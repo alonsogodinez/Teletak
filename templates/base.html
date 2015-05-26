@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    {% load static from staticfiles %}
+    <link href="{% static 'css/normalize.css' %}"/>
+    <link href= "{% static "css/bootstrap.min.css" %}" rel="stylesheet"/>
+    <link href="{% static "css/estilos.css" %}" rel="stylesheet">
+    <title>Teletak</title>
+</head>
+<body>
+
+    <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+         <div class="container-fluid contenedor ">
+             <div class="navbar-header">
+
+                 <button type="button" class="navbar-toggle " data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse">
+                     <span class="sr-only">Desplegar navegacion</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                 </button>
+                 <a href="#" class="navbar-brand">
+                     TELETAK
+{#                     <img class="img-circle logo" src="{% static 'img/vet.jpg' %}" alt=""> Teletak#}
+                 </a>
+             </div>
+            <!-- <p class=" navbar-text pull-right  hidden-sm hidden-xs logged"><a href="#" class="navbar-link">Alonso</a></p> -->
+
+
+             <div class="navbar-collapse collapse hola navbar-ex1-collapse">
+
+                <ul class="nav navbar-nav">
+
+                    <li>
+                        <a href="">Contacto</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle desplega" data-toggle="dropdown">
+                           Servicios
+                           <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">...</a></li>
+                            <li><a href="#">...</a></li>
+                            <li><a href="#">...</a></li>
+                            <li class="dropdown-header">...</li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+            </div>
+         </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+
+    <footer class="footer1 ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-sm-6  copy">
+                <p class="navbar-text">2015  © Teletak™</p>
+            </div>
+            <div class="col-lg-6 col-sm-6  socialbar">
+
+                <div class="social  ">
+                    <div class="  navbar-text "><p class="socialtext"> Siguenos |  </p>
+                          <p class="   socialicon ">
+
+                        <a target="_blank" href=" https://www.facebook.com/happy.veterinaria?ref=ts&fref=ts"class="facebook">
+                        </a>
+
+                        </p>
+                        <p class="   socialicon ">
+
+                        <a target="_blank" href=" https://www.facebook.com/happy.veterinaria?ref=ts&fref=ts"class="facebook">
+                        </a>
+
+                        </p>
+                        <p class="   socialicon ">
+
+                        <a target="_blank" href=" https://www.facebook.com/happy.veterinaria?ref=ts&fref=ts"class="facebook">
+                        </a>
+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script-!-->
+    <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+
+</html>
