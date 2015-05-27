@@ -42,4 +42,8 @@ body {
     -webkit-align-items: center
 }
 
+.navbar-logo{
+    max-width: 120px;
+
+}
 

@@ -55,3 +55,5 @@ USE_TZ = True
 TEMPLATE_DIRS = [BASE_DIR.child('templates')]
 
 AUTH_USER_MODEL = 'users.User'
+
+LOGIN_URL = '/login'
