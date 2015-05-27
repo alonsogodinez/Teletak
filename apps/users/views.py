@@ -25,6 +25,8 @@ class Login(View):
             if user.is_active:
                 login(request, user)
                 return redirect(request.GET['next'])
+            return render(request, self.template_name, {'form': form, 'error': 'La cuenta esta deshabilitada'})
+
         else:
             return render(request, self.template_name, {'form': form, 'error': 'Verifique los datos ingresados'})
 

@@ -18,39 +18,27 @@
         <div class="col-md-4 col-lg-4 col-sm-4 hidden-xs logo">
             <img  class="img-responsive" src="{% static 'img/logo.png' %}" alt="logo teletak"/>
         </div>
-        <div class="col-md-8 col-lg-8 col-sm-8 col-xs-12 ">
+        <div class="  col-xs-offset-1 col-lg-6 col-sm-7 col-xs-10 ">
             <h1>Login</h1>
             <p class="lead"></p>
             <form class="form" role="form"  method="post">{% csrf_token%}
                 <div class="form-group ">
                     {{ form.username.errors }}
-                     <label  class="col-md-12 col-xs-12" for="{{ form.username.id_for_label }}">{{ form.username.label }}</label>
-
+                     <label   for="{{ form.username.id_for_label }}">{{ form.username.label }}</label>
                     {{ form.username }}
-                    <button type="submit" class="btn btn-success
-                    col-md-offset-1  col-xs-offset-1 col-md-offset-1 col-lg-3 col-md-3 col-sm-3 col-xs-3" id="guardar">Ingresar</button>
-
                 </div>
 
                 <div class="form-group ">
                     {{ form.password.errors }}
-                     <label  class="col-md-12 col-xs-12" for="{{ form.password.id_for_label }}">{{ form.password.label }}</label>
+                     <label  for="{{ form.password.id_for_label }}">{{ form.password.label }}</label>
 
                     {{ form.password }}
-                    <a  href="#" class="btn btn-danger col-md-offset-1  col-xs-offset-1 col-md-offset-1 col-lg-3
-                    col-md-3 col-sm-3 col-xs-3" id="cancelar">
-                        Regresar
-                    </a>
-
-
                 </div>
-
-
-
-
-
-
-
+                 <div class="form-group">
+                    <button type="submit" class="btn btn-success col-xs-12" id="guardar">
+                        Ingresar
+                    </button>
+                 </div>
             </form>
         </div>
 
