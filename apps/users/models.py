@@ -43,7 +43,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=True)
 
-    user_type = models.CharField('tipo de usuario', choices=USER_TYPE_CHOICES, max_length=10, blank=False,null=False,
+    user_type = models.CharField('tipo de usuario', choices=USER_TYPE_CHOICES, max_length=10, blank=True,null=True,
                                 default=TRABAJADOR)
 
     objects = UserManager()

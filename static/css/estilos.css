@@ -9,8 +9,10 @@ body {
     background-image: url('../img/fondo.png');
     background-size: cover;
     margin-bottom: 60px;
+    padding-top: 60px;
 
 }
+
 a:hover,a:focus{
     color:#4db5ed;
 
@@ -18,6 +20,25 @@ a:hover,a:focus{
 a:visited,a:hover, a:active, a:focus{
     text-decoration: none;
 }
+.backbutton{
+    position: absolute;
+    bottom: 100px;
+    left: 25px;
+    padding: 0px 20px;
+    padding-top: 10px;
+    font-size: 3em;
+    border-radius: 20px;
+    background: #4b5162;
+    color:white;
+    -webkit-transition: all .4s ease ;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
+.btn:focus, .btn:active, .btn:active:focus {
+  outline: 0 auto -webkit-focus-ring-color;
+}
+
 .contenedor-modulos{
     padding: 12em 25px;
 }
@@ -45,7 +66,15 @@ a:visited,a:hover, a:active, a:focus{
     -o-transform:rotateZ(360deg);
     transform: rotateZ(360deg);
 }
+.login{
 
+    color:white;
+    text-shadow: 1px 1px 2px #222;
+}
+
+.login h1 {
+    padding-bottom: 15px;
+}
 .login-input{
     width:66.66666667%;
     float:left;
@@ -77,10 +106,11 @@ a:visited,a:hover, a:active, a:focus{
 }
 
 .module{
-    padding:15px;
+    padding:0 15px;
     text-align: center;
     color:white;
     background: transparent;
+    margin-bottom: 25px ;
 
 }
 

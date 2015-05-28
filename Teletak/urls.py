@@ -10,5 +10,6 @@ urlpatterns = [
     url(r'^login/', Login.as_view()),
     url(r'^logout/', Logout.as_view()),
     url(r'^',include('apps.almacen.urls',namespace='almacen')),
+    url(r'^usuarios/',include('apps.users.urls',namespace='usuarios'))
 
 ]

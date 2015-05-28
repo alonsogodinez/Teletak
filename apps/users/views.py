@@ -1,7 +1,8 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render,redirect
-from django.views.generic import View
+from django.views.generic import View,CreateView,TemplateView
 from .forms import LoginForm
+from .models import User
 
 
 
@@ -24,12 +25,13 @@ class Login(View):
         if user:
             if user.is_active:
                 login(request, user)
-                return redirect(request.GET['next'])
+                if request.GET:
+                    return redirect(request.GET['next'])
+                return redirect('/')
             return render(request, self.template_name, {'form': form, 'error': 'La cuenta esta deshabilitada'})
 
         else:
             return render(request, self.template_name, {'form': form, 'error': 'Verifique los datos ingresados'})
-
 
 
 
@@ -38,6 +40,16 @@ class Logout(View):
     def get(self,request):
             logout(request)
             return redirect('/login')
+
+
+class Configuracion(TemplateView):
+    template_name = 'configuracion/index.html'
+
+class RegistrarTrabajador(CreateView):
+    model = User
+    template_name = 'configuracion/nuevo_trabajador.html'
+    fields = ['username','password','email','first_name','last_name','dni','cellphone']
+
 
 
 
