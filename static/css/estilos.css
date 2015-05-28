@@ -5,12 +5,17 @@ html {
 
 }
 body {
-    background: #f5f5f5;
+    /*background: #5B7E90;*/
+    background-image: url('../img/fondo.png');
+    background-size: cover;
     margin-bottom: 60px;
 
 }
-a:hover{
-    color:#d7dfed;
+a:hover,a:focus{
+    color:#4db5ed;
+
+}
+a:visited,a:hover, a:active, a:focus{
     text-decoration: none;
 }
 .contenedor-modulos{
@@ -23,9 +28,24 @@ a:hover{
     bottom: 0;
     width: 100%;
     color:white;
-  /* Set the fixed height of the footer here */
-    background-color: #249fee;
+    /*background-color: #249fee;*/
+    background-color: rgba(36, 159, 238, 0.24);
 }
+
+.module:hover .glyphicon::before{
+    -webkit-transition: -webkit-transform .4s ease ;
+    -moz-transition: -moz-transform .4s ease;
+    -o-transition: -o-transform .4s ease;
+    transition: transform .4s ease;
+}
+.module:hover .glyphicon::before{
+    transform-origin: top left;
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform:scale(2,4);
+    -o-transform:rotateZ(360deg);
+    transform: rotateZ(360deg);
+}
+
 .login-input{
     width:66.66666667%;
     float:left;
@@ -63,18 +83,37 @@ a:hover{
     background: transparent;
 
 }
+
+
 .module > .glyphicon{
     padding-top: 60px;
     padding-bottom: 50px;
     font-size: 4.2em;
     width:100%;
+
     border-radius: 30px 30px 0 0;
+
 }
+.module{
+    -webkit-transition: all .4s ease ;
+    -moz-transition: all .4s ease;
+     -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.module:hover{
+    -webkit-transform:scale(1.05,1.05);
+    -moz-transform:scale(1.05,1.05);
+    -o-transform:scale(1.05,1.05);
+    transform:scale(1.05,1.05);
+}
+
 .module > h3{
     margin-top: -3px;
     padding: 10px 0;
     border-radius: 0 0 30px 30px;
-    background:#249fee;
+    background:white;
+    color: #2f6588;
 
 }
 
