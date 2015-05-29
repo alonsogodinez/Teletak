@@ -1,5 +1,7 @@
 # -*- encoding: utf-8 -*-
+
 from unipath import Path
+
 
 BASE_DIR = Path(__file__).ancestor(3)
 
@@ -16,7 +18,7 @@ DJANGO_APPS = (
 )
 
 LOCAL_APPS = (
-    'apps.users',
+    'apps.usuarios',
     'apps.almacen',
 )
 
@@ -54,6 +56,8 @@ USE_TZ = True
 
 TEMPLATE_DIRS = [BASE_DIR.child('templates')]
 
-AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'usuarios.User'
 
 LOGIN_URL = '/login'
+
+

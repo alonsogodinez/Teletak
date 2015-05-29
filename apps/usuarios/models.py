@@ -20,6 +20,9 @@ class UserManager(BaseUserManager):
     def create_superuser(self,username,email,password,**extra_fields):
         return self._create_user(username,email,password,True,True,**extra_fields)
 
+class Usuario (models.Model):
+    class Meta:
+        abstract = True
 
 class User(AbstractBaseUser, PermissionsMixin):
 
@@ -41,10 +44,10 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 
     is_active = models.BooleanField(default=True)
-    is_staff = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
 
-    user_type = models.CharField('tipo de usuario', choices=USER_TYPE_CHOICES, max_length=10, blank=True,null=True,
-                                default=TRABAJADOR)
+    user_type = models.CharField('tipo de usuario', choices=USER_TYPE_CHOICES, max_length=10, blank=False,null=False,
+                                default=TRABAJADOR )
 
     objects = UserManager()
     USERNAME_FIELD = 'username'
@@ -55,6 +58,10 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def get_full_name(self):
         return self.first_name+' '+self.last_name
+
+    class Meta:
+        verbose_name = 'Usuario'
+        verbose_name_plural = 'Usuarios'
 
 
 

@@ -26,6 +26,7 @@ class MyUserCreationForm(UserCreationForm):
 class UserAdmin(UserAdmin):
     form = MyUserChangeForm
     add_form = MyUserCreationForm
+    formfield_overrides = {models.ForeignKey: {'empty_label': None},}
     fieldsets = (
         ('Usuario',{'fields': ('username','password')}),
         ('Informacion Personal', {'fields': ('first_name',
