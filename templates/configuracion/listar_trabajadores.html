@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered ">
+                        {% load static from staticfiles %}
+                        <thead>
+                            <tr  align="center">
+                                <td width="5%">ID</td>
+                                <td width="25%">NOMBRES</td>
+                                <td width="25%">APELLIDOS</td>
+                                <td width="20%">TELEFONO</td>
+                                <td width="25%">ACCIONES</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for trabajador in object_list %}
+                            <tr valign="middle" class="{{forloop.counter|divisibleby:2|yesno:'even,odd'}}">
+                                <td align="center">{{ trabajador.id }}</td>
+                                <td align="center">{{trabajador.first_name}}</td>
+                                <td align="center">{{trabajador.last_name}}</td>
+                                <td align="center">{{trabajador.cellphone}}</td>
+                                <td align="center">
+                                    <a href="#" class="btn btn-info">Editar</a>
+                                    <a href="#" class="btn btn-danger">Eliminar</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+
+                    </table>
+    </div>
+{% endblock %}
