@@ -33,11 +33,11 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     cellphone = models.CharField('Celular', max_length=15, blank=True, null=True)
     dni = models.CharField('Dni', max_length=8, blank=False, null=True)
-    email=models.EmailField(max_length=50)
+    email=models.EmailField(max_length=30)
     first_name=models.CharField('Nombres', max_length=100)
     last_name= models.CharField('Apellidos', max_length=100)
     phone = models.CharField('Telefono', max_length=15, blank=True, null=True)
-    username = models.CharField(max_length=50, unique=True)
+    username = models.CharField(max_length=30, unique=True)
 
 
     is_active = models.BooleanField(default=True)

@@ -1,8 +1,9 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render,redirect
 from django.views.generic import View,CreateView,TemplateView
-from .forms import LoginForm
+from .forms import LoginForm, RegistrarTrabajadorForm
 from .models import User
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 
@@ -45,10 +46,13 @@ class Logout(View):
 class Configuracion(TemplateView):
     template_name = 'configuracion/index.html'
 
-class RegistrarTrabajador(CreateView):
+class RegistrarTrabajador(SuccessMessageMixin,CreateView):
     model = User
     template_name = 'configuracion/nuevo_trabajador.html'
-    fields = ['username','password','email','first_name','last_name','dni','cellphone']
+    form_class = RegistrarTrabajadorForm
+    success_url = '/usuarios'
+    success_message = 'El registro se realizó correctamente'
+
 
 
 

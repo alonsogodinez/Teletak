@@ -20,6 +20,10 @@ a:hover,a:focus{
 a:visited,a:hover, a:active, a:focus{
     text-decoration: none;
 }
+
+.alert{
+    border-radius: 0px;
+}
 .backbutton{
     position: absolute;
     bottom: 100px;
@@ -52,7 +56,16 @@ a:visited,a:hover, a:active, a:focus{
     /*background-color: #249fee;*/
     background-color: rgba(36, 159, 238, 0.24);
 }
+.form-field{
+    padding-bottom:15px;
+}
 
+form  > .form-group:first-of-type .form-field {
+    padding-top: 40px;
+}
+.form-label{
+    color:white;
+}
 .module:hover .glyphicon::before{
     -webkit-transition: -webkit-transform .4s ease ;
     -moz-transition: -moz-transform .4s ease;
