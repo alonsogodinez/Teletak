@@ -1,13 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    {% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% endif %}
     <div class="contenedor-modulos">
         <div class="row">
-            <a href="{% url 'usuarios:add_user' %}" class="module col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <a href="{% url 'usuarios:add_trabajador' %}" class="module col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
                 <h3>Registrar Trabajador</h3>
             </a>
-            <a href="#" class="module col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <a href="{% url 'usuarios:trabajadores_list' %}" class="module col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
                 <h3>Lista de Trabajadores</h3>
             </a>

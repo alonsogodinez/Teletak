@@ -2,13 +2,11 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
-from django.conf import settings
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
@@ -21,6 +19,13 @@ class Migration(migrations.Migration):
             options={
                 'verbose_name_plural': 'Almacenes',
             },
+        ),
+        migrations.CreateModel(
+            name='Categoria',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('nombre', models.CharField(max_length=15)),
+            ],
         ),
         migrations.CreateModel(
             name='DetalleAlmacen',
@@ -48,12 +53,22 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
+            name='GuiaRemision',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('fecha_traslado', models.DateField()),
+                ('punto_partida', models.CharField(max_length=30)),
+                ('nro_guia_remitente', models.CharField(max_length=15)),
+                ('placa_vehiculo', models.CharField(max_length=10)),
+                ('licencia_conducir', models.CharField(max_length=15)),
+            ],
+        ),
+        migrations.CreateModel(
             name='Ingreso',
             fields=[
                 ('id', models.AutoField(serialize=False, primary_key=True)),
                 ('fecha', models.DateField(null=True, blank=True)),
                 ('guia_remision', models.CharField(max_length=20, null=True, blank=True)),
-                ('dni_usuario', models.ForeignKey(blank=True, to=settings.AUTH_USER_MODEL, null=True)),
             ],
         ),
         migrations.CreateModel(
@@ -62,7 +77,6 @@ class Migration(migrations.Migration):
                 ('codigo', models.AutoField(max_length=10, serialize=False, primary_key=True)),
                 ('sap', models.CharField(max_length=10, null=True, blank=True)),
                 ('descripcion', models.CharField(max_length=50, null=True, blank=True)),
-                ('categoria', models.CharField(max_length=10, null=True, blank=True)),
                 ('stock_minimo', models.IntegerField(null=True, blank=True)),
             ],
         ),
@@ -71,7 +85,14 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('equiv', models.DecimalField(verbose_name=b'Equivalencia', max_digits=4, decimal_places=2)),
-                ('prod', models.ForeignKey(to='almacen.Producto')),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Proveedor',
+            fields=[
+                ('ruc', models.CharField(max_length=10, serialize=False, primary_key=True)),
+                ('nombre', models.CharField(max_length=30)),
+                ('direccion', models.CharField(max_length=30)),
             ],
         ),
         migrations.CreateModel(
@@ -81,8 +102,6 @@ class Migration(migrations.Migration):
                 ('fecha', models.DateField(null=True, blank=True)),
                 ('nodo', models.CharField(max_length=15, null=True, blank=True)),
                 ('devolucion', models.NullBooleanField()),
-                ('dni_usuario', models.ForeignKey(to=settings.AUTH_USER_MODEL)),
-                ('id_almacen', models.ForeignKey(to='almacen.Almacen')),
             ],
         ),
         migrations.CreateModel(
@@ -91,45 +110,5 @@ class Migration(migrations.Migration):
                 ('id_und', models.AutoField(serialize=False, primary_key=True)),
                 ('nombre', models.CharField(max_length=20)),
             ],
-        ),
-        migrations.AddField(
-            model_name='productomedida',
-            name='unidad',
-            field=models.ForeignKey(to='almacen.UnidadMedicion'),
-        ),
-        migrations.AddField(
-            model_name='detallesalida',
-            name='codigo_producto',
-            field=models.ForeignKey(blank=True, to='almacen.Producto', null=True),
-        ),
-        migrations.AddField(
-            model_name='detallesalida',
-            name='id_salida',
-            field=models.ForeignKey(blank=True, to='almacen.Salida', null=True),
-        ),
-        migrations.AddField(
-            model_name='detalleingreso',
-            name='codigo_producto',
-            field=models.ForeignKey(blank=True, to='almacen.Producto', null=True),
-        ),
-        migrations.AddField(
-            model_name='detalleingreso',
-            name='id_ingreso',
-            field=models.ForeignKey(blank=True, to='almacen.Ingreso', null=True),
-        ),
-        migrations.AddField(
-            model_name='detallealmacen',
-            name='codigo_producto',
-            field=models.ForeignKey(to='almacen.Producto'),
-        ),
-        migrations.AddField(
-            model_name='detallealmacen',
-            name='id_almacen',
-            field=models.ForeignKey(to='almacen.Almacen'),
-        ),
-        migrations.AddField(
-            model_name='detallealmacen',
-            name='id_ingreso',
-            field=models.ForeignKey(blank=True, to='almacen.Ingreso', null=True),
         ),
     ]

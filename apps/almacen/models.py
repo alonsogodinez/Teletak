@@ -1,6 +1,8 @@
 from django.db import models
-from apps.users.models import User
+from apps.usuarios.models import User
 
+class Categoria(models.Model):
+    nombre = models.CharField(max_length=15)
 
 class UnidadMedicion(models.Model):
     id_und = models.AutoField(primary_key=True)
@@ -10,13 +12,26 @@ class Producto(models.Model):
     codigo = models.AutoField(primary_key=True, max_length=10)
     sap = models.CharField(max_length=10, blank=True, null=True)
     descripcion = models.CharField(max_length=50, blank=True, null=True)
-
+    categoria = models.ForeignKey(Categoria,blank=True,null=True)
     stock_minimo = models.IntegerField(blank=True, null=True)
 
 class ProductoMedida(models.Model):
     unidad = models.ForeignKey(UnidadMedicion)
     prod = models.ForeignKey(Producto)
     equiv = models.DecimalField('Equivalencia',max_digits=4,decimal_places=2)
+
+class Proveedor(models.Model):
+    ruc = models.CharField(max_length=10,primary_key=True)
+    nombre = models.CharField(max_length=30)
+    direccion = models.CharField(max_length=30)
+
+class GuiaRemision(models.Model):
+    fecha_traslado = models.DateField()
+    punto_partida = models.CharField(max_length=30)
+    nro_guia_remitente = models.CharField(max_length=15)
+    placa_vehiculo = models.CharField(max_length=10)
+    licencia_conducir = models.CharField(max_length=15)
+
 
 class Ingreso(models.Model):
     id = models.AutoField(primary_key=True)
@@ -41,7 +56,6 @@ class Almacen(models.Model):
 
     class Meta:
         verbose_name_plural = "Almacenes"
-
 
 
 class DetalleAlmacen(models.Model):

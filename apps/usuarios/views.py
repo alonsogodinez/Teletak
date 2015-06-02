@@ -1,9 +1,20 @@
+# -*- encoding: utf-8 -*-
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render,redirect
-from django.views.generic import View,CreateView,TemplateView
-from .forms import LoginForm
+from django.utils.decorators import method_decorator
+from django.views.generic import View,CreateView,TemplateView,ListView
+from .forms import LoginForm, RegistrarTrabajadorForm
 from .models import User
+from django.contrib.messages.views import SuccessMessageMixin
 
+
+class LoginRequiredMixin(object):
+    u"""Ensures that user must be authenticated in order to access view."""
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(LoginRequiredMixin, self).dispatch(*args, **kwargs)
 
 
 class Login(View):
@@ -45,10 +56,18 @@ class Logout(View):
 class Configuracion(TemplateView):
     template_name = 'configuracion/index.html'
 
-class RegistrarTrabajador(CreateView):
+class RegistrarTrabajador(LoginRequiredMixin,SuccessMessageMixin,CreateView):
     model = User
     template_name = 'configuracion/nuevo_trabajador.html'
-    fields = ['username','password','email','first_name','last_name','dni','cellphone']
+    form_class = RegistrarTrabajadorForm
+    success_url = '/usuarios'
+    success_message = 'El registro se realizó correctamente'
+
+class ListarTrabajadores(LoginRequiredMixin,ListView):
+    queryset = User.objects.filter(is_staff=False)
+    template_name = 'configuracion/listar_trabajadores.html'
+
+
 
 
 
