@@ -4,9 +4,9 @@ from django.contrib import admin
 from apps.usuarios.views import Login,Logout
 
 
-admin.site.site_header = "Veterinaria HappyPets"
-admin.site.site_title= "Sistema de Administración HappyPets "
-admin.site.index_title = "Bienvenido 'user'"
+admin.site.site_header = "TELETAK"
+admin.site.site_title= "Sistema de Administración"
+# admin.site.index_title = "Bienvenido "
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
