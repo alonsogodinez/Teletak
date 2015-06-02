@@ -3,8 +3,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render,redirect
 from django.utils.decorators import method_decorator
-from django.views.generic import View,CreateView,TemplateView,ListView
-from .forms import LoginForm, RegistrarTrabajadorForm
+from django.views.generic import View, CreateView,TemplateView, ListView, DetailView, FormView
+from .forms import LoginForm, RegistrarTrabajadorForm, EditarTrabajadorForm
 from .models import User
 from django.contrib.messages.views import SuccessMessageMixin
 
@@ -68,6 +68,18 @@ class ListarTrabajadores(LoginRequiredMixin,ListView):
     template_name = 'configuracion/listar_trabajadores.html'
 
 
+class EditarTrabajador(DetailView):
+    model = User
+    template_name = 'configuracion/editar_trabajador.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(EditarTrabajador, self).get_context_data(**kwargs)
+        context['form'] = EditarTrabajadorForm
+        return context
+
+class EditarTrabajadorFormView(FormView):
+    form_class = EditarTrabajadorForm
+    success_url = '/usuarios/list'
 
 
 
