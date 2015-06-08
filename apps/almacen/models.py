@@ -16,8 +16,8 @@ class Producto(models.Model):
     stock_minimo = models.IntegerField(blank=True, null=True)
 
 class ProductoMedida(models.Model):
-    unidad = models.ForeignKey(UnidadMedicion)
-    prod = models.ForeignKey(Producto)
+    unidad = models.ForeignKey(UnidadMedicion,blank=True,null=True)
+    prod = models.ForeignKey(Producto,blank=True,null=True)
     equiv = models.DecimalField('Equivalencia',max_digits=4,decimal_places=2)
 
 class Proveedor(models.Model):
@@ -60,8 +60,8 @@ class Almacen(models.Model):
 
 class DetalleAlmacen(models.Model):
     id = models.AutoField(primary_key=True)
-    codigo_producto = models.ForeignKey(Producto)
-    id_almacen = models.ForeignKey(Almacen)
+    codigo_producto = models.ForeignKey(Producto,blank=True,null=True)
+    id_almacen = models.ForeignKey(Almacen,blank=True,null=True)
     id_ingreso = models.ForeignKey(Ingreso, blank=True, null=True)
     cantidad = models.IntegerField()
     estado = models.CharField(max_length=10, blank=True, null=True)
@@ -69,8 +69,8 @@ class DetalleAlmacen(models.Model):
 
 class Salida(models.Model):
     id = models.AutoField(primary_key=True)
-    dni_usuario = models.ForeignKey(User)
-    id_almacen = models.ForeignKey(Almacen)
+    dni_usuario = models.ForeignKey(User,blank=True,null=True)
+    id_almacen = models.ForeignKey(Almacen,blank=True,null=True)
     fecha = models.DateField(blank=True, null=True)
     nodo = models.CharField(max_length=15, blank=True, null=True)
     devolucion = models.NullBooleanField()
