@@ -33,14 +33,14 @@ td .btn-danger{
 }
 
 .alert{
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .backbutton{
     position: absolute;
     bottom: 70px;
     left: 25px;
-    padding: 0px 20px;
+    padding: 0 20px;
     padding-top: 10px;
     font-size: 3em;
     border-radius: 20px;
@@ -55,8 +55,19 @@ td .btn-danger{
   outline: 0 auto -webkit-focus-ring-color;
 }
 
+.close {
+  font-size: 26px;
+  color: #FF4141;
+  opacity: .3;
+}
+
+.close:focus, .close:hover {
+  color: #FF4141;
+  opacity: 1;
+}
+
 .contenedor-lista{
-    margin-top: 100px;
+    padding-top:60px;
 }
 
 .contenedor-modulos{
@@ -92,7 +103,7 @@ td .btn-danger{
 .module:hover .glyphicon::before{
     transform-origin: top left;
     -webkit-transform: rotateZ(360deg);
-    -moz-transform:scale(2,4);
+    -moz-transform:scale(2,3.5);
     -o-transform:rotateZ(360deg);
     transform: rotateZ(360deg);
 }
@@ -162,10 +173,10 @@ td .btn-danger{
 }
 
 .module:hover{
-    -webkit-transform:scale(1.05,1.05);
-    -moz-transform:scale(1.05,1.05);
-    -o-transform:scale(1.05,1.05);
-    transform:scale(1.05,1.05);
+    -webkit-transform:scale(1.025,1.05);
+    -moz-transform:scale(1.025,1.05);
+    -o-transform:scale(1.025,1.05);
+    transform:scale(1.025,1.05);
 }
 
 .module > h3{

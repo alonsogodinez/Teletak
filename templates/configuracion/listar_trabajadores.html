@@ -33,12 +33,23 @@
                         <td align="center">{{trabajador.cellphone}}</td>
                         <td align="center">
                             <a href="{% url 'usuarios:trabajador_detail' trabajador.id %}" class="btn btn-info">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
+                            <a href="{% url 'usuarios:trabajador_delete' trabajador.id %}"  data-toggle="modal" data-target="#delete-modal" class="btn btn-danger btn-delete">Eliminar</a>
                         </td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
+        </div>
+        <a class="col-sm-offset-0 col-xs-offset-4 backbutton" href="{% url 'usuarios:index' %}">
+            <span class="  glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <div class="modal fade" id="delete-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                </div>
+            </div>
         </div>
 
 
