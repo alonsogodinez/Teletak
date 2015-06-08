@@ -1,16 +1,19 @@
 # -*- encoding: utf-8 -*-
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import ImproperlyConfigured
 from django.shortcuts import render,redirect
 from django.utils.decorators import method_decorator
-from django.views.generic import View, CreateView,TemplateView, ListView, DetailView, FormView
+from django.utils.encoding import force_text
+from django.views.generic import View, CreateView,TemplateView, ListView, UpdateView
 from .forms import LoginForm, RegistrarTrabajadorForm, EditarTrabajadorForm
 from .models import User
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.hashers import PBKDF2PasswordHasher
 
 
 class LoginRequiredMixin(object):
-    u"""Ensures that user must be authenticated in order to access view."""
+
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
@@ -63,23 +66,30 @@ class RegistrarTrabajador(LoginRequiredMixin,SuccessMessageMixin,CreateView):
     success_url = '/usuarios'
     success_message = 'El registro se realizó correctamente'
 
+    def form_valid(self, form):
+        hasher = PBKDF2PasswordHasher()
+        password = hasher.encode(password=self.request.POST['password'], salt='salt', iterations=50000)
+        form.instance.password = password
+        form.instance.save()
+        return super(RegistrarTrabajador, self).form_valid(form)
+
+
+
+
 class ListarTrabajadores(LoginRequiredMixin,ListView):
     queryset = User.objects.filter(is_staff=False)
     template_name = 'configuracion/listar_trabajadores.html'
 
 
-class EditarTrabajador(DetailView):
+
+
+class EditarTrabajador(SuccessMessageMixin,UpdateView):
     model = User
-    template_name = 'configuracion/editar_trabajador.html'
-
-    def get_context_data(self, **kwargs):
-        context = super(EditarTrabajador, self).get_context_data(**kwargs)
-        context['form'] = EditarTrabajadorForm
-        return context
-
-class EditarTrabajadorFormView(FormView):
     form_class = EditarTrabajadorForm
-    success_url = '/usuarios/list'
+    success_url = '/usuarios'
+    template_name = 'configuracion/editar_trabajador.html'
+    success_message = 'Los datos se actualizaron correctamente'
+
 
 
 

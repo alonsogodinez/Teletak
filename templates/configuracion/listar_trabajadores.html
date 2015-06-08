@@ -1,28 +1,38 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
     <div class="container contenedor-lista">
         <div class="table-responsive">
             <table class="table table-striped ">
                 {% load static from staticfiles %}
                 <thead>
                     <tr  align="center">
-                        <td width="5%">ID</td>
+                        <td width="10%">DNI</td>
                         <td width="25%">NOMBRES</td>
                         <td width="25%">APELLIDOS</td>
                         <td width="20%">TELEFONO</td>
-                        <td width="25%">ACCIONES</td>
+                        <td width="20%">ACCIONES</td>
                     </tr>
                 </thead>
                 <tbody>
                     {% for trabajador in object_list %}
                     <tr valign="middle" class="{{forloop.counter|divisibleby:2|yesno:'even,odd'}}">
-                        <td align="center">{{ trabajador.id }}</td>
+                        <td align="center">{{ trabajador.dni }}</td>
                         <td align="center">{{trabajador.first_name}}</td>
                         <td align="center">{{trabajador.last_name}}</td>
                         <td align="center">{{trabajador.cellphone}}</td>
                         <td align="center">
-                            <a href="#" class="btn btn-info">Editar</a>
+                            <a href="{% url 'usuarios:trabajador_detail' trabajador.id %}" class="btn btn-info">Editar</a>
                             <a href="#" class="btn btn-danger">Eliminar</a>
                         </td>
                     </tr>
