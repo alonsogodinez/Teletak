@@ -13,12 +13,7 @@ class LoginRequiredMixin(object):
 class Index(LoginRequiredMixin, View):
 
     template_name = 'almacen/index.html'
+
     def get(self, request):
         return render(request, self.template_name)
 
-    def post(self,request):
-        form = self.form_class(request.POST)
-        if form.is_valid():
-            return HttpResponseRedirect('/success/')
-
-        return render(request, self.template_name, {'form': form, 'error': 'Verifique los datos ingresados'})

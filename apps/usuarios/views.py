@@ -2,6 +2,7 @@
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.hashers import PBKDF2PasswordHasher
+from django.contrib import messages
 from django.shortcuts import render,redirect
 from django.utils.decorators import method_decorator
 from django.views.generic import View, CreateView,TemplateView, ListView, UpdateView, DeleteView
@@ -18,6 +19,16 @@ class LoginRequiredMixin(object):
         return super(LoginRequiredMixin, self).dispatch(*args, **kwargs)
 
 
+
+class AdminPermissionRequiredMixin(object):
+
+    def get(self,request):
+        if request.user.is_staff:
+            return render(request, self.template_name)
+        messages.info(request, 'No tienes acceso a este módulo')
+        return redirect('/')
+
+
 class Login(View):
 
     form_class = LoginForm
@@ -25,7 +36,6 @@ class Login(View):
     user_check_failure_path = '/login'
 
     def get(self, request):
-        print request.user.is_authenticated
         if request.user.is_authenticated():
             return redirect('/')
         form = self.form_class()
@@ -54,9 +64,10 @@ class Logout(View):
             return redirect('/login')
 
 
-class Configuracion(TemplateView):
-
+class Configuracion(AdminPermissionRequiredMixin,TemplateView):
     template_name = 'configuracion/index.html'
+
+
 
 
 class RegistrarTrabajador(LoginRequiredMixin,SuccessMessageMixin,CreateView):
@@ -77,7 +88,7 @@ class RegistrarTrabajador(LoginRequiredMixin,SuccessMessageMixin,CreateView):
 
 class ListarTrabajadores(LoginRequiredMixin,ListView):
 
-    queryset = User.objects.filter(is_staff=False)
+    queryset = User.objects.all()
     template_name = 'configuracion/listar_trabajadores.html'
 
 

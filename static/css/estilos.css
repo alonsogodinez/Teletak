@@ -211,6 +211,9 @@ td .btn-danger{
     color:white;
 }
 
+.table-striped>thead>tr{
+    border-bottom: 6px solid rgba(77, 202, 196, 0.62);
+}
 .table-striped>tbody>tr:nth-of-type(odd){
     color:black;
 }
