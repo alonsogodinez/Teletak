@@ -35,7 +35,7 @@ class DetalleIngreso(models.Model):
 
 class Almacen(models.Model):
     ubicacion = models.CharField(max_length=50, blank=True, null=True)
-    capacidad = models.IntegerField()
+    capacidad = models.IntegerField(blank=True,null=True)
 
     class Meta:
         verbose_name_plural = "Almacenes"
