@@ -1,0 +1,11 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title"> Advertencia</h4>
+</div>
+<div class="modal-body">
+    <form action="{% url 'usuarios:trabajador_delete' object.id%}" class="text-center"method="post">{% csrf_token %}
+        <p>Esta seguro que desea eliminar a {{ object.first_name }} {{ object.last_name }} de la base de datos ?</p>
+        <input class="btn btn-success" type="submit" value="Si, estoy seguro" />
+    </form>
+</div>
+

@@ -1,0 +1,225 @@
+html {
+  position: relative;
+
+  min-height: 100%;
+
+}
+
+a:hover,a:focus{
+    color:#4db5ed;
+
+}
+a:visited,a:hover, a:active, a:focus{
+    text-decoration: none;
+}
+
+
+body {
+    /*background: #5B7E90;*/
+    background-image: url('../img/fondo.png');
+    background-size: cover;
+    margin-bottom: 60px;
+    margin-top: 60px;
+
+}
+
+
+td .btn-info {
+    background-color: #64C1DD;
+}
+
+td .btn-danger{
+    background-color:#E26864
+}
+
+.alert{
+    border-radius: 0;
+}
+
+.backbutton{
+    position: absolute;
+    bottom: 70px;
+    left: 25px;
+    padding: 0 20px;
+    padding-top: 10px;
+    font-size: 3em;
+    border-radius: 20px;
+    background: #4b5162;
+    color:white;
+    -webkit-transition: all .4s ease ;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
+.btn:focus, .btn:active, .btn:active:focus {
+  outline: 0 auto -webkit-focus-ring-color;
+}
+
+.close {
+  font-size: 26px;
+  color: #FF4141;
+  opacity: .3;
+}
+
+.close:focus, .close:hover {
+  color: #FF4141;
+  opacity: 1;
+}
+
+.contenedor-lista{
+    padding-top:60px;
+}
+
+.contenedor-modulos{
+    padding: 12em 25px;
+}
+
+.footer {
+    padding: 20px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color:white;
+    /*background-color: #249fee;*/
+    background-color: rgba(36, 159, 238, 0.24);
+}
+.form-field{
+    padding-bottom:15px;
+}
+
+.form-group:first-of-type .form-field {
+    padding-top: 40px;
+}
+.form-label{
+    color:white;
+}
+.module:hover .glyphicon::before{
+    -webkit-transition: -webkit-transform .4s ease ;
+    -moz-transition: -moz-transform .4s ease;
+    -o-transition: -o-transform .4s ease;
+    transition: transform .4s ease;
+}
+.module:hover .glyphicon::before{
+    transform-origin: top left;
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform:scale(2,3.5);
+    -o-transform:rotateZ(360deg);
+    transform: rotateZ(360deg);
+}
+.login{
+
+    color:white;
+    text-shadow: 1px 1px 2px #222;
+}
+
+.login h1 {
+    padding-bottom: 15px;
+}
+.login-input{
+    width:66.66666667%;
+    float:left;
+    margin-bottom: 10px;
+}
+
+.login-container{
+    padding: 10% 15px 6% 15px
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.login-container .row{
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    -webkit-align-items: center
+}
+
+.login-button{
+    margin-top: 10px;
+}
+.module > *{
+    background: #4b5162;
+}
+
+.module{
+    padding:0 15px;
+    text-align: center;
+    color:white;
+    background: transparent;
+    margin-bottom: 25px ;
+
+}
+
+
+.module > .glyphicon{
+    padding-top: 60px;
+    padding-bottom: 50px;
+    font-size: 4.2em;
+    width:100%;
+
+    border-radius: 30px 30px 0 0;
+
+}
+.module{
+    -webkit-transition: all .4s ease ;
+    -moz-transition: all .4s ease;
+     -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.module:hover{
+    -webkit-transform:scale(1.025,1.05);
+    -moz-transform:scale(1.025,1.05);
+    -o-transform:scale(1.025,1.05);
+    transform:scale(1.025,1.05);
+}
+
+.module > h3{
+    margin-top: -3px;
+    padding: 10px 0;
+    border-radius: 0 0 30px 30px;
+    background:white;
+    color: #2f6588;
+
+}
+
+.navbar-logo{
+    max-width: 140px;
+
+}
+
+.navbar-nav>li>a{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.navbar,.navbar-nav{
+    height: 60px;
+    min-height: 60px;
+}
+
+.navbar-collapse.collapse{
+    height: 60px !important;
+}
+
+.table-striped{
+   background: rgb(40, 98, 137);
+    color:white;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd){
+    color:black;
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .contenedor-modulos{
+        padding: 7em 25px;
+    }
+}
+

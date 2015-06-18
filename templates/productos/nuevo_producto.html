@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+
+            <form method="post" enctype="multipart/form-data">
+                <div id="form">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <input type="submit">
+                </div>
+            <form>
+        </div>
+        <a class="col-sm-offset-0 col-xs-offset-4 backbutton" href="{% url 'productos:index' %}">
+            <span class="  glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        </a>
+    </div>
+
+{% endblock %}
