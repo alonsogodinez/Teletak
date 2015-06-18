@@ -63,4 +63,3 @@ class DetalleSalida(models.Model):
     cantidad = models.IntegerField(blank=True, null=True)
 
 
-# guia de remision - campo proveedores
