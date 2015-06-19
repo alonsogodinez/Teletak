@@ -4,7 +4,7 @@
 </div>
 <div class="modal-body">
     <form action="{% url 'productos:Eliminar_Producto' object.codigo%}" class="text-center"method="post">{% csrf_token %}
-        <p>Esta seguro que desea eliminar {{ object.codigo }}  de la base de datos ?</p>
+        <p>Esta seguro que desea eliminar {{ object.descripcion }}  de la base de datos ?</p>
         <input class="btn btn-success" type="submit" value="Si, estoy seguro" />
     </form>
 </div>

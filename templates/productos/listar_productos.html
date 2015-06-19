@@ -31,7 +31,7 @@
                         <td align="center">{{ producto.descripcion }}</td>
                         <td align="center">{{ producto.stock_minimo }}</td>
                         <td align="center">
-                            <a href="#" class="btn btn-info">Editar</a>
+                            <a href="{% url 'productos:Editar_Producto' producto.codigo %}" class="btn btn-info">Editar</a>
                             <a href="{% url 'productos:Eliminar_Producto' producto.codigo %}"  data-toggle="modal" data-target="#delete-modal" class="btn btn-danger btn-delete">Eliminar</a>
                         </td>
                     </tr>

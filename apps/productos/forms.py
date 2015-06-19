@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from apps.almacen.models import Producto,Categoria
+from .models import Producto,Categoria
 
 class ProductoForm(forms.ModelForm):
     sap = forms.CharField(max_length=10,widget=forms.TextInput(attrs={'class':'form-control'}),label="SAP")
@@ -10,3 +10,4 @@ class ProductoForm(forms.ModelForm):
     class Meta:
         model = Producto
         fields = ('sap','descripcion','categoria','stock_minimo',)
+
