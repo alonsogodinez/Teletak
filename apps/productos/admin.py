@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import *
+from apps.almacen.models import *
 # Register your models here.
 
 class CategoriaAdmin(admin.ModelAdmin):
@@ -20,7 +21,16 @@ class UnidadMedicionAdmin(admin.ModelAdmin):
         return 'Unidades de Medida'
 
 
+class GuiaDeRemisionAdmin(admin.ModelAdmin):
+    model = GuiaRemision
+    list_display = ('id','fecha_traslado','punto_partida','nro_guia_remitente','placa_vehiculo','licencia_conducir')
+    list_editable = ('id','fecha_traslado','punto_partida','nro_guia_remitente','placa_vehiculo','licencia_conducir')
+
 admin.site.register(Producto,ProductosAdmin)
 admin.site.register(Categoria,CategoriaAdmin)
+<<<<<<< HEAD
 admin.site.register(ProductoMedida,ProductoMedidaAdmin)
 admin.site.register(UnidadMedicion,UnidadMedicionAdmin)
+=======
+admin.site.register(GuiaRemision,GuiaDeRemisionAdmin)
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45

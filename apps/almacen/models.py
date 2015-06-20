@@ -7,12 +7,18 @@ class Proveedor(models.Model):
     nombre = models.CharField(max_length=30)
     direccion = models.CharField(max_length=30)
 
+    class Meta:
+        verbose_name_plural = "Proveedores"
+
 class GuiaRemision(models.Model):
     fecha_traslado = models.DateField()
     punto_partida = models.CharField(max_length=30)
     nro_guia_remitente = models.CharField(max_length=15)
     placa_vehiculo = models.CharField(max_length=10)
     licencia_conducir = models.CharField(max_length=15)
+
+    class Meta:
+        verbose_name_plural = "Guias de remision"
 
 class Ingreso(models.Model):
     dni_usuario = models.ForeignKey(User, blank=True, null=True)
