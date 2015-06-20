@@ -28,9 +28,6 @@ class GuiaDeRemisionAdmin(admin.ModelAdmin):
 
 admin.site.register(Producto,ProductosAdmin)
 admin.site.register(Categoria,CategoriaAdmin)
-<<<<<<< HEAD
 admin.site.register(ProductoMedida,ProductoMedidaAdmin)
 admin.site.register(UnidadMedicion,UnidadMedicionAdmin)
-=======
 admin.site.register(GuiaRemision,GuiaDeRemisionAdmin)
->>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
