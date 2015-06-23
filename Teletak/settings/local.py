@@ -10,7 +10,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'teletak',
         'USER': 'postgres',
-        'PASSWORD': '745522',
+        'PASSWORD': '123456',
         'HOST': 'localhost',
         'PORT': '5432',
     }

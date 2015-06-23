@@ -16,3 +16,7 @@ class Index(LoginRequiredMixin, View):
     def get(self, request):
         return render(request, self.template_name)
 
+class Operaciones(View):
+    template_name='almacen/operaciones/index.html'
+    def get(self,request):
+        return render(request,self.template_name)

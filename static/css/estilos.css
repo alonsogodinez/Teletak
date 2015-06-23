@@ -74,6 +74,14 @@ td .btn-danger{
     padding: 12em 25px;
 }
 
+.contenedor-operaciones{
+    padding: 12em 25px;
+}
+
+.clase-general{
+    display:table-row;
+}
+
 .footer {
     padding: 20px;
     height: 60px;
