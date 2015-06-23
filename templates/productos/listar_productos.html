@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <div class="container contenedor-lista">
+        <div class="table-responsive">
+            <table class="table table-striped ">
+                {% load static from staticfiles %}
+                <thead>
+                    <tr  align="center">
+                        <td width="10%">Código</td>
+                        <td width="25%">SAP</td>
+                        <td width="25%">Descripción</td>
+                        <td width="20%">Categoría</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for producto in object_list %}
+                    <tr valign="middle" class="{{forloop.counter|divisibleby:2|yesno:'even,odd'}}">
+                        <td align="center">{{ producto.codigo }}</td>
+                        <td align="center">{{ producto.sap }}</td>
+                        <td align="center">{{ producto.descripcion }}</td>
+                        <td align="center">{{ producto.stock_minimo }}</td>
+                        <td align="center">
+                            <a href="{% url 'productos:Editar_Producto' producto.codigo %}" class="btn btn-info">Editar</a>
+                            <a href="{% url 'productos:Eliminar_Producto' producto.codigo %}"  data-toggle="modal" data-target="#delete-modal" class="btn btn-danger btn-delete">Eliminar</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <a class="col-sm-offset-0 col-xs-offset-4 backbutton" href="{% url 'productos:index' %}">
+            <span class="  glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <div class="modal fade" id="delete-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+{% endblock %}

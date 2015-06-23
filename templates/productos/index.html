@@ -1,3 +1,26 @@
 {% extends 'base.html' %}
 
- 
+
+{% block content %}
+
+    <div class="contenedor-modulos">
+        <div class="row">
+            <a href="{% url 'productos:Listar_Productos' %}" class="module col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                <h3>Listar Productos</h3>
+            </a>
+            <a href="{% url 'productos:Registrar_Producto' %}" class="module col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+                <h3>Registrar Productos</h3>
+            </a>
+            <a href="" class="module col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                <h3>Configuracion</h3>
+            </a>
+        </div>
+    </div>
+        <a class="col-sm-offset-0 col-xs-offset-4 backbutton" href="{% url 'almacen:index' %}">
+            <span class="  glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        </a>
+{% endblock %}
+

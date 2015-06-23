@@ -1,0 +1,2188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/templates/productos/listar_productos.html" line="34" mnemonic="5" />
+    <bookmark url="file://$PROJECT_DIR$/apps/usuarios/admin.py" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9d85c8d6-ff0d-4acd-a0a7-81f18414a5bf" name="Default" comment="">
+<<<<<<< HEAD
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/productos/admin.py" afterPath="$PROJECT_DIR$/apps/productos/admin.py" />
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Teletak.iml" afterPath="$PROJECT_DIR$/.idea/Teletak.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/almacen/admin.py" afterPath="$PROJECT_DIR$/apps/almacen/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/productos/admin.py" afterPath="$PROJECT_DIR$/apps/productos/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teletak/settings/local.py" afterPath="$PROJECT_DIR$/Teletak/settings/local.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/almacen/models.py" afterPath="$PROJECT_DIR$/apps/almacen/models.py" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/productos/models.py" afterPath="$PROJECT_DIR$/apps/productos/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="Teletak.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PostgreSQL - teletak@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="teletak.public" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PostgreSQL - teletak@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Teletak" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+<<<<<<< HEAD
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/productos/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.34615386">
+              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+=======
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/almacen/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+=======
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/productos/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/productos/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="78" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="78" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/almacen/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.41336116">
+              <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DATABASE/33521067-56c7-4ff0-895d-716fe0ce49b2" pinned="false" current-in-tab="false">
+        <entry file="uml://DATABASE/33521067-56c7-4ff0-895d-716fe0ce49b2">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>33521067-56c7-4ff0-895d-716fe0ce49b2</OriginalElement>
+              <nodes>
+                <node x="1579.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_amproc</node>
+                <node x="2384.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_largeobject</node>
+                <node x="1154.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_user_indexes</node>
+                <node x="271.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_range</node>
+                <node x="2891.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_seclabel</node>
+                <node x="0.0" y="661.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallesalida</node>
+                <node x="1457.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_ts_config</node>
+                <node x="2000.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_foreign_table</node>
+                <node x="888.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_database_conflicts</node>
+                <node x="3073.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_description</node>
+                <node x="1602.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_user_mapping</node>
+                <node x="2750.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_pltemplate</node>
+                <node x="1378.5367647058824" y="0.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_type</node>
+                <node x="433.0" y="2005.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_replication</node>
+                <node x="1416.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_sys_indexes</node>
+                <node x="3010.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_aggregate</node>
+                <node x="1801.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_inherits</node>
+                <node x="1767.0" y="2005.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_database</node>
+                <node x="176.0" y="640.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen</node>
+                <node x="3087.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_rewrite</node>
+                <node x="716.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_group</node>
+                <node x="3299.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_event_trigger</node>
+                <node x="953.5367647058823" y="373.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_admin_log</node>
+                <node x="1208.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_tablespace</node>
+                <node x="407.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_views</node>
+                <node x="1385.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_enum</node>
+                <node x="1992.0" y="1491.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_settings</node>
+                <node x="265.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_proveedor</node>
+                <node x="1119.0367647058824" y="115.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_content_type</node>
+                <node x="679.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_rules</node>
+                <node x="626.25" y="672.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_groups</node>
+                <node x="3497.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_auth_members</node>
+                <node x="2427.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_foreign_data_wrapper</node>
+                <node x="2640.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_prepared_statements</node>
+                <node x="3285.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_shseclabel</node>
+                <node x="0.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_all_tables</node>
+                <node x="3123.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_sys_sequences</node>
+                <node x="2577.0" y="851.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_sys_tables</node>
+                <node x="945.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_db_role_setting</node>
+                <node x="2052.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_shadow</node>
+                <node x="1574.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_user_indexes</node>
+                <node x="2915.5367647058824" y="0.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_class</node>
+                <node x="2202.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_guiaremision</node>
+                <node x="3056.0" y="2005.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_authid</node>
+                <node x="1270.5" y="1491.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_categoria</node>
+                <node x="327.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_amop</node>
+                <node x="1856.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_sys_indexes</node>
+                <node x="710.0" y="851.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statistic</node>
+                <node x="2420.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_matviews</node>
+                <node x="0.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_language</node>
+                <node x="3345.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_all_sequences</node>
+                <node x="796.25" y="672.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_group_permissions</node>
+                <node x="1287.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_indexes</node>
+                <node x="2752.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_tables</node>
+                <node x="0.0" y="851.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_proc</node>
+                <node x="1368.0" y="851.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_constraint</node>
+                <node x="1249.0" y="1612.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_producto</node>
+                <node x="542.0" y="1491.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_database</node>
+                <node x="535.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_xact_user_functions</node>
+                <node x="2147.5367647058824" y="0.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_am</node>
+                <node x="1705.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_opfamily</node>
+                <node x="788.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_user_functions</node>
+                <node x="2639.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_ts_config_map</node>
+                <node x="0.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_ts_parser</node>
+                <node x="1193.5367647058824" y="415.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_permission</node>
+                <node x="1317.0" y="2005.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_operator</node>
+                <node x="3119.0" y="851.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_user_tables</node>
+                <node x="0.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_user_sequences</node>
+                <node x="2192.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_shdescription</node>
+                <node x="1945.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_default_acl</node>
+                <node x="1853.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_ts_dict</node>
+                <node x="2019.0" y="851.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_attribute</node>
+                <node x="762.5" y="436.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_group</node>
+                <node x="483.5367647058823" y="0.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user</node>
+                <node x="222.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_migrations</node>
+                <node x="374.36764705882354" y="415.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso</node>
+                <node x="342.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_user_tables</node>
+                <node x="1282.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_seclabels</node>
+                <node x="2177.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_timezone_names</node>
+                <node x="486.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_namespace</node>
+                <node x="2463.0" y="1491.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_activity</node>
+                <node x="51.55882352941171" y="115.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_almacen</node>
+                <node x="650.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_opclass</node>
+                <node x="0.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_session</node>
+                <node x="951.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_ts_template</node>
+                <node x="99.53676470588232" y="394.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_salida</node>
+                <node x="2622.0" y="2005.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_bgwriter</node>
+                <node x="2384.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_cast</node>
+                <node x="684.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_xact_user_tables</node>
+                <node x="1148.75" y="1796.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_productomedida</node>
+                <node x="1678.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_shdepend</node>
+                <node x="845.0" y="2005.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stats</node>
+                <node x="0.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_cursors</node>
+                <node x="3084.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_conversion</node>
+                <node x="2401.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_user</node>
+                <node x="1026.5" y="672.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_user_permissions</node>
+                <node x="2562.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_largeobject_metadata</node>
+                <node x="2408.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_available_extensions</node>
+                <node x="1041.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_user_mappings</node>
+                <node x="1026.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_xact_sys_tables</node>
+                <node x="0.0" y="2005.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_trigger</node>
+                <node x="0.0" y="1491.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_all_tables</node>
+                <node x="2138.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_all_indexes</node>
+                <node x="406.25" y="630.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detalleingreso</node>
+                <node x="2909.0" y="1491.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_locks</node>
+                <node x="308.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_foreign_server</node>
+                <node x="1368.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_xact_all_tables</node>
+                <node x="2196.0" y="2005.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_roles</node>
+                <node x="1710.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_sys_tables</node>
+                <node x="615.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_depend</node>
+                <node x="1048.0" y="1643.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_unidadmedicion</node>
+                <node x="971.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_available_extension_versions</node>
+                <node x="3395.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_extension</node>
+                <node x="2125.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_prepared_xacts</node>
+                <node x="1167.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_timezone_abbrevs</node>
+                <node x="2720.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_collation</node>
+                <node x="2858.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_attrdef</node>
+                <node x="1480.0" y="1491.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_index</node>
+                <node x="1940.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_all_indexes</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_groups" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_group">
+                  <point x="37.5" y="-46.0" />
+                  <point x="738.75" y="610.0" />
+                  <point x="787.5" y="610.0" />
+                  <point x="-25.0" y="35.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso">
+                  <point x="45.0" y="-77.5" />
+                  <point x="311.0" y="610.0" />
+                  <point x="409.36764705882354" y="610.0" />
+                  <point x="-35.0" y="56.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_producto" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_categoria">
+                  <point x="0.0" y="-67.0" />
+                  <point x="0.0" y="35.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_user_permissions" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+                  <point x="-52.25" y="-46.0" />
+                  <point x="1078.75" y="590.0" />
+                  <point x="943.0367647058823" y="590.0" />
+                  <point x="943.0367647058823" y="353.0" />
+                  <point x="721.5367647058823" y="353.0" />
+                  <point x="68.0" y="161.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_groups" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+                  <point x="-37.5" y="-46.0" />
+                  <point x="663.75" y="353.0" />
+                  <point x="653.5367647058823" y="353.0" />
+                  <point x="0.0" y="161.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_salida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+                  <point x="45.0" y="-77.5" />
+                  <point x="234.53676470588232" y="343.0" />
+                  <point x="517.5367647058823" y="343.0" />
+                  <point x="-136.0" y="161.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_group_permissions" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_group">
+                  <point x="-41.25" y="-46.0" />
+                  <point x="25.0" y="35.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_admin_log" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+                  <point x="-55.0" y="-98.5" />
+                  <point x="1008.5367647058823" y="343.0" />
+                  <point x="789.5367647058823" y="343.0" />
+                  <point x="136.0" y="161.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_salida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_almacen">
+                  <point x="-45.0" y="-77.5" />
+                  <point x="144.53676470588232" y="353.0" />
+                  <point x="151.3088235294117" y="353.0" />
+                  <point x="33.25" y="46.0" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detalleingreso" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso">
+                  <point x="0.0" y="-88.0" />
+                  <point x="506.25" y="610.0" />
+                  <point x="479.36764705882354" y="610.0" />
+                  <point x="35.0" y="56.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_user_permissions" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_permission">
+                  <point x="52.25" y="-46.0" />
+                  <point x="1183.25" y="610.0" />
+                  <point x="1298.5367647058824" y="610.0" />
+                  <point x="35.0" y="56.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_group_permissions" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_permission">
+                  <point x="41.25" y="-46.0" />
+                  <point x="920.0" y="600.0" />
+                  <point x="1228.5367647058824" y="600.0" />
+                  <point x="-35.0" y="56.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallesalida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_salida">
+                  <point x="0.0" y="-56.5" />
+                  <point x="78.0" y="610.0" />
+                  <point x="189.53676470588232" y="610.0" />
+                  <point x="0.0" y="77.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_permission" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_content_type">
+                  <point x="0.0" y="-56.5" />
+                  <point x="1263.5367647058824" y="353.0" />
+                  <point x="1227.0367647058824" y="353.0" />
+                  <point x="36.0" y="46.0" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_almacen">
+                  <point x="-45.0" y="-77.5" />
+                  <point x="221.0" y="600.0" />
+                  <point x="89.03676470588232" y="600.0" />
+                  <point x="89.03676470588232" y="353.0" />
+                  <point x="84.80882352941171" y="353.0" />
+                  <point x="-33.25" y="46.0" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_productomedida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_producto">
+                  <point x="45.75" y="-56.5" />
+                  <point x="1286.0" y="1771.0" />
+                  <point x="1342.0" y="1771.0" />
+                  <point x="0.0" y="67.0" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_productomedida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_unidadmedicion">
+                  <point x="-45.75" y="-56.5" />
+                  <point x="1194.5" y="1771.0" />
+                  <point x="1138.5" y="1771.0" />
+                  <point x="0.0" y="35.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+                  <point x="0.0" y="-56.5" />
+                  <point x="444.36764705882354" y="353.0" />
+                  <point x="585.5367647058823" y="353.0" />
+                  <point x="-68.0" y="161.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_admin_log" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_content_type">
+                  <point x="55.0" y="-98.5" />
+                  <point x="1118.5367647058824" y="353.0" />
+                  <point x="1155.0367647058824" y="353.0" />
+                  <point x="-36.0" y="46.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.9" x="136.22222222222177" y="3438.666666666668" />
+              <SelectedNodes>
+                <node>33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_migrations</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DATABASE/33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen" pinned="false" current-in-tab="false">
+        <entry file="uml://DATABASE/33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen</OriginalElement>
+              <nodes>
+                <node x="53.0" y="0.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user</node>
+                <node x="0.0" y="383.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_almacen</node>
+                <node x="153.0" y="373.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso</node>
+                <node x="54.75" y="536.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso">
+                  <point x="45.0" y="-77.5" />
+                  <point x="189.75" y="511.0" />
+                  <point x="223.0" y="511.0" />
+                  <point x="0.0" y="56.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_almacen">
+                  <point x="-45.0" y="-77.5" />
+                  <point x="99.75" y="511.0" />
+                  <point x="66.5" y="511.0" />
+                  <point x="0.0" y="46.0" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+                  <point x="0.0" y="-56.5" />
+                  <point x="0.0" y="161.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.6357243319268636" x="282.52212389380526" y="447.52212389380526" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DATABASE/33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_guiaremision" pinned="false" current-in-tab="false">
+        <entry file="uml://DATABASE/33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_guiaremision">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_guiaremision</OriginalElement>
+              <nodes>
+                <node x="416.8269230769231" y="142.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user</node>
+                <node x="585.6346153846154" y="730.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detalleingreso</node>
+                <node x="559.3269230769231" y="546.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso</node>
+                <node x="0.0" y="761.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallesalida</node>
+                <node x="225.0" y="951.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_proveedor</node>
+                <node x="719.3269230769231" y="556.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_user_permissions</node>
+                <node x="806.0769230769231" y="247.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_permission</node>
+                <node x="804.0769230769231" y="0.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_content_type</node>
+                <node x="55.0" y="257.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_almacen</node>
+                <node x="1199.076923076923" y="152.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_unidadmedicion</node>
+                <node x="130.63461538461542" y="525.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_salida</node>
+                <node x="993.0769230769231" y="121.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_producto</node>
+                <node x="0.0" y="951.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_guiaremision</node>
+                <node x="1014.5769230769231" y="0.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_categoria</node>
+                <node x="330.63461538461536" y="556.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_groups</node>
+                <node x="209.5" y="740.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen</node>
+                <node x="1096.326923076923" y="305.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_productomedida</node>
+                <node x="296.8269230769231" y="268.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_group</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_groups" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_group">
+                  <point x="-37.5" y="-46.0" />
+                  <point x="368.13461538461536" y="485.0" />
+                  <point x="346.8269230769231" y="485.0" />
+                  <point x="0.0" y="35.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso">
+                  <point x="45.0" y="-77.5" />
+                  <point x="344.5" y="710.0" />
+                  <point x="594.3269230769231" y="710.0" />
+                  <point x="-35.0" y="56.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_producto" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_categoria">
+                  <point x="0.0" y="-67.0" />
+                  <point x="0.0" y="35.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_user_permissions" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+                  <point x="-52.25" y="-46.0" />
+                  <point x="771.5769230769231" y="505.0" />
+                  <point x="714.3269230769231" y="505.0" />
+                  <point x="127.5" y="161.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_salida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+                  <point x="45.0" y="-77.5" />
+                  <point x="265.6346153846154" y="495.0" />
+                  <point x="459.3269230769231" y="495.0" />
+                  <point x="-127.5" y="161.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_groups" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+                  <point x="37.5" y="-46.0" />
+                  <point x="443.13461538461536" y="505.0" />
+                  <point x="544.3269230769231" y="505.0" />
+                  <point x="-42.5" y="161.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_user_permissions" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_permission">
+                  <point x="52.25" y="-46.0" />
+                  <point x="0.0" y="56.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detalleingreso" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso">
+                  <point x="0.0" y="-88.0" />
+                  <point x="685.6346153846154" y="710.0" />
+                  <point x="664.3269230769231" y="710.0" />
+                  <point x="35.0" y="56.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_salida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_almacen">
+                  <point x="-45.0" y="-77.5" />
+                  <point x="175.63461538461542" y="505.0" />
+                  <point x="154.75" y="505.0" />
+                  <point x="33.25" y="46.0" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallesalida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_salida">
+                  <point x="0.0" y="-56.5" />
+                  <point x="78.0" y="710.0" />
+                  <point x="220.63461538461542" y="710.0" />
+                  <point x="0.0" y="77.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_permission" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_content_type">
+                  <point x="0.0" y="-56.5" />
+                  <point x="0.0" y="46.0" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_almacen">
+                  <point x="-45.0" y="-77.5" />
+                  <point x="254.5" y="700.0" />
+                  <point x="98.82692307692304" y="700.0" />
+                  <point x="98.82692307692304" y="505.0" />
+                  <point x="88.25" y="505.0" />
+                  <point x="-33.25" y="46.0" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_productomedida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_unidadmedicion">
+                  <point x="45.75" y="-56.5" />
+                  <point x="1233.576923076923" y="280.0" />
+                  <point x="1289.576923076923" y="280.0" />
+                  <point x="0.0" y="35.5" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_productomedida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_producto">
+                  <point x="-45.75" y="-56.5" />
+                  <point x="1142.076923076923" y="280.0" />
+                  <point x="1086.076923076923" y="280.0" />
+                  <point x="0.0" y="67.0" />
+                </edge>
+                <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+                  <point x="0.0" y="-56.5" />
+                  <point x="42.5" y="161.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.2648108493932905" x="896.3072776280322" y="605.8679245283018" />
+              <SelectedNodes>
+                <node>33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_guiaremision</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="local.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Teletak/settings/local.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/productos/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/almacen/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Html5" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/templates/producto/index.html" />
+        <option value="$PROJECT_DIR$/Teletak/settings/base.py" />
+        <option value="$PROJECT_DIR$/templates/productos/listar_trabajadores.html" />
+        <option value="$PROJECT_DIR$/templates/producto/confirm_delete_productos.html" />
+        <option value="$PROJECT_DIR$/templates/configuracion/nuevo_trabajador.html" />
+        <option value="$PROJECT_DIR$/Teletak/urls.py" />
+        <option value="$PROJECT_DIR$/apps/usuarios/views.py" />
+        <option value="$PROJECT_DIR$/apps/almacen/views.py" />
+        <option value="$PROJECT_DIR$/apps/usuarios/urls.py" />
+        <option value="$PROJECT_DIR$/apps/modelsimported.py" />
+        <option value="$PROJECT_DIR$/apps/usuarios/models.py" />
+        <option value="$PROJECT_DIR$/templates/login/index.html" />
+        <option value="$PROJECT_DIR$/templates/almacen/index.html" />
+        <option value="$PROJECT_DIR$/apps/productos/urls.py" />
+        <option value="$PROJECT_DIR$/templates/productos/listar_productos.html" />
+        <option value="$PROJECT_DIR$/apps/productos/views.py" />
+        <option value="$PROJECT_DIR$/templates/configuracion/confirm_delete_trabajador.html" />
+        <option value="$PROJECT_DIR$/templates/productos/confirm_delete_producto.html" />
+        <option value="$PROJECT_DIR$/templates/productos/index.html" />
+        <option value="$PROJECT_DIR$/templates/productos/nuevo_producto.html" />
+        <option value="$PROJECT_DIR$/templates/productos/editar_producto.html" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/apps/productos/models.py" />
+        <option value="$PROJECT_DIR$/apps/productos/admin.py" />
+=======
+        <option value="$PROJECT_DIR$/Teletak/settings/local.py" />
+        <option value="$PROJECT_DIR$/apps/productos/models.py" />
+        <option value="$PROJECT_DIR$/apps/productos/forms.py" />
+        <option value="$PROJECT_DIR$/apps/productos/admin.py" />
+        <option value="$PROJECT_DIR$/apps/almacen/admin.py" />
+        <option value="$PROJECT_DIR$/apps/almacen/models.py" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+<<<<<<< HEAD
+    <option name="x" value="-2" />
+    <option name="y" value="27" />
+    <option name="width" value="1370" />
+    <option name="height" value="743" />
+=======
+    <option name="x" value="-1" />
+    <option name="y" value="30" />
+    <option name="width" value="1602" />
+    <option name="height" value="871" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="productos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configuracion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="almacen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="usuarios" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="productos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="almacen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+<<<<<<< HEAD
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Teletak/settings/local.py" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/configuracion" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django server.Unnamed">
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Teletak" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/virtualenv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Teletak" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Teletak" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Teletak" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Teletak" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Teletak" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Teletak" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Teletak" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unnamed" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Teletak.settings.local" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/virtualenv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Teletak" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Django server.Unnamed" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9d85c8d6-ff0d-4acd-a0a7-81f18414a5bf" name="Default" comment="" />
+      <created>1434255001013</created>
+      <option name="number" value="Default" />
+      <updated>1434255001013</updated>
+    </task>
+    <task id="LOCAL-00001" summary="HOY GANAMOS">
+      <created>1434660392812</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1434660392812</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="-2" y="27" width="1370" height="743" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11226766" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.49739778" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5055762" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32569557" sideWeight="0.49739778" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32741934" sideWeight="0.4959108" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2394822" sideWeight="0.4944238" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+=======
+    <frame x="-1" y="30" width="1602" height="871" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24206349" sideWeight="0.4944238" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5055762" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.4959108" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@Teletak" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.49739778" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2618742" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32569557" sideWeight="0.49739778" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17512275" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.49739778" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5055762" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32569557" sideWeight="0.49739778" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.4959108" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2394822" sideWeight="0.4944238" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25947955" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17512275" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="HOY GANAMOS" />
+    <option name="LAST_COMMIT_MESSAGE" value="HOY GANAMOS" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+    <entry file="file://$PROJECT_DIR$/templates/login/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/configuracion/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/estilos.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Teletak/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$USER_HOME$/django-dev/local/lib/python2.7/site-packages/django/db/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.06">
+=======
+    <entry file="file://$PROJECT_DIR$/apps/almacen/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/apps/almacen/tests.py">
+=======
+    <entry file="file://$PROJECT_DIR$/apps/usuarios/admin.py">
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/Teletak/settings/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3090909">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+    <entry file="file://$PROJECT_DIR$/apps/almacen/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38636363">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$USER_HOME$/django-dev/local/lib/python2.7/site-packages/django/views/generic/edit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3318182">
+          <caret line="320" column="6" selection-start-line="320" selection-start-column="6" selection-end-line="320" selection-end-column="6" />
+=======
+    <entry file="file://$PROJECT_DIR$/Teletak/mixins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/configuracion/listar_trabajadores.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1943128">
+          <caret line="42" column="84" selection-start-line="42" selection-start-column="76" selection-end-line="42" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/configuracion/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1279621">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/productos/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/modelsimported.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/almacen/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/productos/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/productos/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3908046">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1100245">
+          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/almacen/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34991422">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+<<<<<<< HEAD
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/django-dev/local/lib/python2.7/site-packages/django/views/generic/list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6792453">
+          <caret line="206" column="6" selection-start-line="206" selection-start-column="6" selection-end-line="206" selection-end-column="6" />
+=======
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/usuarios/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.17495711">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/almacen/migrations/0002_auto_20150614_0411.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/almacen/migrations/0003_auto_20150614_0411.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Teletak/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/almacen/migrations/0004_auto_20150619_0326.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/usuarios/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.02915952">
+          <caret line="2" column="90" selection-start-line="2" selection-start-column="90" selection-end-line="2" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/configuracion/editar_trabajador.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.411131">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/usuarios/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/productos/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="79" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/configuracion/nuevo_trabajador.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20782396">
+          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/configuracion/confirm_delete_trabajador.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24938875">
+          <caret line="6" column="64" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/productos/confirm_delete_producto.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/productos/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/productos/listar_productos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/productos/nuevo_producto.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="-0.3207547">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/productos/editar_producto.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/almacen/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.20782396">
+          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/almacen/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.24938875">
+          <caret line="6" column="64" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="64" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Teletak/settings/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/usuarios/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.5022625">
+          <caret line="93" column="15" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="15" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/almacen/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.34615386">
+=======
+        <state vertical-scroll-proportion="0.0">
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="26" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/almacen/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03846154">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Teletak/settings/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.03846154">
+          <caret line="45" column="45" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="33" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Teletak/settings/local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+=======
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/apps/productos/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.84615386">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+=======
+    <entry file="file://$PROJECT_DIR$/apps/modelsimported.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/productos/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/productos/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="79" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/productos/editar_producto.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.333333">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/productos/nuevo_producto.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.740741">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/apps/productos/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34615386">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+=======
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3333334">
+          <caret line="35" column="78" selection-start-line="35" selection-start-column="78" selection-end-line="35" selection-end-column="78" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/apps/usuarios/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+=======
+    <entry file="dbDummy://dbtable:/6083799e/33521067-56c7-4ff0-895d-716fe0ce49b2/teletak.public.productos_productomedida_id_seq">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/productos/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/almacen/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/productos/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Teletak/settings/local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/apps/usuarios/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30769232">
+          <caret line="23" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+=======
+    <entry file="uml://DATABASE/33521067-56c7-4ff0-895d-716fe0ce49b2">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>33521067-56c7-4ff0-895d-716fe0ce49b2</OriginalElement>
+          <nodes>
+            <node x="1579.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_amproc</node>
+            <node x="2384.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_largeobject</node>
+            <node x="1154.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_user_indexes</node>
+            <node x="271.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_range</node>
+            <node x="2891.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_seclabel</node>
+            <node x="0.0" y="661.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallesalida</node>
+            <node x="1457.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_ts_config</node>
+            <node x="2000.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_foreign_table</node>
+            <node x="888.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_database_conflicts</node>
+            <node x="3073.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_description</node>
+            <node x="1602.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_user_mapping</node>
+            <node x="2750.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_pltemplate</node>
+            <node x="1378.5367647058824" y="0.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_type</node>
+            <node x="433.0" y="2005.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_replication</node>
+            <node x="1416.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_sys_indexes</node>
+            <node x="3010.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_aggregate</node>
+            <node x="1801.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_inherits</node>
+            <node x="1767.0" y="2005.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_database</node>
+            <node x="176.0" y="640.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen</node>
+            <node x="3087.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_rewrite</node>
+            <node x="716.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_group</node>
+            <node x="3299.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_event_trigger</node>
+            <node x="953.5367647058823" y="373.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_admin_log</node>
+            <node x="1208.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_tablespace</node>
+            <node x="407.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_views</node>
+            <node x="1385.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_enum</node>
+            <node x="1992.0" y="1491.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_settings</node>
+            <node x="265.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_proveedor</node>
+            <node x="1119.0367647058824" y="115.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_content_type</node>
+            <node x="679.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_rules</node>
+            <node x="626.25" y="672.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_groups</node>
+            <node x="3497.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_auth_members</node>
+            <node x="2427.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_foreign_data_wrapper</node>
+            <node x="2640.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_prepared_statements</node>
+            <node x="3285.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_shseclabel</node>
+            <node x="0.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_all_tables</node>
+            <node x="3123.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_sys_sequences</node>
+            <node x="2577.0" y="851.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_sys_tables</node>
+            <node x="945.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_db_role_setting</node>
+            <node x="2052.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_shadow</node>
+            <node x="1574.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_user_indexes</node>
+            <node x="2915.5367647058824" y="0.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_class</node>
+            <node x="2202.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_guiaremision</node>
+            <node x="3056.0" y="2005.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_authid</node>
+            <node x="1270.5" y="1491.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_categoria</node>
+            <node x="327.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_amop</node>
+            <node x="1856.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_sys_indexes</node>
+            <node x="710.0" y="851.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statistic</node>
+            <node x="2420.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_matviews</node>
+            <node x="0.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_language</node>
+            <node x="3345.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_all_sequences</node>
+            <node x="796.25" y="672.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_group_permissions</node>
+            <node x="1287.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_indexes</node>
+            <node x="2752.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_tables</node>
+            <node x="0.0" y="851.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_proc</node>
+            <node x="1368.0" y="851.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_constraint</node>
+            <node x="1249.0" y="1612.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_producto</node>
+            <node x="542.0" y="1491.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_database</node>
+            <node x="535.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_xact_user_functions</node>
+            <node x="2147.5367647058824" y="0.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_am</node>
+            <node x="1705.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_opfamily</node>
+            <node x="788.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_user_functions</node>
+            <node x="2639.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_ts_config_map</node>
+            <node x="0.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_ts_parser</node>
+            <node x="1193.5367647058824" y="415.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_permission</node>
+            <node x="1317.0" y="2005.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_operator</node>
+            <node x="3119.0" y="851.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_user_tables</node>
+            <node x="0.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_user_sequences</node>
+            <node x="2192.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_shdescription</node>
+            <node x="1945.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_default_acl</node>
+            <node x="1853.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_ts_dict</node>
+            <node x="2019.0" y="851.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_attribute</node>
+            <node x="762.5" y="436.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_group</node>
+            <node x="483.5367647058823" y="0.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user</node>
+            <node x="222.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_migrations</node>
+            <node x="374.36764705882354" y="415.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso</node>
+            <node x="342.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_user_tables</node>
+            <node x="1282.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_seclabels</node>
+            <node x="2177.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_timezone_names</node>
+            <node x="486.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_namespace</node>
+            <node x="2463.0" y="1491.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_activity</node>
+            <node x="51.55882352941171" y="115.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_almacen</node>
+            <node x="650.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_opclass</node>
+            <node x="0.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_session</node>
+            <node x="951.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_ts_template</node>
+            <node x="99.53676470588232" y="394.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_salida</node>
+            <node x="2622.0" y="2005.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_bgwriter</node>
+            <node x="2384.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_cast</node>
+            <node x="684.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_xact_user_tables</node>
+            <node x="1148.75" y="1796.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_productomedida</node>
+            <node x="1678.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_shdepend</node>
+            <node x="845.0" y="2005.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stats</node>
+            <node x="0.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_cursors</node>
+            <node x="3084.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_conversion</node>
+            <node x="2401.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_user</node>
+            <node x="1026.5" y="672.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_user_permissions</node>
+            <node x="2562.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_largeobject_metadata</node>
+            <node x="2408.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_available_extensions</node>
+            <node x="1041.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_user_mappings</node>
+            <node x="1026.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_xact_sys_tables</node>
+            <node x="0.0" y="2005.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_trigger</node>
+            <node x="0.0" y="1491.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_all_tables</node>
+            <node x="2138.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_all_indexes</node>
+            <node x="406.25" y="630.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detalleingreso</node>
+            <node x="2909.0" y="1491.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_locks</node>
+            <node x="308.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_foreign_server</node>
+            <node x="1368.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_stat_xact_all_tables</node>
+            <node x="2196.0" y="2005.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_roles</node>
+            <node x="1710.0" y="2393.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_sys_tables</node>
+            <node x="615.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_depend</node>
+            <node x="1048.0" y="1643.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_unidadmedicion</node>
+            <node x="971.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_available_extension_versions</node>
+            <node x="3395.0" y="2697.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_extension</node>
+            <node x="2125.0" y="3158.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_prepared_xacts</node>
+            <node x="1167.0" y="3535.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_timezone_abbrevs</node>
+            <node x="2720.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_collation</node>
+            <node x="2858.0" y="3357.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_attrdef</node>
+            <node x="1480.0" y="1491.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_index</node>
+            <node x="1940.0" y="2938.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.pg_catalog.pg_statio_all_indexes</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_groups" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_group">
+              <point x="37.5" y="-46.0" />
+              <point x="738.75" y="610.0" />
+              <point x="787.5" y="610.0" />
+              <point x="-25.0" y="35.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso">
+              <point x="45.0" y="-77.5" />
+              <point x="311.0" y="610.0" />
+              <point x="409.36764705882354" y="610.0" />
+              <point x="-35.0" y="56.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_producto" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_categoria">
+              <point x="0.0" y="-67.0" />
+              <point x="0.0" y="35.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_user_permissions" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+              <point x="-52.25" y="-46.0" />
+              <point x="1078.75" y="590.0" />
+              <point x="943.0367647058823" y="590.0" />
+              <point x="943.0367647058823" y="353.0" />
+              <point x="721.5367647058823" y="353.0" />
+              <point x="68.0" y="161.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_groups" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+              <point x="-37.5" y="-46.0" />
+              <point x="663.75" y="353.0" />
+              <point x="653.5367647058823" y="353.0" />
+              <point x="0.0" y="161.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_salida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+              <point x="45.0" y="-77.5" />
+              <point x="234.53676470588232" y="343.0" />
+              <point x="517.5367647058823" y="343.0" />
+              <point x="-136.0" y="161.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_group_permissions" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_group">
+              <point x="-41.25" y="-46.0" />
+              <point x="25.0" y="35.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_admin_log" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+              <point x="-55.0" y="-98.5" />
+              <point x="1008.5367647058823" y="343.0" />
+              <point x="789.5367647058823" y="343.0" />
+              <point x="136.0" y="161.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_salida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_almacen">
+              <point x="-45.0" y="-77.5" />
+              <point x="144.53676470588232" y="353.0" />
+              <point x="151.3088235294117" y="353.0" />
+              <point x="33.25" y="46.0" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detalleingreso" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso">
+              <point x="0.0" y="-88.0" />
+              <point x="506.25" y="610.0" />
+              <point x="479.36764705882354" y="610.0" />
+              <point x="35.0" y="56.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_user_permissions" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_permission">
+              <point x="52.25" y="-46.0" />
+              <point x="1183.25" y="610.0" />
+              <point x="1298.5367647058824" y="610.0" />
+              <point x="35.0" y="56.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_group_permissions" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_permission">
+              <point x="41.25" y="-46.0" />
+              <point x="920.0" y="600.0" />
+              <point x="1228.5367647058824" y="600.0" />
+              <point x="-35.0" y="56.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallesalida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_salida">
+              <point x="0.0" y="-56.5" />
+              <point x="78.0" y="610.0" />
+              <point x="189.53676470588232" y="610.0" />
+              <point x="0.0" y="77.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_permission" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_content_type">
+              <point x="0.0" y="-56.5" />
+              <point x="1263.5367647058824" y="353.0" />
+              <point x="1227.0367647058824" y="353.0" />
+              <point x="36.0" y="46.0" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_almacen">
+              <point x="-45.0" y="-77.5" />
+              <point x="221.0" y="600.0" />
+              <point x="89.03676470588232" y="600.0" />
+              <point x="89.03676470588232" y="353.0" />
+              <point x="84.80882352941171" y="353.0" />
+              <point x="-33.25" y="46.0" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_productomedida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_producto">
+              <point x="45.75" y="-56.5" />
+              <point x="1286.0" y="1771.0" />
+              <point x="1342.0" y="1771.0" />
+              <point x="0.0" y="67.0" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_productomedida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_unidadmedicion">
+              <point x="-45.75" y="-56.5" />
+              <point x="1194.5" y="1771.0" />
+              <point x="1138.5" y="1771.0" />
+              <point x="0.0" y="35.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+              <point x="0.0" y="-56.5" />
+              <point x="444.36764705882354" y="353.0" />
+              <point x="585.5367647058823" y="353.0" />
+              <point x="-68.0" y="161.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_admin_log" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_content_type">
+              <point x="55.0" y="-98.5" />
+              <point x="1118.5367647058824" y="353.0" />
+              <point x="1155.0367647058824" y="353.0" />
+              <point x="-36.0" y="46.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.9" x="136.22222222222177" y="3438.666666666668" />
+          <SelectedNodes>
+            <node>33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_migrations</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen</OriginalElement>
+          <nodes>
+            <node x="53.0" y="0.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user</node>
+            <node x="0.0" y="383.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_almacen</node>
+            <node x="153.0" y="373.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso</node>
+            <node x="54.75" y="536.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso">
+              <point x="45.0" y="-77.5" />
+              <point x="189.75" y="511.0" />
+              <point x="223.0" y="511.0" />
+              <point x="0.0" y="56.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_almacen">
+              <point x="-45.0" y="-77.5" />
+              <point x="99.75" y="511.0" />
+              <point x="66.5" y="511.0" />
+              <point x="0.0" y="46.0" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+              <point x="0.0" y="-56.5" />
+              <point x="0.0" y="161.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.6357243319268636" x="282.52212389380526" y="447.52212389380526" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_guiaremision">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_guiaremision</OriginalElement>
+          <nodes>
+            <node x="416.8269230769231" y="142.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user</node>
+            <node x="585.6346153846154" y="730.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detalleingreso</node>
+            <node x="559.3269230769231" y="546.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso</node>
+            <node x="0.0" y="761.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallesalida</node>
+            <node x="225.0" y="951.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_proveedor</node>
+            <node x="719.3269230769231" y="556.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_user_permissions</node>
+            <node x="806.0769230769231" y="247.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_permission</node>
+            <node x="804.0769230769231" y="0.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_content_type</node>
+            <node x="55.0" y="257.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_almacen</node>
+            <node x="1199.076923076923" y="152.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_unidadmedicion</node>
+            <node x="130.63461538461542" y="525.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_salida</node>
+            <node x="993.0769230769231" y="121.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_producto</node>
+            <node x="0.0" y="951.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_guiaremision</node>
+            <node x="1014.5769230769231" y="0.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_categoria</node>
+            <node x="330.63461538461536" y="556.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_groups</node>
+            <node x="209.5" y="740.5">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen</node>
+            <node x="1096.326923076923" y="305.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_productomedida</node>
+            <node x="296.8269230769231" y="268.0">33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_group</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_groups" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_group">
+              <point x="-37.5" y="-46.0" />
+              <point x="368.13461538461536" y="485.0" />
+              <point x="346.8269230769231" y="485.0" />
+              <point x="0.0" y="35.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso">
+              <point x="45.0" y="-77.5" />
+              <point x="344.5" y="710.0" />
+              <point x="594.3269230769231" y="710.0" />
+              <point x="-35.0" y="56.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_producto" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_categoria">
+              <point x="0.0" y="-67.0" />
+              <point x="0.0" y="35.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_user_permissions" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+              <point x="-52.25" y="-46.0" />
+              <point x="771.5769230769231" y="505.0" />
+              <point x="714.3269230769231" y="505.0" />
+              <point x="127.5" y="161.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_salida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+              <point x="45.0" y="-77.5" />
+              <point x="265.6346153846154" y="495.0" />
+              <point x="459.3269230769231" y="495.0" />
+              <point x="-127.5" y="161.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_groups" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+              <point x="37.5" y="-46.0" />
+              <point x="443.13461538461536" y="505.0" />
+              <point x="544.3269230769231" y="505.0" />
+              <point x="-42.5" y="161.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user_user_permissions" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_permission">
+              <point x="52.25" y="-46.0" />
+              <point x="0.0" y="56.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detalleingreso" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso">
+              <point x="0.0" y="-88.0" />
+              <point x="685.6346153846154" y="710.0" />
+              <point x="664.3269230769231" y="710.0" />
+              <point x="35.0" y="56.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_salida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_almacen">
+              <point x="-45.0" y="-77.5" />
+              <point x="175.63461538461542" y="505.0" />
+              <point x="154.75" y="505.0" />
+              <point x="33.25" y="46.0" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallesalida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_salida">
+              <point x="0.0" y="-56.5" />
+              <point x="78.0" y="710.0" />
+              <point x="220.63461538461542" y="710.0" />
+              <point x="0.0" y="77.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.auth_permission" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.django_content_type">
+              <point x="0.0" y="-56.5" />
+              <point x="0.0" y="46.0" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_detallealmacen" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_almacen">
+              <point x="-45.0" y="-77.5" />
+              <point x="254.5" y="700.0" />
+              <point x="98.82692307692304" y="700.0" />
+              <point x="98.82692307692304" y="505.0" />
+              <point x="88.25" y="505.0" />
+              <point x="-33.25" y="46.0" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_productomedida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_unidadmedicion">
+              <point x="45.75" y="-56.5" />
+              <point x="1233.576923076923" y="280.0" />
+              <point x="1289.576923076923" y="280.0" />
+              <point x="0.0" y="35.5" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_productomedida" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.productos_producto">
+              <point x="-45.75" y="-56.5" />
+              <point x="1142.076923076923" y="280.0" />
+              <point x="1086.076923076923" y="280.0" />
+              <point x="0.0" y="67.0" />
+            </edge>
+            <edge source="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_ingreso" target="33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.usuarios_user">
+              <point x="0.0" y="-56.5" />
+              <point x="42.5" y="161.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.2648108493932905" x="896.3072776280322" y="605.8679245283018" />
+          <SelectedNodes>
+            <node>33521067-56c7-4ff0-895d-716fe0ce49b2.table:teletak.public.almacen_guiaremision</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/productos/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="78" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="78" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/Teletak/mixins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.115384616">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/productos/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34615386">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/apps/almacen/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/almacen/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41336116">
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+>>>>>>> 7be23992e9c4bcb154425c64aa8886f6563f6a45
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -2,7 +2,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 
-
 class UserManager(BaseUserManager):
     def _create_user(self, username, email, password, is_staff,
                      is_superuser, **extra_fields):
@@ -51,7 +50,6 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     objects = UserManager()
     USERNAME_FIELD = 'username'
-
     REQUIRED_FIELDS = ['email']
 
     def get_short_name(self):

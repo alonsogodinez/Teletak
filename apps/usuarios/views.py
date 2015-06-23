@@ -18,8 +18,6 @@ class LoginRequiredMixin(object):
     def dispatch(self, *args, **kwargs):
         return super(LoginRequiredMixin, self).dispatch(*args, **kwargs)
 
-
-
 class AdminPermissionRequiredMixin(object):
 
     def get(self,request):
@@ -27,7 +25,6 @@ class AdminPermissionRequiredMixin(object):
             return render(request, self.template_name)
         messages.info(request, 'No tienes acceso a este módulo')
         return redirect('/')
-
 
 class Login(View):
 
@@ -68,8 +65,6 @@ class Configuracion(AdminPermissionRequiredMixin,TemplateView):
     template_name = 'configuracion/index.html'
 
 
-
-
 class RegistrarTrabajador(LoginRequiredMixin,SuccessMessageMixin,CreateView):
 
     model = User
@@ -87,7 +82,6 @@ class RegistrarTrabajador(LoginRequiredMixin,SuccessMessageMixin,CreateView):
 
 
 class ListarTrabajadores(LoginRequiredMixin,ListView):
-
     queryset = User.objects.all()
     template_name = 'configuracion/listar_trabajadores.html'
 

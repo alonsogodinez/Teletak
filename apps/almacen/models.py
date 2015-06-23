@@ -2,12 +2,13 @@ from django.db import models
 from apps.usuarios.models import User
 from apps.productos.models import Producto
 
-
-
 class Proveedor(models.Model):
     ruc = models.CharField(max_length=10,primary_key=True)
     nombre = models.CharField(max_length=30)
     direccion = models.CharField(max_length=30)
+
+    class Meta:
+        verbose_name_plural = "Proveedores"
 
 class GuiaRemision(models.Model):
     fecha_traslado = models.DateField()
@@ -15,8 +16,9 @@ class GuiaRemision(models.Model):
     nro_guia_remitente = models.CharField(max_length=15)
     placa_vehiculo = models.CharField(max_length=10)
     licencia_conducir = models.CharField(max_length=15)
-    ruc_proveedor = models.ForeignKey(Proveedor,blank=True,null=True)
 
+    class Meta:
+        verbose_name_plural = "Guias de remision"
 
 class Ingreso(models.Model):
     dni_usuario = models.ForeignKey(User, blank=True, null=True)
@@ -35,7 +37,7 @@ class DetalleIngreso(models.Model):
 
 class Almacen(models.Model):
     ubicacion = models.CharField(max_length=50, blank=True, null=True)
-    capacidad = models.IntegerField()
+    capacidad = models.IntegerField(blank=True,null=True)
 
     class Meta:
         verbose_name_plural = "Almacenes"
@@ -61,6 +63,3 @@ class DetalleSalida(models.Model):
     codigo_producto = models.ForeignKey(Producto, blank=True, null=True)
     id_salida = models.ForeignKey(Salida, blank=True, null=True)
     cantidad = models.IntegerField(blank=True, null=True)
-
-
-# guia de remision - campo proveedores

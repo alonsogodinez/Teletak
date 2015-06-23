@@ -13,7 +13,6 @@ class LoginRequiredMixin(object):
 class Index(LoginRequiredMixin, View):
 
     template_name = 'almacen/index.html'
-
     def get(self, request):
         return render(request, self.template_name)
 
