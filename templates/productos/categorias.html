@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <div class="table-responsive">
+        <form action="/productos/categoria" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit"/>
+        </form>
+        <table class="table table-striped ">
+            {% load static from staticfiles %}
+            <thead>
+                <tr  align="center">
+                    <td width="80%">Listado de Categorias</td>
+                    <td width="20%">Opciones</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in categoria %}
+                <tr valign="middle" class="{{forloop.counter|divisibleby:2|yesno:'even,odd'}}">
+                    <td align="center">{{ item.nombre }}</td>
+                    <td align="center">
+                        <a href="" class="btn btn-info">Editar</a>
+                        <a href=""  data-toggle="modal" data-target="#delete-modal" class="btn btn-danger btn-delete">Eliminar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+{% endblock %}

@@ -11,3 +11,7 @@ class ProductoForm(forms.ModelForm):
         model = Producto
         fields = ('sap','descripcion','categoria','stock_minimo',)
 
+class CategoriaForm(forms.ModelForm):
+    class Meta:
+        model = Categoria
+        fields = ['nombre',]

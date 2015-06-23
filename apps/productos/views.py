@@ -4,8 +4,8 @@ from django.utils.decorators import method_decorator
 from django.views.generic import View, CreateView, ListView, UpdateView, DeleteView
 from Teletak.mixins import SuccessMessageMixin
 from django.http import HttpResponse,HttpResponseRedirect
-from .forms import ProductoForm
-from .models import Producto
+from .forms import *
+from .models import *
 from django.template.context import RequestContext
 
 class LoginRequiredMixin(object):
@@ -64,3 +64,24 @@ class EditarProducto(SuccessMessageMixin,UpdateView):
     success_url = '/productos/listar'
     template_name= 'productos/editar_producto.html'
     success_message = 'Los datos se actualizaron correctamente'
+
+class Categorias(View,LoginRequiredMixin):
+    def get(self,request, *args, **kwargs):
+        categoria = Categoria.objects.all()
+        form = CategoriaForm
+        return render_to_response('productos/categorias.html',locals(),context_instance=RequestContext(self.request))
+    def post(self,request):
+        form = CategoriaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/productos/categoria")
+        else:
+            return render(request, self.template_name, {'form': form, 'error': 'Verifique los datos ingresados'})
+    def update(self,request):
+        pass
+
+class UnidadMedidaProducto(View,LoginRequiredMixin):
+    def get(self):
+        pass
+    def post(self):
+        pass
