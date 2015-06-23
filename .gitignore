@@ -1,3 +1,2 @@
 *.pyc
-Teletak/settings/local.py
 apps/*/migrations
