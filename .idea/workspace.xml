@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4abeee97-c5ca-42d3-91cb-d25b29e75d27" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/almacen/operaciones/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/operaciones/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/estilos.css" afterPath="$PROJECT_DIR$/static/css/estilos.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/almacen/index.html" afterPath="$PROJECT_DIR$/templates/almacen/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teletak/settings/local.py" afterPath="$PROJECT_DIR$/Teletak/settings/local.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/almacen/urls.py" afterPath="$PROJECT_DIR$/apps/almacen/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/almacen/views.py" afterPath="$PROJECT_DIR$/apps/almacen/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="9444596f-7d05-4e1f-bb88-ade04f83be90" name="New changelist" comment="" />
