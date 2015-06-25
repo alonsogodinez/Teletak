@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^login/', Login.as_view()),
     url(r'^logout/', Logout.as_view()),
-    url(r'^',include('apps.almacen.urls',namespace='almacen')),
+    url(r'^',include('apps.almacen.urls', namespace='almacen')),
     url(r'^usuarios/',include('apps.usuarios.urls',namespace='usuarios')),
     url(r'^productos/',include('apps.productos.urls',namespace='productos')),
 
