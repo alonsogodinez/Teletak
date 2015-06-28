@@ -2,3 +2,4 @@
 Teletak/settings/local.py
 apps/*/migrations
 .idea/
+.idea/workspace.xml
