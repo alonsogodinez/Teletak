@@ -24,11 +24,11 @@ body {
 
 
 td .btn-info {
-    background-color: #64C1DD;
+    background-color: #00C4FF;
 }
 
 td .btn-danger{
-    background-color:#E26864
+    background-color:#E74F4A
 }
 
 .alert{
@@ -53,10 +53,12 @@ td .btn-danger{
 
 .breadcrumb{
     background-color: #f8f8f8;
+    border-radius: 0;
+    padding: 5px 15px;
     position:fixed;
     width: 100%;
     z-index: 2;
-    border-radius: 0;
+    box-shadow: 2px 2px 3px #69717E;
 }
 
 .btn:focus, .btn:active, .btn:active:focus {
@@ -98,7 +100,9 @@ td .btn-danger{
     width: 100%;
     color:white;
     /*background-color: #249fee;*/
-    background-color: rgba(36, 159, 238, 0.24);
+    /*background-color: rgba(36, 159, 238, 0.24);*/
+    background-color: rgba(87, 96, 102, 0.2);
+    border-top: 3px solid rgba(148, 138, 138, 0.06);
 }
 .form-field{
     padding-bottom:15px;
@@ -110,6 +114,26 @@ td .btn-danger{
 .form-label{
     color:white;
 }
+
+.form-panel{
+    margin-top: 65px;
+}
+
+.form-panel > .panel-body{
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+.form-subtitle{
+    font-size: 2em;
+    color: #697b88;
+}
+
+.input-group-addon.glyphicon{
+    top:0;
+}
+
 .module:hover .glyphicon::before{
     -webkit-transition: -webkit-transform .4s ease ;
     -moz-transition: -moz-transform .4s ease;
@@ -210,6 +234,9 @@ td .btn-danger{
 
 }
 
+.navbar-default{
+    border-bottom: 3px solid #4b5162;
+}
 /*.navbar-nav>li>a{*/
     /*padding-top: 20px;*/
     /*padding-bottom: 20px;*/
@@ -222,13 +249,27 @@ td .btn-danger{
 
 /*}*/
 
+.panel{
+    border:none;
+    box-shadow: 2px 2px 4px #707274;
+}
+
+.submit-row {
+    background-color: #6191b0;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 .table-striped{
    background: rgb(40, 98, 137);
     color:white;
+      border-radius: 10px;
+  box-shadow: 3px 2px 2px 1px rgba(75, 82, 84, 0.67);
 }
 
 .table-striped>thead>tr{
-    border-bottom: 6px solid rgba(77, 202, 196, 0.62);
+    border-bottom: 6px solid #4b5162;
 }
 
 .table-striped>tbody>tr:nth-of-type(odd){
@@ -240,6 +281,13 @@ td .btn-danger{
 @media screen and (max-width: 767px) {
     .contenedor-modulos{
         padding: 7em 25px;
+    }
+}
+
+@media (min-width:768px){
+
+    .submit-row {
+        padding-left: 33.33%;
     }
 }
 
