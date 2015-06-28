@@ -26,7 +26,7 @@
              </div>
             <!-- <p class=" navbar-text pull-right  hidden-sm hidden-xs logged"><a href="#" class="navbar-link">Alonso</a></p> -->
              <div class="navbar-collapse collapse hola navbar-ex1-collapse">
-                <ul class="nav navbar-nav navbar-right hidden-xs">
+                <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             Bienvenido
@@ -34,13 +34,17 @@
                             <strong>{{ user.username }}</strong>
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu" id="logout" role="menu">
-                            <li class="text-center"><a href="/logout">Cerrar Sesión</a></li>
+                            <li ><a href="/logout">Cerrar Sesión</a></li>
                             </ul>
                     </li>
                 </ul>
             </div>
          </div>
     </div>
+
+    {% block breadcrumb %}
+    {% endblock %}
+
     {% block content %}
     {% endblock %}
 

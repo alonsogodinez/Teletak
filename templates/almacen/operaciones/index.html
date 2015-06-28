@@ -1,4 +1,12 @@
 {% extends 'base.html' %}
+
+{%  block breadcrumb %}
+    <ol class="breadcrumb">
+        <li ><a href="{%  url 'almacen:index' %}">Inicio</a></li>
+        <li class="active">Almacén</li>
+    </ol>
+{% endblock %}
+
 {% block content %}
     <div class="contenedor-operaciones">
         <div class="row">

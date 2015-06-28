@@ -13,13 +13,12 @@ a:visited,a:hover, a:active, a:focus{
     text-decoration: none;
 }
 
-
 body {
     /*background: #5B7E90;*/
     background-image: url('../img/fondo.png');
     background-size: cover;
     margin-bottom: 60px;
-    margin-top: 60px;
+    margin-top: 50px;
 
 }
 
@@ -51,6 +50,15 @@ td .btn-danger{
     -o-transition: all .4s ease;
     transition: all .4s ease;
 }
+
+.breadcrumb{
+    background-color: #f8f8f8;
+    position:fixed;
+    width: 100%;
+    z-index: 2;
+    border-radius: 0;
+}
+
 .btn:focus, .btn:active, .btn:active:focus {
   outline: 0 auto -webkit-focus-ring-color;
 }
@@ -198,33 +206,31 @@ td .btn-danger{
 
 .navbar-logo{
     max-width: 140px;
+    max-height: 31px;
 
 }
 
-.navbar-nav>li>a{
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.navbar,.navbar-nav{
-    height: 60px;
-    min-height: 60px;
-}
+/*.navbar-nav>li>a{*/
+    /*padding-top: 20px;*/
+    /*padding-bottom: 20px;*/
+/*}*/
+/*.navbar,.navbar-nav{*/
 
-.navbar-collapse.collapse{
-    height: 60px !important;
-}
+/*}*/
+
+/*.navbar-collapse.collapse{*/
+
+/*}*/
 
 .table-striped{
    background: rgb(40, 98, 137);
     color:white;
 }
 
-<<<<<<< HEAD
-=======
 .table-striped>thead>tr{
     border-bottom: 6px solid rgba(77, 202, 196, 0.62);
 }
->>>>>>> 525bd61938e23e4122ae18e84adab85cd5f1c072
+
 .table-striped>tbody>tr:nth-of-type(odd){
     color:black;
 }

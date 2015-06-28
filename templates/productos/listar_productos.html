@@ -1,5 +1,15 @@
 {% extends 'base.html' %}
 
+
+{%  block breadcrumb %}
+     <ol class="breadcrumb">
+        <li ><a href="{%  url 'almacen:index' %}">Inicio</a></li>
+        <li class="active"><a href="{%   url 'productos:index' %}">Productos</a></li>
+        <li >Listar Productos</li>
+    </ol>
+{% endblock %}
+
+
 {% block content %}
     {% if messages %}
         {% for message in messages %}
