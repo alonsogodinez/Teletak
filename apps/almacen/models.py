@@ -23,7 +23,7 @@ class GuiaRemision(models.Model):
 class Ingreso(models.Model):
     dni_usuario = models.ForeignKey(User, blank=True, null=True)
     fecha = models.DateField(blank=True, null=True)
-    guia_remision = models.CharField(max_length=20, blank=True, null=True)
+    guia_remision = models.ForeignKey(GuiaRemision, blank=True, null=True)
 
 
 class DetalleIngreso(models.Model):
