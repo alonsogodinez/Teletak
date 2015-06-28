@@ -1,0 +1,10 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title"> Advertencia</h4>
+</div>
+<div class="modal-body">
+    <form action="{% url 'productos:Eliminar_Categoria' object.id%}" class="text-center"method="post">{% csrf_token %}
+        <p>Si elimina esta categoria, todos los productos de la Base de Datos asociados a ella serán eliminados, Esta seguro que desea eliminar {{ object.nombre }}  de la base de datos ?</p>
+        <input class="btn btn-success" type="submit" value="Si, estoy seguro" />
+    </form>
+</div>

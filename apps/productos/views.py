@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render,render_to_response
+from django.shortcuts import render,render_to_response,get_object_or_404
 from django.utils.decorators import method_decorator
 from django.views.generic import View, CreateView, ListView, UpdateView, DeleteView
 from Teletak.mixins import SuccessMessageMixin
@@ -38,38 +38,56 @@ class EliminarProducto(SuccessMessageMixin,DeleteView):
     template_name = 'productos/confirm_delete_producto.html'
     success_message = 'El producto fue eliminado correctamente'
 
-class RegistrarProducto(LoginRequiredMixin,SuccessMessageMixin,CreateView):
-
-    model = Producto
-    template_name = 'productos/nuevo_producto.html'
-    form_class =  ProductoForm()
-    success_url = '/productos/listar'
-    success_message = 'El registro se realizo correctamente'
-    def get(self, request, *args, **kwargs):
-        template = "productos/nuevo_producto.html"
-        form=ProductoForm()
-        return render_to_response(template,context_instance=RequestContext(request,locals()))
-    def post(self, request, *args, **kwargs):
-        form = ProductoForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect("/productos/listar")
+class RegistrarProducto(LoginRequiredMixin,View,SuccessMessageMixin):
+    def get(self, request):
+        template_name = 'productos/nuevo_producto.html'
+        producto_form = ProductoForm
+        unidadproducto_form = UnidadProductoForm
+        return render(request,template_name,locals())
+    def post(self,request):
+        producto_form = ProductoForm(request.POST)
+        unidadproducto_form = UnidadProductoForm(request.POST)
+        if producto_form.is_valid() and unidadproducto_form.is_valid():
+            nuevo_item = unidadproducto_form.save(commit=False)
+            nuevo_item.codigo_producto = producto_form.save()
+            nuevo_item.save()
+            success_message = 'Los datos se actualizaron correctamente'
+            return HttpResponseRedirect("/productos/")
         else:
-            return render(request, self.template_name, {'form': form, 'error': 'Verifique los datos ingresados'})
+            template_name = 'productos/nuevo_producto.html'
+            producto_form = ProductoForm
+            unidadproducto_form = UnidadProductoForm
+            return render(request,template_name,locals())
 
-class EditarProducto(SuccessMessageMixin,UpdateView):
 
-    model = Producto
-    form_class = ProductoForm
-    success_url = '/productos/listar'
-    template_name= 'productos/editar_producto.html'
+def Editar_Producto(request,id):
+    template_name = 'productos/editar_producto.html'
+    producto = get_object_or_404(Producto,pk=id)
+    unidad_producto = ProductoMedida.objects.get(codigo_producto=id)
+    if request.POST:
+        producto_form = ProductoForm(request.POST,instance=producto)
+        unidadproducto_form = UnidadProductoForm(request.POST,instance=unidad_producto)
+        #form = ArticleForm(request.POST, instance=article)
+        if producto_form.is_valid() and unidadproducto_form.is_valid():
+            producto_form.save()
+            unidadproducto_form.save()
+            # If the save was successful, redirect to another page
+            #redirect_url = reverse(article_save_success)
+            return HttpResponseRedirect('/productos/')
+    else:
+        producto_form = ProductoForm(instance=producto)
+        unidadproducto_form = UnidadProductoForm(instance=unidad_producto)
+        #form = ArticleForm(instance=producto)
+    return render_to_response(template_name,locals(), context_instance=RequestContext(request))
+
+
+class Categorias(View,SuccessMessageMixin):
+    template_name = 'productos/categorias.html'
     success_message = 'Los datos se actualizaron correctamente'
-
-class Categorias(View,LoginRequiredMixin):
     def get(self,request, *args, **kwargs):
         categoria = Categoria.objects.all()
         form = CategoriaForm
-        return render_to_response('productos/categorias.html',locals(),context_instance=RequestContext(self.request))
+        return render_to_response(self.template_name,locals(),context_instance=RequestContext(self.request))
     def post(self,request):
         form = CategoriaForm(request.POST)
         if form.is_valid():
@@ -77,11 +95,30 @@ class Categorias(View,LoginRequiredMixin):
             return HttpResponseRedirect("/productos/categoria")
         else:
             return render(request, self.template_name, {'form': form, 'error': 'Verifique los datos ingresados'})
-    def update(self,request):
-        pass
 
-class UnidadMedidaProducto(View,LoginRequiredMixin):
-    def get(self):
-        pass
-    def post(self):
-        pass
+
+def Editar_Categoria(request,id):
+    cat = Categoria.objects.get(pk=id)
+    print cat.nombre
+    if request.POST:
+        form = CategoriaForm(request.POST,instance=cat)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/productos/categoria")
+        else:
+            return render(request,'productos/categorias.html', {'form': form, 'error': 'Verifique los datos ingresados'})
+    else:
+        form = CategoriaForm(instance=cat)
+        categoria = Categoria.objects.all()
+        return render_to_response('productos/categorias.html',locals(),context_instance=RequestContext(request))
+
+
+class EliminarCategoria(SuccessMessageMixin,DeleteView):
+
+    model = Categoria
+    success_url = '/productos/categoria'
+    template_name = 'productos/confirm_delete_categoria.html'
+    success_message = 'El producto fue eliminado correctamente'
+
+
+

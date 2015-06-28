@@ -6,7 +6,8 @@
             <form method="post" enctype="multipart/form-data">
                 <div id="form">
                     {% csrf_token %}
-                    {{form.as_p}}
+                    {{producto_form.as_p}}
+                    {{unidadproducto_form.as_p}}
                     <div class="form-group">
                         <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
                             <input  class ="col-xs-12 btn btn-success btn-lg" type="submit" value="Registrar Producto" />

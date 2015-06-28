@@ -11,32 +11,52 @@
             </div>
         {% endfor %}
     {% endif %}
-    <div class="table-responsive">
-        <form action="/productos/categoria" method="post">
-            {% csrf_token %}
-            {{form.as_p}}
-            <input type="submit"/>
-        </form>
+    <div class="container">
+        <h3>Formulario</h3>
+            <form enctype="multipart/form-data" method="post">
+                <div id="form">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <div class="form-group">
+                        <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
+                            <input  class ="col-xs-12 btn btn-success btn-lg" type="submit" value="Enviar" />
+                        </div>
+                    </div>
+                </div>
+            </form>
         <table class="table table-striped ">
             {% load static from staticfiles %}
             <thead>
                 <tr  align="center">
-                    <td width="80%">Listado de Categorias</td>
+                    <td width="20%">Código</td>
+                    <td width="60%">Listado de Categorias</td>
                     <td width="20%">Opciones</td>
                 </tr>
             </thead>
             <tbody>
                 {% for item in categoria %}
                 <tr valign="middle" class="{{forloop.counter|divisibleby:2|yesno:'even,odd'}}">
+                    <td align="center">{{ item.pk }}</td>
                     <td align="center">{{ item.nombre }}</td>
                     <td align="center">
-                        <a href="" class="btn btn-info">Editar</a>
-                        <a href=""  data-toggle="modal" data-target="#delete-modal" class="btn btn-danger btn-delete">Eliminar</a>
+                        <a href="{% url 'productos:Editar_Categoria' item.id %}" class="btn btn-info">Editar</a>
+                        <a href="{% url 'productos:Eliminar_Categoria' item.id %}"  data-toggle="modal" data-target="#delete-modal" class="btn btn-danger btn-delete">Eliminar</a>
                     </td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
+    </div>
+    <a class="col-sm-offset-0 col-xs-offset-4 backbutton" href="{% url 'productos:index' %}">
+        <span class="  glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    </a>
+
+    <div class="modal fade" id="delete-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+            </div>
+        </div>
     </div>
 
 

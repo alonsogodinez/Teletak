@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Producto,Categoria
+from .models import Producto,Categoria,UnidadMedicion,ProductoMedida
 
 class ProductoForm(forms.ModelForm):
     sap = forms.CharField(max_length=10,widget=forms.TextInput(attrs={'class':'form-control'}),label="SAP")
@@ -11,7 +11,14 @@ class ProductoForm(forms.ModelForm):
         model = Producto
         fields = ('sap','descripcion','categoria','stock_minimo',)
 
+class UnidadProductoForm(forms.ModelForm):
+    id_unidad = forms.ModelChoiceField(queryset=UnidadMedicion.objects.all(),widget=forms.Select(attrs={'class':'form-control'}),label="Unidad de Medida")
+    class Meta:
+        model = ProductoMedida
+        fields = ['id_unidad','equivalencia',]
+
 class CategoriaForm(forms.ModelForm):
+    nombre = forms.CharField(max_length=15,widget=forms.TextInput(attrs={'class':'form-control'}),label="Nombre")
     class Meta:
         model = Categoria
         fields = ['nombre',]
