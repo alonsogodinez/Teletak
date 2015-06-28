@@ -9,6 +9,7 @@ admin.site.site_title= "Sistema de Administración"
 # admin.site.index_title = "Bienvenido "
 
 urlpatterns = [
+
     url(r'^admin/', include(admin.site.urls)),
     url(r'^login/', Login.as_view()),
     url(r'^logout/', Logout.as_view()),

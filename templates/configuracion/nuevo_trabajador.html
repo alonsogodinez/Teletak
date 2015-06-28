@@ -13,71 +13,107 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <form action="" method="post">{% csrf_token %}
-                <div class="form-group ">
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        {{ form.username.errors }}
-                        <label class="form-label" for="{{ form.username.id_for_label }}">{{ form.username.label }}</label>
-                        {{ form.username }}
-                    </div>
-                </div>
-                <div class="form-group ">
-                    {{ form.password.errors }}
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        <label class="form-label" for="{{ form.password.id_for_label }}">{{ form.password.label }}</label>
-                        {{ form.password }}
-                    </div>
-                </div>
-                <div class="form-group ">
-                    {{ form.password.errors }}
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        <label class="form-label" for="id_password2">Confirme Contraseña</label>
-                        <input class="form-control " id="id_password2" name="password2" type="password" required>
-                    </div>
-                </div>
-                <div class="form-group ">
-                    {{ form.email.errors }}
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        <label class="form-label" for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
-                        {{ form.email }}
-                    </div>
-                </div>
-                <div class="form-group ">
-                    {{ form.first_name.errors }}
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        <label class="form-label" for="{{ form.first_name.id_for_label }}">{{ form.first_name.label }}</label>
-                        {{ form.first_name }}
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        {{ form.last_name.errors }}
-                        <label class="form-label" for="{{ form.last_name.id_for_label }}">{{ form.last_name.label }}</label>
-                        {{ form.last_name }}
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        {{ form.dni.errors }}
-                        <label class="form-label" for="{{ form.dni.id_for_label }}">{{ form.dni.label }}</label>
-                        {{ form.dni }}
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        {{ form.cellphone.errors }}
-                        <label class="form-label" for="{{ form.cellphone.id_for_label }}">{{ form.cellphone.label }}</label>
-                        {{ form.cellphone }}
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        <input  class ="col-xs-12 btn btn-success btn-lg" type="submit" value="Registrar Trabajador" />
-                    </div>
-                </div>
-            </form>
-        </div>
+            <div class="panel form-panel panel-primary">
+                <div class="panel-body">
+                    <form action="" method="post">{% csrf_token %}
 
+
+                        <div class="credenciales col-sm-6 col-xs-12">
+                            <div class="form-field  form-subtitle col-sm-11">
+                                Credenciales
+                            </div>
+                            <div class="form-group ">
+                                <div class="form-field col-sm-11 " >
+                                    {{ form.username.errors }}
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-user"></span>
+                                        {{ form.username }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="form-field col-sm-11">
+                                    {{ form.password.errors }}
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-lock" ></span>
+                                        {{ form.password }}
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                {{ form.password.errors }}
+                                <div class="form-field col-sm-11  ">
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-lock" ></span>
+                                        <input class="form-control" placeholder="Confirme Contraseña" id="id_password2"
+                                           name="password2" type="password" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                {{ form.email.errors }}
+                                <div class="form-field col-sm-11 ">
+                                    <div class="input-group">
+                                        <span class="input-group-addon " >@</span>
+                                        {{ form.email }}
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="datos col-sm-6 col-sm-12">
+                            <div class="form-field form-subtitle col-sm-11">
+                                Datos Personales
+                            </div>
+                            <div class="form-group ">
+                                {{ form.first_name.errors }}
+                                <div class="form-field col-sm-11">
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-user " ></span>
+                                        {{ form.first_name }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="form-field col-sm-11">
+                                    {{ form.last_name.errors }}
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-user " ></span>
+                                        {{ form.last_name }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="form-field col-sm-11">
+                                    {{ form.dni.errors }}
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-pencil" > </span>
+                                        {{ form.dni }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="form-field col-sm-11">
+                                    {{ form.cellphone.errors }}
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-phone " ></span>
+                                        {{ form.cellphone }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="submit-row  col-xs-12">
+                            <input  class ="col-sm-6  col-xs-11 btn btn-success btn-lg" type="submit" value="Registrar Trabajador" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+
 
 {% endblock %}

@@ -1,12 +1,21 @@
 {% extends 'base.html' %}
 
+{%  block breadcrumb %}
+     <ol class="breadcrumb">
+        <li ><a href="{%  url 'almacen:index' %}">Inicio</a></li>
+        <li class="active"><a href="{%   url 'almacen:operaciones' %}">Almacén</a></li>
+        <li >Registrar Entrada</li>
+    </ol>
+{% endblock %}
+
+
 {% block content %}
     <div class="container">
         <div class="row">
             <form method="post" enctype="multipart/form-data">
                 <div id="form">
                     {% csrf_token %}
-                    {{}}
+
                     {{unidadproducto_form.as_p}}
                     <div class="form-group">
                         <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
@@ -14,11 +23,9 @@
                         </div>
                     </div>
                 </div>
-            <form>
+            </form>
         </div>
-        <a class="col-sm-offset-0 col-xs-offset-4 backbutton" href="{% url 'productos:index' %}">
-            <span class="  glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        </a>
+
     </div>
 
 {% endblock %}
