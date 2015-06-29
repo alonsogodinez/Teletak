@@ -80,39 +80,22 @@
                         </div>
                     </div>
 
-{#                     <div class="checkbox">#}
-{#                        <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">#}
-{#                            {{ form.is_active.errors }}#}
-{#                            <label class="form-label" for="{{ form.is_active.id_for_label }}">#}
-{#                                {{ form.is_active }}#}
-{#                                {{ form.is_active.label }}#}
-{#                            </label>#}
-{##}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="checkbox">#}
-{#                        <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">#}
-{#                            {{ form.is_staff.errors }}#}
-{#                            <label class="form-label" for="{{ form.is_staff.id_for_label }}">#}
-{#                                {{ form.is_staff }}#}
-{#                                {{ form.is_staff.label }}#}
-{#                            </label>#}
-{##}
-{#                        </div>#}
-{#                    </div>#}
 
-                    <div class="form-group">
+                    <div class="form-group action-buttons">
                         <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                            <input  class ="col-xs-12 btn btn-success btn-lg" type="submit" value="Guardar Cambios" />
+                            <input  class ="col-xs-12 col-sm-6 btn btn-success btn-lg" type="submit"
+                                    value="Guardar Cambios" />
+                            <a href="{% url 'usuarios:trabajadores_list' %}"
+                               class ="col-sm-push-1 col-sm-5 col-xs-12 btn btn-danger btn-lg" >
+                                Volver
+                            </a>
                         </div>
                     </div>
 
 
                 </form>
         </div>
-        <a class="col-sm-offset-0 col-xs-offset-4 backbutton" href="{% url 'usuarios:trabajadores_list' %}">
-            <span class="  glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        </a>
+
     </div>
 
 {% endblock %}

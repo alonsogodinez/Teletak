@@ -43,7 +43,11 @@ td .btn-danger{
 }
 
 
-
+.action-buttons > .form-field{
+    margin-top:25px;
+    border-top: 1px solid #393737;
+    padding-top: 20px;
+}
 .alert{
     border-radius: 0;
 }
