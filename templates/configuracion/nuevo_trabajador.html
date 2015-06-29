@@ -16,11 +16,9 @@
             <div class="panel form-panel panel-primary">
                 <div class="panel-body">
                     <form action="" method="post">{% csrf_token %}
-
-
                         <div class="credenciales col-sm-6 col-xs-12">
                             <div class="form-field  form-subtitle col-sm-11">
-                                Credenciales
+                                <span>Credenciales</span>
                             </div>
                             <div class="form-group ">
                                 <div class="form-field col-sm-11 " >
@@ -65,7 +63,7 @@
 
                         <div class="datos col-sm-6 col-sm-12">
                             <div class="form-field form-subtitle col-sm-11">
-                                Datos Personales
+                                <span> Datos Personales</span>
                             </div>
                             <div class="form-group ">
                                 {{ form.first_name.errors }}
@@ -107,7 +105,11 @@
 
 
                         <div class="submit-row  col-xs-12">
-                            <input  class ="col-sm-6  col-xs-11 btn btn-success btn-lg" type="submit" value="Registrar Trabajador" />
+                            <input  class ="col-sm-offset-2 col-sm-4  col-xs-12 btn btn-success btn-lg" type="submit"
+                                    value="Registrar Trabajador" />
+                            <a class ="col-sm-offset-1 col-sm-3  col-xs-12 btn btn-danger btn-lg"
+                               href="{% url 'usuarios:index' %}">Volver</a>
+{#                            <input  class ="col-sm-offset-1 col-sm-3  col-xs-11 btn btn-danger btn-lg" type="submit" value="Volver" />#}
                         </div>
                     </form>
                 </div>

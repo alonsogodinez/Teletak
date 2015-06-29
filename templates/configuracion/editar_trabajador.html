@@ -3,79 +3,112 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <form  method="post">{% csrf_token %}
-                <div class="form-group ">
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        {{ form.username.errors }}
-                        <label class="form-label" for="{{ form.username.id_for_label }}">{{ form.username.label }}</label>
-                        {{ form.username }}
-                    </div>
-                </div>
 
-                <div class="form-group ">
-                    {{ form.email.errors }}
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        <label class="form-label" for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
-                        {{ form.email }}
+                <form  method="post">{% csrf_token %}
+                    <div class="form-group ">
+                        <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
+                            {{ form.username.errors }}
+                            <label class="form-label" for="{{ form.username.id_for_label }}">{{ form.username.label }}</label>
+                            <div class="input-group">
+                                <span class="input-group-addon glyphicon glyphicon-user"></span>
+                                {{ form.username }}
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group ">
-                    {{ form.first_name.errors }}
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        <label class="form-label" for="{{ form.first_name.id_for_label }}">{{ form.first_name.label }}</label>
-                        {{ form.first_name }}
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        {{ form.last_name.errors }}
-                        <label class="form-label" for="{{ form.last_name.id_for_label }}">{{ form.last_name.label }}</label>
-                        {{ form.last_name }}
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        {{ form.dni.errors }}
-                        <label class="form-label" for="{{ form.dni.id_for_label }}">{{ form.dni.label }}</label>
-                        {{ form.dni }}
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        {{ form.cellphone.errors }}
-                        <label class="form-label" for="{{ form.cellphone.id_for_label }}">{{ form.cellphone.label }}</label>
-                        {{ form.cellphone }}
-                    </div>
-                </div>
-                 <div class="checkbox">
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        {{ form.is_active.errors }}
-                        <label class="form-label" for="{{ form.is_active.id_for_label }}">
-                            {{ form.is_active }}
-                            {{ form.is_active.label }}
-                        </label>
 
+                    <div class="form-group ">
+                        {{ form.email.errors }}
+                        <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
+                            <label class="form-label" for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
+                            <div class="input-group">
+                                <span class="input-group-addon ">@</span>
+                                {{ form.email }}
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="checkbox">
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        {{ form.is_staff.errors }}
-                        <label class="form-label" for="{{ form.is_staff.id_for_label }}">
-                            {{ form.is_staff }}
-                            {{ form.is_staff.label }}
-                        </label>
-
+                    <div class="form-group ">
+                        {{ form.first_name.errors }}
+                        <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
+                            <label class="form-label" for="{{ form.first_name.id_for_label }}">{{ form.first_name.label }}</label>
+                            <div class="input-group">
+                                <span class="input-group-addon glyphicon glyphicon-user"></span>
+                                {{ form.first_name }}
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                        <input  class ="col-xs-12 btn btn-success btn-lg" type="submit" value="Guardar Cambios" />
+                    <div class="form-group ">
+                        <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
+                            {{ form.last_name.errors }}
+                            <label class="form-label" for="{{ form.last_name.id_for_label }}">{{ form.last_name.label }}</label>
+                            <div class="input-group">
+                                <span class="input-group-addon glyphicon glyphicon-user"></span>
+                                {{ form.last_name }}
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <div class="form-group ">
+                        <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
+                            {{ form.dni.errors }}
+                            <label class="form-label" for="{{ form.dni.id_for_label }}">{{ form.dni.label }}</label>
+                            <div class="input-group">
+                                <span class="input-group-addon glyphicon glyphicon-pencil"></span>
+                                {{ form.dni }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
+                            {{ form.cellphone.errors }}
+                            <label class="form-label" for="{{ form.cellphone.id_for_label }}">{{ form.cellphone.label }}</label>
+                            <div class="input-group">
+                                <span class="input-group-addon glyphicon glyphicon-phone"></span>
+                                {{ form.cellphone }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
+                            <div class="btn-group" data-toggle="buttons">
+                              <label class="btn btn-primary {% if form.is_active.value %} active {% endif %}">
+                                {{ form.is_active }} {{ form.is_active.label }}
+                              </label>
+                              <label class="btn btn-warning {% if form.is_staff.value %} active {% endif %}">
+                               {{ form.is_staff }} {{ form.is_staff.label }}
+                              </label>
+                            </div>
+                        </div>
+                    </div>
+
+{#                     <div class="checkbox">#}
+{#                        <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">#}
+{#                            {{ form.is_active.errors }}#}
+{#                            <label class="form-label" for="{{ form.is_active.id_for_label }}">#}
+{#                                {{ form.is_active }}#}
+{#                                {{ form.is_active.label }}#}
+{#                            </label>#}
+{##}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="checkbox">#}
+{#                        <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">#}
+{#                            {{ form.is_staff.errors }}#}
+{#                            <label class="form-label" for="{{ form.is_staff.id_for_label }}">#}
+{#                                {{ form.is_staff }}#}
+{#                                {{ form.is_staff.label }}#}
+{#                            </label>#}
+{##}
+{#                        </div>#}
+{#                    </div>#}
+
+                    <div class="form-group">
+                        <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
+                            <input  class ="col-xs-12 btn btn-success btn-lg" type="submit" value="Guardar Cambios" />
+                        </div>
+                    </div>
 
 
-            </form>
+                </form>
         </div>
         <a class="col-sm-offset-0 col-xs-offset-4 backbutton" href="{% url 'usuarios:trabajadores_list' %}">
             <span class="  glyphicon glyphicon-chevron-left" aria-hidden="true"></span>

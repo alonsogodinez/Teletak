@@ -20,36 +20,55 @@
             </div>
         {% endfor %}
     {% endif %}
-    <div class="container contenedor-lista">
-        <div class="table-responsive">
-            <table class="table table-striped ">
-                {% load static from staticfiles %}
-                <thead>
-                    <tr  align="center">
-                        <td width="10%">DNI</td>
-                        <td width="25%">NOMBRES</td>
-                        <td width="25%">APELLIDOS</td>
-                        <td width="20%">TELEFONO</td>
-                        <td width="20%">ACCIONES</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for trabajador in object_list %}
-                    <tr valign="middle" class="{{forloop.counter|divisibleby:2|yesno:'even,odd'}}">
-                        <td align="center">{{ trabajador.dni }}</td>
-                        <td align="center">{{trabajador.first_name}}</td>
-                        <td align="center">{{trabajador.last_name}}</td>
-                        <td align="center">{{trabajador.cellphone}}</td>
-                        <td align="center">
-                            <a href="{% url 'usuarios:trabajador_detail' trabajador.id %}" class="btn btn-info">Editar</a>
-                            <a href="{% url 'usuarios:trabajador_delete' trabajador.id %}"  data-toggle="modal" data-target="#delete-modal" class="btn btn-danger btn-delete">Eliminar</a>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+    <div class=" contenedor-lista">
+        <div class="panel  panel-primary">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-pencil"></span>
+                <span class="">LISTADO DE TRABAJADORES</span>
+                <a class ="pull-right btn btn-danger  "
+                   href="{% url 'usuarios:index' %}">Volver
+                </a>
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-striped ">
+                        {% load static from staticfiles %}
+                        <thead>
+                        <tr  align="center">
+                            <td width="5%">DNI</td>
+                            <td width="30%">NOMBRES</td>
+                            <td width="30%">APELLIDOS</td>
+                            <td width="10%">TELEFONO</td>
+                            <td width="25%">ACCIONES</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            {% for trabajador in object_list %}
+                                <tr valign="middle" class="{{forloop.counter|divisibleby:2|yesno:'even,odd'}}">
+                                    <td align="center">{{ trabajador.dni }}</td>
+                                    <td align="center">{{trabajador.first_name}}</td>
+                                    <td align="center">{{trabajador.last_name}}</td>
+                                    <td align="center">{{trabajador.cellphone}}</td>
+                                    <td align="center">
+                                        <a href="{% url 'usuarios:trabajador_detail' trabajador.id %}"
+                                           class="btn btn-info">Editar</a>
+                                        <a href="{% url 'usuarios:trabajador_delete' trabajador.id %}"
+                                           data-toggle="modal" data-target="#delete-modal"
+                                           class="btn btn-danger btn-delete">Eliminar</a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
 
+     </div>
+
+{#        <a class="col-sm-offset-0 col-xs-offset-4 backbutton" href="{% url 'usuarios:index' %}">#}
+{#            <span class="  glyphicon glyphicon-chevron-left" aria-hidden="true"></span>#}
+{#        </a>#}
 
         <div class="modal fade" id="delete-modal">
             <div class="modal-dialog">

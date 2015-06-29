@@ -26,6 +26,7 @@ class Ingreso(models.Model):
     guia_remision = models.ForeignKey(GuiaRemision, blank=True, null=True)
 
 
+
 class DetalleIngreso(models.Model):
     id_ingreso = models.ForeignKey(Ingreso, blank=True, null=True)
     codigo_producto = models.ForeignKey(Producto, blank=True, null=True)
