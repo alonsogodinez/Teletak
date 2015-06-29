@@ -1,5 +1,4 @@
 $(document).ready(function() {
-<<<<<<< HEAD
 
 //    function centerModals(){
 //  $('.modal').each(function(i){
@@ -12,22 +11,17 @@ $(document).ready(function() {
 //}
 //$('.modal').on('show.bs.modal', centerModals);
 //$(window).on('resize', centerModals);
-=======
+
     //delete modal content after close
     $('body').on('hidden.bs.modal', '.modal', function () {
         $(this).removeData('bs.modal');
       });
 
 
->>>>>>> 525bd61938e23e4122ae18e84adab85cd5f1c072
+
 });
 
 
 
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 525bd61938e23e4122ae18e84adab85cd5f1c072

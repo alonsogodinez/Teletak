@@ -16,6 +16,7 @@ class GuiaRemision(models.Model):
     nro_guia_remitente = models.CharField(max_length=15)
     placa_vehiculo = models.CharField(max_length=10)
     licencia_conducir = models.CharField(max_length=15)
+    proveedor = models.ForeignKey(Proveedor,blank=True,null=True)
 
     class Meta:
         verbose_name_plural = "Guias de remision"
@@ -24,6 +25,7 @@ class Ingreso(models.Model):
     dni_usuario = models.ForeignKey(User, blank=True, null=True)
     fecha = models.DateField(blank=True, null=True)
     guia_remision = models.ForeignKey(GuiaRemision, blank=True, null=True)
+
 
 
 class DetalleIngreso(models.Model):

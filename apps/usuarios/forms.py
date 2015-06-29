@@ -57,7 +57,7 @@ class EditarTrabajadorForm(forms.ModelForm):
     last_name = forms.CharField(max_length=100,widget= forms.TextInput(attrs={'class':'form-control '}),label= "Apellidos")
     dni = forms.CharField(max_length=8,widget= forms.TextInput(attrs={'class':'form-control '}),label= "DNI")
     cellphone = forms.CharField(max_length=15, widget= forms.TextInput(attrs={'class':'form-control '}),label= "Celular")
-    is_active = forms.BooleanField(widget= forms.CheckboxInput(attrs={'type':'checkbox'}),label= "Habilitado")
+    is_active = forms.BooleanField(widget= forms.CheckboxInput(attrs={'type':'checkbox'}),label= "Habilitado",required=False)
     is_staff = forms.BooleanField(widget= forms.CheckboxInput(attrs={'type':'checkbox '}),label= "Administrador",required=False)
 
     class Meta:

@@ -33,7 +33,6 @@ class UserAdmin(UserAdmin):
                                              'last_name',
                                              'email',
                                              'dni',
-                                             'phone',
                                              'cellphone',
                                              'user_type')}),
         ('Permisos',{'fields':('is_active',
@@ -56,7 +55,6 @@ class UserAdmin(UserAdmin):
                        'last_name',
                        'email',
                        'dni',
-                       'phone',
                        'cellphone',
                        )
         }))
