@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Almacen,Proveedor
+from .models import *
 
 @admin.register(Almacen)
 class AlmacenAdmin(admin.ModelAdmin):
@@ -11,3 +11,7 @@ class ProveedorAdmin(admin.ModelAdmin):
     list_edit = ('ruc','nombre','direccion')
 
 admin.site.register(Proveedor,ProveedorAdmin)
+
+@admin.register(Ingreso)
+class IngresoAdmin(admin.ModelAdmin):
+    model = Ingreso

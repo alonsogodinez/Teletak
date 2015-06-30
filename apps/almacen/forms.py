@@ -1,8 +1,8 @@
 from datetime import date
 from django import forms
-
+from django.forms.models import inlineformset_factory
 from .models import GuiaRemision,Ingreso,DetalleIngreso,Proveedor
-from apps.productos.models import Producto
+from apps.productos.models import Producto,UnidadMedicion
 from apps.usuarios.forms import User
 
 class UsuarioForm(forms.ModelForm):
@@ -12,20 +12,25 @@ class UsuarioForm(forms.ModelForm):
         fields = ('dni',)
 
 class IngresoForm(forms.ModelForm):
-    dni_usuario = forms.CharField(max_length=8,widget=forms.TextInput(attrs={'class':'form-control'}),label="DNI")
+    dni_usuario = forms.ModelChoiceField(queryset=User.objects.all(),
+                                          widget=forms.Select(attrs={'class':'form-control chosen-select',}))
     fecha       = forms.DateField(initial=date.today(),widget= forms.DateInput(attrs={'class':'form-control'}),label="Fecha")
     class Meta:
         model = Ingreso
         fields = ('dni_usuario','fecha',)
 
 class DetalleIngresoForm(forms.ModelForm):
-    serie = forms.CharField(max_length=10,widget=forms.TextInput(attrs={'class':'form-control'}),label="Punto de partida")
+    serie = forms.CharField(max_length=10,widget=forms.TextInput(attrs={'class':'form-control'}),label="Serie")
     cantidad = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control'}),label="Cantidad")
-    unidad_caja = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control'}),label="Unidad de caja")
+    unidad_caja = forms.ModelChoiceField(queryset=UnidadMedicion.objects.all(),
+                                         widget=forms.Select(attrs={'class':'form-control chosen-select'}),
+                                         label="Unidad de medida")
     estado = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control'}),label="Estado")
+    cod_producto = forms.ModelChoiceField(queryset=Producto.objects.all(),
+                                          widget=forms.Select(attrs={'class':'form-control chosen-select',}))
     class Meta:
         model = DetalleIngreso
-        fields = ('serie','cantidad','unidad_caja','estado',)
+        fields = ('serie','cantidad','unidad_caja','estado','cod_producto')
 
 class ProductoForm(forms.ModelForm):
     codigo_product = forms.ModelChoiceField(queryset=Producto.objects.all(),widget=forms.Select(attrs={'class':'form-control'}),label="Unidad de Medida")
@@ -52,3 +57,6 @@ class ProveedoresForm(forms.ModelForm):
     class Meta:
         model = Proveedor
         fields = ('ruc','nombre','direccion',)
+
+
+DetalleIngresoFormSet = inlineformset_factory(Ingreso,DetalleIngreso,can_delete=False, extra=1,form=DetalleIngresoForm)
