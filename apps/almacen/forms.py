@@ -32,6 +32,10 @@ class DetalleIngresoForm(forms.ModelForm):
         model = DetalleIngreso
         fields = ('serie','cantidad','unidad_caja','estado','cod_producto')
 
+DetalleIngresoFormSet = inlineformset_factory(Ingreso,DetalleIngreso,can_delete=False, extra=1,form=DetalleIngresoForm)
+
+
+
 class ProductoForm(forms.ModelForm):
     codigo_product = forms.ModelChoiceField(queryset=Producto.objects.all(),widget=forms.Select(attrs={'class':'form-control'}),label="Unidad de Medida")
     class Meta:
@@ -59,4 +63,3 @@ class ProveedoresForm(forms.ModelForm):
         fields = ('ruc','nombre','direccion',)
 
 
-DetalleIngresoFormSet = inlineformset_factory(Ingreso,DetalleIngreso,can_delete=False, extra=1,form=DetalleIngresoForm)
