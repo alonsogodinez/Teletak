@@ -1,7 +1,7 @@
 from datetime import date
 from django import forms
 
-from .models import GuiaRemision,Ingreso,DetalleIngreso,Proveedor,Salida,DetalleSalida
+from .models import GuiaRemision,Ingreso,DetalleIngreso,Proveedor,Salida,DetalleSalida,Almacen
 from apps.productos.models import Producto
 from apps.usuarios.forms import User
 

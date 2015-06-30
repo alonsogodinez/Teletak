@@ -4,8 +4,9 @@ from django.utils.decorators import method_decorator
 from django.views.generic import View
 from forms import *
 from django.http import HttpResponse,HttpResponseRedirect
-from Teletak.mixins import SuccessMessageMixin
-
+from Teletak.mixins import SuccessMessageMixin,JSONMixin
+from rest_framework import generics
+from .serializers import SalidaSerializer
 class LoginRequiredMixin(object):
     u"""Ensures that user must be authenticated in order to access view."""
 
