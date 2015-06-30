@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 //    function centerModals(){
 //  $('.modal').each(function(i){
 //    var $clone = $(this).clone().css('display', 'block').appendTo('body');
@@ -26,8 +27,8 @@ $(document).ready(function() {
 	});
 
 
-
-/*    $('#generarsalida').click(function() {
+/*
+    $('#generarsalida').click(function() {
         $.ajax({
             url: $('#ajaxform').attr('action'),
             type: 'POST',
@@ -40,7 +41,6 @@ $(document).ready(function() {
                     $('#comments').prepend(response.fields.message);
 
                 } else {
-
                     $('.form-error').remove();
                     for(var error in response.errors.fields) {
                         $('#ajaxform #id_' + error).before('<div class="form-error">' + response.errors.fields[error] + '</div>');
@@ -48,9 +48,9 @@ $(document).ready(function() {
                 }
             }
         });
-    });*/
+    });
 
-
+*/
 	/*$('#generarsalida').on('click', function(){
 		var almacen = $('#id_id_almacen').val();
 		var usuario = $('#id_dni_usuario').val();
@@ -103,26 +103,27 @@ $(document).ready(function() {
 
 });
 
-    function desbloquear()
-    {
-        $('#nombEstudiante').attr('disabled');
-        $('#regEstudiante').attr('disabled');
-        $('#id_id_almacen').removeAttr('disabled','disabled');
-        $('#id_dni_usuario').removeAttr('disabled','disabled');
-        $('#id_devolucion').removeAttr('disabled','disabled');
-        $('#id_nodo').removeAttr('disabled','disabled');
-        $('#generarsalida').removeAttr('disabled','disabled');
-    }
+function desbloquear()
+{
+    $('#nombEstudiante').attr('disabled');
+    $('#regEstudiante').attr('disabled');
+    $('#id_id_almacen').removeAttr('disabled','disabled');
+    $('#id_dni_usuario').removeAttr('disabled','disabled');
+    $('#id_devolucion').removeAttr('disabled','disabled');
+    $('#id_nodo').removeAttr('disabled','disabled');
+    $('#generarsalida').removeAttr('disabled','disabled');
+}
 
-    function bloquear()
-    {
-        $('#nombEstudiante').removeAttr('disabled').focus();
-        $('#regEstudiante').removeAttr('disabled');
-        $('#id_id_almacen').attr('disabled','disabled');
-        $('#id_dni_usuario').attr('disabled','disabled');
-        $('#id_devolucion').attr('disabled','disabled');
-        $('#id_nodo').attr('disabled','disabled');
-        $('#generarsalida').attr('disabled','disabled');
-    }
+
+function bloquear()
+{
+    $('#nombEstudiante').removeAttr('disabled').focus();
+    $('#regEstudiante').removeAttr('disabled');
+    $('#id_id_almacen').attr('disabled','disabled');
+    $('#id_dni_usuario').attr('disabled','disabled');
+    $('#id_devolucion').attr('disabled','disabled');
+    $('#id_nodo').attr('disabled','disabled');
+    $('#generarsalida').attr('disabled','disabled');
+}
 
 

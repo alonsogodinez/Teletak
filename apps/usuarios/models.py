@@ -19,11 +19,10 @@ class UserManager(BaseUserManager):
     def create_superuser(self,username,email,password,**extra_fields):
         return self._create_user(username,email,password,True,True,**extra_fields)
 
-class Usuario (models.Model):
-    class Meta:
-        abstract = True
+
 
 class User(AbstractBaseUser, PermissionsMixin):
+
 
     TRABAJADOR = 'TRA'
     GERENTE = 'GER'
@@ -38,7 +37,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     email=models.EmailField(max_length=30)
     first_name=models.CharField('Nombres', max_length=100)
     last_name= models.CharField('Apellidos', max_length=100)
-    phone = models.CharField('Telefono', max_length=15, blank=True, null=True)
     username = models.CharField(max_length=30, unique=True)
 
 
