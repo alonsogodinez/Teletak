@@ -38,9 +38,11 @@ class DetalleIngreso(models.Model):
 class Almacen(models.Model):
     ubicacion = models.CharField(max_length=50, blank=True, null=True)
     capacidad = models.IntegerField(blank=True,null=True)
-
+    def __unicode__(self):
+        return self.ubicacion
     class Meta:
         verbose_name_plural = "Almacenes"
+
 
 
 class DetalleAlmacen(models.Model):
@@ -49,6 +51,7 @@ class DetalleAlmacen(models.Model):
     id_ingreso = models.ForeignKey(Ingreso, blank=True, null=True)
     cantidad = models.IntegerField()
     estado = models.CharField(max_length=10, blank=True, null=True)
+
 
 
 class Salida(models.Model):

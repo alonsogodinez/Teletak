@@ -40,8 +40,27 @@ class Reingresos(LoginRequiredMixin,View):
     def get(self,request):
         return render(request,self.template_name)
 
-class Salidas(LoginRequiredMixin,View):
-    template_name='almacen/salidas/index.html'
+
+#salidas - HACIENDO PRUEBAS ----
+class Salidas(View,LoginRequiredMixin,JSONMixin):
     def get(self,request):
-        return render(request,self.template_name)
+        salidas = Salida.objects.all()
+        salida_form = SalidaForm()
+        return render(request,'almacen/salidas/index.html',{'salida_form':salida_form,'salidas':salidas})
+    def post(self,request):
+        form = SalidaForm(request.POST)
+        if form.is_valid():
+            salida = form.save(commit=False)
+            salida.fecha = time.strftime('%Y-%m-%d')
+            salida.save()
+        else:
+            pass
+#api
+class SalidasCollection(generics.ListCreateAPIView):
+    queryset = Salida.objects.all()
+    serializer_class = SalidaSerializer
+
+class SalidasDelete(generics.RetrieveDestroyAPIView):
+    queryset = Salida.objects.all()
+    serializer_class = SalidaSerializer
 

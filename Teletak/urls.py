@@ -16,5 +16,6 @@ urlpatterns = [
     url(r'^',include('apps.almacen.urls', namespace='almacen')),
     url(r'^usuarios/',include('apps.usuarios.urls',namespace='usuarios')),
     url(r'^productos/',include('apps.productos.urls',namespace='productos')),
+    url(r'^salidas/',include('apps.salidas.urls',namespace='salidas')),
 
 ]

@@ -1,7 +1,7 @@
 from datetime import date
 from django import forms
 
-from .models import GuiaRemision,Ingreso,DetalleIngreso,Proveedor
+from .models import GuiaRemision,Ingreso,DetalleIngreso,Proveedor,Salida,DetalleSalida
 from apps.productos.models import Producto
 from apps.usuarios.forms import User
 
@@ -52,3 +52,21 @@ class ProveedoresForm(forms.ModelForm):
     class Meta:
         model = Proveedor
         fields = ('ruc','nombre','direccion',)
+
+#SALIDAS
+
+class SalidaForm(forms.ModelForm):
+    id_almacen = forms.ModelChoiceField(queryset=Almacen.objects.all(),widget=forms.Select(attrs={'class':'form-control'}),label="Almacen")
+    dni_usuario = forms.ModelChoiceField(queryset=User.objects.all(),widget=forms.Select(attrs={'class':'form-control'}),label="Usuario")
+    nodo = forms.CharField(max_length=15,widget=forms.TextInput(attrs={'class':'form-control'}),label="Nodo de Trabajo")
+    devolucion = forms.BooleanField(initial=True,widget=forms.CheckboxInput(),label="Retirar productos para devolver al proveedor")
+    class Meta:
+        model = Salida
+        fields = ('id_almacen','dni_usuario','nodo','devolucion',)
+
+class DetalleSalidaForm(forms.ModelForm):
+    codigo_producto = forms.ModelChoiceField(queryset=Producto.objects.all(),widget=forms.Select(attrs={'class':'form-control'}),label="Producto")
+    cantidad = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control'}),label="Cantidad")
+    class Meta:
+        model = DetalleSalida
+        fields = ('codigo_producto','cantidad',)

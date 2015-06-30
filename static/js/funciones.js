@@ -1,6 +1,4 @@
 $(document).ready(function() {
-<<<<<<< HEAD
-
 //    function centerModals(){
 //  $('.modal').each(function(i){
 //    var $clone = $(this).clone().css('display', 'block').appendTo('body');
@@ -12,22 +10,119 @@ $(document).ready(function() {
 //}
 //$('.modal').on('show.bs.modal', centerModals);
 //$(window).on('resize', centerModals);
-=======
+
     //delete modal content after close
     $('body').on('hidden.bs.modal', '.modal', function () {
         $(this).removeData('bs.modal');
       });
 
+    //FUNCIONES DE PRUEBA PARA SALIDAS - NO HACER CASO SORRY
+    $('#nuevasalida').on('click', function(){
+		desbloquear();
+		$('#modalsalida').modal({
+			show:true,
+			backdrop:'static',
+		});
+	});
 
->>>>>>> 525bd61938e23e4122ae18e84adab85cd5f1c072
+
+
+/*    $('#generarsalida').click(function() {
+        $.ajax({
+            url: $('#ajaxform').attr('action'),
+            type: 'POST',
+            data: $('#ajaxform').serialize(),
+            dataType: 'json',
+            success: function(response) {
+                if(response.success){
+                    $('#ajaxform')[0].reset();
+                    $('.form-error').remove();
+                    $('#comments').prepend(response.fields.message);
+
+                } else {
+
+                    $('.form-error').remove();
+                    for(var error in response.errors.fields) {
+                        $('#ajaxform #id_' + error).before('<div class="form-error">' + response.errors.fields[error] + '</div>');
+                    }
+                }
+            }
+        });
+    });*/
+
+
+	/*$('#generarsalida').on('click', function(){
+		var almacen = $('#id_id_almacen').val();
+		var usuario = $('#id_dni_usuario').val();
+		var nodo = $('#id_nodo').val();
+		var devolucion = $('#id_devolucion').val();
+        var datos = "{'id_almacen':'" + almacen + "', 'dni_usuario':'" + usuario + "', 'devolucion':'" + devolucion + "' , 'nodo' :'"+nodo+"'}";
+        alert(datos);
+		if(almacen.length>0 && usuario.length>0 && nodo.length>0 && devolucion.length>0 ){
+			$.ajax({
+				type: 'POST',
+				data: datos,
+				url: $('#ajaxform').serialize(),
+				dataType : 'json',
+				success: function(data){
+					if(data == 'existe'){
+						$('#mensaje').html('<p class="alert alert-danger">Espere!!, este codigo de registro ya fue ingresado anteriormente, ingrese otro porfavor.</p>');
+					}else{
+					}
+				}
+			});
+		}else{
+			$('#mensaje').html('<p class="alert alert-warning">Espere!!, tiene que ingresar todos los datos.</p>');
+		}
+	});}*/
+	$('#generarsalida').on('click',function(){
+            var almacen = $('#id_id_almacen').val();
+            var usuario = $('#id_dni_usuario').val();
+            var nodo = $('#id_nodo').val();
+            var devolucion = $('#id_devolucion').val();
+            var datos = "{'id_almacen':'" + almacen + "', 'dni_usuario':'" + usuario + "', 'devolucion':'" + devolucion + "' , 'nodo' :'"+nodo+"'}";
+	        alert(datos);
+	        $.ajax({
+            url : "salidas/api/salidas", // the endpoint
+            type : "POST", // http method
+            data : datos, // data sent with the post request
+            // handle a successful response
+            success : function(json) {
+                $('#post-text').val(''); // remove the value from the input
+                console.log(json); // log the returned json to the console
+                console.log("success"); // another sanity check
+            },
+            // handle a non-successful response
+            error : function(xhr,errmsg,err) {
+                $('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
+                    " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
+                console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+            }
+        });
+	});
+
 });
 
+    function desbloquear()
+    {
+        $('#nombEstudiante').attr('disabled');
+        $('#regEstudiante').attr('disabled');
+        $('#id_id_almacen').removeAttr('disabled','disabled');
+        $('#id_dni_usuario').removeAttr('disabled','disabled');
+        $('#id_devolucion').removeAttr('disabled','disabled');
+        $('#id_nodo').removeAttr('disabled','disabled');
+        $('#generarsalida').removeAttr('disabled','disabled');
+    }
+
+    function bloquear()
+    {
+        $('#nombEstudiante').removeAttr('disabled').focus();
+        $('#regEstudiante').removeAttr('disabled');
+        $('#id_id_almacen').attr('disabled','disabled');
+        $('#id_dni_usuario').attr('disabled','disabled');
+        $('#id_devolucion').attr('disabled','disabled');
+        $('#id_nodo').attr('disabled','disabled');
+        $('#generarsalida').attr('disabled','disabled');
+    }
 
 
-
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 525bd61938e23e4122ae18e84adab85cd5f1c072

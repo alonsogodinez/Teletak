@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {%  block breadcrumb %}
      <ol class="breadcrumb">
         <li ><a href="{%  url 'almacen:index' %}">Inicio</a></li>
@@ -7,13 +6,96 @@
         <li >Registrar Salida</li>
     </ol>
 {% endblock %}
-
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <a class="col-sm-offset-0 col-xs-offset-4 backbutton" href="{% url 'almacen:operaciones' %}">
-                <span class="  glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            </a>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <div class="container contenedor-lista">
+        <h3>Realizar Salida de Producto</h3>
+        <input type="button" value="GENERAR NUEVO REGISTRO" id="nuevasalida" class="btn btn-primary"/>
+        <div class="table-responsive">
+            <table class="table table-striped ">
+                {% load static from staticfiles %}
+                <thead>
+                    <tr  align="center">
+                        <td width="10%">Usuario</td>
+                        <td width="25%">Almacen</td>
+                        <td width="25%">Fecha</td>
+                        <td width="20%">Nodo</td>
+                        <td width="20%">Devolución</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in salidas %}
+                    <tr valign="middle" class="{{forloop.counter|divisibleby:2|yesno:'even,odd'}}">
+                        <td align="center">{{item.dni_usuario }}</td>
+                        <td align="center">{{item.id_almacen}}</td>
+                        <td align="center">{{item.fecha}}</td>
+                        <td align="center">{{item.nodo}}</td>
+                        <td align="center">
+                            <a href="#" class="btn btn-info">Editar</a>
+                            <a href="#"  data-toggle="modal" data-target="#delete-modal" class="btn btn-danger btn-delete">Eliminar</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
+        <div class="modal fade" id="delete-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                </div>
+            </div>
+        </div>
+
+
+    <!-- MODAL DE REGISTRO -->
+
+    <div class="modal fade" id="modalsalida" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="myModalLabel"><b>Registro de Salidas</b></h4>
+            </div>
+            <div class="modal-body">
+
+                <fieldset><legend>1. Generar Registro</legend>
+                    <form id="ajaxform"action="{% url 'salidas:index' %}" method="POST">{% csrf_token %}
+                        {{salida_form.as_p}}
+                    	<input type="button" id="generarsalida" class="btn btn-success" value="Registrar Salida" />
+                    </form>
+                </fieldset>
+                <div id="mensaje"></div>
+
+                <fieldset><legend>2. Registrar Alumnos</legend>
+                <table class="tbl-registro" width="100%">
+                	<tr>
+                    	<td><input type="text" placeholder="Escriba el nombre y apellido del estudiante..." class="form-control" id="nombEstudiante" disabled="disabled"/></td>
+                        <td><input type="button" id="regEstudiante" class="btn btn-primary" value="+" disabled="disabled"/></td>
+                    </tr>
+                </table>
+                </fieldset>
+
+                <br />
+
+                <div id="contenidoRegistro"></div>
+                <div class="modal-footer">
+                	<input type="button" id="guardar" class="btn btn-default" value="Guardar"/>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 {% endblock %}
