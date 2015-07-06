@@ -50,6 +50,7 @@ td .btn-danger{
 }
 .alert{
     border-radius: 0;
+
 }
 
 .backbutton{
@@ -379,6 +380,10 @@ td .btn-danger{
     .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus,
     .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
       background-color: #CBDEE5;
+    }
+
+    .backbutton{
+        position: inherit;
     }
 }
 

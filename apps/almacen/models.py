@@ -1,6 +1,6 @@
 from django.db import models
 from apps.usuarios.models import User
-from apps.productos.models import Producto
+from apps.productos.models import Producto,UnidadMedicion
 
 class Proveedor(models.Model):
     ruc = models.CharField(max_length=10,primary_key=True)
@@ -26,6 +26,10 @@ class Ingreso(models.Model):
     fecha = models.DateField(blank=True, null=True)
     guia_remision = models.ForeignKey(GuiaRemision, blank=True, null=True)
 
+    def __unicode__(self):
+        return  self.guia_remision.nro_guia_remitente + ' ' +  self.fecha.strftime('%Y-%m-%d')
+
+
 
 
 class DetalleIngreso(models.Model):
@@ -33,7 +37,7 @@ class DetalleIngreso(models.Model):
     codigo_producto = models.ForeignKey(Producto, blank=True, null=True)
     serie = models.CharField(max_length=20, blank=True, null=True)
     cantidad = models.IntegerField(blank=True, null=True)
-    unidad_caja = models.IntegerField(blank=True, null=True)
+    unidad_caja = models.ForeignKey(UnidadMedicion,blank=True, null=True)
     estado = models.CharField(max_length=15, blank=True, null=True)
 
 

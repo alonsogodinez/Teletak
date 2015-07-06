@@ -80,12 +80,14 @@ $(document).ready(function() {
             var usuario = $('#id_dni_usuario').val();
             var nodo = $('#id_nodo').val();
             var devolucion = $('#id_devolucion').val();
-            var datos = "{'id_almacen':'" + almacen + "', 'dni_usuario':'" + usuario + "', 'devolucion':'" + devolucion + "' , 'nodo' :'"+nodo+"'}";
-	        alert(datos);
+            var token = $('#ajaxform input[name^=csrfmiddlewaretoken] ').val();
+            var data_json = '{ "csrfmiddlewaretoken" : "' + token + '" , "id_almacen" : ' + almacen + ' , "dni_usuario" : ' + usuario + ', "devolucion": "' + devolucion + '" , "nodo" : "' + nodo + '"}';
+            var data_serializer = $("#ajaxform").serialize();
 	        $.ajax({
-            url : "salidas/api/salidas", // the endpoint
+            url : "salidas/api", // the endpoint
             type : "POST", // http method
-            data : datos, // data sent with the post request
+            data : data_serializer, // data sent with the post request
+            dataType: 'json',
             // handle a successful response
             success : function(json) {
                 $('#post-text').val(''); // remove the value from the input
