@@ -10,6 +10,9 @@ class Proveedor(models.Model):
     class Meta:
         verbose_name_plural = "Proveedores"
 
+    def __unicode__(self):
+        return self.nombre
+
 class GuiaRemision(models.Model):
     fecha_traslado = models.DateField()
     punto_partida = models.CharField(max_length=30)
@@ -21,13 +24,16 @@ class GuiaRemision(models.Model):
     class Meta:
         verbose_name_plural = "Guias de remision"
 
+    def __unicode__(self):
+        return self.nro_guia_remitente
+
 class Ingreso(models.Model):
     dni_usuario = models.ForeignKey(User, blank=True, null=True)
     fecha = models.DateField(blank=True, null=True)
     guia_remision = models.ForeignKey(GuiaRemision, blank=True, null=True)
 
     def __unicode__(self):
-        return  self.guia_remision.nro_guia_remitente + ' ' +  self.fecha.strftime('%Y-%m-%d')
+        return  self.guia_remision.nro_guia_remitente + ' ' +  self.fecha.strftime('%Y/%m/%d')
 
 
 
@@ -40,6 +46,9 @@ class DetalleIngreso(models.Model):
     unidad_caja = models.ForeignKey(UnidadMedicion,blank=True, null=True)
     estado = models.CharField(max_length=15, blank=True, null=True)
 
+    def __unicode__(self):
+        return self.codigo_producto.descripcion
+
 
 class Almacen(models.Model):
     ubicacion = models.CharField(max_length=50, blank=True, null=True)
@@ -48,6 +57,9 @@ class Almacen(models.Model):
         return self.ubicacion
     class Meta:
         verbose_name_plural = "Almacenes"
+
+    def __unicode__(self):
+        return self.ubicacion
 
 
 
@@ -58,6 +70,9 @@ class DetalleAlmacen(models.Model):
     cantidad = models.IntegerField()
     estado = models.CharField(max_length=10, blank=True, null=True)
 
+    def __unicode__(self):
+        return self.codigo_producto.descripcion
+
 
 
 class Salida(models.Model):
@@ -67,8 +82,13 @@ class Salida(models.Model):
     nodo = models.CharField(max_length=15, blank=True, null=True)
     devolucion = models.NullBooleanField()
 
+    def __unicode__(self):
+        return self.fecha.strftime('%Y/%m/%d')+' ' + nodo
 
 class DetalleSalida(models.Model):
     codigo_producto = models.ForeignKey(Producto, blank=True, null=True)
     id_salida = models.ForeignKey(Salida, blank=True, null=True)
     cantidad = models.IntegerField(blank=True, null=True)
+
+    def __unicode__(self):
+        return self.codigo_producto.descripcion

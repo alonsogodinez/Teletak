@@ -21,34 +21,52 @@
             </div>
         {% endfor %}
     {% endif %}
-    <div class="container contenedor-lista">
-        <div class="table-responsive">
-            <table class="table table-striped ">
-                {% load static from staticfiles %}
-                <thead>
-                    <tr  align="center">
-                        <td width="10%">Código</td>
-                        <td width="25%">SAP</td>
-                        <td width="25%">Descripción</td>
-                        <td width="20%">Categoría</td>
-                        <td width="20%">Operaciones</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for producto in object_list %}
-                    <tr valign="middle" class="{{forloop.counter|divisibleby:2|yesno:'even,odd'}}">
-                        <td align="center">{{ producto.codigo }}</td>
-                        <td align="center">{{ producto.sap }}</td>
-                        <td align="center">{{ producto.descripcion }}</td>
-                        <td align="center">{{ producto.stock_minimo }}</td>
-                        <td align="center">
-                            <a href="{% url 'productos:Editar_Producto' producto.codigo %}" class="btn btn-info">Editar</a>
-                            <a href="{% url 'productos:Eliminar_Producto' producto.codigo %}"  data-toggle="modal" data-target="#delete-modal" class="btn btn-danger btn-delete">Eliminar</a>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+    <div class=" contenedor-lista">
+        <div class="panel  panel-primary">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-pencil"></span>
+                <span class="">LISTADO DE PRODUCTOS</span>
+                <a class ="pull-right btn btn-danger  "
+                   href="{% url 'usuarios:index' %}">Volver
+                </a>
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-striped ">
+                        {% load static from staticfiles %}
+                        <thead>
+                            <tr  align="center">
+                                <td width="10%">Código</td>
+                                <td width="25%">SAP</td>
+                                <td width="25%">Descripción</td>
+                                <td width="20%">Categoría</td>
+                                <td width="20%">Operaciones</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for producto in object_list %}
+                            <tr valign="middle" class="{{forloop.counter|divisibleby:2|yesno:'even,odd'}}">
+                                <td align="center">{{ producto.codigo }}</td>
+                                <td align="center">{{ producto.sap }}</td>
+                                <td align="center">{{ producto.descripcion }}</td>
+                                <td align="center">{{ producto.stock_minimo }}</td>
+                                <td align="center">
+                                    <a href="{% url 'productos:Editar_Producto' producto.codigo %}"
+                                       class="btn btn-info">
+                                        Editar
+                                    </a>
+                                    <a href="{% url 'productos:Eliminar_Producto' producto.codigo %}"
+                                       data-toggle="modal" data-target="#delete-modal"
+                                       class="btn btn-danger btn-delete">
+                                        Eliminar
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
 
         <div class="modal fade" id="delete-modal">

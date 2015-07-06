@@ -192,9 +192,11 @@ td .btn-danger{
 
 
 
+
 .input-group-addon.glyphicon{
     top:0;
 }
+
 
 .module:hover .glyphicon::before{
     -webkit-transition: -webkit-transform .4s ease ;
@@ -299,6 +301,7 @@ td .btn-danger{
 .navbar-default{
     border-bottom: 3px solid #4b5162;
 }
+
 /*.navbar-nav>li>a{*/
     /*padding-top: 20px;*/
     /*padding-bottom: 20px;*/
@@ -317,6 +320,11 @@ td .btn-danger{
     color: #FFF;
     background-color: #6191B0;
 }
+
+.no-padding-top{
+    padding-top:0px !important;
+}
+
 .panel{
     background-color: rgba(255, 255, 255, 0.11);
     border:none;

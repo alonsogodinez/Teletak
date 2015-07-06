@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render,render_to_response,get_object_or_404
+from django.shortcuts import render,render_to_response,get_object_or_404, redirect
 from django.utils.decorators import method_decorator
 from django.views.generic import View, CreateView, ListView, UpdateView, DeleteView
 from Teletak.mixins import SuccessMessageMixin
@@ -42,21 +42,16 @@ class RegistrarProducto(LoginRequiredMixin,View,SuccessMessageMixin):
     def get(self, request):
         template_name = 'productos/nuevo_producto.html'
         producto_form = ProductoForm
-        unidadproducto_form = UnidadProductoForm
         return render(request,template_name,locals())
     def post(self,request):
         producto_form = ProductoForm(request.POST)
-        unidadproducto_form = UnidadProductoForm(request.POST)
-        if producto_form.is_valid() and unidadproducto_form.is_valid():
-            nuevo_item = unidadproducto_form.save(commit=False)
-            nuevo_item.codigo_producto = producto_form.save()
-            nuevo_item.save()
+        if producto_form.is_valid() :
+            producto_form.save()
             success_message = 'Los datos se actualizaron correctamente'
-            return HttpResponseRedirect("/productos/")
+            return redirect('/productos')
         else:
             template_name = 'productos/nuevo_producto.html'
             producto_form = ProductoForm
-            unidadproducto_form = UnidadProductoForm
             return render(request,template_name,locals())
 
 

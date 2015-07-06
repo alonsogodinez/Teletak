@@ -49,7 +49,7 @@ WSGI_APPLICATION = 'Teletak.wsgi.application'
 
 LANGUAGE_CODE = 'es-PE'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Lima'
 
 USE_I18N = True
 
