@@ -116,7 +116,9 @@ class Salidas(View,LoginRequiredMixin,JSONMixin):
             salida.fecha = time.strftime('%Y-%m-%d')
             salida.save()
         else:
-            pass
+            return JsonResponse(form.errors, status=400)
+
+
 #api
 class SalidasCollection(generics.ListCreateAPIView):
     queryset = Salida.objects.all()

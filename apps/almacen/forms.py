@@ -63,15 +63,15 @@ class ProveedoresForm(forms.ModelForm):
         model = Proveedor
         fields = ('ruc','nombre','direccion',)
 
-DetalleIngresoFormSet = inlineformset_factory(Ingreso,DetalleIngreso,can_delete=False, extra=1,form=DetalleIngresoForm)
+DetalleIngresoFormSet = inlineformset_factory(Ingreso,DetalleIngreso,can_delete=False, extra=5,form=DetalleIngresoForm)
 
 #SALIDAS
 
 class SalidaForm(forms.ModelForm):
-    id_almacen = forms.ModelChoiceField(queryset=Almacen.objects.all(),widget=forms.Select(attrs={'class':'form-control'}),label="Almacen")
-    dni_usuario = forms.ModelChoiceField(queryset=User.objects.all(),widget=forms.Select(attrs={'class':'form-control'}),label="Usuario")
-    nodo = forms.CharField(max_length=15,widget=forms.TextInput(attrs={'class':'form-control'}),label="Nodo de Trabajo")
-    devolucion = forms.BooleanField(initial=True,widget=forms.CheckboxInput(),label="Retirar productos para devolver al proveedor")
+    id_almacen = forms.ModelChoiceField(queryset=Almacen.objects.all(),widget=forms.Select(attrs={'class':'form-control','required':'true'}),label="Almacen")
+    dni_usuario = forms.ModelChoiceField(queryset=User.objects.all(),widget=forms.Select(attrs={'class':'form-control','required':'true'}),label="Usuario")
+    nodo = forms.CharField(max_length=15,widget=forms.TextInput(attrs={'class':'form-control','required':'true'}),label="Nodo de Trabajo")
+    devolucion = forms.BooleanField(initial=True,widget=forms.CheckboxInput(attrs={'required':'true'}),label="Retirar productos para devolver al proveedor")
     class Meta:
         model = Salida
         fields = ('id_almacen','dni_usuario','nodo','devolucion',)

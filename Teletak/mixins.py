@@ -66,3 +66,4 @@ class JSONMixin(object):
             to_json.update(errors=errors)
 
         return json.dumps(to_json)
+

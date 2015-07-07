@@ -27,7 +27,7 @@ $(document).ready(function() {
 	});
 
 
-/*
+
     $('#generarsalida').click(function() {
         $.ajax({
             url: $('#ajaxform').attr('action'),
@@ -50,7 +50,7 @@ $(document).ready(function() {
         });
     });
 
-*/
+
 	/*$('#generarsalida').on('click', function(){
 		var almacen = $('#id_id_almacen').val();
 		var usuario = $('#id_dni_usuario').val();
@@ -75,7 +75,7 @@ $(document).ready(function() {
 			$('#mensaje').html('<p class="alert alert-warning">Espere!!, tiene que ingresar todos los datos.</p>');
 		}
 	});}*/
-	$('#generarsalida').on('click',function(){
+	/*$('#generarsalida').on('click',function(){
             var almacen = $('#id_id_almacen').val();
             var usuario = $('#id_dni_usuario').val();
             var nodo = $('#id_nodo').val();
@@ -101,7 +101,7 @@ $(document).ready(function() {
                 console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
             }
         });
-	});
+	});*/
 
 });
 

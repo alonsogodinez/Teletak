@@ -20,34 +20,7 @@
     <div class="container contenedor-lista">
         <h3>Realizar Salida de Producto</h3>
         <input type="button" value="GENERAR NUEVO REGISTRO" id="nuevasalida" class="btn btn-primary"/>
-        <div class="table-responsive">
-            <table class="table table-striped ">
-                {% load static from staticfiles %}
-                <thead>
-                    <tr  align="center">
-                        <td width="10%">Usuario</td>
-                        <td width="25%">Almacen</td>
-                        <td width="25%">Fecha</td>
-                        <td width="20%">Nodo</td>
-                        <td width="20%">Devolución</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for item in salidas %}
-                    <tr valign="middle" class="{{forloop.counter|divisibleby:2|yesno:'even,odd'}}">
-                        <td align="center">{{item.dni_usuario }}</td>
-                        <td align="center">{{item.id_almacen}}</td>
-                        <td align="center">{{item.fecha}}</td>
-                        <td align="center">{{item.nodo}}</td>
-                        <td align="center">
-                            <a href="#" class="btn btn-info">Editar</a>
-                            <a href="#"  data-toggle="modal" data-target="#delete-modal" class="btn btn-danger btn-delete">Eliminar</a>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+
         <div class="modal fade" id="delete-modal">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -68,13 +41,12 @@
             <div class="modal-body">
 
                 <fieldset><legend>1. Generar Registro</legend>
-                    <form id="ajaxform"action="{% url 'almacen:salidas' %}" method="POST">{% csrf_token %}
+                    <form id="ajaxform" action="{% url 'almacen:salidas' %}" method="POST">{% csrf_token %}
                         {{salida_form.as_p}}
                     	<input type="button" id="generarsalida" class="btn btn-success" value="Registrar Salida" />
                     </form>
                 </fieldset>
                 <div id="mensaje"></div>
-
                 <fieldset><legend>2. Registrar Alumnos</legend>
                 <table class="tbl-registro" width="100%">
                 	<tr>
