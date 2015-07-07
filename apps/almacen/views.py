@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.utils.decorators import method_decorator
 from django.views.generic import View, CreateView
 from forms import *
@@ -44,7 +44,7 @@ class Ingresos(LoginRequiredMixin,View,SuccessMessageMixin):
             nuevo_item1.save()
             success_message = 'Los datos se actualizaron correctamente'
 
-            return HttpResponseRedirect("/ingresos/")
+            return redirect("/ingresos/")
         else:
             template_name = 'almacen/ingresos'
             usuario_form = UsuarioForm
@@ -57,6 +57,7 @@ class Ingresos(LoginRequiredMixin,View,SuccessMessageMixin):
             return render(request,template_name,locals())
 
 class IngresoMultiple(LoginRequiredMixin,SuccessMessageMixin,View):
+
     template_name = 'almacen/ingresos/ingreso_multiple.html'
     model = Ingreso
 
@@ -64,7 +65,6 @@ class IngresoMultiple(LoginRequiredMixin,SuccessMessageMixin,View):
         ctx = {}
         ctx['ingresos_form']= IngresoForm()
         ctx['formset'] = DetalleIngresoFormSet()
-
         ctx['guiaremision_form'] = GuiaRemisionForm()
 
 
@@ -73,6 +73,10 @@ class IngresoMultiple(LoginRequiredMixin,SuccessMessageMixin,View):
     def post(self,request):
         ingresos_form= IngresoForm(request.POST)
         guiaremision_form = GuiaRemisionForm(request.POST)
+
+
+        print request.POST
+
         if ingresos_form.is_valid()  and guiaremision_form.is_valid():
 
             nuevo_item = ingresos_form.save(commit=False)
@@ -82,7 +86,7 @@ class IngresoMultiple(LoginRequiredMixin,SuccessMessageMixin,View):
             if formset.is_valid():
                 formset.save()
                 success_message = 'Los datos se actualizaron correctamente'
-                return HttpResponseRedirect("/ingresos/")
+                return HttpResponseRedirect("/operaciones")
             return render(request,self.template_name,locals())
 
         else:

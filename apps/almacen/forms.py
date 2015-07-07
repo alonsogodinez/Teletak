@@ -26,13 +26,13 @@ class DetalleIngresoForm(forms.ModelForm):
                                          widget=forms.Select(attrs={'class':'form-control chosen-select'}),
                                          label="Unidad de medida")
     estado = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control'}),label="Estado")
-    cod_producto = forms.ModelChoiceField(queryset=Producto.objects.all(),
+    codigo_producto = forms.ModelChoiceField(queryset=Producto.objects.all(),
                                           widget=forms.Select(attrs={'class':'form-control chosen-select',}))
     class Meta:
         model = DetalleIngreso
-        fields = ('serie','cantidad','unidad_caja','estado','cod_producto')
+        fields = ('serie','cantidad','unidad_caja','estado','codigo_producto')
 
-DetalleIngresoFormSet = inlineformset_factory(Ingreso,DetalleIngreso,can_delete=False, extra=1,form=DetalleIngresoForm)
+DetalleIngresoFormSet = inlineformset_factory(Ingreso,DetalleIngreso,can_delete=False, form=DetalleIngresoForm)
 
 
 

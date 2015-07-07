@@ -42,11 +42,18 @@ class RegistrarProducto(LoginRequiredMixin,View,SuccessMessageMixin):
     def get(self, request):
         template_name = 'productos/nuevo_producto.html'
         producto_form = ProductoForm
+        unidad_producto_form = UnidadProductoForm
+        unidad_producto_formset = UnidadProductoFormSet
         return render(request,template_name,locals())
     def post(self,request):
         producto_form = ProductoForm(request.POST)
-        if producto_form.is_valid() :
-            producto_form.save()
+        unidad_producto_form = UnidadProductoForm(request.POST)
+        unidad_producto_formset = UnidadProductoFormSet(request.POST)
+        if producto_form.is_valid() and unidad_producto_form:
+            unidad_producto =unidad_producto_form.save(commit=False)
+            producto = producto_form.save()
+            unidad_producto.codigo_producto = producto
+            unidad_producto.save()
             success_message = 'Los datos se actualizaron correctamente'
             return redirect('/productos')
         else:
@@ -55,13 +62,21 @@ class RegistrarProducto(LoginRequiredMixin,View,SuccessMessageMixin):
             return render(request,template_name,locals())
 
 
+# class Editar_Producto(SuccessMessageMixin,UpdateView):
+#
+#     model = Producto
+#     form_class = ProductoForm
+#     success_url = '/usuarios/lista'
+#     template_name = 'productos/editar_producto.html'
+#     success_message = 'Los datos se actualizaron correctamente'
+
 def Editar_Producto(request,id):
     template_name = 'productos/editar_producto.html'
     producto = get_object_or_404(Producto,pk=id)
-    unidad_producto = ProductoMedida.objects.get(codigo_producto=id)
+    unidad_producto = UnidadProductoForm
     if request.POST:
         producto_form = ProductoForm(request.POST,instance=producto)
-        unidadproducto_form = UnidadProductoForm(request.POST,instance=unidad_producto)
+        unidadproducto_form = UnidadProductoForm(request.POST)
         #form = ArticleForm(request.POST, instance=article)
         if producto_form.is_valid() and unidadproducto_form.is_valid():
             producto_form.save()

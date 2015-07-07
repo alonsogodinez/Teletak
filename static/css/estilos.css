@@ -42,6 +42,14 @@ td .btn-danger{
     background-color:#DF6561
 }
 
+.add-row{
+    margin-left: 31px;
+    background-color: #62aeee !important;
+}
+
+.add-row:hover{
+    background-color: #508bbd !important;
+}
 
 .action-buttons > .form-field{
     margin-top:25px;

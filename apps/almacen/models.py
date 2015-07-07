@@ -47,7 +47,7 @@ class DetalleIngreso(models.Model):
     estado = models.CharField(max_length=15, blank=True, null=True)
 
     def __unicode__(self):
-        return self.codigo_producto.descripcion
+        return self.estado
 
 
 class Almacen(models.Model):

@@ -15,3 +15,8 @@ admin.site.register(Proveedor,ProveedorAdmin)
 @admin.register(Ingreso)
 class IngresoAdmin(admin.ModelAdmin):
     model = Ingreso
+
+
+@admin.register(DetalleIngreso)
+class DetalleIngresoAdmin  (admin.ModelAdmin):
+    model = DetalleIngreso
