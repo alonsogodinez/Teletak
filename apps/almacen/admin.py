@@ -23,3 +23,11 @@ admin.site.register(Salida,SalidaAdmin)
 @admin.register(Ingreso)
 class IngresoAdmin(admin.ModelAdmin):
     model = Ingreso
+<<<<<<< HEAD
+=======
+
+
+@admin.register(DetalleIngreso)
+class DetalleIngresoAdmin  (admin.ModelAdmin):
+    model = DetalleIngreso
+>>>>>>> 042ec10db9bf56befafb55797317d74da18935cd

@@ -17,14 +17,15 @@
                 <div class="panel-body">
                     <form method="post" enctype="multipart/form-data">
                         <div id="form">
+
                             {% csrf_token %}
 
-                              <div class="">
-                                <div class="form-field form-subtitle col-sm-11">
-                                    <span> Datos del Producto</span>
-                                </div>
+                            <div class="form-field form-subtitle col-sm-11">
+                                <span> Datos del Producto</span>
                             </div>
+
                             <div class=" col-sm-6 col-xs-12">
+
                                 <div class=" form-group ">
                                     <div class="no-padding-top form-field col-sm-11">
                                         {{ producto_form.sap.errors }}
@@ -34,6 +35,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="form-group ">
                                     <div class="form-field col-sm-11">
                                         {{ producto_form.descripcion.errors }}
@@ -43,9 +45,12 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
 
+
                             <div class="col-sm-6 col-xs-12">
+
                                 <div class="form-group ">
                                     <div class="no-padding-top  form-field col-sm-11">
                                         {{ producto_form.stock_minimo.errors }}
@@ -55,6 +60,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="form-group ">
                                     <div class="form-field col-sm-11">
                                         {{ producto_form.categoria.errors }}
@@ -64,15 +70,61 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
+
+
+                            <div class="form-field form-subtitle col-sm-11">
+                                <span> Unidades del Producto</span>
+                            </div>
+
+                            {% for unidad_producto_form in unidad_producto_formset %}
+
+                            <div class="formset">
+                                <div class=" col-sm-6 col-xs-12">
+                                    <div class="form-group ">
+                                        <div class="no-padding-top form-field col-sm-11">
+                                            {{ unidad_producto_form.id_unidad.errors }}
+                                            <div class="input-group">
+                                                <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                                {{ unidad_producto_form.id_unidad}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 col-xs-12">
+
+                                    <div class="form-group ">
+                                        <div class="no-padding-top form-field col-sm-11">
+                                            {{ unidad_producto_form.equivalencia.errors }}
+                                            <div class="input-group">
+                                                <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                                {{ unidad_producto_form.equivalencia}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            {% endfor %}
+
+
+
+
+
                             <div class="submit-row  col-xs-12">
                                 <input  class ="col-sm-offset-2 col-sm-4  col-xs-12 btn btn-success btn-lg" type="submit"
                                     value="Registrar Producto" />
                                 <a class ="col-sm-offset-1 col-sm-3  col-xs-12 btn btn-danger btn-lg"
-                               href="{% url 'productos:index' %}">Volver</a>
-
+                                   href="{% url 'productos:index' %}">
+                                    Volver
+                                </a>
                             </div>
                         </div>
+                    {{ unidad_producto_formset.management_form }}
                     </form>
                 </div>
             </div>

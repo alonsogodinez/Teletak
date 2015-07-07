@@ -16,6 +16,7 @@ $(document).ready(function() {
     $('body').on('hidden.bs.modal', '.modal', function () {
         $(this).removeData('bs.modal');
       });
+<<<<<<< HEAD
 
     //FUNCIONES DE PRUEBA PARA SALIDAS - NO HACER CASO SORRY
     $('#nuevasalida').on('click', function(){
@@ -25,6 +26,11 @@ $(document).ready(function() {
 			backdrop:'static',
 		});
 	});
+=======
+     $(function() {
+        $('form .formset').formset();
+    })
+>>>>>>> 042ec10db9bf56befafb55797317d74da18935cd
 
 
 
