@@ -18,36 +18,39 @@ class RegistrarTrabajadorForm(forms.ModelForm):
 
     username = forms.CharField(max_length=30,
                                widget= forms.TextInput(attrs={'class':'form-control',
-                                                              'placeholder':'Usuario'}),
+                                                              'placeholder':'Usuario','required': True}),
                                label= "Usuario")
 
     password = forms.CharField(widget= forms.PasswordInput(attrs={'class':' form-control',
-                                                                  'placeholder':'Constraseña'}),
+                                                                  'placeholder':'Contraseña','required': True}),
                                label= "Contraseña")
 
     email = forms.EmailField(max_length=30,widget=forms.EmailInput(attrs={'class':'form-control',
-                                                                          'placeholder':'Email'}),
-                             label="Correo Electronico")
+                                                                          'placeholder':'Email','required': True}),
+                             label="Email")
 
     first_name = forms.CharField(max_length=100,widget= forms.TextInput(attrs={'class':'form-control',
-                                                                               'placeholder':'Nombres'}),
+                                                                               'placeholder':'Nombres','required': True}),
                                  label= "Nombres")
 
     last_name = forms.CharField(max_length=100,widget= forms.TextInput(attrs={'class':'form-control',
-                                                                              'placeholder':'Apellidos'}),
+                                                                              'placeholder':'Apellidos','required': True}),
                                 label= "Apellidos")
 
     dni = forms.CharField(max_length=8,widget= forms.TextInput(attrs={'class':'form-control',
-                                                                      'placeholder':'Dni'}),
+                                                                      'placeholder':'DNI','required': True}),
                           label= "DNI")
 
     cellphone = forms.CharField(max_length=15, widget= forms.TextInput(attrs={'class':'form-control',
-                                                                              'placeholder':'Celular'}),
+                                                                              'placeholder':'Celular','required': True}),
                                 label= "Celular")
 
     class Meta:
         model = User
         fields = ['username','password','email','first_name','last_name','dni','cellphone']
+
+
+
 
 class EditarTrabajadorForm(forms.ModelForm):
 
