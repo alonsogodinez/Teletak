@@ -1,9 +1,6 @@
 from django.conf.urls import patterns,  url, include
 from .views import *
-from rest_framework import routers
 
-router = routers.DefaultRouter()
-router.register(r'api', SalidasViewSet)
 
 urlpatterns = patterns('',
 
@@ -11,10 +8,8 @@ urlpatterns = patterns('',
     url(r'^operaciones$', Operaciones.as_view(),name='operaciones'),
     url(r'^operaciones/ingresos$', IngresoMultiple.as_view(),name='ingresos'),
     url(r'^operaciones/reingresos$', Reingresos.as_view(),name='reingresos'),
-    # url(r'^list/$', ListaMascota.as_view(),name='mascotas_list'),
-    # url(r'^(?P<pk>\d+)/$', MascotaDetailView.as_view(),name='mascotas_detail'),
-    url(r'^salidas$', Salidas.as_view(),name='salidas'),
-#    url(r'^salidas/', include(router.urls)),
-    url(r'^salidas/api/$', SalidasCollection.as_view()),
-    url(r'^salidas/api/(?P<pk>\d+)/$', SalidasDelete.as_view())
+    url(r'^operaciones/salidas',SalidaView.as_view(), name='salidas'),
+    url(r'^operaciones/registrar_salida','apps.almacen.views.RegistrarSalida', name='Registrar_Salida'),
+    url(r'^operaciones/add_detalle_salida','apps.almacen.views.AddDetalleSalida', name='Add_Detalle_Salida'),
+
 )

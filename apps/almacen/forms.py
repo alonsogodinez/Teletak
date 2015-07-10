@@ -1,4 +1,4 @@
-from django.forms.models import inlineformset_factory
+from django.forms.models import inlineformset_factory, formset_factory
 from datetime import date
 from django import forms
 from .models import GuiaRemision,Ingreso,DetalleIngreso,Proveedor,Salida,DetalleSalida,Almacen
@@ -71,7 +71,7 @@ class SalidaForm(forms.ModelForm):
     id_almacen = forms.ModelChoiceField(queryset=Almacen.objects.all(),widget=forms.Select(attrs={'class':'form-control','required':'true'}),label="Almacen")
     dni_usuario = forms.ModelChoiceField(queryset=User.objects.all(),widget=forms.Select(attrs={'class':'form-control','required':'true'}),label="Usuario")
     nodo = forms.CharField(max_length=15,widget=forms.TextInput(attrs={'class':'form-control','required':'true'}),label="Nodo de Trabajo")
-    devolucion = forms.BooleanField(initial=True,widget=forms.CheckboxInput(attrs={'required':'true'}),label="Retirar productos para devolver al proveedor")
+    devolucion = forms.BooleanField(initial=True,widget=forms.CheckboxInput(),label="Retirar productos para devolver al proveedor")
     class Meta:
         model = Salida
         fields = ('id_almacen','dni_usuario','nodo','devolucion',)
@@ -83,4 +83,5 @@ class DetalleSalidaForm(forms.ModelForm):
         model = DetalleSalida
         fields = ('codigo_producto','cantidad',)
 
-
+AddDetalleFormset = formset_factory(DetalleSalidaForm,extra=1,can_delete=True)
+#UnidadProductoFormSet = formset_factory(UnidadProductoForm, extra=6, max_num=10,can_delete=True)

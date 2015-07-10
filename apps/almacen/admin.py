@@ -15,19 +15,21 @@ class ProveedorAdmin(admin.ModelAdmin):
 class SalidaAdmin(admin.ModelAdmin):
     model=Salida
 
+class DetalleSalidaAdmin(admin.ModelAdmin):
+    model = DetalleSalida
+
 
 admin.site.register(Proveedor,ProveedorAdmin)
 admin.site.register(Salida,SalidaAdmin)
+admin.site.register(DetalleSalida,DetalleSalidaAdmin)
+
 
 
 @admin.register(Ingreso)
 class IngresoAdmin(admin.ModelAdmin):
     model = Ingreso
-<<<<<<< HEAD
-=======
 
 
 @admin.register(DetalleIngreso)
 class DetalleIngresoAdmin  (admin.ModelAdmin):
     model = DetalleIngreso
->>>>>>> 042ec10db9bf56befafb55797317d74da18935cd

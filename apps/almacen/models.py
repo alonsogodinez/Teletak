@@ -82,8 +82,6 @@ class Salida(models.Model):
     nodo = models.CharField(max_length=15, blank=True, null=True)
     devolucion = models.NullBooleanField()
 
-    def __unicode__(self):
-        return self.fecha.strftime('%Y/%m/%d')+' ' + nodo
 
 class DetalleSalida(models.Model):
     codigo_producto = models.ForeignKey(Producto, blank=True, null=True)

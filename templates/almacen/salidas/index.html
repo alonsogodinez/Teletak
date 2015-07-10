@@ -17,56 +17,136 @@
             </div>
         {% endfor %}
     {% endif %}
-    <div class="container contenedor-lista">
-        <h3>Realizar Salida de Producto</h3>
-        <input type="button" value="GENERAR NUEVO REGISTRO" id="nuevasalida" class="btn btn-primary"/>
 
-        <div class="modal fade" id="delete-modal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                </div>
-            </div>
-        </div>
-
-
-    <!-- MODAL DE REGISTRO -->
-
-    <div class="modal fade" id="modalsalida" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 class="modal-title" id="myModalLabel"><b>Registro de Salidas</b></h4>
-            </div>
-            <div class="modal-body">
-
-                <fieldset><legend>1. Generar Registro</legend>
-                    <form id="ajaxform" action="{% url 'almacen:salidas' %}" method="POST">{% csrf_token %}
-                        {{salida_form.as_p}}
-                    	<input type="button" id="generarsalida" class="btn btn-success" value="Registrar Salida" />
+    <div class="container">
+        <div class="row">
+            <div class="panel form-panel panel-primary">
+                <div class="panel-body">
+                    <form method="post" enctype="multipart/form-data" action="{% url 'almacen:salidas' %}"> {% csrf_token%}
+                        <div id="form">
+                            <div class="form-field form-subtitle col-sm-11">
+                                <span>Registrar una Salida</span>
+                            </div>
+                            <input type="hidden" value="1" name="mitoken"/>
+                            <div class=" col-sm-6 col-xs-12">
+                                <div class=" form-group ">
+                                    <div class="no-padding-top form-field col-sm-11">
+                                        {{ salidaform.dni_usuario.errors }}
+                                        <div class="input-group">
+                                            <span class="input-group-addon glyphicon glyphicon-barcode " ></span>
+                                            {{ salidaform.dni_usuario }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <div class="form-field col-sm-11">
+                                        {{ salidaform.id_almacen.errors }}
+                                        <div class="input-group">
+                                            <span class="input-group-addon glyphicon glyphicon-pencil " ></span>
+                                            {{ salidaform.id_almacen }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-sm-6 col-xs-12">
+                                 <div class=" form-group ">
+                                    <div class="no-padding-top form-field col-sm-11">
+                                        {{ salidaform.nodo.errors }}
+                                        <div class="input-group">
+                                            <span class="input-group-addon glyphicon glyphicon-barcode " ></span>
+                                            {{ salidaform.nodo }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <div class="form-field col-sm-11">
+                                        {{ salidaform.devolucion.errors }}
+                                        <div class="input-group">
+                                            <span class="input-group-addon glyphicon glyphicon-pencil " ></span>
+                                            {{ salidaform.devolucion }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-field form-subtitle col-sm-11">
+                                <span>Detalles</span>
+                            </div>
+                            {% for form in formset %}
+                                <div class="formset">
+                                    <div class=" col-sm-6 col-xs-12">
+                                        <div class="form-group ">
+                                            <div class="no-padding-top form-field col-sm-11">
+                                                {{ form.codigo_producto.errors }}
+                                                <div class="input-group">
+                                                    <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                                    {{ form.codigo_producto }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="form-group ">
+                                            <div class="no-padding-top form-field col-sm-11">
+                                                 {{ form.cantidad.errors }}
+                                                <div class="input-group">
+                                                <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                                    {{ form.cantidad }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            <div class="submit-row  col-xs-12">
+                                <input  class ="col-sm-offset-2 col-sm-4  col-xs-12 btn btn-success btn-lg" type="submit"
+                                    value="Guardar" name='submit'  />
+                                <a class ="col-sm-offset-1 col-sm-3  col-xs-12 btn btn-danger btn-lg"
+                                   href="{% url 'almacen:operaciones' %}">
+                                    Volver
+                                </a>
+                            </div>
+                        </div>
+                        {{ formset.management_form }}
                     </form>
-                </fieldset>
-                <div id="mensaje"></div>
-                <fieldset><legend>2. Registrar Alumnos</legend>
-                <table class="tbl-registro" width="100%">
-                	<tr>
-                    	<td><input type="text" placeholder="Escriba el nombre y apellido del estudiante..." class="form-control" id="nombEstudiante" disabled="disabled"/></td>
-                        <td><input type="button" id="regEstudiante" class="btn btn-primary" value="+" disabled="disabled"/></td>
-                    </tr>
-                </table>
-                </fieldset>
-
-                <br />
-
-                <div id="contenidoRegistro"></div>
-                <div class="modal-footer">
-                	<input type="button" id="guardar" class="btn btn-default" value="Guardar"/>
+                 <!--   <form action="{% url 'almacen:Add_Detalle_Salida' %}" method="post"> {% csrf_token%}
+                            <div class="form-field form-subtitle col-sm-11">
+                                <span>Detalles</span>
+                            </div>
+                            <input type="hidden" value="0" name="mitoken"/>
+                            <input type="hidden" value="{{id}}" name="id"/>
+                              {{ sal.management_form }}
+                              {% for form in sal.forms %}
+                                    <div class=" col-sm-12 col-xs-12">
+                                        <div class=" form-group col-sm-6 ">
+                                            <div class="no-padding-top form-field col-sm-11">
+                                                {{ form.codigo_producto.errors }}
+                                                <div class="input-group">
+                                                    <span class="input-group-addon glyphicon glyphicon-barcode " ></span>
+                                                    {{ form.codigo_producto }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-6 ">
+                                            <div class="form-field col-sm-11">
+                                                {{ form.cantidad.errors }}
+                                                <div class="input-group">
+                                                    <span class="input-group-addon glyphicon glyphicon-pencil " ></span>
+                                                    {{ form.cantidad }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                              {% endfor %}
+                            <div class="submit-row  col-xs-12">
+                                <input  class ="col-sm-offset-2 col-sm-4  col-xs-12 btn btn-info btn-lg" type="submit"
+                                    value="Añadir Registro" name='add_detalle'  />
+                                <input  class ="col-sm-offset-1 col-sm-3  col-xs-12 btn btn-success btn-lg" type="submit"
+                                    value="Guardar" name='submit'  />
+                            </div>
+                    </form>-->
                 </div>
-
             </div>
-          </div>
         </div>
-      </div>
-
     </div>
+
 {% endblock %}

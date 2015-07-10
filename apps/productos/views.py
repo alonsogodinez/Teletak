@@ -49,7 +49,7 @@ class RegistrarProducto(LoginRequiredMixin,View,SuccessMessageMixin):
         producto_form = ProductoForm(request.POST)
         unidad_producto_form = UnidadProductoForm(request.POST)
         unidad_producto_formset = UnidadProductoFormSet(request.POST)
-        if producto_form.is_valid() and unidad_producto_form:
+        if producto_form.is_valid() :
             unidad_producto =unidad_producto_form.save(commit=False)
             producto = producto_form.save()
             unidad_producto.codigo_producto = producto
@@ -109,7 +109,6 @@ class Categorias(View,SuccessMessageMixin):
 
 def Editar_Categoria(request,id):
     cat = Categoria.objects.get(pk=id)
-    print cat.nombre
     if request.POST:
         form = CategoriaForm(request.POST,instance=cat)
         if form.is_valid():

@@ -1,10 +1,12 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect
+from django.shortcuts import render, HttpResponseRedirect , redirect, render_to_response
 from django.utils.decorators import method_decorator
-from django.views.generic import View, CreateView
-from forms import *
-from django.http import HttpResponse,HttpResponseRedirect
+from django.views.generic import View
+from django.template.context import RequestContext
+from django.http import HttpResponseRedirect
 from Teletak.mixins import SuccessMessageMixin
+from .forms import *
+from .models import User,Ingreso,DetalleIngreso,Salida,DetalleSalida
 
 class LoginRequiredMixin(object):
     u"""Ensures that user must be authenticated in order to access view."""
@@ -73,12 +75,12 @@ class IngresoMultiple(LoginRequiredMixin,SuccessMessageMixin,View):
     def post(self,request):
         ingresos_form= IngresoForm(request.POST)
         guiaremision_form = GuiaRemisionForm(request.POST)
-
+        print "holaaa"
 
         print request.POST
 
         if ingresos_form.is_valid()  and guiaremision_form.is_valid():
-
+            print "aca estoy"
             nuevo_item = ingresos_form.save(commit=False)
             nuevo_item.guia_remision = guiaremision_form.save()
             nuevo_item.save()
@@ -102,36 +104,68 @@ class Reingresos(LoginRequiredMixin,View):
         return render(request,self.template_name)
 
 
-#salidas - HACIENDO PRUEBAS ----
+#salidas
+import datetime
 
-from Teletak.mixins import JSONMixin
-from rest_framework import generics,viewsets
-from .serializers import SalidaSerializer
-
-class Salidas(View,LoginRequiredMixin,JSONMixin):
-    def get(self,request):
-        salidas = Salida.objects.all()
-        salida_form = SalidaForm()
-        return render(request,'almacen/salidas/index.html',{'salida_form':salida_form,'salidas':salidas})
+class SalidaView(LoginRequiredMixin,View):
+    def get(self, request):
+        salidaform = SalidaForm
+        formset = AddDetalleFormset
+        form = DetalleSalidaForm
+        return render_to_response('almacen/salidas/index.html',locals(),context_instance=RequestContext(request))
     def post(self,request):
-        form = SalidaForm(request.POST)
-        if form.is_valid():
-            salida = form.save(commit=False)
-            salida.fecha = time.strftime('%Y-%m-%d')
+        print request.POST
+        salida_form = SalidaForm(request.POST)
+        formset = AddDetalleFormset(request.POST)
+        form = DetalleSalidaForm
+        if salida_form.is_valid and formset.is_valid:
+            salida = salida_form.save(commit=False)
+            salida.fecha = datetime.date.today()
             salida.save()
+            for form in formset.forms:
+                object = form.save(commit=False)
+                if form.has_changed():
+                    object.id_salida = salida
+                    object.save()
+            return  HttpResponseRedirect("/operaciones")
         else:
-            return JsonResponse(form.errors, status=400)
+            return render_to_response('almacen/salidas/index.html',locals(),context_instance=RequestContext(request))
 
 
-#api
-class SalidasCollection(generics.ListCreateAPIView):
-    queryset = Salida.objects.all()
-    serializer_class = SalidaSerializer
+def RegistrarSalida(request):
+    print request.POST['mitoken']
+    if request.POST['mitoken'] == "1" or request.POST['mitoken'] == 1:
+        print "El token si es 1"
+        form_salida = SalidaForm(request.POST)
+        if form_salida.is_valid():
+            SalidaInstancia = form_salida.save(commit=False)
+            SalidaInstancia.fecha = datetime.date.today()
+            SalidaInstancia.save()
+            new_sal = AddDetalleFormset(prefix='sal',instance=SalidaInstancia)
+            return render_to_response('almacen/salidas/index.html',{'sal':new_sal,'register':False,'id': SalidaInstancia.id},context_instance=RequestContext(request))
+        else:
+            form_salida = SalidaForm()
+            return render_to_response('almacen/salidas/index.html',{'form_salida':form_salida,'register':True},context_instance=RequestContext(request))
+    else:
+         print "El token es 0"
+         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
-class SalidasDelete(generics.RetrieveDestroyAPIView):
-    queryset = Salida.objects.all()
-    serializer_class = SalidaSerializer
 
-class SalidasViewSet(viewsets.ModelViewSet):
-    queryset = Salida.objects.all()
-    serializer_class = SalidaSerializer
+
+def AddDetalleSalida(request):
+        id = request.POST['id']
+        print "Id nr %s " %id
+        SalidaInstancia = Salida.objects.get(pk=id)
+        if request.method == 'POST':
+            if 'add_detalle' in request.POST:
+                cp = request.POST.copy()
+                cp['sal-TOTAL_FORMS'] = int(cp['sal-TOTAL_FORMS'])+ 1
+                new_sal = AddDetalleFormset(cp,prefix='sal')
+            elif 'submit' in request.POST:
+                formset = AddDetalleFormset(request.POST,instance=SalidaInstancia)
+                if formset.is_valid:
+                    formset.save()
+                    return HttpResponseRedirect("/")
+        else:
+            new_sal = AddDetalleFormset (prefix='sal',instance=SalidaInstancia)
+        return render_to_response('almacen/salidas/index.html',{'sal':new_sal,'register':False,'id':id},context_instance=RequestContext(request))
