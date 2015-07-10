@@ -23,14 +23,15 @@ class UnidadProductoForm(forms.ModelForm):
     id_unidad = forms.ModelChoiceField(queryset=UnidadMedicion.objects.all(),
                                        widget=forms.Select(attrs={'class':'form-control'}),
                                        label="Equivalencia")
-    equivalencia = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control',
+    equivalencia = forms.DecimalField(max_digits=4,decimal_places=2,
+                                      widget=forms.NumberInput(attrs={'class':'form-control',
                                                                       'placeholder':'Equivalencia'}),
                                       label="Equivalencia")
     class Meta:
         model = ProductoMedida
         fields = ['id_unidad','equivalencia',]
 
-UnidadProductoFormSet = formset_factory(UnidadProductoForm, extra=6, max_num=10,can_delete=True)
+UnidadProductoFormSet = formset_factory(UnidadProductoForm, extra=1, max_num=10)
 
 class CategoriaForm(forms.ModelForm):
     nombre = forms.CharField(max_length=15,widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Nueva categoria'}),label="Nombre")
