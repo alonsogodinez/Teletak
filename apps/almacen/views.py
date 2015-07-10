@@ -115,11 +115,9 @@ class SalidaView(LoginRequiredMixin,View):
         print request.POST
         salida_form = SalidaForm(request.POST)
         formset = AddDetalleFormset(request.POST)
-        form = DetalleSalidaForm
-        if salida_form.is_valid and formset.is_valid:
-            salida = salida_form.save(commit=False)
-            salida.fecha = datetime.date.today()
-            salida.save()
+        salida = salida_form.save(commit=False)
+        salida.fecha = datetime.date.today()
+        if salida.is_valid and formset.is_valid:
             for form in formset.forms:
                 object = form.save(commit=False)
                 if form.has_changed():

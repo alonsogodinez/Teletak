@@ -108,42 +108,6 @@
                         </div>
                         {{ formset.management_form }}
                     </form>
-                 <!--   <form action="{% url 'almacen:Add_Detalle_Salida' %}" method="post"> {% csrf_token%}
-                            <div class="form-field form-subtitle col-sm-11">
-                                <span>Detalles</span>
-                            </div>
-                            <input type="hidden" value="0" name="mitoken"/>
-                            <input type="hidden" value="{{id}}" name="id"/>
-                              {{ sal.management_form }}
-                              {% for form in sal.forms %}
-                                    <div class=" col-sm-12 col-xs-12">
-                                        <div class=" form-group col-sm-6 ">
-                                            <div class="no-padding-top form-field col-sm-11">
-                                                {{ form.codigo_producto.errors }}
-                                                <div class="input-group">
-                                                    <span class="input-group-addon glyphicon glyphicon-barcode " ></span>
-                                                    {{ form.codigo_producto }}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-sm-6 ">
-                                            <div class="form-field col-sm-11">
-                                                {{ form.cantidad.errors }}
-                                                <div class="input-group">
-                                                    <span class="input-group-addon glyphicon glyphicon-pencil " ></span>
-                                                    {{ form.cantidad }}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                              {% endfor %}
-                            <div class="submit-row  col-xs-12">
-                                <input  class ="col-sm-offset-2 col-sm-4  col-xs-12 btn btn-info btn-lg" type="submit"
-                                    value="Añadir Registro" name='add_detalle'  />
-                                <input  class ="col-sm-offset-1 col-sm-3  col-xs-12 btn btn-success btn-lg" type="submit"
-                                    value="Guardar" name='submit'  />
-                            </div>
-                    </form>-->
                 </div>
             </div>
         </div>

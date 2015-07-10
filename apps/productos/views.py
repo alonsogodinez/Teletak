@@ -47,12 +47,8 @@ class RegistrarProducto(LoginRequiredMixin,View,SuccessMessageMixin):
     def post(self,request):
         producto_form = ProductoForm(request.POST)
         unidad_producto_formset = UnidadProductoFormSet(request.POST)
-<<<<<<< HEAD
         if producto_form.is_valid() :
-            unidad_producto =unidad_producto_form.save(commit=False)
-=======
-        if producto_form.is_valid() and unidad_producto_formset.is_valid():
->>>>>>> 958e9c649fc2ddeea241deaaf564d07de2e6c805
+            #unidad_producto =unidad_producto_form.save(commit=False)
             producto = producto_form.save()
             for form in unidad_producto_formset.forms:
                 print form
