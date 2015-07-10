@@ -88,9 +88,7 @@ class IngresoMultiple(LoginRequiredMixin,SuccessMessageMixin,View):
                 success_message = 'Los datos se actualizaron correctamente'
                 return HttpResponseRedirect("/operaciones")
             return render(request,self.template_name,locals())
-
         else:
-
             return render(request,self.template_name,locals())
 
 

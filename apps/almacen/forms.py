@@ -14,20 +14,20 @@ class UsuarioForm(forms.ModelForm):
 class IngresoForm(forms.ModelForm):
     dni_usuario = forms.ModelChoiceField(queryset=User.objects.all(),
                                           widget=forms.Select(attrs={'class':'form-control chosen-select',}))
-    fecha       = forms.DateField(initial=date.today(),widget= forms.DateInput(attrs={'class':'form-control'}),label="Fecha")
+    fecha       = forms.DateField(initial=date.today(),widget= forms.DateInput(attrs={'class':'form-control'}),label="Fecha de ingreso")
     class Meta:
         model = Ingreso
         fields = ('dni_usuario','fecha',)
 
 class DetalleIngresoForm(forms.ModelForm):
-    serie = forms.CharField(max_length=10,widget=forms.TextInput(attrs={'class':'form-control'}),label="Serie")
-    cantidad = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control'}),label="Cantidad")
+    serie = forms.CharField(max_length=10,widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Serie'}),label="Serie")
+    cantidad = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control','placeholder':'Cantidad'}),label="Cantidad")
     unidad_caja = forms.ModelChoiceField(queryset=UnidadMedicion.objects.all(),
-                                         widget=forms.Select(attrs={'class':'form-control chosen-select'}),
+                                         widget=forms.Select(attrs={'class':'form-control chosen-select','placeholder':'Unidad de medida'}),
                                          label="Unidad de medida")
-    estado = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control'}),label="Estado")
+    estado = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control','placeholder':'Estado'}),label="Estado")
     codigo_producto = forms.ModelChoiceField(queryset=Producto.objects.all(),
-                                          widget=forms.Select(attrs={'class':'form-control chosen-select',}))
+                                          widget=forms.Select(attrs={'class':'form-control chosen-select','placeholder':'Codigo'}))
     class Meta:
         model = DetalleIngreso
         fields = ('serie','cantidad','unidad_caja','estado','codigo_producto')
@@ -43,7 +43,7 @@ class ProductoForm(forms.ModelForm):
         fields = ('codigo',)
 
 class GuiaRemisionForm(forms.ModelForm):
-    fecha_traslado = forms.DateField(initial=date.today(),widget= forms.DateInput(attrs={'class':'form-control'}),label="Fecha")
+    fecha_traslado = forms.DateField(initial=date.today(),widget= forms.DateInput(attrs={'class':'form-control'}),label="Fecha de traslado")
     punto_partida = forms.CharField(max_length=10,widget=forms.TextInput(attrs={'class':'form-control'}),label="Punto de partida")
     nro_guia_remitente = forms.CharField(max_length=10,widget=forms.TextInput(attrs={'class':'form-control'}),label="Guia remitente")
     placa_vehiculo = forms.CharField(max_length=10,widget=forms.TextInput(attrs={'class':'form-control'}),label="Placa de vehiculo")
