@@ -4,9 +4,7 @@ from django.forms import ModelForm, formset_factory
 from .models import Producto,Categoria,UnidadMedicion,ProductoMedida
 
 class ProductoForm(forms.ModelForm):
-    sap = forms.CharField(max_length=10,
-                          widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Código SAP'}),
-                          label="SAP")
+    sap = forms.ModelChoiceField(queryset=Producto.objects.all(),widget=forms.Select(attrs={'class':'form-control'}),label="Unidad de Medida")
     descripcion = forms.CharField(max_length=50,
                                   widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Descripción'}),
                                   label="Descripcion")
@@ -25,17 +23,18 @@ class UnidadProductoForm(forms.ModelForm):
     id_unidad = forms.ModelChoiceField(queryset=UnidadMedicion.objects.all(),
                                        widget=forms.Select(attrs={'class':'form-control'}),
                                        label="Equivalencia")
-    equivalencia = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control',
+    equivalencia = forms.DecimalField(max_digits=4,decimal_places=2,
+                                      widget=forms.NumberInput(attrs={'class':'form-control',
                                                                       'placeholder':'Equivalencia'}),
                                       label="Equivalencia")
     class Meta:
         model = ProductoMedida
         fields = ['id_unidad','equivalencia',]
 
-UnidadProductoFormSet = formset_factory(UnidadProductoForm, extra=6, max_num=10,can_delete=True)
+UnidadProductoFormSet = formset_factory(UnidadProductoForm, extra=1, max_num=10)
 
 class CategoriaForm(forms.ModelForm):
-    nombre = forms.CharField(max_length=15,widget=forms.TextInput(attrs={'class':'form-control'}),label="Nombre")
+    nombre = forms.CharField(max_length=15,widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Nueva categoria'}),label="Nombre")
     class Meta:
         model = Categoria
         fields = ['nombre',]

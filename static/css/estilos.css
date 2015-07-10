@@ -365,6 +365,14 @@ td .btn-danger{
     padding-bottom: 25px;
     margin-top: 20px;
 }
+
+.submit-row-cat {
+    background-color: #F8F8F8;
+    padding-bottom: 25px;
+    margin-top: 20px;
+}
+
+
 .table-responsive {
   overflow-x: visible;
 }
