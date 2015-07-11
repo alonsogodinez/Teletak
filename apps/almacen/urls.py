@@ -8,8 +8,10 @@ urlpatterns = patterns('',
     url(r'^operaciones$', Operaciones.as_view(),name='operaciones'),
     url(r'^operaciones/ingresos$', IngresoMultiple.as_view(),name='ingresos'),
     url(r'^operaciones/reingresos$', Reingresos.as_view(),name='reingresos'),
-    url(r'^operaciones/salidas',SalidaView.as_view(), name='salidas'),
+    url(r'^operaciones/salidas$',SalidaView.as_view(), name='salidas'),
+    url(r'^operaciones/listar_salidas$',ListarSalidas.as_view(), name='lista_salidas'),
+    url(r'^operaciones/eliminar_salidas/(?P<pk>\d+)/$',EliminarSalida.as_view(), name='eliminar_salidas'),
     url(r'^operaciones/registrar_salida','apps.almacen.views.RegistrarSalida', name='Registrar_Salida'),
     url(r'^operaciones/add_detalle_salida','apps.almacen.views.AddDetalleSalida', name='Add_Detalle_Salida'),
-
+    url(r'^prueba/(\d+)/$','apps.almacen.views.prueba', name='prueba'),
 )

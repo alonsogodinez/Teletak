@@ -33,7 +33,7 @@ class Ingreso(models.Model):
     guia_remision = models.ForeignKey(GuiaRemision, blank=True, null=True)
 
     def __unicode__(self):
-        return  self.guia_remision.nro_guia_remitente + ' ' +  self.fecha.strftime('%Y/%m/%d')
+        return  "%s - %d" %(self.guia_remision.nro_guia_remitente,self.fecha.strftime('%Y/%m/%d'))
 
 
 
@@ -46,8 +46,6 @@ class DetalleIngreso(models.Model):
     unidad_caja = models.ForeignKey(UnidadMedicion,blank=True, null=True)
     estado = models.CharField(max_length=15, blank=True, null=True)
 
-    def __unicode__(self):
-        return self.estado
 
 
 class Almacen(models.Model):
@@ -58,10 +56,6 @@ class Almacen(models.Model):
     class Meta:
         verbose_name_plural = "Almacenes"
 
-    def __unicode__(self):
-        return self.ubicacion
-
-
 
 class DetalleAlmacen(models.Model):
     codigo_producto = models.ForeignKey(Producto,blank=True,null=True)
@@ -71,8 +65,9 @@ class DetalleAlmacen(models.Model):
     estado = models.CharField(max_length=10, blank=True, null=True)
 
     def __unicode__(self):
-        return self.codigo_producto.descripcion
-
+        return self.codigo_producto
+    class Meta:
+        verbose_name = "Stock de Almacen"
 
 
 class Salida(models.Model):
@@ -81,12 +76,19 @@ class Salida(models.Model):
     fecha = models.DateField(blank=True, null=True)
     nodo = models.CharField(max_length=15, blank=True, null=True)
     devolucion = models.NullBooleanField()
+    def __unicode__(self):
+        return "Almacen: %s - Fecha: %s - Nodo: %s" %(self.id_almacen.ubicacion,self.fecha,self.nodo)
+    class Meta:
+        verbose_name = "Salida"
+        verbose_name_plural = "Salidas"
 
 
 class DetalleSalida(models.Model):
-    codigo_producto = models.ForeignKey(Producto, blank=True, null=True)
     id_salida = models.ForeignKey(Salida, blank=True, null=True)
+    codigo_producto = models.ForeignKey(Producto, blank=True, null=True)
     cantidad = models.IntegerField(blank=True, null=True)
 
     def __unicode__(self):
-        return self.codigo_producto.descripcion
+        return "Producto: %s - Cantidad: %d" %(self.codigo_producto.descripcion,self.cantidad)
+    class Meta:
+        verbose_name = "Detalles de Salida"

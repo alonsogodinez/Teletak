@@ -1,12 +1,12 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, HttpResponseRedirect , redirect, render_to_response
+from django.shortcuts import render, HttpResponseRedirect , redirect, render_to_response, HttpResponse
 from django.utils.decorators import method_decorator
-from django.views.generic import View
+from django.views.generic import View, ListView, DeleteView
 from django.template.context import RequestContext
 from django.http import HttpResponseRedirect
 from Teletak.mixins import SuccessMessageMixin
 from .forms import *
-from .models import User,Ingreso,DetalleIngreso,Salida,DetalleSalida
+from .models import Ingreso,DetalleIngreso,Salida,DetalleAlmacen,Almacen
 
 class LoginRequiredMixin(object):
     u"""Ensures that user must be authenticated in order to access view."""
@@ -105,27 +105,38 @@ class Reingresos(LoginRequiredMixin,View):
 #salidas
 import datetime
 
-class SalidaView(LoginRequiredMixin,View):
+class SalidaView(LoginRequiredMixin,View,SuccessMessageMixin):
     def get(self, request):
         salidaform = SalidaForm
         formset = AddDetalleFormset
         form = DetalleSalidaForm
         return render_to_response('almacen/salidas/index.html',locals(),context_instance=RequestContext(request))
     def post(self,request):
-        print request.POST
         salida_form = SalidaForm(request.POST)
         formset = AddDetalleFormset(request.POST)
-        salida = salida_form.save(commit=False)
-        salida.fecha = datetime.date.today()
-        if salida.is_valid and formset.is_valid:
+        if salida_form.is_valid() and formset.is_valid():
+            salida = salida_form.save(commit=False)
+            salida.fecha = datetime.date.today()
+            salida.save()
+            print salida.id
             for form in formset.forms:
                 object = form.save(commit=False)
-                if form.has_changed():
-                    object.id_salida = salida
-                    object.save()
-            return  HttpResponseRedirect("/operaciones")
+                object.id_salida = salida
+                object.save()
+            return  HttpResponseRedirect("/operaciones/listar_salidas")
         else:
-            return render_to_response('almacen/salidas/index.html',locals(),context_instance=RequestContext(request))
+            return render_to_response('almacen/salidas/index.html',{'salidaform': salida_form,'formset':formset},context_instance=RequestContext(request))
+
+
+class ListarSalidas(LoginRequiredMixin,ListView):
+    queryset = Salida.objects.all()
+    template_name = 'almacen/salidas/lista_salidas.html'
+
+class EliminarSalida(SuccessMessageMixin,DeleteView):
+    model = Salida
+    success_url = '/operaciones/listar_salidas'
+    template_name = 'almacen/salidas/confirm_delete_salida.html'
+    success_message = 'El registro de salida fue eliminado correctamente'
 
 
 def RegistrarSalida(request):
@@ -165,3 +176,14 @@ def AddDetalleSalida(request):
         else:
             new_sal = AddDetalleFormset (prefix='sal',instance=SalidaInstancia)
         return render_to_response('almacen/salidas/index.html',{'sal':new_sal,'register':False,'id':id},context_instance=RequestContext(request))
+
+
+def prueba(request,almacen):
+    articulos = []
+    for p in Producto.objects.all():
+        contador = 0
+        for c in DetalleAlmacen.objects.filter(codigo_producto = p.codigo, id_almacen = almacen):
+            contador = contador + c.cantidad
+        if contador>0:
+            articulos.append({p.id:contador})
+    return HttpResponse(articulos)

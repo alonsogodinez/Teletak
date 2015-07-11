@@ -47,8 +47,7 @@ class RegistrarProducto(LoginRequiredMixin,View,SuccessMessageMixin):
     def post(self,request):
         producto_form = ProductoForm(request.POST)
         unidad_producto_formset = UnidadProductoFormSet(request.POST)
-        if producto_form.is_valid() :
-            #unidad_producto =unidad_producto_form.save(commit=False)
+        if producto_form.is_valid() and unidad_producto_formset.is_valid() :
             producto = producto_form.save()
             for form in unidad_producto_formset.forms:
                 print form
@@ -56,7 +55,6 @@ class RegistrarProducto(LoginRequiredMixin,View,SuccessMessageMixin):
                 form.save()
                 success_message = 'Los datos se actualizaron correctamente'
                 return redirect('/productos')
-
         else:
             template_name = 'productos/nuevo_producto.html'
             producto_form = ProductoForm

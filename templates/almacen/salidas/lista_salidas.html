@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+
+{%  block breadcrumb %}
+     <ol class="breadcrumb">
+        <li ><a href="{%  url 'almacen:index' %}">Inicio</a></li>
+        <li class="active"><a href="{%   url 'almacen:operaciones' %}">Almacén</a></li>
+        <li >Listar Salidas</li>
+    </ol>
+{% endblock %}
+
+
+{% block content %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <div class=" contenedor-lista">
+        <div class="panel  panel-primary">
+            <div class="panel-heading">
+                <ul class="nav nav-tabs nav-justified">
+                     <li role="presentation" ><a href="{% url 'almacen:salidas' %}">Registro de Salidas</a></li>
+                     <li role="presentation" class="active"><a href="{% url 'almacen:lista_salidas' %}">Listado de Salidas</a></li>
+                 </ul>
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-striped ">
+                        {% load static from staticfiles %}
+                        <thead>
+                            <tr  align="center">
+                                <td width="10%">Fecha</td>
+                                <td width="20%">Trabajador</td>
+                                <td width="20%">Almacen</td>
+                                <td width="20%">Nodo</td>
+                                <td width="10%">Devolucion</td>
+                                <td width="40%">Operaciones</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for salida in object_list %}
+                            <tr valign="middle" class="{{forloop.counter|divisibleby:2|yesno:'even,odd'}}">
+                                <td align="center">{{ salida.fecha }}</td>
+                                <td align="center">{{ salida.dni_usuario }}</td>
+                                <td align="center">{{ salida.id_almacen }}</td>
+                                <td align="center">{{ salida.nodo }}</td>
+                                <td align="center">{{ salida.devolucion }}</td>
+                                <td align="center">
+                                    <a href=""
+                                       class="btn btn-info">
+                                        Detalles
+                                    </a>
+                                    <a href="{% url 'almacen:eliminar_salidas' salida.id %}"
+                                       data-toggle="modal" data-target="#delete-modal"
+                                       class="btn btn-danger btn-delete">
+                                        Eliminar
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="delete-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    {% endblock %}

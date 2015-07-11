@@ -20,7 +20,14 @@
 
     <div class="container">
         <div class="row">
+
             <div class="panel form-panel panel-primary">
+                 <div class="panel-heading">
+                     <ul class="nav nav-tabs nav-justified">
+                         <li role="presentation" class="active"><a href="{% url 'almacen:salidas' %}">Registro de Salidas</a></li>
+                         <li role="presentation"><a href="{% url 'almacen:lista_salidas' %}">Listado de Salidas</a></li>
+                     </ul>
+                 </div>
                 <div class="panel-body">
                     <form method="post" enctype="multipart/form-data" action="{% url 'almacen:salidas' %}"> {% csrf_token%}
                         <div id="form">
@@ -31,18 +38,20 @@
                             <div class=" col-sm-6 col-xs-12">
                                 <div class=" form-group ">
                                     <div class="no-padding-top form-field col-sm-11">
+                                        <h4><span class="label label-default"> {{ salidaform.dni_usuario.label }}</span></h4>
                                         {{ salidaform.dni_usuario.errors }}
                                         <div class="input-group">
-                                            <span class="input-group-addon glyphicon glyphicon-barcode " ></span>
+                                            <span class="input-group-addon glyphicon glyphicon-user " ></span>
                                             {{ salidaform.dni_usuario }}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <div class="form-field col-sm-11">
+                                        <h4><span class="label label-default"> {{ salidaform.id_almacen.label }}</span></h4>
                                         {{ salidaform.id_almacen.errors }}
                                         <div class="input-group">
-                                            <span class="input-group-addon glyphicon glyphicon-pencil " ></span>
+                                            <span class="input-group-addon glyphicon glyphicon-shopping-cart " ></span>
                                             {{ salidaform.id_almacen }}
                                         </div>
                                     </div>
@@ -51,9 +60,10 @@
                             <div class=" col-sm-6 col-xs-12">
                                  <div class=" form-group ">
                                     <div class="no-padding-top form-field col-sm-11">
+                                        <h4><span class="label label-default"> {{ salidaform.nodo.label }}</span></h4>
                                         {{ salidaform.nodo.errors }}
                                         <div class="input-group">
-                                            <span class="input-group-addon glyphicon glyphicon-barcode " ></span>
+                                            <span class="input-group-addon glyphicon glyphicon-tasks " ></span>
                                             {{ salidaform.nodo }}
                                         </div>
                                     </div>
@@ -62,8 +72,7 @@
                                     <div class="form-field col-sm-11">
                                         {{ salidaform.devolucion.errors }}
                                         <div class="input-group">
-                                            <span class="input-group-addon glyphicon glyphicon-pencil " ></span>
-                                            {{ salidaform.devolucion }}
+                                            {{ salidaform.devolucion }} {{ salidaform.devolucion.label }}
                                         </div>
                                     </div>
                                 </div>
