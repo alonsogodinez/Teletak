@@ -50,17 +50,16 @@ class RegistrarProducto(LoginRequiredMixin,View,SuccessMessageMixin):
         unidad_producto_formset = UnidadProductoFormSet(request.POST)
         if producto_form.is_valid() and unidad_producto_formset.is_valid():
             producto = producto_form.save()
-            for form in unidad_producto_formset.forms:
-                print form
-                form.codigo_producto = producto
-                form.save()
-                success_message = 'Los datos se actualizaron correctamente'
-                return redirect('/productos')
+            unidad_producto_formset.instance = producto
+            unidad_producto_formset.save()
+
+            success_message = 'Los datos se actualizaron correctamente'
+            return redirect('/productos')
 
         else:
 
-            producto_form = ProductoForm
-            unidad_producto_formset = UnidadProductoFormSet
+            producto_form = ProductoForm(request.POST)
+            unidad_producto_formset = UnidadProductoFormSet(request.POST)
             return render(request,self.template_name,locals())
 
 
@@ -72,23 +71,21 @@ class Editar_Producto (LoginRequiredMixin,View, SuccessMessageMixin):
     def get(self, request,*args, **kwargs):
         producto = get_object_or_404(Producto,pk=self.kwargs['pk'])
         producto_form = ProductoForm(instance=producto)
-        # unidad_producto_formset = UnidadProductoFormSet
+        unidad_producto_formset = UnidadProductoFormSetEdit(instance=producto)
         return render(request,self.template_name,locals())
-    def post(self,request):
-        producto_form = ProductoForm(request.POST)
-        unidad_producto_formset = UnidadProductoFormSet(request.POST)
+
+    def post(self, request,*args,**kwargs):
+        producto = get_object_or_404(Producto,pk=self.kwargs['pk'])
+        producto_form = ProductoForm(request.POST,instance=producto)
+        unidad_producto_formset = UnidadProductoFormSetEdit(request.POST,instance=producto)
         if producto_form.is_valid() and unidad_producto_formset.is_valid():
             producto = producto_form.save()
-            for form in unidad_producto_formset.forms:
-                print form
-                form.codigo_producto = producto
-                form.save()
-                success_message = 'Los datos se actualizaron correctamente'
-                return redirect('/productos')
+            unidad_producto_formset.save()
+            success_message = 'Los datos se actualizaron correctamente'
+            return redirect('/productos')
 
         else:
-            producto_form = ProductoForm
-            unidad_producto_formset = UnidadProductoFormSet
+
             return render(request,self.template_name,locals())
 
 

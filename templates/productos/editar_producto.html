@@ -10,21 +10,128 @@
 {% endblock %}
 
 
+
 {% block content %}
     <div class="container">
         <div class="row">
-            <form method="post" enctype="multipart/form-data">
-                <div id="form">
-                    {% csrf_token %}
-                    {{producto_form.as_p}}
+            <div class="panel form-panel panel-primary">
+                <div class="panel-body">
+                    <form method="post" enctype="multipart/form-data">
+                        <div id="form">
 
-                    <div class="form-group">
-                        <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                            <input  class ="col-xs-12 btn btn-success btn-lg" type="submit" value="Registrar Producto" />
+                            {% csrf_token %}
+
+                            <div class="form-field form-subtitle col-sm-11">
+                                <span> Datos del Producto</span>
+                            </div>
+
+                            <div class=" col-sm-6 col-xs-12">
+
+                                <div class=" form-group ">
+                                    <div class="no-padding-top form-field col-sm-11">
+                                        {{ producto_form.sap.errors }}
+                                        <div class="input-group">
+                                            <span class="input-group-addon glyphicon glyphicon-barcode " ></span>
+                                            {{ producto_form.sap }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group ">
+                                    <div class="form-field col-sm-11">
+                                        {{ producto_form.descripcion.errors }}
+                                        <div class="input-group">
+                                            <span class="input-group-addon glyphicon glyphicon-pencil " ></span>
+                                            {{ producto_form.descripcion }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-sm-6 col-xs-12">
+
+                                <div class="form-group ">
+                                    <div class="no-padding-top  form-field col-sm-11">
+                                        {{ producto_form.stock_minimo.errors }}
+                                        <div class="input-group">
+                                            <span class="input-group-addon glyphicon glyphicon-flag " ></span>
+                                            {{ producto_form.stock_minimo }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group ">
+                                    <div class="form-field col-sm-11">
+                                        {{ producto_form.categoria.errors }}
+                                        <div class="input-group">
+                                            <span class="input-group-addon glyphicon glyphicon-tag " ></span>
+                                            {{ producto_form.categoria }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            {{ unidad_producto_formset.management_form }}
+                            <div class="form-field form-subtitle col-sm-11">
+                                <span> Unidades del Producto</span>
+                            </div>
+
+                            {% for unidad_producto_form in unidad_producto_formset %}
+
+                            <div class="formset">
+                                <div class=" col-sm-6 col-xs-12">
+                                    <div class="form-group ">
+                                        <div class="no-padding-top form-field col-sm-11">
+                                            {{ unidad_producto_form.id_unidad.errors }}
+                                            <div class="input-group">
+                                                <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                                {{ unidad_producto_form.id_unidad}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{ unidad_producto_form.id}}
+                                <div class="col-sm-6 col-xs-12">
+
+                                    <div class="form-group ">
+                                        <div class="no-padding-top form-field col-sm-11">
+                                            {{ unidad_producto_form.equivalencia.errors }}
+                                            <div class="input-group">
+                                                <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                                {{ unidad_producto_form.equivalencia}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            {% endfor %}
+
+
+
+
+
+                            <div class="submit-row  col-xs-12">
+                                <input  class ="col-sm-offset-2 col-sm-4  col-xs-12 btn btn-success btn-lg" type="submit"
+                                    value="Guardar cambios" />
+                                <a class ="col-sm-offset-1 col-sm-3  col-xs-12 btn btn-danger btn-lg"
+                                   href="{% url 'productos:index' %}">
+                                    Volver
+                                </a>
+                            </div>
                         </div>
-                    </div>
+
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
+
 {% endblock %}
+

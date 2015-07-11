@@ -1,6 +1,6 @@
 # coding=utf-8
 from django import forms
-from django.forms import ModelForm, formset_factory
+from django.forms import ModelForm, formset_factory, inlineformset_factory
 from .models import Producto,Categoria,UnidadMedicion,ProductoMedida
 
 class ProductoForm(forms.ModelForm):
@@ -33,7 +33,8 @@ class UnidadProductoForm(forms.ModelForm):
         model = ProductoMedida
         fields = ['id_unidad','equivalencia',]
 
-UnidadProductoFormSet = formset_factory(UnidadProductoForm, extra=1, max_num=10)
+UnidadProductoFormSet = inlineformset_factory(Producto,ProductoMedida,UnidadProductoForm, extra=1, max_num=10)
+UnidadProductoFormSetEdit = inlineformset_factory(Producto,ProductoMedida,UnidadProductoForm, extra=1, max_num=10,min_num=1)
 
 class CategoriaForm(forms.ModelForm):
     nombre = forms.CharField(max_length=15,widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Nueva categoria'}),label="Nombre")
