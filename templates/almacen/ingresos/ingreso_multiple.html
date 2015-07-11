@@ -10,7 +10,7 @@
 
 
 {% block content %}
-    <div class="container contenedor-lista">
+    <div class="container">
         <div class="row">
             <div class="panel form-panel panel-primary">
                 <div class="panel-body">
@@ -19,13 +19,31 @@
                             {% csrf_token %}
                             {{ formset.management_form }}
 
+                            <div class="form-field form-subtitle col-sm-11">
+                                <span>Datos de la guia de remision</span>
+                            </div>
 
-                            {{ guiaremision_form.fecha_traslado }}
+                            <div class="form-group">
+                                <div class="input-group col-sm-6">
 
+                                    <div class="form-field">
+                                        {{ guiaremision_form.fecha_traslado }}
+                                    </div>
+                                </div>
+                            </div>
 
-                            {{ingresos_form}}
+                            <div class="form-field form-subtitle col-sm-11">
+                                <span> Datos del Producto</span>
+                            </div>
 
-
+                            <div class="form-group">
+                                <div class="input-group col-sm-6">
+                                    <span class="input-group-addon glyphicon glyphicon-hourglass" ></span>
+                                    <div class="form-field">
+                                        {{ ingresos_form.fecha }}
+                                    </div>
+                                </div>
+                            </div>
 
 
                             {% for form in formset %}
@@ -84,7 +102,7 @@
                             <br/><br/><br/>
                             <div class="form-group">
                                 <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                                    <input  class ="col-xs-12 btn btn-success btn-lg" type="submit" value="Registrar Producto" />
+                                    <input  class ="col-xs-12 btn btn-success btn-lg" type="submit" value="Ingresar nueva entrada" />
                                 </div>
                             </div>
                         </div>

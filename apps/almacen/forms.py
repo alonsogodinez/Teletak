@@ -13,8 +13,8 @@ class UsuarioForm(forms.ModelForm):
 
 class IngresoForm(forms.ModelForm):
     dni_usuario = forms.ModelChoiceField(queryset=User.objects.all(),
-                                          widget=forms.Select(attrs={'class':'form-control chosen-select',}))
-    fecha       = forms.DateField(initial=date.today(),widget= forms.DateInput(attrs={'class':'form-control'}),label="Fecha de ingreso")
+                                          widget=forms.Select(attrs={'class':'form-control chosen-select','placeholder':'DNI'}))
+    fecha       = forms.DateField(initial=date.today(),widget= forms.DateInput(attrs={'class':'form-control','placeholder':'Fecha de ingreso','enabled':'false'}),label="Fecha de ingreso")
     class Meta:
         model = Ingreso
         fields = ('dni_usuario','fecha',)
@@ -32,9 +32,7 @@ class DetalleIngresoForm(forms.ModelForm):
         model = DetalleIngreso
         fields = ('serie','cantidad','unidad_caja','estado','codigo_producto')
 
-DetalleIngresoFormSet = inlineformset_factory(Ingreso,DetalleIngreso,can_delete=False, form=DetalleIngresoForm)
-
-
+DetalleIngresoFormSet = inlineformset_factory(Ingreso,DetalleIngreso,extra=1,can_delete=False, form=DetalleIngresoForm)
 
 class ProductoForm(forms.ModelForm):
     codigo_product = forms.ModelChoiceField(queryset=Producto.objects.all(),widget=forms.Select(attrs={'class':'form-control'}),label="Unidad de Medida")
