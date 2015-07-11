@@ -4,7 +4,9 @@ from django.forms import ModelForm, formset_factory
 from .models import Producto,Categoria,UnidadMedicion,ProductoMedida
 
 class ProductoForm(forms.ModelForm):
-    sap = forms.ModelChoiceField(queryset=Producto.objects.all(),widget=forms.Select(attrs={'class':'form-control'}),label="Unidad de Medida")
+    sap = forms.CharField(max_length=10,
+                         widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Código SAP'}),
+                         label="Codigo sap")
     descripcion = forms.CharField(max_length=50,
                                   widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Descripción'}),
                                   label="Descripcion")
