@@ -19,16 +19,40 @@ $(document).ready(function() {
 
     $(function() {
         $('form .formset').formset();
-    })
+    });
 
-    //FUNCIONES DE PRUEBA PARA SALIDAS - NO HACER CASO SORRY
-    $('#nuevasalida').on('click', function(){
-		desbloquear();
-		$('#modalsalida').modal({
-			show:true,
-			backdrop:'static',
-		});
-	});
+
+
+
+    $("#id_form-0-id_almacen ").change(function(){
+        alert("cambio de opcion");
+        $.getJSON("operaciones/almacen/"+$(this).val()+"/", function(j) {
+            var options = '<option value="">---------- </option>';
+            alert("hola");
+            for (var i = 0; i < j.length; i++) {
+              options += '<option value="' + parseInt(j[i].pk) + '">' + j[i].fields['longname'] + '</option>';
+            }
+            $("#id_form-0-codigo_producto").html(options);
+            $("#id_form-0-codigo_producto option:first").attr('selected', 'selected');
+            $("#id_form-0-codigo_producto").attr('disabled', false);
+        });
+        $("#id_form-0-codigo_producto").attr('selected', 'selected');
+    })
+   /* $("#id_form-0-id_almacen ").change(function(){
+        alert("cambio de ipcion");
+        jQuery.ajax({
+             type: "GET",
+             url: "operaciones/almacen/"+$(this).val()+"/",
+             dataType: "json",
+             cache:false,
+             success: function(result) {
+                alert(result);
+             }
+         });
+    });*/
+
+
+    //FUNCIONES DE PRUEBA PARA SALIDAS - NO HACER CASO SORR
 
 
     $('#generarsalida').click(function() {

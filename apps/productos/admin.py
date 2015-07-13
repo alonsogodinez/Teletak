@@ -10,7 +10,7 @@ class CategoriaAdmin(admin.ModelAdmin):
 @admin.register(Producto)
 class ProductosAdmin(admin.ModelAdmin):
     model = Producto
-    list_display = ('sap','descripcion','categoria','stock_minimo',)
+    list_display = ('codigo','sap','descripcion','categoria','stock_minimo',)
     list_editable = ('descripcion','categoria','stock_minimo',)
 
 @admin.register(ProductoMedida)

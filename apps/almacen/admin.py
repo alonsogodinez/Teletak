@@ -5,6 +5,7 @@ from .models import *
 @admin.register(Almacen)
 class AlmacenAdmin(admin.ModelAdmin):
     model = Almacen
+    list_display = ('id',)
 
 class ProveedorAdmin(admin.ModelAdmin):
     model = Proveedor
@@ -13,7 +14,7 @@ class ProveedorAdmin(admin.ModelAdmin):
 
 class SalidaAdmin(admin.ModelAdmin):
     model=Salida
-    list_display = ('id','dni_usuario','id_almacen','fecha','nodo','devolucion',)
+    list_display = ('id','dni_usuario','fecha','nodo','devolucion',)
 
 class DetalleSalidaAdmin(admin.ModelAdmin):
     model = DetalleSalida
@@ -22,7 +23,12 @@ class DetalleSalidaAdmin(admin.ModelAdmin):
 
 class DetalleAlmacenAdmin(admin.ModelAdmin):
     model = DetalleAlmacen
-    list_display = ('codigo_producto','cantidad','id_almacen')
+    list_display = ('id','codigo_producto','cantidad','id_almacen')
+
+@admin.register(DetalleStock)
+class StockAdmin(admin.ModelAdmin):
+    model = DetalleStock
+    list_display = ('id_almacen','producto','stock')
 
 admin.site.register(Proveedor,ProveedorAdmin)
 admin.site.register(Salida,SalidaAdmin)

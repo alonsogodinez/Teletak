@@ -20,8 +20,12 @@ class Producto(models.Model):
     def __unicode__(self):
         return self.descripcion
 
+
 class ProductoMedida(models.Model):
     id_unidad = models.ForeignKey(UnidadMedicion,blank=True,null=True)
     codigo_producto = models.ForeignKey(Producto,blank=True,null=True)
     equivalencia = models.DecimalField('Equivalencia',max_digits=4,decimal_places=2)
+
+    class Meta:
+        unique_together = (("id_unidad", "codigo_producto"),)
 

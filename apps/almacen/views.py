@@ -6,7 +6,7 @@ from django.template.context import RequestContext
 from django.http import HttpResponseRedirect
 from Teletak.mixins import SuccessMessageMixin
 from .forms import *
-from .models import Ingreso,DetalleIngreso,Salida,DetalleAlmacen,Almacen
+from .models import Ingreso,DetalleIngreso,Salida,DetalleAlmacen,DetalleStock
 
 class LoginRequiredMixin(object):
     u"""Ensures that user must be authenticated in order to access view."""
@@ -107,6 +107,7 @@ import datetime
 
 class SalidaView(LoginRequiredMixin,View,SuccessMessageMixin):
     def get(self, request):
+        ActualizarStock(2).ActualizarEntrada()
         salidaform = SalidaForm
         formset = AddDetalleFormset
         form = DetalleSalidaForm
@@ -137,7 +138,7 @@ class EliminarSalida(SuccessMessageMixin,DeleteView):
     success_url = '/operaciones/listar_salidas'
     template_name = 'almacen/salidas/confirm_delete_salida.html'
     success_message = 'El registro de salida fue eliminado correctamente'
-
+"""
 
 def RegistrarSalida(request):
     print request.POST['mitoken']
@@ -177,13 +178,47 @@ def AddDetalleSalida(request):
             new_sal = AddDetalleFormset (prefix='sal',instance=SalidaInstancia)
         return render_to_response('almacen/salidas/index.html',{'sal':new_sal,'register':False,'id':id},context_instance=RequestContext(request))
 
+"""
+class ActualizarStock:
+    almacen = 0
+    def __init__(self,almacen):
+        self.almacen = int(almacen)
+    def ActualizarEntrada(self):
+        stock = []
+        for p in Producto.objects.all():
+            contador = 0
+            lista = DetalleAlmacen.objects.filter(id_almacen=self.almacen).filter(codigo_producto=p.codigo)
+            for c in lista:
+                contador = contador + c.cantidad
+            if contador>0:
+                stock.append((p.codigo,contador))
+                d = DetalleStock.objects.filter(id_almacen=self.almacen).filter(producto=p)
+                for item in d:
+                    item.stock = contador
+                    item.save()
+                if len(d) == 0:
+                    objeto = DetalleStock()
+                    objeto.id_almacen = Almacen.objects.get(pk =  self.almacen )
+                    objeto.producto = p
+                    objeto.stock = contador
+                    objeto.save()
+        #print [ (p.codigo,p.descripcion) for p in Producto.objects.all()]
+        return stock
+    def ActualizarSalida(self):
+        pass
 
-def prueba(request,almacen):
-    articulos = []
-    for p in Producto.objects.all():
-        contador = 0
-        for c in DetalleAlmacen.objects.filter(codigo_producto = p.codigo, id_almacen = almacen):
-            contador = contador + c.cantidad
-        if contador>0:
-            articulos.append({p.id:contador})
-    return HttpResponse(articulos)
+
+
+"""def prueba(request, cat_id):
+    from django.core import serializers
+    response = HttpResponse()
+    response['Content-Type'] = "application/json"
+    response.write(serializers.serialize("json", DetalleStock.objects.filter(id_almacen = cat_id)))
+    return response"""
+import json
+
+def prueba(request,id):
+    from django.core import serializers
+    response = serializers.serialize("json",DetalleStock.objects.filter(id_almacen=id))
+    return HttpResponse(response,content_type="application/json")
+

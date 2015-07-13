@@ -1,12 +1,66 @@
-{% extends 'base.html' %}
-{%  block breadcrumb %}
-     <ol class="breadcrumb">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    {% load static from staticfiles %}
+    <link href="{% static 'css/normalize.css' %}"/>
+    <link href= "{% static 'css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
+    <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <title>Teletak</title>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        alert("bienvenido");
+        $(function() {
+            $('form .formset').formset();
+        });
+        $("#id_form-0-id_almacen ").change(function(){
+            alert("esta cambiando");
+            
+        });
+    });
+    </script>
+</head>
+<body>
+    <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+         <div class="container-fluid contenedor ">
+             <div class="navbar-header">
+                 <button type="button" class="navbar-toggle " data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse">
+                     <span class="sr-only">Desplegar navegacion</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                 </button>
+                 <a href="/" class="navbar-brand">
+                     <img class=" navbar-logo" src="{% static 'img/logo.png' %}" alt="">
+                 </a>
+             </div>
+             <div class="navbar-collapse collapse hola navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Bienvenido
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            <strong>{{ user.username }}</strong>
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu" id="logout" role="menu">
+                            <li ><a href="/logout">Cerrar Sesión</a></li>
+                            </ul>
+                    </li>
+                </ul>
+            </div>
+         </div>
+    </div>
+
+    <ol class="breadcrumb">
         <li ><a href="{%  url 'almacen:salidas' %}">Inicio</a></li>
         <li class="active"><a href="{%   url 'almacen:operaciones' %}">Almacén</a></li>
         <li >Registrar Salida</li>
     </ol>
-{% endblock %}
-{% block content %}
+
     {% if messages %}
         {% for message in messages %}
             <div class="alert alert-success alert-dismissible" role="alert">
@@ -46,7 +100,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group ">
+                                <!--<div class="form-group ">
                                     <div class="form-field col-sm-11">
                                         <h4><span class="label label-default"> {{ salidaform.id_almacen.label }}</span></h4>
                                         {{ salidaform.id_almacen.errors }}
@@ -55,7 +109,7 @@
                                             {{ salidaform.id_almacen }}
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                             <div class=" col-sm-6 col-xs-12">
                                  <div class=" form-group ">
@@ -82,7 +136,18 @@
                             </div>
                             {% for form in formset %}
                                 <div class="formset">
-                                    <div class=" col-sm-6 col-xs-12">
+                                    <div class=" col-sm-4 col-xs-12">
+                                        <div class="form-group ">
+                                            <div class="no-padding-top form-field col-sm-11">
+                                                {{ form.id_almacen.errors }}
+                                                <div class="input-group">
+                                                    <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                                    {{ form.id_almacen }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" col-sm-4 col-xs-12">
                                         <div class="form-group ">
                                             <div class="no-padding-top form-field col-sm-11">
                                                 {{ form.codigo_producto.errors }}
@@ -93,7 +158,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6 col-xs-12">
+                                    <div class="col-sm-4 col-xs-12">
                                         <div class="form-group ">
                                             <div class="no-padding-top form-field col-sm-11">
                                                  {{ form.cantidad.errors }}
@@ -122,4 +187,12 @@
         </div>
     </div>
 
-{% endblock %}
+</body>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <p class="text-center">2015  © Teletak</p>
+            </div>
+        </div>
+    </footer>
+</html>

@@ -66,17 +66,16 @@ DetalleIngresoFormSet = inlineformset_factory(Ingreso,DetalleIngreso,can_delete=
 #SALIDAS
 
 class SalidaForm(forms.ModelForm):
-    id_almacen = forms.ModelChoiceField(queryset=Almacen.objects.all(),widget=forms.Select(attrs={'class':'form-control','required':'true','placeholder':'Almacen'}),label="Almacen")
     dni_usuario = forms.ModelChoiceField(queryset=User.objects.all(),widget=forms.Select(attrs={'class':'form-control','required':'true'}),label="Usuario")
     nodo = forms.CharField(max_length=15,widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Nombre del Nodo'}),label="Nodo de Trabajo")
     devolucion = forms.BooleanField(initial=True,widget=forms.CheckboxInput(),label="Devolver productos defectuosos al proveedor")
     class Meta:
         model = Salida
-        fields = ('id_almacen','dni_usuario','nodo','devolucion',)
+        fields = ('dni_usuario','nodo','devolucion',)
 
 class DetalleSalidaForm(forms.ModelForm):
-
-    codigo_producto = forms.ModelChoiceField(queryset=Producto.objects.all(),widget=forms.Select(attrs={'class':'form-control'}),label="Producto")
+    id_almacen = forms.ModelChoiceField(queryset=Almacen.objects.all(),widget=forms.Select(attrs={'class':'form-control','required':'true','placeholder':'Almacen'}),label="Almacen")
+    codigo_producto = forms.ModelChoiceField(Producto.objects,widget=forms.Select(attrs={'disabled': 'true'}))
     cantidad = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control'}),label="Cantidad")
     class Meta:
         model = DetalleSalida

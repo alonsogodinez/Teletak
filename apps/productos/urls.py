@@ -1,5 +1,5 @@
 from django.conf.urls import patterns,  url
-from .views import Index,ListarProductos,EliminarProducto,RegistrarProducto,Categorias,EliminarCategoria
+from .views import *
 
 urlpatterns = patterns('',
 
@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     #url(r'^registrar$',RegistrarProducto.as_view(),name='Registrar_Producto'),
     #url(r'^editar/(?P<pk>\d+)/$',EditarProducto.as_view(),name='Editar_Producto'),
     url(r'^registrar$',RegistrarProducto.as_view(),name='Registrar_Producto'),
-    url(r'^editar/(\d+)$','apps.productos.views.Editar_Producto',name='Editar_Producto'),
+    url(r'^editar/(?P<pk>\d+)',Editar_Producto.as_view(),name='Editar_Producto'),
     url(r'^categoria$',Categorias.as_view(),name='Categorias'),
     url(r'editar_categoria/(\d+)/$','apps.productos.views.Editar_Categoria',name='Editar_Categoria'),
     url(r'^eliminar_categoria/(?P<pk>\d+)/$', EliminarCategoria.as_view(),name='Eliminar_Categoria'),

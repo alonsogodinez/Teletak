@@ -16,6 +16,7 @@ DJANGO_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'smart_selects',
 )
 
 LOCAL_APPS = (

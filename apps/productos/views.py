@@ -39,56 +39,51 @@ class EliminarProducto(SuccessMessageMixin,DeleteView):
     success_message = 'El producto fue eliminado correctamente'
 
 class RegistrarProducto(LoginRequiredMixin,View,SuccessMessageMixin):
+    template_name = 'productos/nuevo_producto.html'
     def get(self, request):
-        template_name = 'productos/nuevo_producto.html'
+
         producto_form = ProductoForm
         unidad_producto_formset = UnidadProductoFormSet
-        return render(request,template_name,locals())
+        return render(request,self.template_name,locals())
     def post(self,request):
         producto_form = ProductoForm(request.POST)
         unidad_producto_formset = UnidadProductoFormSet(request.POST)
         if producto_form.is_valid() and unidad_producto_formset.is_valid() :
             producto = producto_form.save()
-            for form in unidad_producto_formset.forms:
-                print form
-                form.codigo_producto = producto
-                form.save()
-                success_message = 'Los datos se actualizaron correctamente'
-                return redirect('/productos')
+            unidad_producto_formset.instance = producto
+            unidad_producto_formset.save()
+            success_message = 'Los datos se actualizaron correctamente'
+            return redirect('/productos')
         else:
-            template_name = 'productos/nuevo_producto.html'
-            producto_form = ProductoForm
-            unidad_producto_formset = UnidadProductoFormSet
-            return render(request,template_name,locals())
+            producto_form = ProductoForm(request.POST)
+            unidad_producto_formset = UnidadProductoFormSet(request.POST)
+            return render(request,self.template_name,locals())
 
 
-# class Editar_Producto(SuccessMessageMixin,UpdateView):
-#
-#     model = Producto
-#     form_class = ProductoForm
-#     success_url = '/usuarios/lista'
-#     template_name = 'productos/editar_producto.html'
-#     success_message = 'Los datos se actualizaron correctamente'
+class Editar_Producto (LoginRequiredMixin,View, SuccessMessageMixin):
 
-def Editar_Producto(request,id):
     template_name = 'productos/editar_producto.html'
-    producto = get_object_or_404(Producto,pk=id)
-    unidad_producto = UnidadProductoForm
-    if request.POST:
-        producto_form = ProductoForm(request.POST,instance=producto)
-        unidadproducto_form = UnidadProductoForm(request.POST)
-        #form = ArticleForm(request.POST, instance=article)
-        if producto_form.is_valid() and unidadproducto_form.is_valid():
-            producto_form.save()
-            unidadproducto_form.save()
-            # If the save was successful, redirect to another page
-            #redirect_url = reverse(article_save_success)
-            return HttpResponseRedirect('/productos/')
-    else:
+    # unidad_producto_formset = UnidadProductoFormSet
+
+    def get(self, request,*args, **kwargs):
+        producto = get_object_or_404(Producto,pk=self.kwargs['pk'])
         producto_form = ProductoForm(instance=producto)
-        unidadproducto_form = UnidadProductoForm(instance=unidad_producto)
-        #form = ArticleForm(instance=producto)
-    return render_to_response(template_name,locals(), context_instance=RequestContext(request))
+        unidad_producto_formset = UnidadProductoFormSetEdit(instance=producto)
+        return render(request,self.template_name,locals())
+
+    def post(self, request,*args,**kwargs):
+        producto = get_object_or_404(Producto,pk=self.kwargs['pk'])
+        producto_form = ProductoForm(request.POST,instance=producto)
+        unidad_producto_formset = UnidadProductoFormSetEdit(request.POST,instance=producto)
+        if producto_form.is_valid() and unidad_producto_formset.is_valid():
+            producto = producto_form.save()
+            unidad_producto_formset.save()
+            success_message = 'Los datos se actualizaron correctamente'
+            return redirect('/productos')
+
+        else:
+
+            return render(request,self.template_name,locals())
 
 
 class Categorias(View,SuccessMessageMixin):
