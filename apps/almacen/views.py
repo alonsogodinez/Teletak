@@ -5,7 +5,7 @@ from django.views.generic import View, CreateView
 from forms import *
 from django.http import HttpResponse,HttpResponseRedirect
 from Teletak.mixins import SuccessMessageMixin
-
+from apps.usuarios.models import User
 class LoginRequiredMixin(object):
     u"""Ensures that user must be authenticated in order to access view."""
 
@@ -24,80 +24,84 @@ class Operaciones(LoginRequiredMixin,View):
     def get(self,request):
         return render(request,self.template_name)
 
-class Ingresos(LoginRequiredMixin,View,SuccessMessageMixin):
-    template_name='almacen/ingresos/index.html'
-    def get(self,request):
-        return render(request,self.template_name)
-    def post(self,request):
-        ingresos_form= IngresoForm(request.POST)
-        detalleingreso_form = DetalleIngresoForm(request.POST)
-        producto_form = ProductoForm(request.POST)
-        guiaremision_form = GuiaRemisionForm(request.POST)
-        if ingresos_form.is_valid() and detalleingreso_form.is_valid() and producto_form.is_valid() \
-                and guiaremision_form.is_valid():
 
-            nuevo_item = ingresos_form.save(commit=False)
-            nuevo_item.guia_remision = guiaremision_form.save()
-            nuevo_item1 = detalleingreso_form.save(commit=False)
-            nuevo_item1.id_ingreso=nuevo_item.save()
-            nuevo_item1.codigo_producto=producto_form.save()
-            nuevo_item1.save()
-            success_message = 'Los datos se actualizaron correctamente'
 
-            return redirect("/ingresos/")
-        else:
-            template_name = 'almacen/ingresos'
-            usuario_form = UsuarioForm
-            ingresos_form = IngresoForm
-            detalleingreso_form = DetalleIngreso
-            producto_form = ProductoForm
-            guiaremision_form = GuiaRemisionForm
-            proveedores_form = ProveedoresForm
+class Ingreso(LoginRequiredMixin,SuccessMessageMixin,View):
 
-            return render(request,template_name,locals())
-
-class IngresoMultiple(LoginRequiredMixin,SuccessMessageMixin,View):
-
-    template_name = 'almacen/ingresos/ingreso_multiple.html'
+    template_name = 'almacen/ingresos/index.html'
     model = Ingreso
 
     def get(self,request):
-        ctx = {}
-        ctx['ingresos_form']= IngresoForm()
-        ctx['formset'] = DetalleIngresoFormSet()
-        ctx['guiaremision_form'] = GuiaRemisionForm()
+        ingresos_form= IngresoForm
+        formset = DetalleIngresoFormSet(prefix='formset')
+        guiaremision_form = GuiaRemisionForm
 
-
-        return render(request,self.template_name,ctx)
+        return render(request,self.template_name,locals())
 
     def post(self,request):
+
         ingresos_form= IngresoForm(request.POST)
         guiaremision_form = GuiaRemisionForm(request.POST)
 
-
-        print request.POST
-
         if ingresos_form.is_valid()  and guiaremision_form.is_valid():
+            nuevo_ingreso = ingresos_form.save(commit=False)
+            nuevo_ingreso.dni_usuario = request.user
+            nuevo_ingreso.tipo = 1
+            nuevo_ingreso.guia_remision = guiaremision_form.save()
+            nuevo_ingreso.save()
 
-            nuevo_item = ingresos_form.save(commit=False)
-            nuevo_item.guia_remision = guiaremision_form.save()
-            nuevo_item.save()
-            formset = DetalleIngresoFormSet(request.POST,instance=nuevo_item)
-            if formset.is_valid():
-                formset.save()
+            detalle_ingreso = DetalleIngresoFormSet(request.POST,prefix='formset',instance=nuevo_ingreso,)
+            if detalle_ingreso.is_valid():
+
+                for detalle in detalle_ingreso.save(commit=False):
+                    detalle.id_almacen = Almacen.objects.get(id=request.POST['almacen'])
+                detalle_ingreso.save()
                 success_message = 'Los datos se actualizaron correctamente'
-                return HttpResponseRedirect("/operaciones")
+                return redirect("/operaciones")
             return render(request,self.template_name,locals())
         else:
+
             return render(request,self.template_name,locals())
 
 
 
 
 class Reingresos(LoginRequiredMixin,View):
-    template_name='almacen/reingresos/index.html'
+
+    template_name = 'almacen/reingresos/index.html'
+    model = Ingreso
+
     def get(self,request):
-        return render(request,self.template_name)
+        ingresos_form= IngresoForm
+        formset = DetalleIngresoFormSet(prefix='formset')
+
+        return render(request,self.template_name,locals())
+
+    def post(self,request):
+
+        ingresos_form= IngresoForm(request.POST)
+
+
+        if ingresos_form.is_valid() :
+            nuevo_ingreso = ingresos_form.save(commit=False)
+            nuevo_ingreso.dni_usuario = request.user
+            nuevo_ingreso.tipo = 2
+            nuevo_ingreso.save()
+
+            detalle_ingreso = DetalleIngresoFormSet(request.POST,prefix='formset',instance=nuevo_ingreso)
+
+            if detalle_ingreso.is_valid():
+
+                for detalle in detalle_ingreso.save(commit=False):
+                    detalle.id_almacen = Almacen.objects.get(id=request.POST['almacen'])
+
+                detalle_ingreso.save()
+                success_message = 'Los datos se actualizaron correctamente'
+                return redirect("/operaciones")
+
+        return render(request,self.template_name,locals())
+
+
 
 class Salidas(LoginRequiredMixin,View):
     template_name='almacen/salidas/index.html'

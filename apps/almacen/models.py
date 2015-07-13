@@ -1,6 +1,8 @@
 from django.db import models
 from apps.usuarios.models import User
 from apps.productos.models import Producto,UnidadMedicion
+from django.utils import timezone
+
 
 class Proveedor(models.Model):
     ruc = models.CharField(max_length=10,primary_key=True)
@@ -29,8 +31,9 @@ class GuiaRemision(models.Model):
 
 class Ingreso(models.Model):
     dni_usuario = models.ForeignKey(User, blank=True, null=True)
-    fecha = models.DateField(blank=True, null=True)
+    fecha = models.DateField(default=timezone.now ,blank=True, null=True)
     guia_remision = models.ForeignKey(GuiaRemision, blank=True, null=True)
+    tipo = models.IntegerField(blank=True, null=True) #ingreso :1   , reingreso:2
 
     def __unicode__(self):
         return  self.guia_remision.nro_guia_remitente + ' ' +  self.fecha.strftime('%Y/%m/%d')
@@ -38,16 +41,6 @@ class Ingreso(models.Model):
 
 
 
-class DetalleIngreso(models.Model):
-    id_ingreso = models.ForeignKey(Ingreso, blank=True, null=True)
-    codigo_producto = models.ForeignKey(Producto, blank=True, null=True)
-    serie = models.CharField(max_length=20, blank=True, null=True)
-    cantidad = models.IntegerField(blank=True, null=True)
-    unidad_caja = models.ForeignKey(UnidadMedicion,blank=True, null=True)
-    estado = models.CharField(max_length=15, blank=True, null=True)
-
-    def __unicode__(self):
-        return self.estado
 
 
 class Almacen(models.Model):
@@ -61,15 +54,15 @@ class Almacen(models.Model):
         return self.ubicacion
 
 
-class DetalleAlmacen(models.Model):
+class DetalleIngreso(models.Model):
     codigo_producto = models.ForeignKey(Producto,blank=True,null=True)
     id_almacen = models.ForeignKey(Almacen,blank=True,null=True)
     id_ingreso = models.ForeignKey(Ingreso, blank=True, null=True)
-    cantidad = models.IntegerField()
+    cantidad = models.IntegerField(blank=True,null=True)
     estado = models.CharField(max_length=10, blank=True, null=True)
 
     def __unicode__(self):
-        return self.codigo_producto.descripcion
+        return 'asdfa'
 
 
 class Salida(models.Model):
