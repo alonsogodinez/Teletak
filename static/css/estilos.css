@@ -231,8 +231,12 @@ td .btn-danger{
 
 .login{
 
-    color:white;
-    text-shadow: 1px 1px 2px #222;
+    color: #768e9e;
+
+    padding: 25px 49px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px #676767;
 }
 
 .login h1 {
