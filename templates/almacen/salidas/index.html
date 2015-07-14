@@ -9,16 +9,59 @@
     <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
     <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.formset.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nextElementInDom.js' %}"></script>
+    <script type="text/javascript" src="{% static 'django_ajax/js/jquery.ajax.min.js' %}"></script>
     <title>Teletak</title>
     <script type="text/javascript">
     $(document).ready(function() {
-        alert("bienvenido");
+
         $(function() {
             $('form .formset').formset();
         });
-        $("#id_form-0-id_almacen ").change(function(){
-            alert("esta cambiando");
-            
+
+        $(".c-almacen").change(function(){
+            $.ajax({
+                    url : "/operaciones/getproducto/"+ $(this).val() +"/",
+                    type : "GET",
+                    dataType: "json",
+                    async: true,
+                    success : function(j) {
+                        var options = '<option value="">---------- </option>';
+                        for (var i = 0; i < j.length; i++) {
+                            options += '<option value="' + parseInt(j[i].codigo) + '">' + j[i].nombre + '</option>';
+                        }
+                    /*  $("this").closest(".c-producto").html(options);
+                        $("this").closest(".c-producto option:first").attr('selected', 'selected');
+                        $("this").closest(".c-producto").attr('disabled', false);*/
+
+                        $("#id_form-0-codigo_producto").html(options);
+                        $("#id_form-0-codigo_producto option:first").attr('selected', 'selected');
+                        $("#id_form-0-codigo_producto").attr('disabled', false);
+                    },
+                    error : function(xhr,errmsg,err) {
+                        alert(xhr.status + ": " + xhr.responseText);
+                    }
+            });
+        });
+        $("#id_form-0-codigo_producto ").change(function(){
+            $.ajax({
+                    url : "/operaciones/getcantidad/" + $("#id_form-0-id_almacen ").val() + "/"+ $(this).val() +"/",
+                    type : "GET",
+                    dataType: "json",
+                    async: true,
+                    success : function(j) {
+                        for (var i = 0; i < j.length; i++) {
+                            $("#id_form-0-cantidad").attr( "max", parseInt(j[i].max_value));
+                            $("#id_form-0-cantidad").attr( "value", parseInt(j[i].max_value));
+
+                        }
+                        $("#id_form-0-cantidad").attr('disabled', false);
+                    },
+                    error : function(xhr,errmsg,err) {
+                        alert(xhr.status + ": " + xhr.responseText);
+                    }
+            });
         });
     });
     </script>
@@ -88,7 +131,6 @@
                             <div class="form-field form-subtitle col-sm-11">
                                 <span>Registrar una Salida</span>
                             </div>
-                            <input type="hidden" value="1" name="mitoken"/>
                             <div class=" col-sm-6 col-xs-12">
                                 <div class=" form-group ">
                                     <div class="no-padding-top form-field col-sm-11">
@@ -122,6 +164,8 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class=" col-sm-12 col-xs-12">
                                 <div class="form-group ">
                                     <div class="form-field col-sm-11">
                                         {{ salidaform.devolucion.errors }}
@@ -135,7 +179,8 @@
                                 <span>Detalles</span>
                             </div>
                             {% for form in formset %}
-                                <div class="formset">
+                            {{forloop.counter0}}
+                            <div class="formset">
                                     <div class=" col-sm-4 col-xs-12">
                                         <div class="form-group ">
                                             <div class="no-padding-top form-field col-sm-11">

@@ -68,22 +68,21 @@ class Editar_Producto (LoginRequiredMixin,View, SuccessMessageMixin):
     def get(self, request,*args, **kwargs):
         producto = get_object_or_404(Producto,pk=self.kwargs['pk'])
         producto_form = ProductoForm(instance=producto)
-        unidad_producto_formset = UnidadProductoFormSetEdit(instance=producto)
+        unidad_producto_formset = UnidadProductoFormSetEdit(prefix='formset', instance=producto)
         return render(request,self.template_name,locals())
 
     def post(self, request,*args,**kwargs):
         producto = get_object_or_404(Producto,pk=self.kwargs['pk'])
         producto_form = ProductoForm(request.POST,instance=producto)
-        unidad_producto_formset = UnidadProductoFormSetEdit(request.POST,instance=producto)
+        unidad_producto_formset = UnidadProductoFormSetEdit(request.POST,instance=producto,prefix='formset')
+
         if producto_form.is_valid() and unidad_producto_formset.is_valid():
             producto = producto_form.save()
             unidad_producto_formset.save()
             success_message = 'Los datos se actualizaron correctamente'
             return redirect('/productos')
 
-        else:
-
-            return render(request,self.template_name,locals())
+        return render(request,self.template_name,locals())
 
 
 class Categorias(View,SuccessMessageMixin):

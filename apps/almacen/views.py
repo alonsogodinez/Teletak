@@ -8,6 +8,7 @@ from Teletak.mixins import SuccessMessageMixin
 from .forms import *
 from .models import Ingreso,DetalleIngreso,Salida,DetalleAlmacen,DetalleStock
 
+
 class LoginRequiredMixin(object):
     u"""Ensures that user must be authenticated in order to access view."""
 
@@ -26,88 +27,88 @@ class Operaciones(LoginRequiredMixin,View):
     def get(self,request):
         return render(request,self.template_name)
 
-class Ingresos(LoginRequiredMixin,View,SuccessMessageMixin):
-    template_name='almacen/ingresos/index.html'
-    def get(self,request):
-        return render(request,self.template_name)
-    def post(self,request):
-        ingresos_form= IngresoForm(request.POST)
-        detalleingreso_form = DetalleIngresoForm(request.POST)
-        producto_form = ProductoForm(request.POST)
-        guiaremision_form = GuiaRemisionForm(request.POST)
-        if ingresos_form.is_valid() and detalleingreso_form.is_valid() and producto_form.is_valid() \
-                and guiaremision_form.is_valid():
+class IngresoView(LoginRequiredMixin,SuccessMessageMixin,View):
 
-            nuevo_item = ingresos_form.save(commit=False)
-            nuevo_item.guia_remision = guiaremision_form.save()
-            nuevo_item1 = detalleingreso_form.save(commit=False)
-            nuevo_item1.id_ingreso=nuevo_item.save()
-            nuevo_item1.codigo_producto=producto_form.save()
-            nuevo_item1.save()
-            success_message = 'Los datos se actualizaron correctamente'
-
-            return redirect("/ingresos/")
-        else:
-            template_name = 'almacen/ingresos'
-            usuario_form = UsuarioForm
-            ingresos_form = IngresoForm
-            detalleingreso_form = DetalleIngreso
-            producto_form = ProductoForm
-            guiaremision_form = GuiaRemisionForm
-            proveedores_form = ProveedoresForm
-
-            return render(request,template_name,locals())
-
-class IngresoMultiple(LoginRequiredMixin,SuccessMessageMixin,View):
-
-    template_name = 'almacen/ingresos/ingreso_multiple.html'
+    template_name = 'almacen/ingresos/index.html'
     model = Ingreso
 
     def get(self,request):
-        ctx = {}
-        ctx['ingresos_form']= IngresoForm()
-        ctx['formset'] = DetalleIngresoFormSet()
-        ctx['guiaremision_form'] = GuiaRemisionForm()
+        ingresos_form= IngresoForm
+        formset = DetalleIngresoFormSet(prefix='formset')
+        guiaremision_form = GuiaRemisionForm
 
-
-        return render(request,self.template_name,ctx)
+        return render(request,self.template_name,locals())
 
     def post(self,request):
+
         ingresos_form= IngresoForm(request.POST)
         guiaremision_form = GuiaRemisionForm(request.POST)
-        print "holaaa"
-
-        print request.POST
-
         if ingresos_form.is_valid()  and guiaremision_form.is_valid():
-            print "aca estoy"
-            nuevo_item = ingresos_form.save(commit=False)
-            nuevo_item.guia_remision = guiaremision_form.save()
-            nuevo_item.save()
-            formset = DetalleIngresoFormSet(request.POST,instance=nuevo_item)
-            if formset.is_valid():
-                formset.save()
+            nuevo_ingreso = ingresos_form.save(commit=False)
+            nuevo_ingreso.dni_usuario = request.user
+            nuevo_ingreso.tipo = 1
+            nuevo_ingreso.guia_remision = guiaremision_form.save()
+            nuevo_ingreso.save()
+
+            detalle_ingreso = DetalleIngresoFormSet(request.POST,prefix='formset',instance=nuevo_ingreso,)
+            if detalle_ingreso.is_valid():
+
+                for detalle in detalle_ingreso.save(commit=False):
+                    detalle.id_almacen = Almacen.objects.get(id=request.POST['almacen'])
+                detalle_ingreso.save()
                 success_message = 'Los datos se actualizaron correctamente'
-                return HttpResponseRedirect("/operaciones")
+                InsertarDetalleAlmacen(nuevo_ingreso.id,request.POST['almacen'])
+                return redirect("/operaciones")
             return render(request,self.template_name,locals())
         else:
+
             return render(request,self.template_name,locals())
-
-
 
 
 class Reingresos(LoginRequiredMixin,View):
-    template_name='almacen/reingresos/index.html'
+
+    template_name = 'almacen/reingresos/index.html'
+    model = Ingreso
+
     def get(self,request):
-        return render(request,self.template_name)
+        ingresos_form= IngresoForm
+        formset = DetalleIngresoFormSet(prefix='formset')
+
+        return render(request,self.template_name,locals())
+
+    def post(self,request):
+
+        ingresos_form= IngresoForm(request.POST)
+
+        if ingresos_form.is_valid() :
+            nuevo_ingreso = ingresos_form.save(commit=False)
+            nuevo_ingreso.dni_usuario = request.user
+            nuevo_ingreso.tipo = 2
+            nuevo_ingreso.save()
+
+            detalle_ingreso = DetalleIngresoFormSet(request.POST,prefix='formset',instance=nuevo_ingreso)
+
+            if detalle_ingreso.is_valid():
+
+                for detalle in detalle_ingreso.save(commit=False):
+                    detalle.id_almacen = Almacen.objects.get(id=request.POST['almacen'])
+
+                detalle_ingreso.save()
+                InsertarDetalleAlmacen(nuevo_ingreso.id,request.POST['almacen'])
+                success_message = 'Los datos se actualizaron correctamente'
+                return redirect("/operaciones")
+
+        return render(request,self.template_name,locals())
 
 
-#salidas
+
+
+#SALIDAS
 import datetime
 
 class SalidaView(LoginRequiredMixin,View,SuccessMessageMixin):
     def get(self, request):
-        ActualizarStock(2).ActualizarEntrada()
+        ActualizarStock(2).ActualizarTodoStock()
         salidaform = SalidaForm
         formset = AddDetalleFormset
         form = DetalleSalidaForm
@@ -119,11 +120,12 @@ class SalidaView(LoginRequiredMixin,View,SuccessMessageMixin):
             salida = salida_form.save(commit=False)
             salida.fecha = datetime.date.today()
             salida.save()
-            print salida.id
             for form in formset.forms:
+                print form
                 object = form.save(commit=False)
                 object.id_salida = salida
                 object.save()
+                ActualizarSalida(object.id_almacen,object.codigo_producto,object.cantidad)
             return  HttpResponseRedirect("/operaciones/listar_salidas")
         else:
             return render_to_response('almacen/salidas/index.html',{'salidaform': salida_form,'formset':formset},context_instance=RequestContext(request))
@@ -138,52 +140,49 @@ class EliminarSalida(SuccessMessageMixin,DeleteView):
     success_url = '/operaciones/listar_salidas'
     template_name = 'almacen/salidas/confirm_delete_salida.html'
     success_message = 'El registro de salida fue eliminado correctamente'
-"""
 
-def RegistrarSalida(request):
-    print request.POST['mitoken']
-    if request.POST['mitoken'] == "1" or request.POST['mitoken'] == 1:
-        print "El token si es 1"
-        form_salida = SalidaForm(request.POST)
-        if form_salida.is_valid():
-            SalidaInstancia = form_salida.save(commit=False)
-            SalidaInstancia.fecha = datetime.date.today()
-            SalidaInstancia.save()
-            new_sal = AddDetalleFormset(prefix='sal',instance=SalidaInstancia)
-            return render_to_response('almacen/salidas/index.html',{'sal':new_sal,'register':False,'id': SalidaInstancia.id},context_instance=RequestContext(request))
-        else:
-            form_salida = SalidaForm()
-            return render_to_response('almacen/salidas/index.html',{'form_salida':form_salida,'register':True},context_instance=RequestContext(request))
-    else:
-         print "El token es 0"
-         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+#FUNCIONES PARA ACTUALIZAR EL STOCK
+#-------------------------------------------------------------------
 
+#Funcion que se usa despues de cada ingreso(o reingreso) para insertar un registro en detallealmacen, y actualizar el stock
+def InsertarDetalleAlmacen(ingreso_id,almacen_id):
+    for p in DetalleIngreso.objects.filter(id_ingreso = ingreso_id).distinct('codigo_producto'):
+        objeto = DetalleIngreso.objects.filter(id_ingreso = ingreso_id, codigo_producto = p.codigo_producto.codigo)
+        cantidad = 0
+        for r in objeto:
+            cantidad = cantidad +  r.cantidad
+        nuevo = DetalleAlmacen()
+        nuevo.codigo_producto = Producto.objects.get(pk=p.codigo_producto.codigo)
+        nuevo.id_almacen = Almacen.objects.get(pk=almacen_id)
+        nuevo.id_ingreso = Ingreso.objects.get(pk=ingreso_id)
+        nuevo.cantidad = cantidad
+        nuevo.save()
+        update = DetalleStock.objects.filter(id_almacen=almacen_id).filter(producto=p.codigo_producto.codigo)
+        for item in update:
+                item.stock = item.stock + cantidad
+                item.save()
+        if len(update) == 0:
+            objeto = DetalleStock()
+            objeto.id_almacen = Almacen.objects.get(pk=almacen_id)
+            objeto.producto = Producto.objects.get(pk=p.codigo_producto.codigo)
+            objeto.stock = cantidad
+            objeto.save()
 
+#Funcion que se utiliza para actualizar el stock luego de una salida
+def ActualizarSalida(almacen_id,producto_id,cantidad):
+    lista = DetalleStock.objects.filter(id_almacen = almacen_id).filter(producto = producto_id)
+    print lista
+    for item in lista:
+        item.stock = item.stock - cantidad
+        item.save()
 
-def AddDetalleSalida(request):
-        id = request.POST['id']
-        print "Id nr %s " %id
-        SalidaInstancia = Salida.objects.get(pk=id)
-        if request.method == 'POST':
-            if 'add_detalle' in request.POST:
-                cp = request.POST.copy()
-                cp['sal-TOTAL_FORMS'] = int(cp['sal-TOTAL_FORMS'])+ 1
-                new_sal = AddDetalleFormset(cp,prefix='sal')
-            elif 'submit' in request.POST:
-                formset = AddDetalleFormset(request.POST,instance=SalidaInstancia)
-                if formset.is_valid:
-                    formset.save()
-                    return HttpResponseRedirect("/")
-        else:
-            new_sal = AddDetalleFormset (prefix='sal',instance=SalidaInstancia)
-        return render_to_response('almacen/salidas/index.html',{'sal':new_sal,'register':False,'id':id},context_instance=RequestContext(request))
-
-"""
+#Clase que se usa para actualizar el stock, sumando las cantidades de todas las entradas desde el origen de los tiempos
+#NO USAR, CON ESTO SE JODE LAS SALIDAS XDDD (solo para pruebas)
 class ActualizarStock:
     almacen = 0
     def __init__(self,almacen):
         self.almacen = int(almacen)
-    def ActualizarEntrada(self):
+    def ActualizarTodoStock(self):
         stock = []
         for p in Producto.objects.all():
             contador = 0
@@ -204,21 +203,28 @@ class ActualizarStock:
                     objeto.save()
         #print [ (p.codigo,p.descripcion) for p in Producto.objects.all()]
         return stock
-    def ActualizarSalida(self):
-        pass
 
 
 
-"""def prueba(request, cat_id):
-    from django.core import serializers
-    response = HttpResponse()
-    response['Content-Type'] = "application/json"
-    response.write(serializers.serialize("json", DetalleStock.objects.filter(id_almacen = cat_id)))
-    return response"""
+#FUNCIONES PARA LOS SELECTS DINAMICOS
+#---------------------------------------------------
 import json
+from django_ajax.decorators import ajax
+from django.core import serializers
 
-def prueba(request,id):
-    from django.core import serializers
-    response = serializers.serialize("json",DetalleStock.objects.filter(id_almacen=id))
-    return HttpResponse(response,content_type="application/json")
+#funcion que recupera todos los productos que existen en un almacen, y retorna json
+def getProductosfromAlmacen(request,almacen_id):
+    response = serializers.serialize("json",DetalleStock.objects.filter(id_almacen=almacen_id))
+    lista = []
+    productos = DetalleStock.objects.filter(id_almacen=almacen_id)
+    for p in productos:
+        lista.append({"codigo" : p.producto.codigo, "nombre" : p.producto.descripcion},)
+    return HttpResponse(json.dumps(lista),content_type='application/json')
 
+#funcion que recupera la cantidad(stock) de un determinado producto que hay en un almacen
+def getCantidadfromProductos(request,almacen_id,producto_id):
+    lista = []
+    items = DetalleStock.objects.filter(id_almacen=almacen_id,producto=producto_id)
+    for p in items:
+        lista.append({"max_value":p.stock},)
+    return HttpResponse(json.dumps(lista),content_type='application/json')

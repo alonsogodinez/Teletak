@@ -1,4 +1,3 @@
-{% comment %}
 {% extends 'base.html' %}
 
 {%  block breadcrumb %}
@@ -13,60 +12,189 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <form method="post" enctype="multipart/form-data">
-                <div id="form">
-                    {% csrf_token %}
+            <div class="panel form-panel panel-primary">
+                <div class="panel-body">
+                    <form method="post" enctype="multipart/form-data">
 
-                    {{unidadproducto_form.as_p}}
-                    <div class="form-group">
-                        <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                            <input  class ="col-xs-12 btn btn-success btn-lg" type="submit" value="Registrar Producto" />
+                        <div id="form">
+                            {% csrf_token %}
+
+
+                            <div class="form-field form-subtitle col-sm-11">
+                                <span>Datos de la guia de remision</span>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <div class="no-padding-top form-field col-sm-11 ">
+                                        {{ guiaremision_form.nro_guia_remitente.errors }}
+                                        <div class="input-group">
+                                            <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                            {{ guiaremision_form.nro_guia_remitente}}
+                                        </div>
+                                     </div>
+                                 </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <div class="no-padding-top form-field col-sm-11 ">
+                                        {{ guiaremision_form.licencia_conducir.errors }}
+                                        <div class="input-group">
+                                            <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                            {{ guiaremision_form.licencia_conducir}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <div class="no-padding-top form-field col-sm-11 ">
+                                        {{ guiaremision_form.punto_partida.errors }}
+                                        <div class="input-group">
+                                            <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                            {{ guiaremision_form.punto_partida}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xs-12">
+                                 <div class="form-group">
+                                     <div class="no-padding-top form-field col-sm-11 ">
+                                         {{ guiaremision_form.placa_vehiculo.errors }}
+                                         <div class="input-group">
+                                             <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                             {{ guiaremision_form.placa_vehiculo}}
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <div class="no-padding-top  form-field col-sm-11">
+                                        {{ guiaremision_form.fecha_traslado.errors }}
+                                        <div class="input-group ">
+                                            <span class="input-group-addon  ">Fecha de traslado</span>
+                                            {{ guiaremision_form.fecha_traslado }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <div class="no-padding-top  form-field col-sm-11">
+                                        <div class="input-group ">
+                                            {{ ingresos_form.almacen.errors }}
+                                            <span class="input-group-addon glyphicon glyphicon-asterisk"></span>
+                                            {{ ingresos_form.almacen }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <div class="form-field form-subtitle col-sm-11">
+                                <span> Datos del Producto</span>
+                            </div>
+
+
+                            {% for form in formset %}
+
+                                <div class="formset">
+
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="form-group ">
+                                            <div class="no-padding-top  form-field col-sm-11">
+                                                {{ form.codigo_producto.errors }}
+                                                <div class="input-group">
+                                                    <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                                    {{ form.codigo_producto}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="form-group ">
+                                            <div class="no-padding-top form-field col-sm-11 col-lg">
+                                                {{ form.cantidad.errors }}
+                                                <div class="input-group">
+                                                    <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                                    {{ form.cantidad}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 col-xs-12 last-row-field">
+                                        <div class="form-group">
+                                            <div class="no-padding-top form-field col-sm-11">
+                                                {{ form.estado.errors }}
+                                                <div class="input-group">
+                                                    <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                                    {{ form.estado}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-sm-6 col-xs-12 last-row-field">
+                                        <div class="form-group">
+                                            <div class="no-padding-top form-field col-sm-11">
+                                                {{ form.unidad_caja.errors }}
+                                                <div class="input-group">
+                                                    <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                                    {{ form.unidad_caja}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </div>
+
+                            {% endfor %}
+
+                            <div class="submit-row  col-xs-12">
+                                <input  class ="col-sm-offset-2 col-sm-4  col-xs-12 btn btn-success btn-lg" type="submit"
+                                    value="Registrar Entrada" />
+                                <a class ="col-sm-offset-1 col-sm-3  col-xs-12 btn btn-danger btn-lg"
+                                   href="{% url 'almacen:operaciones' %}">
+                                    Volver
+                                </a>
+                            </div>
+
                         </div>
-                    </div>
+
+                        {{ formset.management_form }}
+                    </form>
                 </div>
-            </form>
-        </div>
-
-    </div>
-
-{% endblock %}
-{% endcomment %}
-{% extends 'base.html' %}
-
-{%  block breadcrumb %}
-     <ol class="breadcrumb">
-        <li ><a href="{%  url 'almacen:index' %}">Inicio</a></li>
-        <li class="active"><a href="{%   url 'almacen:operaciones' %}">Almacén</a></li>
-        <li >Registrar Entrada</li>
-    </ol>
-{% endblock %}
-
-
-{% block content %}
-    <div class="container contenedor-lista">
-        <div class="row">
-            <form method="post" enctype="multipart/form-data">
-                <div id="form">
-                    {% csrf_token %}
-                {{ formset.management_form }}
-                    {% for form in formset %}
-                        {{ form }}
-                                <br/><br/><br/><br/><br/>
-                    {% endfor %}
-                    <br/><br/><br/><br/><br/>
-                    {{ingresos_form}}
-                    <br/>
-                    <br/><br/>
-
-                    <br/><br/><br/>
-                    {{ guiaremision_form }}
-                    <div class="form-group">
-                        <div class="form-field col-sm-offset-2 col-xs-offset-1 col-sm-8 col-xs-10">
-                            <input  class ="col-xs-12 btn btn-success btn-lg" type="submit" value="Registrar Producto" />
-                        </div>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
 
     </div>

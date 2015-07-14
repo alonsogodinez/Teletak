@@ -35,7 +35,11 @@
                             <div id="form">
                                 {% csrf_token %}
                                     <div class="panel-body">
-                                        {{form.nombre}}
+                                        <div class="input-group">
+                                                <span class="input-group-addon glyphicon glyphicon-tag " ></span>
+                                                {{form.nombre}}
+                                            </div>
+
                                     </div>
                                     <div class="submit-row-cat col-xs-12">
                                         <input  class ="col-sm-offset-3 col-sm-3 col-xs-6 btn btn-success btn-lg" type="submit" value="Registrar" />
@@ -62,8 +66,10 @@
                                 <td align="center">{{ item.pk }}</td>
                                 <td align="center">{{ item.nombre }}</td>
                                 <td align="center">
-                                    <a href="{% url 'productos:Editar_Categoria' item.id %}" class="btn btn-info">Editar</a>
-                                    <a href="{% url 'productos:Eliminar_Categoria' item.id %}"  data-toggle="modal" data-target="#delete-modal" class="btn btn-danger btn-delete">Eliminar</a>
+                                    <a href="{% url 'productos:Eliminar_Categoria' item.id %}"  data-toggle="modal"
+                                       data-target="#delete-modal" class="btn btn-danger btn-delete">
+                                        Eliminar
+                                    </a>
                                 </td>
                             </tr>
                             {% endfor %}

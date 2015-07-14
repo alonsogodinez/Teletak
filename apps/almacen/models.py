@@ -2,6 +2,8 @@ from django.db import models
 from apps.usuarios.models import User
 from apps.productos.models import Producto,UnidadMedicion
 from smart_selects.db_fields import ChainedForeignKey
+from django.utils import timezone
+
 
 class Proveedor(models.Model):
     ruc = models.CharField(max_length=10,primary_key=True)
@@ -30,12 +32,9 @@ class GuiaRemision(models.Model):
 
 class Ingreso(models.Model):
     dni_usuario = models.ForeignKey(User, blank=True, null=True)
-    fecha = models.DateField(blank=True, null=True)
+    fecha = models.DateField(default=timezone.now ,blank=True, null=True)
     guia_remision = models.ForeignKey(GuiaRemision, blank=True, null=True)
-
-
-
-
+    tipo = models.IntegerField(blank=True, null=True) #ingreso :1   , reingreso:2
 
 class DetalleIngreso(models.Model):
     id_ingreso = models.ForeignKey(Ingreso, blank=True, null=True)
@@ -44,7 +43,6 @@ class DetalleIngreso(models.Model):
     cantidad = models.IntegerField(blank=True, null=True)
     unidad_caja = models.ForeignKey(UnidadMedicion,blank=True, null=True)
     estado = models.CharField(max_length=15, blank=True, null=True)
-
 
 
 class Almacen(models.Model):
@@ -60,13 +58,13 @@ class DetalleAlmacen(models.Model):
     codigo_producto = models.ForeignKey(Producto,blank=True,null=True)
     id_almacen = models.ForeignKey(Almacen,blank=True,null=True)
     id_ingreso = models.ForeignKey(Ingreso, blank=True, null=True)
-    cantidad = models.IntegerField()
+    cantidad = models.IntegerField(blank=True,null=True)
     estado = models.CharField(max_length=10, blank=True, null=True)
-
 
     class Meta:
         verbose_name = "Detalle de almacen"
         verbose_name_plural = "Detalle de los almacenes"
+
 
 
 class Salida(models.Model):
@@ -75,7 +73,7 @@ class Salida(models.Model):
     nodo = models.CharField(max_length=15, blank=True, null=True)
     devolucion = models.NullBooleanField()
     def __unicode__(self):
-        return "Almacen: %s - Fecha: %s - Nodo: %s" %(self.id_almacen.ubicacion,self.fecha,self.nodo)
+        return "Fecha: %s - Nodo: %s" %(self.fecha,self.nodo)
     class Meta:
         verbose_name = "Salida"
         verbose_name_plural = "Salidas"

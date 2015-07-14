@@ -18,7 +18,7 @@ class SalidaAdmin(admin.ModelAdmin):
 
 class DetalleSalidaAdmin(admin.ModelAdmin):
     model = DetalleSalida
-    list_display = ('id_salida','codigo_producto','cantidad')
+    list_display = ('id_salida','codigo_producto','cantidad','id_almacen')
     list_editable = ('codigo_producto','cantidad')
 
 class DetalleAlmacenAdmin(admin.ModelAdmin):

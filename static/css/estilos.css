@@ -156,6 +156,10 @@ td .btn-danger{
     background-color: #CBDEE5;
 }
 
+.field-scape{
+    height: 34px;
+}
+
 .footer {
     padding: 20px;
     height: 60px;
@@ -176,7 +180,7 @@ td .btn-danger{
     padding-top: 40px;
 }
 .form-label{
-    color:white;
+    color: white;
 }
 
 .form-panel{
@@ -219,6 +223,12 @@ td .btn-danger{
     -o-transform:rotateZ(360deg);
     transform: rotateZ(360deg);
 }
+
+.last-row-field{
+    padding-bottom: 15px;
+
+}
+
 .login{
 
     color:white;
