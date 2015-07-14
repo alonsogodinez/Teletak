@@ -2,7 +2,8 @@
 from django.conf.urls import include, url
 from django.contrib import admin
 from apps.usuarios.views import Login,Logout
-
+from django.conf.urls.static import static
+from django.conf import settings
 
 admin.site.site_header = "TELETAK"
 admin.site.site_title= "Sistema de Administración"

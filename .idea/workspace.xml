@@ -2,7 +2,223 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4abeee97-c5ca-42d3-91cb-d25b29e75d27" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/logo.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Teletak/static/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Teletak/static/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Teletak/static/img/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Teletak/staticfiles/css/estilos.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Teletak/staticfiles/css/normalize.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Teletak/staticfiles/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Teletak/staticfiles/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Teletak/staticfiles/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Teletak/staticfiles/img/almacen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Teletak/staticfiles/img/configuracion.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Teletak/staticfiles/img/fondo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Teletak/staticfiles/img/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Teletak/staticfiles/img/producto.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Teletak/staticfiles/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Teletak/staticfiles/js/funciones.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Teletak/staticfiles/js/jquery-2.1.4.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Teletak/staticfiles/js/jquery.formset.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/base.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/base.f0d165989b77.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/base.f0d165989b77.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/changelists.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/changelists.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/changelists.facd9faec460.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/changelists.facd9faec460.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/dashboard.4898e2e9983d.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/dashboard.4898e2e9983d.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/dashboard.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/forms.812a4441d477.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/forms.812a4441d477.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/forms.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/forms.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/ie.2ca52592ccf6.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/ie.2ca52592ccf6.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/ie.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/login.9ee3563a2bfe.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/login.9ee3563a2bfe.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/login.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/login.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/rtl.b619957e18c9.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/rtl.b619957e18c9.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/rtl.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/rtl.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/widgets.84396bf6dde3.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/widgets.84396bf6dde3.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/widgets.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/widgets.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/changelist-bg.eaa563daae2a.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/changelist-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/changelist-bg_rtl.db38ab536edc.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/changelist-bg_rtl.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/default-bg-reverse.2c9949b0bac0.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/default-bg-reverse.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/default-bg.af816e70c828.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/default-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/deleted-overlay.1cd28ce73d7d.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/deleted-overlay.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/gis/move_vertex_off.93ee41d8cad9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/gis/move_vertex_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/gis/move_vertex_on.99be2571b3f6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/gis/move_vertex_on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-no.2888642640a3.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-no.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-unknown.662022bb6ab0.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-unknown.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-yes.0596085e212f.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-yes.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_addlink.27872b1581c4.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_addlink.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_alert.572a03fff47e.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_alert.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_calendar.b4704fc81e9d.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_calendar.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_changelink.76183412227f.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_changelink.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_clock.d65ba15015dd.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_clock.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_deletelink.b797f0120322.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_deletelink.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_error.d0272cd88394.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_error.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_searchbox.46952c2c6973.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_searchbox.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_success.08e6b9d922e1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_success.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/inline-delete-8bit.1c135ffae5f0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/inline-delete-8bit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/inline-delete.4df86317f5c4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/inline-delete.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/inline-restore-8bit.19cd843fa6f9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/inline-restore-8bit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/inline-restore.a14579a2580f.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/inline-restore.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/inline-splitter-bg.3d67b08b4771.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/inline-splitter-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/nav-bg-grabber.45d7c744bbe8.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/nav-bg-grabber.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/nav-bg-reverse.bd4701ff1aeb.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/nav-bg-reverse.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/nav-bg-selected.4ebddc881b37.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/nav-bg-selected.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/nav-bg.5dadb8cd9865.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/nav-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/selector-icons.4549da0d5c7f.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/selector-icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/selector-search.a5de786630be.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/selector-search.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/sorting-icons.2a27f8855e6b.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/sorting-icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/tooltag-add.2152fd3b4a4d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/tooltag-add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/tooltag-arrowright.5aa2c86314d7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/tooltag-arrowright.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/LICENSE-JQUERY.3c2025538601.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/LICENSE-JQUERY.3c2025538601.txt.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/LICENSE-JQUERY.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/LICENSE-JQUERY.txt.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/SelectBox.df843afcc450.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/SelectBox.df843afcc450.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/SelectBox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/SelectBox.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/SelectFilter2.54a4515a9134.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/SelectFilter2.54a4515a9134.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/SelectFilter2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/SelectFilter2.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/actions.42b74ac13f07.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/actions.42b74ac13f07.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/actions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/actions.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/actions.min.2893760b9e40.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/actions.min.2893760b9e40.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/actions.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/actions.min.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/admin/DateTimeShortcuts.140919a6a17e.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/admin/DateTimeShortcuts.140919a6a17e.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/admin/DateTimeShortcuts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/admin/DateTimeShortcuts.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/admin/RelatedObjectLookups.58b2336c1e19.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/admin/RelatedObjectLookups.58b2336c1e19.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/admin/RelatedObjectLookups.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/admin/RelatedObjectLookups.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/calendar.df720acbe7bb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/calendar.df720acbe7bb.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/calendar.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/collapse.c781bafaf192.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/collapse.c781bafaf192.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/collapse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/collapse.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/collapse.min.bf4e82bb444b.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/collapse.min.bf4e82bb444b.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/collapse.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/collapse.min.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/core.78280057239a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/core.78280057239a.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/core.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/inlines.ec5c4bfbf84d.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/inlines.ec5c4bfbf84d.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/inlines.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/inlines.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/inlines.min.e3cd9638369f.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/inlines.min.e3cd9638369f.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/inlines.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/inlines.min.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/jquery.c0b3962f9f23.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/jquery.c0b3962f9f23.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/jquery.init.575b5609d57c.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/jquery.init.575b5609d57c.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/jquery.init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/jquery.init.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/jquery.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/jquery.min.5790ead7ad3b.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/jquery.min.5790ead7ad3b.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/jquery.min.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate.cd237b18d36c.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate.cd237b18d36c.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate.min.4479f53b704f.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate.min.4479f53b704f.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate.min.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/related-widget-wrapper.3641d148e433.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/related-widget-wrapper.3641d148e433.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/related-widget-wrapper.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/related-widget-wrapper.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/timeparse.a298a7ede5c3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/timeparse.a298a7ede5c3.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/timeparse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/timeparse.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/urlify.687bc28c85b7.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/urlify.687bc28c85b7.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/urlify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/urlify.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/staticfiles.json" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Teletak/static/css/estilos.css" afterPath="$PROJECT_DIR$/static/css/estilos.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Teletak/static/css/normalize.css" afterPath="$PROJECT_DIR$/static/css/normalize.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Teletak/static/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Teletak/static/img/almacen.png" afterPath="$PROJECT_DIR$/static/img/almacen.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Teletak/static/img/configuracion.png" afterPath="$PROJECT_DIR$/static/img/configuracion.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Teletak/static/img/fondo.png" afterPath="$PROJECT_DIR$/static/img/fondo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Teletak/static/img/producto.png" afterPath="$PROJECT_DIR$/static/img/producto.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Teletak/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Teletak/static/js/funciones.js" afterPath="$PROJECT_DIR$/static/js/funciones.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Teletak/static/js/jquery-2.1.4.min.js" afterPath="$PROJECT_DIR$/static/js/jquery-2.1.4.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Teletak/static/js/jquery.formset.min.js" afterPath="$PROJECT_DIR$/static/js/jquery.formset.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teletak/settings.py" afterPath="$PROJECT_DIR$/Teletak/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teletak/urls.py" afterPath="$PROJECT_DIR$/Teletak/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="9444596f-7d05-4e1f-bb88-ade04f83be90" name="New changelist" comment="" />
     <ignored path="Teletak.iws" />
@@ -102,20 +318,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Teletak/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5851064" vertical-offset="0" max-vertical-offset="570">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding>
-                <element signature="e#27#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="funciones.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Teletak/staticfiles/js/funciones.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7446808" vertical-offset="0" max-vertical-offset="570">
+              <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -127,6 +331,18 @@
             <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="1020">
               <caret line="7" column="104" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="104" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Teletak/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+              <folding>
+                <element signature="e#26#67#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,7 +360,7 @@
       <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Teletak/settingswrap/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
+            <state vertical-scroll-proportion="0.0" vertical-offset="501" max-vertical-offset="1065">
               <caret line="54" column="15" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
               <folding />
             </state>
@@ -161,7 +377,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -175,7 +391,6 @@
         <option value="$PROJECT_DIR$/templates/operacione/index.html" />
         <option value="$PROJECT_DIR$/templates/operaciones/index.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Teletak/urls.py" />
         <option value="$PROJECT_DIR$/templates/almacen/index.html" />
         <option value="$PROJECT_DIR$/templates/almacen/salidas/index.html" />
         <option value="$PROJECT_DIR$/Teletak/settings/local.py" />
@@ -217,6 +432,7 @@
         <option value="$PROJECT_DIR$/static/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/login/index.html" />
+        <option value="$PROJECT_DIR$/Teletak/urls.py" />
         <option value="$PROJECT_DIR$/Teletak/settings.py" />
       </list>
     </option>
@@ -317,7 +533,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Teletak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -332,54 +566,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Teletak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="staticfiles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Teletak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Teletak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Teletak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="staticfiles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Teletak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Teletak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Teletak" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="staticfiles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -414,6 +600,7 @@
       <recent name="$PROJECT_DIR$/Teletak/static/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Teletak" />
     </key>
   </component>
@@ -876,7 +1063,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278496" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26609442" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" x="512" y="152" width="341" height="494" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26609442" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" x="512" y="152" width="341" height="494" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3266745" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3043478" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1105,14 +1292,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Teletak/static/js/funciones.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/usuarios/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6637168" vertical-offset="900" max-vertical-offset="1575">
@@ -1155,14 +1334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3173759" vertical-offset="796" max-vertical-offset="1935">
           <caret line="73" column="75" selection-start-line="73" selection-start-column="68" selection-end-line="73" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Teletak/static/js/jquery.formset.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2222223" vertical-offset="0" max-vertical-offset="240">
-          <caret line="4" column="387" selection-start-line="4" selection-start-column="387" selection-end-line="4" selection-end-column="387" />
           <folding />
         </state>
       </provider>
@@ -1223,16 +1394,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="894" max-vertical-offset="1740">
           <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
           <folding>
-            <element signature="e#0#57#0" expanded="true" />
+            <element signature="e#0#57#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Teletak/static/css/estilos.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0740743" vertical-offset="3226" max-vertical-offset="6600">
-          <caret line="226" column="16" selection-start-line="226" selection-start-column="16" selection-end-line="226" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1288,18 +1451,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Teletak/settingswrap/base.py">
+    <entry file="file://$PROJECT_DIR$/templates/login/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
-          <caret line="54" column="15" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Teletak/staticfiles/js/funciones.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="564">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="1140">
+          <caret line="7" column="104" selection-start-line="7" selection-start-column="104" selection-end-line="7" selection-end-column="104" />
           <folding />
         </state>
       </provider>
@@ -1312,21 +1467,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login/index.html">
+    <entry file="file://$PROJECT_DIR$/static/img/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Teletak/settingswrap/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="1140">
-          <caret line="7" column="104" selection-start-line="7" selection-start-column="104" selection-end-line="7" selection-end-column="104" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="501" max-vertical-offset="1065">
+          <caret line="54" column="15" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Teletak/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="e#26#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Teletak/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5851064" vertical-offset="0" max-vertical-offset="570">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#27#36#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.7446808" vertical-offset="0" max-vertical-offset="570">
+          <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
