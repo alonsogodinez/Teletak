@@ -18,11 +18,11 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = '/static/'
+STATIC_ROOT = 'static'
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-STATICFILES_DIRS = [BASE_DIR.child('static')]
+STATICFILES_DIRS = [BASE_DIR.child('Teletak.static')]
 
 DEBUG = True
 
