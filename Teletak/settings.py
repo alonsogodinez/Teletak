@@ -3,7 +3,7 @@
 
 from .settingswrap.base import *
 
-
+import os
 
 DATABASES = {
     'default': {
@@ -23,9 +23,11 @@ STATIC_URL = '/static/'
 
 
 
-STATIC_ROOT = [BASE_DIR.child('static')]
+STATIC_ROOT = 'static'
 
-
+STATICFILES_DIRS = (
+    os.path.join(os.path.dirname(__file__), "static"),
+)
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 DEBUG = True
