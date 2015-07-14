@@ -24,6 +24,8 @@ STATIC_ROOT = 'staticfiles'
 
 STATICFILES_DIRS = [BASE_DIR.child('static')]
 
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
 DEBUG = True
 
 ALLOWED_HOSTS = []
