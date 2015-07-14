@@ -1,1 +1,1 @@
-web: gunicorn teletak.wsgi --log-file -
+web: gunicorn Teletak.wsgi --log-file -
