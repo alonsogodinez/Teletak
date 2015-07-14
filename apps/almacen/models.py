@@ -1,7 +1,6 @@
 from django.db import models
 from apps.usuarios.models import User
-from apps.productos.models import Producto,UnidadMedicion
-from smart_selects.db_fields import ChainedForeignKey
+from apps.productos.models import Producto, UnidadMedicion
 from django.utils import timezone
 
 
@@ -36,6 +35,7 @@ class Ingreso(models.Model):
     guia_remision = models.ForeignKey(GuiaRemision, blank=True, null=True)
     tipo = models.IntegerField(blank=True, null=True) #ingreso :1   , reingreso:2
 
+
 class DetalleIngreso(models.Model):
     id_ingreso = models.ForeignKey(Ingreso, blank=True, null=True)
     codigo_producto = models.ForeignKey(Producto, blank=True, null=True)
@@ -45,6 +45,9 @@ class DetalleIngreso(models.Model):
     estado = models.CharField(max_length=15, blank=True, null=True)
 
 
+    def __unicode__(self):
+        return  self.guia_remision.nro_guia_remitente + ' ' +  self.fecha.strftime('%Y/%m/%d')
+
 class Almacen(models.Model):
     ubicacion = models.CharField(max_length=50, blank=True, null=True)
     capacidad = models.IntegerField(blank=True,null=True)
@@ -52,6 +55,7 @@ class Almacen(models.Model):
         return self.ubicacion
     class Meta:
         verbose_name_plural = "Almacenes"
+
 
 
 class DetalleAlmacen(models.Model):

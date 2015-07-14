@@ -17,7 +17,7 @@ class UsuarioForm(forms.ModelForm):
 class IngresoForm(forms.ModelForm):
     almacen = forms.ModelChoiceField(queryset=Almacen.objects.all(),
                                      widget=forms.Select(attrs={'class':'form-control chosen-select',
-                                                                'placeholder':'almacen'}),
+                                                                'placeholder':'almacen','required':True}),
                                      label= 'Almacen')
 
     class Meta:
@@ -27,17 +27,23 @@ class IngresoForm(forms.ModelForm):
 class DetalleIngresoForm(forms.ModelForm):
     # serie = forms.CharField(max_length=10,widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Serie'}),
     #                         label="Serie")
-    cantidad = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control','placeholder':'Cantidad'}),
+    cantidad = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control',
+                                                                  'placeholder':'Cantidad',
+                                                                  'required':True}),
                                   label="Cantidad")
     unidad_caja = forms.ModelChoiceField(queryset=UnidadMedicion.objects.all(),
                                          widget=forms.Select(attrs={'class':'form-control chosen-select',
+                                                                    'required':True,
                                                                     'placeholder':'Unidad de medida'}),
-                                         label="Unidad de medida")
-    estado = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Estado'}),
-                             label="Estado del producto")
+                                                            label="Unidad de medida")
+    estado = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control',
+                                                           'placeholder':'Estado',
+                                                           'required':True}),
+                                                    label="Estado del producto")
     codigo_producto = forms.ModelChoiceField(queryset=Producto.objects.all(),
-                                          widget=forms.Select(attrs={'class':'form-control chosen-select',
-                                                                     'placeholder':'Codigo'}))
+                                            widget=forms.Select(attrs={'class':'form-control chosen-select',
+                                                                     'placeholder':'Codigo',
+                                                                     'required':True}))
     class Meta:
         model = DetalleIngreso
         fields = ('cantidad','unidad_caja','estado','codigo_producto',)
@@ -46,7 +52,8 @@ DetalleIngresoFormSet = inlineformset_factory(Ingreso,DetalleIngreso,extra=1,can
 
 class ProductoForm(forms.ModelForm):
     codigo_product = forms.ModelChoiceField(queryset=Producto.objects.all(),
-                                            widget=forms.Select(attrs={'class':'form-control'}),
+                                            widget=forms.Select(attrs={'class':'form-control',
+                                                                       'required':True}),
                                             label="Unidad de Medida")
     class Meta:
         model = Producto
@@ -54,23 +61,29 @@ class ProductoForm(forms.ModelForm):
 
 class GuiaRemisionForm(forms.ModelForm):
     fecha_traslado = forms.DateField(initial=timezone.now().strftime('%Y-%m-%d'),
-                                     widget= forms.DateInput(attrs={'class':'form-control','type':'date'}),
+                                     widget= forms.DateInput(attrs={'class':'form-control',
+                                                                    'type':'date',
+                                                                    'required':True}),
                                      label="Fecha de traslado")
     punto_partida = forms.CharField(max_length=10,
                                     widget=forms.TextInput(attrs={'class':'form-control',
-                                                                  'placeholder':'punto de partida'}),
+                                                                  'placeholder':'Punto de partida',
+                                                                  'required':True}),
                                     label="Punto de partida")
     nro_guia_remitente = forms.CharField(max_length=10,
                                          widget=forms.TextInput(attrs={'class':'form-control',
-                                                                       'placeholder':'nro guia remitente'}),
+                                                                       'placeholder':'Nº guia remitente',
+                                                                       'required':True}),
                                          label="Guia remitente")
     placa_vehiculo = forms.CharField(max_length=10,
                                      widget=forms.TextInput(attrs={'class':'form-control',
-                                                                   'placeholder':'placa de vehiculo'}),
+                                                                   'placeholder':'Placa de vehiculo',
+                                                                   'required':True}),
                                      label="Placa de vehiculo")
     licencia_conducir = forms.CharField(max_length=10,
                                         widget=forms.TextInput(attrs={'class':'form-control',
-                                                                      'placeholder':'licencia de conducir'}),
+                                                                      'placeholder':'Licencia de conducir',
+                                                                      'required':True}),
                                         label="Licencia de conducir")
     class Meta:
         model= GuiaRemision

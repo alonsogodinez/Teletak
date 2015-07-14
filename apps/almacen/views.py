@@ -43,16 +43,16 @@ class IngresoView(LoginRequiredMixin,SuccessMessageMixin,View):
 
         ingresos_form= IngresoForm(request.POST)
         guiaremision_form = GuiaRemisionForm(request.POST)
-        if ingresos_form.is_valid()  and guiaremision_form.is_valid():
+
+        if ingresos_form.is_valid() and guiaremision_form.is_valid():
             nuevo_ingreso = ingresos_form.save(commit=False)
             nuevo_ingreso.dni_usuario = request.user
             nuevo_ingreso.tipo = 1
             nuevo_ingreso.guia_remision = guiaremision_form.save()
             nuevo_ingreso.save()
-
             detalle_ingreso = DetalleIngresoFormSet(request.POST,prefix='formset',instance=nuevo_ingreso,)
-            if detalle_ingreso.is_valid():
 
+            if detalle_ingreso.is_valid():
                 for detalle in detalle_ingreso.save(commit=False):
                     detalle.id_almacen = Almacen.objects.get(id=request.POST['almacen'])
                 detalle_ingreso.save()
@@ -61,8 +61,8 @@ class IngresoView(LoginRequiredMixin,SuccessMessageMixin,View):
                 return redirect("/operaciones")
             return render(request,self.template_name,locals())
         else:
-
             return render(request,self.template_name,locals())
+
 
 
 class Reingresos(LoginRequiredMixin,View):
