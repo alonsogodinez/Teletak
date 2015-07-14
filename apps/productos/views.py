@@ -48,16 +48,13 @@ class RegistrarProducto(LoginRequiredMixin,View,SuccessMessageMixin):
     def post(self,request):
         producto_form = ProductoForm(request.POST)
         unidad_producto_formset = UnidadProductoFormSet(request.POST)
-        if producto_form.is_valid() and unidad_producto_formset.is_valid():
+        if producto_form.is_valid() and unidad_producto_formset.is_valid() :
             producto = producto_form.save()
             unidad_producto_formset.instance = producto
             unidad_producto_formset.save()
-
             success_message = 'Los datos se actualizaron correctamente'
             return redirect('/productos')
-
         else:
-
             producto_form = ProductoForm(request.POST)
             unidad_producto_formset = UnidadProductoFormSet(request.POST)
             return render(request,self.template_name,locals())
@@ -106,7 +103,6 @@ class Categorias(View,SuccessMessageMixin):
 
 def Editar_Categoria(request,id):
     cat = Categoria.objects.get(pk=id)
-    print cat.nombre
     if request.POST:
         form = CategoriaForm(request.POST,instance=cat)
         if form.is_valid():

@@ -1,17 +1,244 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    {% load static from staticfiles %}
+    <link href="{% static 'css/normalize.css' %}"/>
+    <link href= "{% static 'css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
+    <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.formset.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nextElementInDom.js' %}"></script>
+    <script type="text/javascript" src="{% static 'django_ajax/js/jquery.ajax.min.js' %}"></script>
+    <title>Teletak</title>
+    <script type="text/javascript">
+    $(document).ready(function() {
 
-{%  block breadcrumb %}
-     <ol class="breadcrumb">
-        <li ><a href="{%  url 'almacen:index' %}">Inicio</a></li>
+        $(function() {
+            $('form .formset').formset();
+        });
+
+        $(".c-almacen").change(function(){
+            var r = /\d+/;
+            var s = $(this).attr("id");
+            num = s.match(r);
+            console.log(num);
+            //alert(num);
+            $.ajax({
+                    url : "/operaciones/getproducto/"+ $(this).val() +"/",
+                    type : "GET",
+                    dataType: "json",
+                    async: true,
+                    success : function(j) {
+                        var options = '<option value="">---------- </option>';
+                        for (var i = 0; i < j.length; i++) {
+                            options += '<option value="' + parseInt(j[i].codigo) + '">' + j[i].nombre + '</option>';
+                        }
+                        $("#id_form-"+ num +"-codigo_producto").html(options);
+                        $("#id_form-"+ num +"-codigo_producto option:first").attr('selected', 'selected');
+                        $("#id_form-"+ num +"-codigo_producto").attr('disabled', false);
+                    },
+                    error : function(xhr,errmsg,err) {
+                        alert(xhr.status + ": " + xhr.responseText);
+                    }
+            });
+        });
+        $("#id_form-0-codigo_producto ").change(function(){
+            $.ajax({
+                    url : "/operaciones/getcantidad/" + $("#id_form-0-id_almacen ").val() + "/"+ $(this).val() +"/",
+                    type : "GET",
+                    dataType: "json",
+                    async: true,
+                    success : function(j) {
+                        for (var i = 0; i < j.length; i++) {
+                            $("#id_form-0-cantidad").attr( "max", parseInt(j[i].max_value));
+                            $("#id_form-0-cantidad").attr( "value", parseInt(j[i].max_value));
+
+                        }
+                        $("#id_form-0-cantidad").attr('disabled', false);
+                    },
+                    error : function(xhr,errmsg,err) {
+                        alert(xhr.status + ": " + xhr.responseText);
+                    }
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+    <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+         <div class="container-fluid contenedor ">
+             <div class="navbar-header">
+                 <button type="button" class="navbar-toggle " data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse">
+                     <span class="sr-only">Desplegar navegacion</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                 </button>
+                 <a href="/" class="navbar-brand">
+                     <img class=" navbar-logo" src="{% static 'img/logo.png' %}" alt="">
+                 </a>
+             </div>
+             <div class="navbar-collapse collapse hola navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Bienvenido
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            <strong>{{ user.username }}</strong>
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu" id="logout" role="menu">
+                            <li ><a href="/logout">Cerrar Sesión</a></li>
+                            </ul>
+                    </li>
+                </ul>
+            </div>
+         </div>
+    </div>
+
+    <ol class="breadcrumb">
+        <li ><a href="{%  url 'almacen:salidas' %}">Inicio</a></li>
         <li class="active"><a href="{%   url 'almacen:operaciones' %}">Almacén</a></li>
         <li >Registrar Salida</li>
     </ol>
-{% endblock %}
 
-{% block content %}
-    <div class="contenedor-modulos">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <div class="container">
         <div class="row">
 
+            <div class="panel form-panel panel-primary">
+                 <div class="panel-heading">
+                     <ul class="nav nav-tabs nav-justified">
+                         <li role="presentation" class="active"><a href="{% url 'almacen:salidas' %}">Registro de Salidas</a></li>
+                         <li role="presentation"><a href="{% url 'almacen:lista_salidas' %}">Listado de Salidas</a></li>
+                     </ul>
+                 </div>
+                <div class="panel-body">
+                    <form method="post" enctype="multipart/form-data" action="{% url 'almacen:salidas' %}"> {% csrf_token%}
+                        <div id="form">
+                            <div class="form-field form-subtitle col-sm-11">
+                                <span>Registrar una Salida</span>
+                            </div>
+                            <div class=" col-sm-6 col-xs-12">
+                                <div class=" form-group ">
+                                    <div class="no-padding-top form-field col-sm-11">
+                                        <h4><span class="label label-default"> {{ salidaform.dni_usuario.label }}</span></h4>
+                                        {{ salidaform.dni_usuario.errors }}
+                                        <div class="input-group">
+                                            <span class="input-group-addon glyphicon glyphicon-user " ></span>
+                                            {{ salidaform.dni_usuario }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--<div class="form-group ">
+                                    <div class="form-field col-sm-11">
+                                        <h4><span class="label label-default"> {{ salidaform.id_almacen.label }}</span></h4>
+                                        {{ salidaform.id_almacen.errors }}
+                                        <div class="input-group">
+                                            <span class="input-group-addon glyphicon glyphicon-shopping-cart " ></span>
+                                            {{ salidaform.id_almacen }}
+                                        </div>
+                                    </div>
+                                </div>-->
+                            </div>
+                            <div class=" col-sm-6 col-xs-12">
+                                 <div class=" form-group ">
+                                    <div class="no-padding-top form-field col-sm-11">
+                                        <h4><span class="label label-default"> {{ salidaform.nodo.label }}</span></h4>
+                                        {{ salidaform.nodo.errors }}
+                                        <div class="input-group">
+                                            <span class="input-group-addon glyphicon glyphicon-tasks " ></span>
+                                            {{ salidaform.nodo }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-sm-12 col-xs-12">
+                                <div class="form-group ">
+                                    <div class="form-field col-sm-11">
+                                        {{ salidaform.devolucion.errors }}
+                                        <div class="input-group">
+                                            {{ salidaform.devolucion }} {{ salidaform.devolucion.label }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-field form-subtitle col-sm-11">
+                                <span>Detalles</span>
+                            </div>
+                            {% for form in formset %}
+                            {{forloop.counter0}}
+                            <div class="formset">
+                                    <div class=" col-sm-4 col-xs-12">
+                                        <div class="form-group ">
+                                            <div class="no-padding-top form-field col-sm-11">
+                                                {{ form.id_almacen.errors }}
+                                                <div class="input-group">
+                                                    <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                                    {{ form.id_almacen }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" col-sm-4 col-xs-12">
+                                        <div class="form-group ">
+                                            <div class="no-padding-top form-field col-sm-11">
+                                                {{ form.codigo_producto.errors }}
+                                                <div class="input-group">
+                                                    <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                                    {{ form.codigo_producto }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-xs-12">
+                                        <div class="form-group ">
+                                            <div class="no-padding-top form-field col-sm-11">
+                                                 {{ form.cantidad.errors }}
+                                                <div class="input-group">
+                                                <span class="input-group-addon glyphicon glyphicon-asterisk " ></span>
+                                                    {{ form.cantidad }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            <div class="submit-row  col-xs-12">
+                                <input  class ="col-sm-offset-2 col-sm-4  col-xs-12 btn btn-success btn-lg" type="submit"
+                                    value="Guardar" name='submit'  />
+                                <a class ="col-sm-offset-1 col-sm-3  col-xs-12 btn btn-danger btn-lg"
+                                   href="{% url 'almacen:operaciones' %}">
+                                    Volver
+                                </a>
+                            </div>
+                        </div>
+                        {{ formset.management_form }}
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-{% endblock %}
+
+</body>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <p class="text-center">2015  © Teletak</p>
+            </div>
+        </div>
+    </footer>
+</html>
