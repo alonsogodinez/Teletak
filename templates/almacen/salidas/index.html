@@ -21,6 +21,11 @@
         });
 
         $(".c-almacen").change(function(){
+            var r = /\d+/;
+            var s = $(this).attr("id");
+            num = s.match(r);
+            console.log(num);
+            //alert(num);
             $.ajax({
                     url : "/operaciones/getproducto/"+ $(this).val() +"/",
                     type : "GET",
@@ -31,13 +36,9 @@
                         for (var i = 0; i < j.length; i++) {
                             options += '<option value="' + parseInt(j[i].codigo) + '">' + j[i].nombre + '</option>';
                         }
-                    /*  $("this").closest(".c-producto").html(options);
-                        $("this").closest(".c-producto option:first").attr('selected', 'selected');
-                        $("this").closest(".c-producto").attr('disabled', false);*/
-
-                        $("#id_form-0-codigo_producto").html(options);
-                        $("#id_form-0-codigo_producto option:first").attr('selected', 'selected');
-                        $("#id_form-0-codigo_producto").attr('disabled', false);
+                        $("#id_form-"+ num +"-codigo_producto").html(options);
+                        $("#id_form-"+ num +"-codigo_producto option:first").attr('selected', 'selected');
+                        $("#id_form-"+ num +"-codigo_producto").attr('disabled', false);
                     },
                     error : function(xhr,errmsg,err) {
                         alert(xhr.status + ": " + xhr.responseText);

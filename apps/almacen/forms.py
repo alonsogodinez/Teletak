@@ -72,7 +72,7 @@ class GuiaRemisionForm(forms.ModelForm):
                                     label="Punto de partida")
     nro_guia_remitente = forms.CharField(max_length=10,
                                          widget=forms.TextInput(attrs={'class':'form-control',
-                                                                       'placeholder':'Nº guia remitente',
+                                                                       'placeholder':'Nro guia remitente',
                                                                        'required':True}),
                                          label="Guia remitente")
     placa_vehiculo = forms.CharField(max_length=10,
