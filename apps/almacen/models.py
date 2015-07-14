@@ -1,6 +1,6 @@
 from django.db import models
 from apps.usuarios.models import User
-from apps.productos.models import Producto,UnidadMedicion
+from apps.productos.models import Producto, UnidadMedicion
 from django.utils import timezone
 
 
@@ -38,11 +38,6 @@ class Ingreso(models.Model):
     def __unicode__(self):
         return  self.guia_remision.nro_guia_remitente + ' ' +  self.fecha.strftime('%Y/%m/%d')
 
-
-
-
-
-
 class Almacen(models.Model):
     ubicacion = models.CharField(max_length=50, blank=True, null=True)
     capacidad = models.IntegerField(blank=True,null=True)
@@ -55,7 +50,7 @@ class Almacen(models.Model):
 
 
 class DetalleIngreso(models.Model):
-    codigo_producto = models.ForeignKey(Producto,blank=True,null=True)
+    codigo_producto = models.ForeignKey(Producto, blank=True, null=True)
     id_almacen = models.ForeignKey(Almacen,blank=True,null=True)
     id_ingreso = models.ForeignKey(Ingreso, blank=True, null=True)
     cantidad = models.IntegerField(blank=True,null=True)
