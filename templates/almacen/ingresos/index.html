@@ -4,7 +4,7 @@
      <ol class="breadcrumb">
         <li ><a href="{%  url 'almacen:index' %}">Inicio</a></li>
         <li class="active"><a href="{%   url 'almacen:operaciones' %}">Almacén</a></li>
-        <li >Registrar Entrada</li>
+        <li >Registrar Ingresos</li>
     </ol>
 {% endblock %}
 
@@ -13,7 +13,14 @@
     <div class="container">
         <div class="row">
             <div class="panel form-panel panel-primary">
-                <div class="panel-body">
+                <div class="panel-heading">
+                <ul class="nav nav-tabs nav-justified">
+                    <li role="presentation" class="active" ><a href="{% url 'almacen:ingresos' %}">Registro de Ingresos</a></li>
+                    <li role="presentation" ><a href="{% url 'almacen:lista_ingresos' %}">Listado de Ingresos</a></li>
+                </ul>
+            </div>
+            <div class="panel-body">
+
                     <form method="post" enctype="multipart/form-data">
 
                         <div id="form">
@@ -173,6 +180,7 @@
 
                         {{ formset.management_form }}
                     </form>
+                </div>
                 </div>
             </div>
         </div>

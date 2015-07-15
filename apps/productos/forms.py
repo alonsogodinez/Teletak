@@ -37,7 +37,7 @@ UnidadProductoFormSet = inlineformset_factory(Producto,ProductoMedida,UnidadProd
 UnidadProductoFormSetEdit = inlineformset_factory(Producto,ProductoMedida,UnidadProductoForm, extra=0, max_num=10,min_num=1,can_delete=True)
 
 class CategoriaForm(forms.ModelForm):
-    nombre = forms.CharField(max_length=15,widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Nueva categoria'}),label="Nombre")
+    nombre = forms.CharField(max_length=15,widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Nueva categoria','required':True}),label="Nombre")
     class Meta:
         model = Categoria
         fields = ['nombre',]

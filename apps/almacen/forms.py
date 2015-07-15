@@ -1,5 +1,4 @@
 from django.forms.models import inlineformset_factory, formset_factory
-from datetime import date
 from django import forms
 from .models import GuiaRemision,Ingreso,DetalleIngreso,Proveedor,Salida,DetalleSalida,Almacen
 from django.utils import timezone
@@ -99,6 +98,10 @@ class ProveedoresForm(forms.ModelForm):
         model = Proveedor
         fields = ('ruc','nombre','direccion',)
 
+DetalleIngresoFormSet = inlineformset_factory(Ingreso,DetalleIngreso,
+                                              can_delete=False,
+                                              extra=2,
+                                              form=DetalleIngresoForm)
 
 #SALIDAS
 
@@ -118,6 +121,4 @@ class DetalleSalidaForm(forms.ModelForm):
         model = DetalleSalida
         fields = ('id_almacen','codigo_producto','cantidad',)
 
-#DetalleSalidaFormset = inlineformset_factory(Salida,DetalleSalida,extra=1,can_delete=True,form=DetalleSalidaForm)
 DetalleSalidaFormset = inlineformset_factory(Salida,DetalleSalida,extra=1,can_delete=True,form=DetalleSalidaForm)
-#DetalleIngresoFormSet = inlineformset_factory(Ingreso,DetalleIngreso,extra=1,can_delete=False, form=DetalleIngresoForm)
