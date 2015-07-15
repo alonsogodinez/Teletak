@@ -71,7 +71,7 @@ class GuiaRemisionForm(forms.ModelForm):
                                     label="Punto de partida")
     nro_guia_remitente = forms.CharField(max_length=10,
                                          widget=forms.TextInput(attrs={'class':'form-control',
-                                                                       'placeholder':'Nro guia remitente',
+                                                                       'placeholder':'N| guia remitente',
                                                                        'required':True}),
                                          label="Guia remitente")
     placa_vehiculo = forms.CharField(max_length=10,
@@ -107,8 +107,8 @@ DetalleIngresoFormSet = inlineformset_factory(Ingreso,DetalleIngreso,
 
 class SalidaForm(forms.ModelForm):
     dni_usuario = forms.ModelChoiceField(queryset=User.objects.all(),widget=forms.Select(attrs={'class':'form-control','required':'true'}),label="Usuario")
-    nodo = forms.CharField(max_length=15,widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Nombre del Nodo'}),label="Nodo de Trabajo")
-    devolucion = forms.BooleanField(initial=True,widget=forms.CheckboxInput(),label="Devolver productos defectuosos al proveedor")
+    nodo = forms.CharField(max_length=15,widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Nombre del Nodo'}),label="Nodo de Trabajo",required=False)
+    devolucion = forms.BooleanField(initial=False,widget=forms.CheckboxInput(),label="Devolver productos defectuosos al proveedor",required=False)
     class Meta:
         model = Salida
         fields = ('dni_usuario','nodo','devolucion',)
@@ -121,4 +121,4 @@ class DetalleSalidaForm(forms.ModelForm):
         model = DetalleSalida
         fields = ('id_almacen','codigo_producto','cantidad',)
 
-AddDetalleFormset = formset_factory(DetalleSalidaForm,extra=1,can_delete=True)
+DetalleSalidaFormset = inlineformset_factory(Salida,DetalleSalida,extra=1,can_delete=True,form=DetalleSalidaForm)
