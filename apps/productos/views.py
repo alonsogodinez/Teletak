@@ -53,7 +53,7 @@ class RegistrarProducto(LoginRequiredMixin,View,SuccessMessageMixin):
             unidad_producto_formset.instance = producto
             unidad_producto_formset.save()
             success_message = 'Los datos se actualizaron correctamente'
-            return redirect('/productos')
+            return redirect('/productos/listar')
         else:
             producto_form = ProductoForm(request.POST)
             unidad_producto_formset = UnidadProductoFormSet(request.POST)
@@ -113,7 +113,8 @@ def Editar_Categoria(request,id):
     else:
         form = CategoriaForm(instance=cat)
         categoria = Categoria.objects.all()
-        return render_to_response('productos/categorias.html',locals(),context_instance=RequestContext(request))
+        editar = {"editar":True}
+        return render(request,'productos/categorias.html',locals())
 
 
 class EliminarCategoria(SuccessMessageMixin,DeleteView):

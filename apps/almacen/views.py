@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect
 from Teletak.mixins import SuccessMessageMixin
 from .forms import *
 from .models import Ingreso,DetalleIngreso,Salida,DetalleAlmacen,DetalleStock
-
+from django.views.generic.detail import DetailView
 
 class LoginRequiredMixin(object):
     u"""Ensures that user must be authenticated in order to access view."""
@@ -102,33 +102,33 @@ class Reingresos(LoginRequiredMixin,View):
 
 
 
-
 #SALIDAS
 import datetime
 
 class SalidaView(LoginRequiredMixin,View,SuccessMessageMixin):
     def get(self, request):
-        ActualizarStock(2).ActualizarTodoStock()
         salidaform = SalidaForm
-        formset = AddDetalleFormset
-        form = DetalleSalidaForm
+        formset = DetalleSalidaFormset(prefix='formset')
         return render_to_response('almacen/salidas/index.html',locals(),context_instance=RequestContext(request))
     def post(self,request):
         salida_form = SalidaForm(request.POST)
-        formset = AddDetalleFormset(request.POST)
-        if salida_form.is_valid() and formset.is_valid():
+        if salida_form.is_valid() :
             salida = salida_form.save(commit=False)
             salida.fecha = datetime.date.today()
             salida.save()
-            for form in formset.forms:
-                print form
-                object = form.save(commit=False)
-                object.id_salida = salida
-                object.save()
-                ActualizarSalida(object.id_almacen,object.codigo_producto,object.cantidad)
-            return  HttpResponseRedirect("/operaciones/listar_salidas")
+            detallesalida = DetalleSalidaFormset(request.POST,prefix='formset',instance=salida)
+            if detallesalida.is_valid():
+                for detalle in detallesalida.save(commit=False):
+                    ActualizarSalida(detalle.id_almacen,detalle.codigo_producto,detalle.cantidad)
+                detallesalida.save()
+                return  HttpResponseRedirect("/operaciones/listar_salidas")
+            else:
+                print "mlaga puto"
+
         else:
-            return render_to_response('almacen/salidas/index.html',{'salidaform': salida_form,'formset':formset},context_instance=RequestContext(request))
+            detallesalida = DetalleSalidaFormset(request.POST,prefix="formset")
+            return render_to_response('almacen/salidas/index.html',{'salidaform': salida_form,'formset':detallesalida},context_instance=RequestContext(request))
+
 
 
 class ListarSalidas(LoginRequiredMixin,ListView):
@@ -141,8 +141,14 @@ class EliminarSalida(SuccessMessageMixin,DeleteView):
     template_name = 'almacen/salidas/confirm_delete_salida.html'
     success_message = 'El registro de salida fue eliminado correctamente'
 
+class ListarIngresos(LoginRequiredMixin,
+                     DetailView):
+    model = Ingreso
+    queryset = Ingreso.objects.all()
+    template_name = 'almacen/ingresos/lista_ingresos.html'
+
 #FUNCIONES PARA ACTUALIZAR EL STOCK
-#-------------------------------------------------------------------
+#----------------------------------
 
 #Funcion que se usa despues de cada ingreso(o reingreso) para insertar un registro en detallealmacen, y actualizar el stock
 def InsertarDetalleAlmacen(ingreso_id,almacen_id):
@@ -176,8 +182,7 @@ def ActualizarSalida(almacen_id,producto_id,cantidad):
         item.stock = item.stock - cantidad
         item.save()
 
-#Clase que se usa para actualizar el stock, sumando las cantidades de todas las entradas desde el origen de los tiempos
-#NO USAR, CON ESTO SE JODE LAS SALIDAS XDDD (solo para pruebas)
+#SOLO PARA PRUEBAS
 class ActualizarStock:
     almacen = 0
     def __init__(self,almacen):
@@ -207,9 +212,10 @@ class ActualizarStock:
 
 
 #FUNCIONES PARA LOS SELECTS DINAMICOS
-#---------------------------------------------------
+#-------------------------------------
+
+
 import json
-from django_ajax.decorators import ajax
 from django.core import serializers
 
 #funcion que recupera todos los productos que existen en un almacen, y retorna json
