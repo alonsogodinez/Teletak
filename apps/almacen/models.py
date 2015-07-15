@@ -34,6 +34,10 @@ class Ingreso(models.Model):
     fecha = models.DateField(default=timezone.now ,blank=True, null=True)
     guia_remision = models.ForeignKey(GuiaRemision, blank=True, null=True)
     tipo = models.IntegerField(blank=True, null=True) #ingreso :1   , reingreso:2
+    class Meta:
+        verbose_name = "Ingreso"
+        verbose_name_plural = "Ingresos"
+
 
 
 class DetalleIngreso(models.Model):

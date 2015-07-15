@@ -55,7 +55,6 @@
                         for (var i = 0; i < j.length; i++) {
                             $("#id_form-0-cantidad").attr( "max", parseInt(j[i].max_value));
                             $("#id_form-0-cantidad").attr( "value", parseInt(j[i].max_value));
-
                         }
                         $("#id_form-0-cantidad").attr('disabled', false);
                     },
@@ -100,7 +99,7 @@
     </div>
 
     <ol class="breadcrumb">
-        <li ><a href="{%  url 'almacen:salidas' %}">Inicio</a></li>
+        <li ><a href="{%  url 'almacen:index' %}">Inicio</a></li>
         <li class="active"><a href="{%   url 'almacen:operaciones' %}">Almacén</a></li>
         <li >Registrar Salida</li>
     </ol>
@@ -180,7 +179,6 @@
                                 <span>Detalles</span>
                             </div>
                             {% for form in formset %}
-                            {{forloop.counter0}}
                             <div class="formset">
                                     <div class=" col-sm-4 col-xs-12">
                                         <div class="form-group ">

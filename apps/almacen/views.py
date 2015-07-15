@@ -141,6 +141,11 @@ class EliminarSalida(SuccessMessageMixin,DeleteView):
     template_name = 'almacen/salidas/confirm_delete_salida.html'
     success_message = 'El registro de salida fue eliminado correctamente'
 
+class ListarIngresos(LoginRequiredMixin,
+                     ListView):
+    queryset = Ingreso.objects.all()
+    template_name = 'almacen/ingresos/lista_ingresos.html'
+
 #FUNCIONES PARA ACTUALIZAR EL STOCK
 #-------------------------------------------------------------------
 
@@ -209,7 +214,6 @@ class ActualizarStock:
 #FUNCIONES PARA LOS SELECTS DINAMICOS
 #---------------------------------------------------
 import json
-from django_ajax.decorators import ajax
 from django.core import serializers
 
 #funcion que recupera todos los productos que existen en un almacen, y retorna json
