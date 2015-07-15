@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect
 from Teletak.mixins import SuccessMessageMixin
 from .forms import *
 from .models import Ingreso,DetalleIngreso,Salida,DetalleAlmacen,DetalleStock
-
+from django.views.generic.detail import DetailView
 
 class LoginRequiredMixin(object):
     u"""Ensures that user must be authenticated in order to access view."""
@@ -142,7 +142,8 @@ class EliminarSalida(SuccessMessageMixin,DeleteView):
     success_message = 'El registro de salida fue eliminado correctamente'
 
 class ListarIngresos(LoginRequiredMixin,
-                     ListView):
+                     DetailView):
+    model = Ingreso
     queryset = Ingreso.objects.all()
     template_name = 'almacen/ingresos/lista_ingresos.html'
 
