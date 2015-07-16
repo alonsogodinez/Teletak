@@ -123,7 +123,7 @@ class SalidaView(LoginRequiredMixin,View,SuccessMessageMixin):
                 detallesalida.save()
                 return  HttpResponseRedirect("/operaciones/listar_salidas")
             else:
-                print "mlaga puto"
+                print "assa"
 
         else:
             detallesalida = DetalleSalidaFormset(request.POST,prefix="formset")
@@ -132,19 +132,17 @@ class SalidaView(LoginRequiredMixin,View,SuccessMessageMixin):
 
 
 class ListarSalidas(LoginRequiredMixin,ListView):
-    queryset = Salida.objects.all()
-    template_name = 'almacen/salidas/lista_salidas.html'
+    model = Salida
+    template_name = '/almacen/salidas/lista_salidas.html'
 
 class EliminarSalida(SuccessMessageMixin,DeleteView):
     model = Salida
     success_url = '/operaciones/listar_salidas'
-    template_name = 'almacen/salidas/confirm_delete_salida.html'
+    template_name = '/almacen/salidas/confirm_delete_salida.html'
     success_message = 'El registro de salida fue eliminado correctamente'
 
-class ListarIngresos(LoginRequiredMixin,
-                     DetailView):
+class ListarIngresos(LoginRequiredMixin,ListView):
     model = Ingreso
-    queryset = Ingreso.objects.all()
     template_name = 'almacen/ingresos/lista_ingresos.html'
 
 #FUNCIONES PARA ACTUALIZAR EL STOCK
