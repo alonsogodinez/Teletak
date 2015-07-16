@@ -49,7 +49,12 @@
                                 <td align="center">{{ salida.fecha }}</td>
                                 <td align="center">{{ salida.dni_usuario }}</td>
                                 <td align="center">{{ salida.nodo }}</td>
-                                <td align="center">{{ salida.devolucion }}</td>
+                                <td align="center">{% if salida.devolucion%}
+                                        <span class="glyphicon glyphicon-ok-circle" ></span>
+                                    {% else %}
+                                        <span class="glyphicon glyphicon-remove-circle" ></span>
+                                    {% endif %}
+                                    </td>
                                 <td align="center">
                                     <a href=""
                                        class="btn btn-info">

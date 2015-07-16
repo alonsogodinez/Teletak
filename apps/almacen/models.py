@@ -21,7 +21,6 @@ class GuiaRemision(models.Model):
     nro_guia_remitente = models.CharField(max_length=15)
     placa_vehiculo = models.CharField(max_length=10)
     licencia_conducir = models.CharField(max_length=15)
-    proveedor = models.ForeignKey(Proveedor,blank=True,null=True)
 
     class Meta:
         verbose_name_plural = "Guias de remision"
@@ -51,6 +50,8 @@ class DetalleIngreso(models.Model):
 
     def __unicode__(self):
         return  self.guia_remision.nro_guia_remitente + ' ' +  self.fecha.strftime('%Y/%m/%d')
+
+
 
 class Almacen(models.Model):
     ubicacion = models.CharField(max_length=50, blank=True, null=True)

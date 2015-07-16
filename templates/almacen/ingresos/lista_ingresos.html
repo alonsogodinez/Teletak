@@ -43,8 +43,8 @@
                             {% for ingreso in object_list %}
                             <tr valign="middle" class="{{forloop.counter|divisibleby:2|yesno:'even,odd'}}">
                                 <td align="center">{{ ingreso.fecha }}</td>
-                                <td align="center">{{ ingreso.dni_usuario_id }}</td>
-                                <td align="center">{{ ingreso.guia_remision_id }}</td>
+                                <td align="center">{{ ingreso.dni_usuario }}</td>
+                                <td align="center">{{ ingreso.guia_remision}}</td>
                                 <td align="center">
                                     <a href=""
                                        class="btn btn-info">

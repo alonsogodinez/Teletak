@@ -142,9 +142,8 @@ class EliminarSalida(SuccessMessageMixin,DeleteView):
     success_message = 'El registro de salida fue eliminado correctamente'
 
 class ListarIngresos(LoginRequiredMixin,
-                     DetailView):
+                     ListView):
     model = Ingreso
-    queryset = Ingreso.objects.all()
     template_name = 'almacen/ingresos/lista_ingresos.html'
 
 #FUNCIONES PARA ACTUALIZAR EL STOCK
