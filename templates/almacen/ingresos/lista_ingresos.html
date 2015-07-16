@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{%  block breadcrumb %}
+     <ol class="breadcrumb">
+        <li ><a href="{%  url 'almacen:index' %}">Inicio</a></li>
+        <li class="active"><a href="{%   url 'almacen:operaciones' %}">Almacén</a></li>
+        <li >Listar Ingresos</li>
+    </ol>
+{% endblock %}
+
+{% block content %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <div class=" contenedor-lista">
+        <div class="panel  panel-primary">
+            <div class="panel-heading">
+                <ul class="nav nav-tabs nav-justified">
+                     <li role="presentation" ><a href="{% url 'almacen:ingresos' %}">Registro de Ingresos</a></li>
+                     <li role="presentation" class="active"><a href="{% url 'almacen:lista_ingresos' %}">Listado de Ingresos</a></li>
+                 </ul>
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-striped ">
+                        {% load static from staticfiles %}
+                        <thead>
+                            <tr  align="center">
+                                <td width="20%">Fecha</td>
+                                <!--<td width="20%">Almacen</td>-->
+                                <td width="20%">DNI</td>
+                                <td width="30%">Guia de remision</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for ingreso in object_list %}
+                            <tr valign="middle" class="{{forloop.counter|divisibleby:2|yesno:'even,odd'}}">
+                                <td align="center">{{ ingreso.fecha }}</td>
+                                <td align="center">{{ ingreso.dni_usuario_id }}</td>
+                                <td align="center">{{ ingreso.guia_remision_id }}</td>
+                                <td align="center">
+                                    <a href=""
+                                       class="btn btn-info">
+                                        Detalles
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="delete-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    {% endblock %}
