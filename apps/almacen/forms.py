@@ -101,6 +101,7 @@ class ProveedoresForm(forms.ModelForm):
 DetalleIngresoFormSet = inlineformset_factory(Ingreso,DetalleIngreso,
                                               can_delete=False,
                                               extra=2,
+                                             max_num=3,
                                               form=DetalleIngresoForm)
 
 #SALIDAS

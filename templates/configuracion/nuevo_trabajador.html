@@ -40,8 +40,8 @@
                                 </div>
                             </div>
                             <div class="form-group ">
-                                {{ form.password.errors }}
                                 <div class="form-field col-sm-11  ">
+                                    {{ form.password.errors }}
                                     <div class="input-group">
                                         <span class="input-group-addon glyphicon glyphicon-lock" ></span>
                                         <input class="form-control" placeholder="Confirme Contraseña" id="id_password2"
@@ -50,8 +50,9 @@
                                 </div>
                             </div>
                             <div class="form-group ">
-                                {{ form.email.errors }}
+
                                 <div class="form-field col-sm-11 ">
+                                    {{ form.email.errors }}
                                     <div class="input-group">
                                         <span class="input-group-addon " >@</span>
                                         {{ form.email }}
@@ -66,8 +67,8 @@
                                 <span> Datos Personales</span>
                             </div>
                             <div class="form-group ">
-                                {{ form.first_name.errors }}
                                 <div class="form-field col-sm-11">
+                                    {{ form.first_name.errors }}
                                     <div class="input-group">
                                         <span class="input-group-addon glyphicon glyphicon-user " ></span>
                                         {{ form.first_name }}
@@ -105,7 +106,7 @@
 
 
                         <div class="submit-row  col-xs-12">
-                            <input  class ="col-sm-offset-2 col-sm-4  col-xs-12 btn btn-success btn-lg" type="submit"
+                            <input  id='registrartrabajador' class ="col-sm-offset-2 col-sm-4  col-xs-12 btn btn-success btn-lg" type="submit"
                                     value="Registrar Trabajador" />
                             <a class ="col-sm-offset-1 col-sm-3  col-xs-12 btn btn-danger btn-lg"
                                href="{% url 'usuarios:index' %}">Volver</a>

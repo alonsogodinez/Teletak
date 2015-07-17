@@ -10,6 +10,9 @@ from django.views.generic import View, CreateView,TemplateView, ListView, Update
 from .forms import LoginForm, RegistrarTrabajadorForm, EditarTrabajadorForm
 from .models import User
 
+from apps.productos.models import *
+from apps.almacen.models import *
+
 from Teletak.mixins import SuccessMessageMixin
 
 class LoginRequiredMixin(object):
@@ -102,6 +105,16 @@ class EliminarTrabajador(SuccessMessageMixin,DeleteView):
     template_name = 'configuracion/confirm_delete_trabajador.html'
     success_message = 'El trabajador fue eliminado correctamente'
 
+
+class Prueba(View):
+    template_name = 'prueba.html'
+
+    def get(self, request):
+        productos = Producto.objects.all()
+        ingresos = Ingreso.objects.all()
+        detalles = DetalleIngreso.objects.all()
+        guia_remision = GuiaRemision.objects.all()
+        return render(request, self.template_name, locals())
 
 
 

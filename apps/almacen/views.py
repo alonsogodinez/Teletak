@@ -133,12 +133,12 @@ class SalidaView(LoginRequiredMixin,View,SuccessMessageMixin):
 
 class ListarSalidas(LoginRequiredMixin,ListView):
     model = Salida
-    template_name = '/almacen/salidas/lista_salidas.html'
+    template_name = 'almacen/salidas/lista_salidas.html'
 
 class EliminarSalida(SuccessMessageMixin,DeleteView):
     model = Salida
     success_url = '/operaciones/listar_salidas'
-    template_name = '/almacen/salidas/confirm_delete_salida.html'
+    template_name = 'almacen/salidas/confirm_delete_salida.html'
     success_message = 'El registro de salida fue eliminado correctamente'
 
 class ListarIngresos(LoginRequiredMixin,ListView):
