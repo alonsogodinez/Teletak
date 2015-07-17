@@ -145,6 +145,12 @@ class ListarIngresos(LoginRequiredMixin,ListView):
     model = Ingreso
     template_name = 'almacen/ingresos/lista_ingresos.html'
 
+class ListarDetalleIngreso(LoginRequiredMixin,DetailView):
+    template_name = 'almacen/ingresos/detalles_lista_ingreso.html'
+
+    model = DetalleIngreso
+    slug = 'id'
+
 #FUNCIONES PARA ACTUALIZAR EL STOCK
 #----------------------------------
 

@@ -46,7 +46,7 @@
                                 <td align="center">{{ ingreso.dni_usuario }}</td>
                                 <td align="center">{{ ingreso.guia_remision}}</td>
                                 <td align="center">
-                                    <a href=""
+                                    <a href="{% url 'almacen:lista_detalle_ingresos'  ingreso.id %}"
                                        class="btn btn-info">
                                         Detalles
                                     </a>
