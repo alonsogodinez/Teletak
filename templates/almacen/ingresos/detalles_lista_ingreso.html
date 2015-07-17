@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{%  block breadcrumb %}
+     <ol class="breadcrumb">
+        <li ><a href="{%  url 'almacen:index' %}">Inicio</a></li>
+        <li ><a href="{%   url 'almacen:operaciones' %}">Almacén</a></li>
+        <li  ><a href="{% url 'almacen:lista_ingresos' %}">Listar Ingresos</a></li>
+        <li class="active" >Detalle Ingresos</li>
+
+    </ol>
+{% endblock %}
+
+{% block content %}
+
+    {% for DetalleIngreso in object_list %}
+        <div class="row" >{{ DetalleIngreso.cantidad }}</div>
+
+    {% endfor %}
+{% endblock %}
+
+

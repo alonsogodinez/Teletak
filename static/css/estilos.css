@@ -141,7 +141,7 @@ td .btn-danger{
 }
 
 .contenedor-modulos{
-    padding: 15.5em 25px;
+    padding: 12em 25px;
 }
 
 .contenedor-operaciones{
@@ -155,7 +155,13 @@ td .btn-danger{
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
     background-color: #CBDEE5;
 }
-
+.errorlist{
+    list-style: none;
+    color: white;
+    background: #DF6561;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
 .field-scape{
     height: 34px;
 }
@@ -204,7 +210,9 @@ td .btn-danger{
 
 
 
-
+.hidden-span-top{
+    padding-top: 20px !important;
+}
 .input-group-addon.glyphicon{
     top:0;
 }
@@ -222,6 +230,10 @@ td .btn-danger{
     -moz-transform:scale(2,3.5);
     -o-transform:rotateZ(360deg);
     transform: rotateZ(360deg);
+}
+
+.label-default{
+    background: #6191B0;
 }
 
 .last-row-field{
@@ -420,8 +432,14 @@ td .btn-danger{
       background-color: #CBDEE5;
     }
 
+
+
     .backbutton{
         position: inherit;
+    }
+
+    .hidden-span-top{
+        padding-top: 0 !important;
     }
 }
 

@@ -21,7 +21,6 @@ class GuiaRemision(models.Model):
     nro_guia_remitente = models.CharField(max_length=15)
     placa_vehiculo = models.CharField(max_length=10)
     licencia_conducir = models.CharField(max_length=15)
-    proveedor = models.ForeignKey(Proveedor,blank=True,null=True)
 
     class Meta:
         verbose_name_plural = "Guias de remision"
@@ -47,6 +46,8 @@ class DetalleIngreso(models.Model):
     cantidad = models.IntegerField(blank=True, null=True)
     unidad_caja = models.ForeignKey(UnidadMedicion,blank=True, null=True)
     estado = models.CharField(max_length=15, blank=True, null=True)
+
+
 
 
 
