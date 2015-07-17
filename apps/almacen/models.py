@@ -49,8 +49,6 @@ class DetalleIngreso(models.Model):
     estado = models.CharField(max_length=15, blank=True, null=True)
 
 
-    def __unicode__(self):
-        return  self.guia_remision.nro_guia_remitente + ' ' +  self.fecha.strftime('%Y/%m/%d')
 
 class Almacen(models.Model):
     ubicacion = models.CharField(max_length=50, blank=True, null=True)

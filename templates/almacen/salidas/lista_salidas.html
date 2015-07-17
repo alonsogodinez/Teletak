@@ -51,14 +51,9 @@
                                 <td align="center">{{ salida.nodo }}</td>
                                 <td align="center">{{ salida.devolucion }}</td>
                                 <td align="center">
-                                    <a href=""
+                                    <a href="{% url 'almacen:detalle_salidas' salida.id %}"
                                        class="btn btn-info">
                                         Detalles
-                                    </a>
-                                    <a href="{% url 'almacen:eliminar_salidas' salida.id %}"
-                                       data-toggle="modal" data-target="#delete-modal"
-                                       class="btn btn-danger btn-delete">
-                                        Eliminar
                                     </a>
                                 </td>
                             </tr>
@@ -79,4 +74,57 @@
 
 
     </div>
+    {% if status %}
+
+        <!-- Modal HTML -->
+            <div id="detalle" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Detalle de Salida Nro. {{ sal.id }}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <table width="100%">
+                                <tr >
+                                    <td><STRONG>Trabajador</STRONG></td>
+                                    <td>{{ sal.dni_usuario }}</td>
+                                </tr>
+                                <tr >
+                                    <td><STRONG>Fecha</STRONG></td>
+                                    <td>{{ sal.fecha }}</td>
+                                </tr>
+                                <tr >
+                                    <td><STRONG>Motivo</STRONG></td>
+                                    <td>{% if sal.devolucion %}
+                                        Devolución de productos defectuosos al proveedor.
+                                    {% else %}
+                                        Productos empleados para el Nodo {{ sal.nodo }}.
+                                    {% endif %}</td>
+                                </tr>
+                            </table>
+                            <br>
+                            <table class="table table-hover">
+                                <thead>
+                                    <th>Almacen</th>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                </thead>
+                                {% for d in det %}
+                                <tr>
+                                    <td>{{ d.id_almacen }}</td>
+                                    <td>{{ d.codigo_producto }}</td>
+                                    <td>{{ d.cantidad }}</td>
+                                </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    {% endif %}
     {% endblock %}
