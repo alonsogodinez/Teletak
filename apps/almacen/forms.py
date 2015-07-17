@@ -16,7 +16,8 @@ class UsuarioForm(forms.ModelForm):
 class IngresoForm(forms.ModelForm):
     almacen = forms.ModelChoiceField(queryset=Almacen.objects.all(),
                                      widget=forms.Select(attrs={'class':'form-control chosen-select',
-                                                                'placeholder':'almacen','required':True}),
+                                                                'placeholder':'almacen','required':True
+                                                                }),empty_label="Escoga la ubicacion del almacen",
                                      label= 'Almacen')
 
     class Meta:
@@ -33,13 +34,12 @@ class DetalleIngresoForm(forms.ModelForm):
     unidad_caja = forms.ModelChoiceField(queryset=UnidadMedicion.objects.all(),
                                          widget=forms.Select(attrs={'class':'form-control chosen-select',
                                                                     'required':True,
-                                                                    'placeholder':'Unidad de medida'}),
-                                                            label="Unidad de medida")
+                                                                    'placeholder':'Unidad de medida'}),empty_label="Escoga la unidad de medida")
     estado = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control',
                                                            'placeholder':'Estado',
                                                            'required':True}),
                                                     label="Estado del producto")
-    codigo_producto = forms.ModelChoiceField(queryset=Producto.objects.all(),
+    codigo_producto = forms.ModelChoiceField(queryset=Producto.objects.all(),empty_label="Escoga el codigo de producto",
                                             widget=forms.Select(attrs={'class':'form-control chosen-select',
                                                                      'placeholder':'Codigo',
                                                                      'required':True}))
@@ -50,7 +50,7 @@ class DetalleIngresoForm(forms.ModelForm):
 DetalleIngresoFormSet = inlineformset_factory(Ingreso,DetalleIngreso,extra=1,can_delete=False, form=DetalleIngresoForm)
 
 class ProductoForm(forms.ModelForm):
-    codigo_product = forms.ModelChoiceField(queryset=Producto.objects.all(),
+    codigo_product = forms.ModelChoiceField(queryset=Producto.objects.all(),empty_label="Codigo",
                                             widget=forms.Select(attrs={'class':'form-control',
                                                                        'required':True}),
                                             label="Unidad de Medida")
@@ -71,7 +71,7 @@ class GuiaRemisionForm(forms.ModelForm):
                                     label="Punto de partida")
     nro_guia_remitente = forms.CharField(max_length=10,
                                          widget=forms.TextInput(attrs={'class':'form-control',
-                                                                       'placeholder':'N| guia remitente',
+                                                                       'placeholder':'Nro guia remitente',
                                                                        'required':True}),
                                          label="Guia remitente")
     placa_vehiculo = forms.CharField(max_length=10,

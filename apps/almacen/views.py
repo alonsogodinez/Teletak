@@ -106,29 +106,38 @@ class Reingresos(LoginRequiredMixin,View):
 import datetime
 
 class SalidaView(LoginRequiredMixin,View,SuccessMessageMixin):
+    template_name = 'almacen/salidas/index.html'
     def get(self, request):
         salidaform = SalidaForm
         formset = DetalleSalidaFormset(prefix='formset')
-        return render_to_response('almacen/salidas/index.html',locals(),context_instance=RequestContext(request))
+        return render_to_response(self.template_name,locals(),context_instance=RequestContext(request))
     def post(self,request):
-        salida_form = SalidaForm(request.POST)
-        if salida_form.is_valid() :
-            salida = salida_form.save(commit=False)
+        salidaform = SalidaForm(request.POST)
+        if salidaform.is_valid() :
+            salida = salidaform.save(commit=False)
             salida.fecha = datetime.date.today()
             salida.save()
-            detallesalida = DetalleSalidaFormset(request.POST,prefix='formset',instance=salida)
-            if detallesalida.is_valid():
-                for detalle in detallesalida.save(commit=False):
+            formset = DetalleSalidaFormset(request.POST,prefix='formset',instance=salida)
+            if formset.is_valid():
+                for detalle in formset.save(commit=False):
                     ActualizarSalida(detalle.id_almacen,detalle.codigo_producto,detalle.cantidad)
-                detallesalida.save()
+                formset.save()
                 return  HttpResponseRedirect("/operaciones/listar_salidas")
             else:
-                print "assa"
+                return render(request,self.template_name,locals())
 
         else:
-            detallesalida = DetalleSalidaFormset(request.POST,prefix="formset")
-            return render_to_response('almacen/salidas/index.html',{'salidaform': salida_form,'formset':detallesalida},context_instance=RequestContext(request))
+            formset = DetalleSalidaFormset(request.POST,prefix="formset")
+            return render_to_response(self.template_name,{'salidaform': salidaform,'formset':formset},context_instance=RequestContext(request))
 
+class DetalleSalidaView(LoginRequiredMixin,View):
+    def get(self,request,id):
+        object_list = Salida.objects.all()
+        sal = Salida.objects.get(pk=id)
+        det = DetalleSalida.objects.filter(id_salida=id)
+        template_name = 'almacen/salidas/lista_salidas.html'
+        status = True
+        return render(request,template_name,locals())
 
 
 class ListarSalidas(LoginRequiredMixin,ListView):
@@ -145,8 +154,12 @@ class ListarIngresos(LoginRequiredMixin,ListView):
     model = Ingreso
     template_name = 'almacen/ingresos/lista_ingresos.html'
 
-#FUNCIONES PARA ACTUALIZAR EL STOCK
-#----------------------------------
+class ListarDetalleIngreso(LoginRequiredMixin,DetailView):
+    template_name = 'almacen/ingresos/detalles_lista_ingreso.html'
+
+    model = DetalleIngreso
+    slug = 'id'
+
 
 #Funcion que se usa despues de cada ingreso(o reingreso) para insertar un registro en detallealmacen, y actualizar el stock
 def InsertarDetalleAlmacen(ingreso_id,almacen_id):
@@ -210,25 +223,29 @@ class ActualizarStock:
 
 
 #FUNCIONES PARA LOS SELECTS DINAMICOS
-#-------------------------------------
-
-
 import json
-from django.core import serializers
+from django.views.decorators.csrf import csrf_exempt
 
-#funcion que recupera todos los productos que existen en un almacen, y retorna json
-def getProductosfromAlmacen(request,almacen_id):
-    response = serializers.serialize("json",DetalleStock.objects.filter(id_almacen=almacen_id))
+@csrf_exempt
+def getProductosfromAlmacen(request):
+    req  = request.body
+    data = json.loads(req)
     lista = []
-    productos = DetalleStock.objects.filter(id_almacen=almacen_id)
+    productos = DetalleStock.objects.filter(id_almacen=data['almacen']).exclude(producto__in=data['productos'])
     for p in productos:
         lista.append({"codigo" : p.producto.codigo, "nombre" : p.producto.descripcion},)
     return HttpResponse(json.dumps(lista),content_type='application/json')
 
-#funcion que recupera la cantidad(stock) de un determinado producto que hay en un almacen
 def getCantidadfromProductos(request,almacen_id,producto_id):
     lista = []
     items = DetalleStock.objects.filter(id_almacen=almacen_id,producto=producto_id)
     for p in items:
         lista.append({"max_value":p.stock},)
     return HttpResponse(json.dumps(lista),content_type='application/json')
+
+def reporte(request):
+    ingresos = Ingreso.objects.all()
+    productos = Producto.objects.all()
+    guia_remision = GuiaRemision.objects.all()
+    detalles = DetalleIngreso.objects.all()
+    return render(request,'almacen/reporte.html',locals())

@@ -48,8 +48,6 @@ class DetalleIngreso(models.Model):
     unidad_caja = models.ForeignKey(UnidadMedicion,blank=True, null=True)
     estado = models.CharField(max_length=15, blank=True, null=True)
 
-
-
 class Almacen(models.Model):
     ubicacion = models.CharField(max_length=50, blank=True, null=True)
     capacidad = models.IntegerField(blank=True,null=True)

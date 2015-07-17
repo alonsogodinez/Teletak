@@ -18,64 +18,78 @@ $(document).ready(function() {
       });
      $(function() {
         $('form .formset').formset();
-    });
+    })
 
-     $('#id_devolucion').change(function () {
-        $('#id_nodo').prop("disabled", this.checked);
-    }).change()
+       $('#detalle').modal('show');
+});
 
-    //Choidec Dinamicos
-    $(".c-almacen").change(function(){
+    $(".c-almacen").click(function(){
+        //Obteniendo el nro de form del formset
         var r = /\d+/;
         var s = $(this).attr("id");
         num = s.match(r);
-        $.ajax({
-                url : "/operaciones/getproducto/"+ $(this).val() +"/",
-                type : "GET",
+        almacen_actual = $(this).val();
+        //Llenando el array producto con los productos ya seleccionados
+        var productos = [ $(this).val() ];
+        $(".c-producto").each(function() {
+            var g = $(this).attr("id");
+            numero = g.match(r);
+            fila_actual = "id_formset-"+num+"-codigo_producto";
+            item_actual = String($(this).attr("id"));
+            console.log(item_actual + " - " + fila_actual);
+            if( $(this).val() > 0 && $("#id_formset-"+ numero + "-id_almacen").val() == almacen_actual)
+            {
+                if(fila_actual != item_actual)
+                    productos.push($(this).val());
+            }
+        });
+        //transformado la data a json
+        data = '{"almacen":';
+        for(var i=0;i<productos.length;i++)
+        {
+            if(i==0)
+            {
+                data += productos[i] + ',"productos":[';
+            }
+            else
+            {
+                if(i==productos.length-1)
+                    data += productos[i];
+                else
+                    data += productos[i]+",";
+            }
+        }
+        data += "]}";
+        console.log(data);
+        if ($(this).val() > 0)
+        {
+            $.ajax({
+                url: "/operaciones/getproducto/",
+                type: "POST",
+                data:  data,
                 dataType: "json",
                 async: true,
-                success : function(j) {
+                success: function (j) {
                     var options = '<option value="0">---------- </option>';
                     for (var i = 0; i < j.length; i++) {
                         options += '<option value="' + parseInt(j[i].codigo) + '">' + j[i].nombre + '</option>';
                     }
-                    nextid = "#id_formset-"+num+"-codigo_producto";
+                    nextid = "#id_formset-" + num + "-codigo_producto";
                     $(nextid).html(options);
                     $(nextid + " option:first").attr('selected', 'selected');
                     $(nextid).attr('disabled', false);
-
-                    /*$("#id_form-"+ num +"-codigo_producto").html(options);
-                    $("#id_form-"+ num +"-codigo_producto option:first").attr('selected', 'selected');
-                    $("#id_form-"+ num +"-codigo_producto").attr('disabled', false);*/
+                    $("#id_formset-"+ num +"-cantidad").attr('disabled', true);
                 },
-                error : function(xhr,errmsg,err) {
+                error: function (xhr, errmsg, err) {
                     alert(xhr.status + ": " + xhr.responseText);
                 }
-        });
-    });
-    $(".c-producto").change(function(){
-        var r = /\d+/;
-        var s = $(this).attr("id");
-        num = s.match(r);
-        almacen = $("#id_formset-"+ num + "-id_almacen").val();
-        $.ajax({
-                url : "/operaciones/getcantidad/" + almacen + "/"+ $(this).val() +"/",
-                type : "GET",
-                dataType: "json",
-                async: true,
-                success : function(j) {
-                    nextid = "#id_formset-" + num + "-cantidad";
-                    //alert(nextid);
-                    for (var i = 0; i < j.length; i++) {
-                        $(nextid).attr( "max", parseInt(j[i].max_value));
-                        $(nextid).attr( "value", parseInt(j[i].max_value));
-                    }
-                    $(nextid).attr('disabled', false);
-                },
-                error : function(xhr,errmsg,err) {
-                    alert(xhr.status + ": " + xhr.responseText);
-                }
-        });
+            });
+        }
+        else
+        {
+            $("#id_formset-"+ num +"-codigo_producto").attr('disabled', true);
+            $("#id_formset-"+ num +"-cantidad").attr('disabled', true);
+        }
     });
     $("#registrartrabajador").click(function(e){
         var password =$("#id_password");
@@ -114,12 +128,32 @@ $(document).ready(function() {
 
     });
 
-
-
-
-
-});
-
+$(".c-producto").change(function(){
+        var r = /\d+/;
+        var s = $(this).attr("id");
+        num = s.match(r);
+        almacen = $("#id_formset-"+ num + "-id_almacen").val();
+        if (almacen > 0) {
+            $.ajax({
+                url: "/operaciones/getcantidad/" + almacen + "/" + $(this).val() + "/",
+                type: "GET",
+                dataType: "json",
+                async: true,
+                success: function (j) {
+                    nextid = "#id_formset-" + num + "-cantidad";
+                    //alert(nextid);
+                    for (var i = 0; i < j.length; i++) {
+                        $(nextid).attr("max", parseInt(j[i].max_value));
+                        $(nextid).attr("value", parseInt(j[i].max_value));
+                    }
+                    $(nextid).attr('disabled', false);
+                },
+                error: function (xhr, errmsg, err) {
+                    alert(xhr.status + ": " + xhr.responseText);
+                }
+            });
+        }
+    });
 
 
 
