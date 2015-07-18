@@ -25,14 +25,14 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = 'static'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, 'static/css'),
-    os.path.join(BASE_DIR, 'static/js'),
-    os.path.join(BASE_DIR, 'static/fonts'),
-    os.path.join(BASE_DIR, 'static/img'),
-
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+#     os.path.join(BASE_DIR, 'static/css'),
+#     os.path.join(BASE_DIR, 'static/js'),
+#     os.path.join(BASE_DIR, 'static/fonts'),
+#     os.path.join(BASE_DIR, 'static/img'),
+#
+# )
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 DEBUG = True
