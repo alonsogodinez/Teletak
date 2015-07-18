@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+        alert('sadfsa');
 //    function centerModals(){
 //  $('.modal').each(function(i){
 //    var $clone = $(this).clone().css('display', 'block').appendTo('body');
@@ -161,6 +161,9 @@ $(document).ready(function() {
 
 
     });
+
+
+
 
 
 });

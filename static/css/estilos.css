@@ -156,6 +156,10 @@ th,.report-td{
     display:table-row;
 }
 
+.dataTables_length,.dataTables_filter,.dataTables_info{
+    color:white;
+}
+
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
     background-color: #CBDEE5;
 }
@@ -367,6 +371,25 @@ th,.report-td{
     padding-top:0px !important;
 }
 
+.pagination>.disabled>a, .pagination>.disabled>a:focus,
+.pagination>.disabled>a:hover, .pagination>.disabled>span,
+.pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
+  color: #777;
+  cursor: not-allowed;
+  background-color: #F8F8F8;
+  border-color: #ddd;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus,
+.pagination>.active>a:hover, .pagination>.active>span,
+.pagination>.active>span:focus, .pagination>.active>span:hover {
+  z-index: 2;
+  color: #fff;
+  cursor: default;
+  background-color: #6191B0;
+  border-color: #6191B0;
+}
+
 .panel{
     background-color: rgba(255, 255, 255, 0.11);
     border:none;
@@ -383,7 +406,8 @@ th,.report-td{
     /*color: #6191B0;*/
     font-weight: bolder;
     font-size: 1.1em;
-    background-color: #c1d8df;
+    /*background-color: #c1d8df;*/
+    background-color: #F2F2F2;
 
 }
 

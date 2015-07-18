@@ -162,6 +162,43 @@ $(document).ready(function() {
 
     });
 
+    var datatable = {
+
+        "oLanguage": {
+            "oAria": {
+                "sSortAscending": " - ordenar de forma ascendente",
+                "sSortDescending": " - ordenar de forma descendente",
+                "sInfoEmpty": "No hay información para mostrar",
+                "sLengthMenu": "Mostrar _MENU_ registros",
+                "sSearch": "Buscar :",
+                "sZeroRecords": "No hay ningún registro",
+
+            },
+            "oPaginate": {
+                "sFirst": "Primera página",
+                "sLast": "Última página",
+                "sNext": "Página siguiente",
+                "sPrevious": "Página anterior"
+            },
+
+            "sEmptyTable": "Esta tabla no tiene datos",
+            "sInfo": "Mostrando  _START_ - _END_ de _TOTAL_ registros",
+            "sInfoEmpty": "Mostrando 0 entradas",
+            "sInfoFiltered": "(filtrados de _MAX_  registros en total)",
+            "sLengthMenu": "Motrar _MENU_ registros",
+            "sSearch": "Buscar :",
+            "sZeroRecords": "No se encontraron coincidencias"
+
+        }
+    };
+
+    $('#datatable').DataTable(datatable);
+
+
+    var datatableresponsive = datatable;
+    datatableresponsive.responsive = true;
+
+    $('#datatable-responsive').DataTable(datatableresponsive);
 
 });
 

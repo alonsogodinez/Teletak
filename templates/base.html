@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     {% load static from staticfiles %}
-    <link href="{% static 'css/normalize.css' %}"/>
-<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-
+    <link href="{% static 'css/normalize.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'DataTables-1.10.7/media/css/jquery.dataTables.css' %}" rel="stylesheet">
+    <link href="{% static 'DataTables-1.10.7/extensions/Responsive/css/dataTables.responsive.css' %}" rel="stylesheet">
 {#    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">#}
     <link href="{% static "css/estilos.css" %}" rel="stylesheet">
-    <link href="{% static "css/bootstrap.icon-large.min.css" %}" rel="stylesheet">
+{#    <link href="{% static "css/bootstrap.icon-large.min.css" %}" rel="stylesheet">#}
     <title>Teletak</title>
 </head>
 <body>
@@ -60,8 +61,11 @@
         </div>
     </footer>
     <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script-!-->
-    <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script charset="utf8" src="{% static 'DataTables-1.10.7/media/js/jquery.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script charset="utf8" src="{% static 'DataTables-1.10.7/media/js/jquery.dataTables.js' %}"></script>
+    <script charset="utf8" src="{% static 'DataTables-1.10.7/extensions/Responsive/js/dataTables.responsive.js' %}"></script>
+{#    <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>#}
     <script src="{% static 'js/jquery.formset.min.js' %}"></script>
     <script src="{% static 'js/funciones.js'%}"></script>
 </html>
