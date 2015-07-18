@@ -23,10 +23,14 @@ STATIC_URL = '/static/'
 
 
 
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = 'static'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
+    'Teletak/static/css',
+    'Teletak/static/js',
+    'Teletak/static/fonts',
+    'Teletak/static/img'
 )
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
