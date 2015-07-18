@@ -107,7 +107,7 @@ class EliminarTrabajador(SuccessMessageMixin,DeleteView):
 
 
 class Prueba(View):
-    template_name = 'prueba.html'
+    template_name = 'almacen/reporte.html'
 
     def get(self, request):
         productos = Producto.objects.all()

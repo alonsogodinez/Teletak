@@ -42,6 +42,10 @@ td .btn-danger{
     background-color:#DF6561
 }
 
+th,.report-td{
+    text-align: center;
+}
+
 .add-row{
     margin-left: 31px;
     background-color: #62aeee !important;
@@ -336,6 +340,10 @@ td .btn-danger{
     border-bottom: 3px solid #4b5162;
 }
 
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #63AEED;
+}
 /*.navbar-nav>li>a{*/
     /*padding-top: 20px;*/
     /*padding-bottom: 20px;*/

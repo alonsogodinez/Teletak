@@ -154,11 +154,15 @@ class ListarIngresos(LoginRequiredMixin,ListView):
     model = Ingreso
     template_name = 'almacen/ingresos/lista_ingresos.html'
 
-class ListarDetalleIngreso(LoginRequiredMixin,DetailView):
-    template_name = 'almacen/ingresos/detalles_lista_ingreso.html'
+class DetalleIngresoView(LoginRequiredMixin,View):
+    def get(self,request,id):
+        object_list = Ingreso.objects.all()
+        sal = Ingreso.objects.get(pk=id)
+        det = DetalleIngreso.objects.filter(id_ingreso=id)
+        template_name = 'almacen/ingresos/lista_ingresos.html'
+        status = True
+        return render(request,template_name,locals())
 
-    model = DetalleIngreso
-    slug = 'id'
 
 
 #Funcion que se usa despues de cada ingreso(o reingreso) para insertar un registro en detallealmacen, y actualizar el stock
@@ -243,9 +247,12 @@ def getCantidadfromProductos(request,almacen_id,producto_id):
         lista.append({"max_value":p.stock},)
     return HttpResponse(json.dumps(lista),content_type='application/json')
 
-def reporte(request):
-    ingresos = Ingreso.objects.all()
-    productos = Producto.objects.all()
-    guia_remision = GuiaRemision.objects.all()
-    detalles = DetalleIngreso.objects.all()
-    return render(request,'almacen/reporte.html',locals())
+class Reporte(View):
+    template_name = 'almacen/reporte.html'
+
+    def get(self, request):
+        productos = Producto.objects.all()
+        ingresos = Ingreso.objects.all()
+        detalles = DetalleIngreso.objects.all()
+        guia_remision = GuiaRemision.objects.all()
+        return render(request, self.template_name, locals())

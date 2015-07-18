@@ -16,12 +16,15 @@ $(document).ready(function() {
     $('body').on('hidden.bs.modal', '.modal', function () {
         $(this).removeData('bs.modal');
       });
-     $(function() {
+    $(function() {
         $('form .formset').formset();
-    })
+    });
 
-       $('#detalle').modal('show');
-});
+    $('#detalle').modal('show');
+
+    $('#id_devolucion').change(function () {
+        $('#id_nodo').prop("disabled", this.checked);
+    }).change();
 
     $(".c-almacen").click(function(){
         //Obteniendo el nro de form del formset
@@ -91,6 +94,37 @@ $(document).ready(function() {
             $("#id_formset-"+ num +"-cantidad").attr('disabled', true);
         }
     });
+
+
+    $(".c-producto").change(function(){
+        var r = /\d+/;
+        var s = $(this).attr("id");
+        num = s.match(r);
+        almacen = $("#id_formset-"+ num + "-id_almacen").val();
+        if (almacen > 0) {
+            $.ajax({
+                url: "/operaciones/getcantidad/" + almacen + "/" + $(this).val() + "/",
+                type: "GET",
+                dataType: "json",
+                async: true,
+                success: function (j) {
+                    nextid = "#id_formset-" + num + "-cantidad";
+                    //alert(nextid);
+                    for (var i = 0; i < j.length; i++) {
+                        $(nextid).attr("max", parseInt(j[i].max_value));
+                        $(nextid).attr("value", parseInt(j[i].max_value));
+                    }
+                    $(nextid).attr('disabled', false);
+                },
+                error: function (xhr, errmsg, err) {
+                    alert(xhr.status + ": " + xhr.responseText);
+                }
+            });
+        }
+    });
+
+
+
     $("#registrartrabajador").click(function(e){
         var password =$("#id_password");
         var dni = $('#id_dni');
@@ -128,32 +162,9 @@ $(document).ready(function() {
 
     });
 
-$(".c-producto").change(function(){
-        var r = /\d+/;
-        var s = $(this).attr("id");
-        num = s.match(r);
-        almacen = $("#id_formset-"+ num + "-id_almacen").val();
-        if (almacen > 0) {
-            $.ajax({
-                url: "/operaciones/getcantidad/" + almacen + "/" + $(this).val() + "/",
-                type: "GET",
-                dataType: "json",
-                async: true,
-                success: function (j) {
-                    nextid = "#id_formset-" + num + "-cantidad";
-                    //alert(nextid);
-                    for (var i = 0; i < j.length; i++) {
-                        $(nextid).attr("max", parseInt(j[i].max_value));
-                        $(nextid).attr("value", parseInt(j[i].max_value));
-                    }
-                    $(nextid).attr('disabled', false);
-                },
-                error: function (xhr, errmsg, err) {
-                    alert(xhr.status + ": " + xhr.responseText);
-                }
-            });
-        }
-    });
+
+});
+
 
 
 
