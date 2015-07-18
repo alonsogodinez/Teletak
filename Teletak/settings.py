@@ -23,7 +23,7 @@ STATIC_URL = '/static/'
 
 
 
-STATIC_ROOT = 'static'
+STATIC_ROOT = 'staticfiles'
 
 STATICFILES_DIRS = (
     os.path.join(os.path.dirname(__file__), "static"),
