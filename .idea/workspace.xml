@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4abeee97-c5ca-42d3-91cb-d25b29e75d27" name="Default" comment="agregado">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teletak/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/Teletak/static/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teletak/static/css/estilos.css" afterPath="$PROJECT_DIR$/Teletak/static/css/estilos.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teletak/static/js/funciones.js" afterPath="$PROJECT_DIR$/Teletak/static/js/funciones.js" />
-    </list>
+    <list default="true" id="4abeee97-c5ca-42d3-91cb-d25b29e75d27" name="Default" comment="agregado" />
     <list id="9444596f-7d05-4e1f-bb88-ade04f83be90" name="New changelist" comment="" />
     <ignored path="Teletak.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -164,10 +159,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Teletak/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+            <state vertical-scroll-proportion="0.056925997" vertical-offset="0" max-vertical-offset="660">
               <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
@@ -184,10 +179,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listar_trabajadores.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="listar_trabajadores.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/configuracion/listar_trabajadores.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8349901" vertical-offset="0" max-vertical-offset="570">
+            <state vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="570">
               <caret line="72" column="49" selection-start-line="72" selection-start-column="49" selection-end-line="72" selection-end-column="49" />
               <folding>
                 <element signature="e#726#3089#0#HTML" expanded="false" />
@@ -1200,7 +1195,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32549942" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1214,7 +1209,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278496" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34406295" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" x="512" y="152" width="341" height="494" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34406295" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" x="512" y="152" width="341" height="494" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3266745" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3043478" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1667,14 +1662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Teletak/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/almacen/ingresos/lista_ingresos.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.625" vertical-offset="315" max-vertical-offset="2025">
@@ -1709,12 +1696,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/configuracion/listar_trabajadores.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8349901" vertical-offset="0" max-vertical-offset="570">
+        <state vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="570">
           <caret line="72" column="49" selection-start-line="72" selection-start-column="49" selection-end-line="72" selection-end-column="49" />
           <folding>
             <element signature="e#726#3089#0#HTML" expanded="false" />
             <element signature="e#3310#3493#0#HTML" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Teletak/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.056925997" vertical-offset="0" max-vertical-offset="660">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
