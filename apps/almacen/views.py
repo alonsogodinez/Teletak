@@ -142,7 +142,7 @@ class DetalleSalidaView(LoginRequiredMixin,View):
 
 class ListarSalidas(LoginRequiredMixin,ListView):
     model = Salida
-    template_name = '/almacen/salidas/lista_salidas.html'
+    template_name = 'almacen/salidas/lista_salidas.html'
 
 class EliminarSalida(SuccessMessageMixin,DeleteView):
     model = Salida
