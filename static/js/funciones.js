@@ -124,4 +124,48 @@ $(document).ready(function() {
     });
 
 
+
+    $("#registrartrabajador").click(function(e){
+        var password =$("#id_password");
+        var dni = $('#id_dni');
+
+        if($("#id_password2").val()!=password.val()){
+            e.preventDefault();
+
+            if($("#error_password").length==0){
+                password
+                    .parent()
+                    .parent()
+                    .prepend('<ul id="error_password" class="errorlist">' +
+                                '<li> Las constraseñas ingresadas no coinciden</li></ul>');
+            }
+
+        }
+
+        if(dni.val().length!=8){
+            if($("#error_dni").length==0) {
+                dni
+                    .parent()
+                    .parent()
+                    .prepend('<ul id="error_dni" class="errorlist">' +
+                    '<li> Este campo tiene que ser de 8 caracteres</li></ul>');
+            }
+
+        }
+        else{
+            var error_password =$("#error_password");
+            if(error_password.length>0) alert("existe error");
+            e.submit();
+        }
+
+
+
+    });
+
+
 });
+
+
+
+
+

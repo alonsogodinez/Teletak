@@ -21,6 +21,7 @@ class GuiaRemision(models.Model):
     nro_guia_remitente = models.CharField(max_length=15)
     placa_vehiculo = models.CharField(max_length=10)
     licencia_conducir = models.CharField(max_length=15)
+    proveedor = models.ForeignKey(Proveedor,blank=True,null=True)
 
     class Meta:
         verbose_name_plural = "Guias de remision"
@@ -28,11 +29,21 @@ class GuiaRemision(models.Model):
     def __unicode__(self):
         return self.nro_guia_remitente
 
+class Almacen(models.Model):
+    ubicacion = models.CharField(max_length=50, blank=True, null=True)
+    capacidad = models.IntegerField(blank=True,null=True)
+    def __unicode__(self):
+        return self.ubicacion
+    class Meta:
+        verbose_name_plural = "Almacenes"
+
+
 class Ingreso(models.Model):
     dni_usuario = models.ForeignKey(User, blank=True, null=True)
     fecha = models.DateField(default=timezone.now ,blank=True, null=True)
     guia_remision = models.ForeignKey(GuiaRemision, blank=True, null=True)
     tipo = models.IntegerField(blank=True, null=True) #ingreso :1   , reingreso:2
+    almacen = models.ForeignKey(Almacen,blank=True,null=True)
     class Meta:
         verbose_name = "Ingreso"
         verbose_name_plural = "Ingresos"
@@ -47,17 +58,6 @@ class DetalleIngreso(models.Model):
     unidad_caja = models.ForeignKey(UnidadMedicion,blank=True, null=True)
     estado = models.CharField(max_length=15, blank=True, null=True)
 
-
-
-
-
-class Almacen(models.Model):
-    ubicacion = models.CharField(max_length=50, blank=True, null=True)
-    capacidad = models.IntegerField(blank=True,null=True)
-    def __unicode__(self):
-        return self.ubicacion
-    class Meta:
-        verbose_name_plural = "Almacenes"
 
 
 

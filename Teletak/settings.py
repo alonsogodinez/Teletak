@@ -7,17 +7,17 @@ import os
 import dj_database_url
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': 'teletak2',
-    #     'USER': 'Alonso',
-    #     'PASSWORD': '123456',
-    #     'HOST': 'localhost',
-    #     'PORT': '',
-    # }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'teletak2',
+        'USER': 'Alonso',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
 }
-DATABASES['default'] =  dj_database_url.config()
-DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
+# DATABASES['default'] =  dj_database_url.config()
+# DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 
 STATIC_URL = '/static/'
 
