@@ -1,5 +1,5 @@
 $(document).ready(function() {
-        alert('sadfsa');
+
 //    function centerModals(){
 //  $('.modal').each(function(i){
 //    var $clone = $(this).clone().css('display', 'block').appendTo('body');
@@ -73,7 +73,7 @@ $(document).ready(function() {
                 dataType: "json",
                 async: true,
                 success: function (j) {
-                    var options = '<option value="0">---------- </option>';
+                    var options = '<option value="0">Escoja un Producto</option>';
                     for (var i = 0; i < j.length; i++) {
                         options += '<option value="' + parseInt(j[i].codigo) + '">' + j[i].nombre + '</option>';
                     }
@@ -162,9 +162,43 @@ $(document).ready(function() {
 
     });
 
+    var datatable = {
+
+        "oLanguage": {
+            "oAria": {
+                "sSortAscending": " - ordenar de forma ascendente",
+                "sSortDescending": " - ordenar de forma descendente",
+                "sInfoEmpty": "No hay información para mostrar",
+                "sLengthMenu": "Mostrar _MENU_ registros",
+                "sSearch": "Buscar :",
+                "sZeroRecords": "No hay ningún registro",
+
+            },
+            "oPaginate": {
+                "sFirst": "Primera página",
+                "sLast": "Última página",
+                "sNext": "Página siguiente",
+                "sPrevious": "Página anterior"
+            },
+
+            "sEmptyTable": "Esta tabla no tiene datos",
+            "sInfo": "Mostrando  _START_ - _END_ de _TOTAL_ registros",
+            "sInfoEmpty": "Mostrando 0 entradas",
+            "sInfoFiltered": "(filtrados de _MAX_  registros en total)",
+            "sLengthMenu": "Motrar _MENU_ registros",
+            "sSearch": "Buscar :",
+            "sZeroRecords": "No se encontraron coincidencias"
+
+        }
+    };
+
+    $('#datatable').DataTable(datatable);
 
 
+    var datatableresponsive = datatable;
+    datatableresponsive.responsive = true;
 
+    $('#datatable-responsive').DataTable(datatableresponsive);
 
 });
 
