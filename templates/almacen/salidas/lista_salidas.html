@@ -80,14 +80,26 @@
 
     </div>
     {% if status %}
-
+        <style>
+        .modal-header {
+            padding:9px 15px;
+            border-bottom:1px solid #eee;
+            background-color: #0480be;
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-radius-topleft: 5px;
+            -moz-border-radius-topright: 5px;
+             border-top-left-radius: 5px;
+             border-top-right-radius: 5px;
+         }
+        </style>
         <!-- Modal HTML -->
             <div id="detalle" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">Detalle de Salida Nro. {{ sal.id }}</h4>
+                            <h4 class="modal-title"><strong>Detalle de Salida Nro. {{ sal.id }}</strong></h4>
                         </div>
                         <div class="modal-body">
                             <table width="100%">
@@ -109,7 +121,7 @@
                                 </tr>
                             </table>
                             <br>
-                            <table class="table table-hover">
+                            <table class="table table-bordered">
                                 <thead>
                                     <th>Almacen</th>
                                     <th>Producto</th>
@@ -125,7 +137,7 @@
                             </table>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-success" data-dismiss="modal"><span class="glyphicon glyphicon-ok"> Aceptar</span></button>
                         </div>
                     </div>
                 </div>
