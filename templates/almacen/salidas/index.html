@@ -132,4 +132,55 @@
             </div>
         </div>
     </div>
+    {% if status %}
+             <style>
+             .modal-header {
+                padding:9px 15px;
+                border-bottom:1px solid #eee;
+                background-color: #DF0101;
+                 color: white;
+                -webkit-border-top-left-radius: 5px;
+                -webkit-border-top-right-radius: 5px;
+                -moz-border-radius-topleft: 5px;
+                -moz-border-radius-topright: 5px;
+                 border-top-left-radius: 5px;
+                 border-top-right-radius: 5px;
+             }
+
+             </style>
+                <!-- Modal HTML -->
+            <div id="detalle" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title"><strong>ADVERTENCIA</strong></h4>
+                        </div>
+                        <div class="modal-body">
+                            <strong>Los siguientes productos se encuentran por debajo de su stock mínimo, se recomienda realizar un pedido a su proveedor</strong>
+                            <br><br>
+                            <div class="table-responsive">
+                            <table class="table table-striped ">
+                                <thead>
+                                    <th>Almacen</th>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                </thead>
+                                {% for p in prod_list %}
+                                <tr>
+                                    <td>{{ p.almacen }}</td>
+                                    <td>{{ p.nombre }}</td>
+                                    <td>{{ p.cantidad }}</td>
+                                </tr>
+                                {% endfor %}
+                            </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    {% endif %}
 {% endblock %}

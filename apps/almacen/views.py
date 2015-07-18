@@ -110,7 +110,17 @@ class SalidaView(LoginRequiredMixin,View,SuccessMessageMixin):
     def get(self, request):
         salidaform = SalidaForm
         formset = DetalleSalidaFormset(prefix='formset')
-        return render_to_response(self.template_name,locals(),context_instance=RequestContext(request))
+        #Verificar stock minimo
+        stock = DetalleStock.objects.all()
+        prod_list = []
+        for item in stock:
+            if item.stock < item.producto.stock_minimo:
+                prod_list.append({'nombre':item.producto.descripcion, 'cantidad':item.stock,'almacen': item.id_almacen.ubicacion})
+        print prod_list
+        if prod_list.__len__() >0:
+            return render_to_response(self.template_name,{'salidaform':salidaform,'formset':formset,'prod_list':prod_list,'status':True},context_instance=RequestContext(request))
+        else:
+            return render_to_response(self.template_name,{'salidaform':salidaform,'formset':formset},context_instance=RequestContext(request))
     def post(self,request):
         salidaform = SalidaForm(request.POST)
         if salidaform.is_valid() :

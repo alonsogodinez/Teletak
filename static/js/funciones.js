@@ -73,7 +73,7 @@ $(document).ready(function() {
                 dataType: "json",
                 async: true,
                 success: function (j) {
-                    var options = '<option value="0">---------- </option>';
+                    var options = '<option value="0">Escoja un Producto</option>';
                     for (var i = 0; i < j.length; i++) {
                         options += '<option value="' + parseInt(j[i].codigo) + '">' + j[i].nombre + '</option>';
                     }
