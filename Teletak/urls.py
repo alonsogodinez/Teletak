@@ -18,4 +18,4 @@ urlpatterns = [
     url(r'^usuarios/',include('apps.usuarios.urls',namespace='usuarios')),
     url(r'^productos/',include('apps.productos.urls',namespace='productos')),
 
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

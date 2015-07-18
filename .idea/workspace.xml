@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4abeee97-c5ca-42d3-91cb-d25b29e75d27" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teletak/wsgi.py" afterPath="$PROJECT_DIR$/Teletak/wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Teletak/urls.py" afterPath="$PROJECT_DIR$/Teletak/urls.py" />
     </list>
     <list id="9444596f-7d05-4e1f-bb88-ade04f83be90" name="New changelist" comment="" />
     <ignored path="Teletak.iws" />
@@ -159,10 +159,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Teletak/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35363457" vertical-offset="0" max-vertical-offset="509">
+            <state vertical-scroll-proportion="-3.2727273" vertical-offset="0" max-vertical-offset="375">
               <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="e#223#232#0" expanded="true" />
@@ -181,11 +181,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Teletak/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.42553192" vertical-offset="0" max-vertical-offset="564">
+              <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -241,7 +241,6 @@
         <option value="$PROJECT_DIR$/Teletak/static/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/static/css/kl.css" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/Teletak/urls.py" />
         <option value="$PROJECT_DIR$/templates/login/index.html" />
         <option value="$PROJECT_DIR$/static/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/Teletak/settingswrap/local.py" />
@@ -271,6 +270,7 @@
         <option value="$PROJECT_DIR$/templates/almacen/reporte.html" />
         <option value="$PROJECT_DIR$/Teletak/settings.py" />
         <option value="$PROJECT_DIR$/Teletak/wsgi.py" />
+        <option value="$PROJECT_DIR$/Teletak/urls.py" />
       </list>
     </option>
   </component>
@@ -1437,22 +1437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/almacen/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1262" max-vertical-offset="2085">
-          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="123" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Teletak/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Teletak/settingswrap/local.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
@@ -1487,11 +1471,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Teletak/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35363457" vertical-offset="0" max-vertical-offset="509">
+        <state vertical-scroll-proportion="-3.2727273" vertical-offset="0" max-vertical-offset="375">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#223#232#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/almacen/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1262" max-vertical-offset="2085">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="123" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Teletak/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42553192" vertical-offset="0" max-vertical-offset="564">
+          <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
