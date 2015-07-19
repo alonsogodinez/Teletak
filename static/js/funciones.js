@@ -20,7 +20,8 @@ $(document).ready(function() {
         $('form .formset').formset();
     });
 
-    $(".chosen-select").chosen({no_results_text: "No se encontró coincidencias con :"});
+    $(".chosen-select").chosen({no_results_text: "No se encontró coincidencias con :",
+                                width: '100%' });
  //
     $('#detalle').modal('show');
 
