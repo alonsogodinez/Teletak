@@ -206,11 +206,14 @@ $(document).ready(function() {
 
     $("#btnExport").click(function () {
 
-        $("#tblExport").battatech_excelexport({
-                containerid: "reporte",
-                datatype: 'table'
-            });
+        var uri =$("#tblExport").battatech_excelexport({
+            containerid: "reporte",
+            datatype: 'table',
+            returnUri: true
         });
+        var today = new Date();
+        $(this).attr('download', 'ReporteFinal'+'.xls').attr('href', uri);
+    });
 
 
 

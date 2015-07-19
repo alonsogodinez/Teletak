@@ -15,7 +15,7 @@
             <div class="panel-heading">
                 <span class="glyphicon glyphicon-pencil"></span>
                 <span class="">LISTADO DE GUIAS DE REMISIÓN</span>
-                <input class ="pull-right btn btn-success" id="btnExport" type="button" value="Exportar a Excel">
+                <a class ="pull-right btn btn-success" id="btnExport" type="button" >Exportar a Excel</a>
                 <a class ="pull-right btn btn-danger  "
                    href="{% url 'almacen:operaciones' %}">Volver
                 </a>
@@ -44,7 +44,7 @@
                                 {% if detalle.codigo_producto.codigo == producto.codigo and detalle.id_ingreso.id == ingreso.id %}
                                     {% load tagvariable %}
                                     {% flag as flag %}
-                                    <td class="report-td">{{ detalle.cantidad }}</td>
+                                    <td class="report-td">{{ detalle.cantidad }} {{ detalle.unidad }}</td>
                                 {% endif %}
                                 {% if forloop.last and not flag %}
                                     <td class="report-td">--</td>
