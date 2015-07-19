@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4abeee97-c5ca-42d3-91cb-d25b29e75d27" name="Default" comment="agregado">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/productos/forms.py" afterPath="$PROJECT_DIR$/apps/productos/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/usuarios/views.py" afterPath="$PROJECT_DIR$/apps/usuarios/views.py" />
+    <list default="true" id="4abeee97-c5ca-42d3-91cb-d25b29e75d27" name="Default" comment="agregado" />
+    <list id="9444596f-7d05-4e1f-bb88-ade04f83be90" name="New changelist" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <list id="9444596f-7d05-4e1f-bb88-ade04f83be90" name="New changelist" comment="" />
     <ignored path="Teletak.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -110,21 +109,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/almacen/operaciones/index.html">
+      <file leaf-file-name="funciones.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/funciones.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="615">
-              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+            <state vertical-scroll-proportion="-9.814815" vertical-offset="2315" max-vertical-offset="3465">
+              <caret line="172" column="25" selection-start-line="172" selection-start-column="22" selection-end-line="172" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="funciones.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/funciones.js">
+      <file leaf-file-name="reporte.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/almacen/reporte.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="3900">
-              <caret line="23" column="46" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.3709273" vertical-offset="107" max-vertical-offset="1095">
+              <caret line="17" column="101" selection-start-line="17" selection-start-column="101" selection-end-line="17" selection-end-column="101" />
               <folding />
             </state>
           </provider>
@@ -143,8 +142,8 @@
       <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/productos/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-              <caret line="28" column="78" selection-start-line="28" selection-start-column="78" selection-end-line="28" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+              <caret line="27" column="85" selection-start-line="27" selection-start-column="85" selection-end-line="27" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -160,31 +159,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/usuarios/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47144592" vertical-offset="902" max-vertical-offset="1725">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1935">
               <caret line="100" column="74" selection-start-line="100" selection-start-column="74" selection-end-line="100" selection-end-column="74" />
-              <folding />
+              <folding>
+                <element signature="e#26#85#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listar_productos.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/productos/listar_productos.html">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/productos/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-27.041666" vertical-offset="116" max-vertical-offset="1305">
-              <caret line="51" column="72" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2025">
+              <caret line="49" column="85" selection-start-line="49" selection-start-column="85" selection-end-line="49" selection-end-column="85" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lista_ingresos.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/almacen/ingresos/lista_ingresos.html">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Teletak/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-50.625" vertical-offset="0" max-vertical-offset="1920">
-              <caret line="81" column="70" selection-start-line="81" selection-start-column="70" selection-end-line="81" selection-end-column="70" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+              <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -193,9 +196,11 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.291666" vertical-offset="416" max-vertical-offset="1230">
-              <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
-              <folding />
+            <state vertical-scroll-proportion="-28.291666" vertical-offset="401" max-vertical-offset="1215">
+              <caret line="72" column="44" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="44" />
+              <folding>
+                <marker date="1437311135000" expanded="true" signature="3520:3585" placeholder="    &lt;script src=&quot;{% static 'js/jquery-2.1.4.min.js' %}&quot;&gt;&lt;/scrip... %}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -252,7 +257,6 @@
         <option value="$PROJECT_DIR$/apps/almacen/urls.py" />
         <option value="$PROJECT_DIR$/apps/almacen/views.py" />
         <option value="$PROJECT_DIR$/templates/almacen/ingresos/index.html" />
-        <option value="$PROJECT_DIR$/templates/almacen/reporte.html" />
         <option value="$PROJECT_DIR$/Teletak/settings.py" />
         <option value="$PROJECT_DIR$/Teletak/wsgi.py" />
         <option value="$PROJECT_DIR$/Teletak/urls.py" />
@@ -266,10 +270,11 @@
         <option value="$PROJECT_DIR$/templates/almacen/ingresos/lista_ingresos.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/apps/almacen/forms.py" />
-        <option value="$PROJECT_DIR$/static/js/funciones.js" />
         <option value="$PROJECT_DIR$/Teletak/static/js/funciones.js" />
-        <option value="$PROJECT_DIR$/apps/productos/forms.py" />
         <option value="$PROJECT_DIR$/apps/usuarios/views.py" />
+        <option value="$PROJECT_DIR$/apps/productos/forms.py" />
+        <option value="$PROJECT_DIR$/static/js/funciones.js" />
+        <option value="$PROJECT_DIR$/templates/almacen/reporte.html" />
       </list>
     </option>
   </component>
@@ -659,8 +664,14 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="UPDATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/apps/almacen/urls.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/apps/almacen/views.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/apps/productos/forms.py</PATH>
             <PATH vcs="Git" revision="">$PROJECT_DIR$/static/js/funciones.js</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/almacen/ingresos/lista_ingresos.html</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/almacen/reingresos/index.html</PATH>
             <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/almacen/reporte.html</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/almacen/salidas/lista_salidas.html</PATH>
             <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/base.html</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
@@ -669,8 +680,8 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="CREATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/static/DataTables-1.10.7/media/swf/copy_csv_xls.swf</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/static/DataTables-1.10.7/media/swf/copy_csv_xls_pdf.swf</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/static/js/jquery.battatech.excelexport.min.js</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/almacen/reingresos/lista_reingresos.html</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
             <option name="myUpdateName" value="Deleted" />
@@ -678,6 +689,8 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="true" />
             <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/almacen/reporte2.html</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/almacen/salidas/confirm_delete_salida.html</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
             <option name="myUpdateName" value="Restored" />
@@ -1209,7 +1222,13 @@
       <option name="project" value="LOCAL" />
       <updated>1437205844357</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="ALfin!">
+      <created>1437313792974</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1437313792974</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1238,11 +1257,13 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32549942" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43830788" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904148" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.303268" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3478261" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329582" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278496" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1251,10 +1272,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30317274" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43830788" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="manage.py@Teletak" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329582" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329582" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1299,7 +1318,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="breadcrumbs para navegacion" />
     <MESSAGE value="flechas eliminadas en los forms" />
     <MESSAGE value="Rediseño de formulario ( nuevo usuario)&#10;Lo usare como molde para los demas&#10;" />
     <MESSAGE value="ajustes css y glyphicon a inputs" />
@@ -1324,7 +1342,8 @@
     <MESSAGE value="reporte" />
     <MESSAGE value="nueva interfaz" />
     <MESSAGE value="busqueda  y paginado en listas responsive :'( alfin crj" />
-    <option name="LAST_COMMIT_MESSAGE" value="busqueda  y paginado en listas responsive :'( alfin crj" />
+    <MESSAGE value="ALfin!" />
+    <option name="LAST_COMMIT_MESSAGE" value="ALfin!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1373,13 +1392,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="1140">
           <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/productos/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.2960993" vertical-offset="782" max-vertical-offset="1905">
-          <caret line="49" column="85" selection-start-line="49" selection-start-column="85" selection-end-line="49" selection-end-column="85" />
         </state>
       </provider>
     </entry>
@@ -1446,13 +1458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/almacen/reporte2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/almacen/ingresos/detalles_lista_ingreso.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
@@ -1507,13 +1512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/almacen/reporte.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="750">
-          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Teletak/static/human.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="823">
@@ -1547,13 +1545,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
           <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Teletak/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1652,17 +1643,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/almacen/ingresos/lista_ingresos.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-50.625" vertical-offset="0" max-vertical-offset="1920">
-          <caret line="81" column="70" selection-start-line="81" selection-start-column="70" selection-end-line="81" selection-end-column="70" />
+        <state vertical-scroll-proportion="-50.625" vertical-offset="300" max-vertical-offset="2220">
+          <caret line="101" column="37" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.291666" vertical-offset="416" max-vertical-offset="1230">
-          <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
-          <folding />
+        <state vertical-scroll-proportion="-28.291666" vertical-offset="401" max-vertical-offset="1215">
+          <caret line="72" column="44" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="44" />
+          <folding>
+            <marker date="1437311135000" expanded="true" signature="3520:3585" placeholder="    &lt;script src=&quot;{% static 'js/jquery-2.1.4.min.js' %}&quot;&gt;&lt;/scrip... %}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1674,26 +1667,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/funciones.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="3900">
-          <caret line="23" column="46" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Teletak/static/js/funciones.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3255">
           <caret line="24" column="86" selection-start-line="24" selection-start-column="86" selection-end-line="24" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/productos/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-          <caret line="28" column="78" selection-start-line="28" selection-start-column="78" selection-end-line="28" selection-end-column="78" />
           <folding />
         </state>
       </provider>
@@ -1708,8 +1685,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/usuarios/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47144592" vertical-offset="902" max-vertical-offset="1725">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1935">
           <caret line="100" column="74" selection-start-line="100" selection-start-column="74" selection-end-line="100" selection-end-column="74" />
+          <folding>
+            <element signature="e#26#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Teletak/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/productos/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2025">
+          <caret line="49" column="85" selection-start-line="49" selection-start-column="85" selection-end-line="49" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/productos/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+          <caret line="27" column="85" selection-start-line="27" selection-start-column="85" selection-end-line="27" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/funciones.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.814815" vertical-offset="2315" max-vertical-offset="3465">
+          <caret line="172" column="25" selection-start-line="172" selection-start-column="22" selection-end-line="172" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/almacen/reporte.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3709273" vertical-offset="107" max-vertical-offset="1095">
+          <caret line="17" column="101" selection-start-line="17" selection-start-column="101" selection-end-line="17" selection-end-column="101" />
           <folding />
         </state>
       </provider>
