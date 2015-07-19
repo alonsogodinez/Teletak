@@ -1,17 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="contenedor-lista">
-        <div class="table-responsive">
-            <table class="table table-striped ">
+    <div class="container">
+            <table class="table table-striped " id="reporte" cellspacing="0" width="100%">
             <thead align="center">
-                    <th width="20%" align="center">Product\Guia de Remisión </th>
+                    <th width="20%" align="center">Producto\Guia de Remisión </th>
                     {% for guia in guia_remision %}
                     <th align="center">
                         {{guia.nro_guia_remitente}}
                     </th>
                     {% endfor %}
-
             </thead>
             <tbody>
                 {% for producto in productos %}
@@ -35,10 +33,7 @@
                         {% endfor %}
                     </tr>
                 {% endfor %}
-
             </tbody>
-
             </table>
-        </div>
-</div>
+    </div>
 {% endblock %}
