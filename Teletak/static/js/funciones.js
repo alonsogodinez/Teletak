@@ -22,6 +22,8 @@ $(document).ready(function() {
 
     $('#detalle').modal('show');
 
+    $(".chosen-select").chosen({no_results_text: "No se encontró coincidencias con :"});
+
     $('#id_devolucion').change(function () {
         $('#id_nodo').prop("disabled", this.checked);
     }).change();
