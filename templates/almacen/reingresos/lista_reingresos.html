@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+
+
+{%  block breadcrumb %}
+     <ol class="breadcrumb">
+        <li ><a href="{%  url 'almacen:index' %}">Inicio</a></li>
+        <li class="active"><a href="{%   url 'almacen:operaciones' %}">Almacén</a></li>
+        <li >Listar Salidas</li>
+    </ol>
+{% endblock %}
+
+
+{% block content %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <div class=" contenedor-lista">
+        <div class="panel  panel-primary">
+            <div class="panel-heading">
+                <ul class="nav nav-tabs nav-justified">
+                     <li role="presentation" ><a href="{% url 'almacen:salidas' %}">Registro de Salidas</a></li>
+                     <li role="presentation" class="active"><a href="{% url 'almacen:lista_salidas' %}">Listado de Salidas</a></li>
+                 </ul>
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table id="datatable-responsive" class="table table-striped ">
+                        {% load static from staticfiles %}
+                        <thead>
+                            <tr  align="center">
+                                <th width="10%">Fecha</th>
+                                <th width="20%">Trabajador</th>
+                                <!--<th width="20%">Almacen</th>-->
+                                <th width="20%">Nodo</th>
+                                <th width="10%">Devolucion</th>
+                                <th width="40%">Operaciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for salida in object_list %}
+                            <tr valign="middle" class="{{forloop.counter|divisibleby:2|yesno:'even,odd'}}">
+                                <td align="center">{{ salida.fecha }}</td>
+                                <td align="center">{{ salida.dni_usuario }}</td>
+                                <td align="center">{{ salida.nodo }}</td>
+                                <td align="center">{% if salida.devolucion%}
+                                        <span class="glyphicon glyphicon-ok-circle" ></span>
+                                    {% else %}
+                                        <span class="glyphicon glyphicon-remove-circle" ></span>
+                                    {% endif %}
+                                    </td>
+                                <td align="center">
+                                    <a href="{% url 'almacen:detalle_salidas' salida.id %}"
+                                       class="btn btn-info">
+                                        Detalles
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="delete-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    {% if status %}
+        <style>
+        .modal-header {
+            padding:9px 15px;
+            border-bottom:1px solid #eee;
+            background-color: #0480be;
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-radius-topleft: 5px;
+            -moz-border-radius-topright: 5px;
+             border-top-left-radius: 5px;
+             border-top-right-radius: 5px;
+         }
+        </style>
+        <!-- Modal HTML -->
+            <div id="detalle" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title"><strong>Detalle de Salida Nro. {{ sal.id }}</strong></h4>
+                        </div>
+                        <div class="modal-body">
+                            <table width="100%">
+                                <tr >
+                                    <td><STRONG>Trabajador</STRONG></td>
+                                    <td>{{ sal.dni_usuario }}</td>
+                                </tr>
+                                <tr >
+                                    <td><STRONG>Fecha</STRONG></td>
+                                    <td>{{ sal.fecha }}</td>
+                                </tr>
+                                <tr >
+                                    <td><STRONG>Motivo</STRONG></td>
+                                    <td>{% if sal.devolucion %}
+                                        Devolución de productos defectuosos al proveedor.
+                                    {% else %}
+                                        Productos empleados para el Nodo {{ sal.nodo }}.
+                                    {% endif %}</td>
+                                </tr>
+                            </table>
+                            <br>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <th>Almacen</th>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                </thead>
+                                {% for d in det %}
+                                <tr>
+                                    <td>{{ d.id_almacen }}</td>
+                                    <td>{{ d.codigo_producto }}</td>
+                                    <td>{{ d.cantidad }}</td>
+                                </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-dismiss="modal"><span class="glyphicon glyphicon-ok"> Aceptar</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    {% endif %}
+    {% endblock %}

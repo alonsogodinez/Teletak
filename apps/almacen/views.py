@@ -100,7 +100,14 @@ class Reingresos(LoginRequiredMixin,View):
 
         return render(request,self.template_name,locals())
 
-
+class DetalleReingresoView(LoginRequiredMixin,View):
+    def get(self,request,id):
+        object_list = Ingreso.objects.all()
+        sal = Ingreso.objects.get(pk=id)
+        det = DetalleSalida.objects.filter(id_salida=id)
+        template_name = 'almacen/salidas/lista_salidas.html'
+        status = True
+        return render(request,template_name,locals())
 
 #SALIDAS
 import datetime
