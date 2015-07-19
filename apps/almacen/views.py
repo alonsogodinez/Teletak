@@ -58,7 +58,7 @@ class IngresoView(LoginRequiredMixin,SuccessMessageMixin,View):
                 detalle_ingreso.save()
                 success_message = 'Los datos se actualizaron correctamente'
                 InsertarDetalleAlmacen(nuevo_ingreso.id,request.POST['almacen'])
-                return redirect("/operaciones")
+                return redirect("/operaciones/listar_ingresos/")
             return render(request,self.template_name,locals())
         else:
             return render(request,self.template_name,locals())
@@ -96,7 +96,7 @@ class Reingresos(LoginRequiredMixin,View):
                 detalle_ingreso.save()
                 InsertarDetalleAlmacen(nuevo_ingreso.id,request.POST['almacen'])
                 success_message = 'Los datos se actualizaron correctamente'
-                return redirect("/operaciones")
+                return redirect("/operaciones/listar_reingresos")
 
         return render(request,self.template_name,locals())
 
@@ -114,6 +114,13 @@ class DetalleReingresoView(LoginRequiredMixin,View):
         template_name = 'almacen/reingresos/lista_reingresos.html'
         status = True
         return render(request,template_name,locals())
+
+class ListarIngresos(LoginRequiredMixin,ListView):
+    def get(self,request):
+        object_list = Ingreso.objects.filter(tipo=1)
+        template_name = 'almacen/ingresos/lista_ingresos.html'
+        return render(request,template_name,locals())
+
 
 class DetalleIngresoView(LoginRequiredMixin,View):
     def get(self,request,id):
@@ -182,9 +189,6 @@ class EliminarSalida(SuccessMessageMixin,DeleteView):
     template_name = 'almacen/salidas/confirm_delete_salida.html'
     success_message = 'El registro de salida fue eliminado correctamente'
 
-class ListarIngresos(LoginRequiredMixin,ListView):
-    model = Ingreso
-    template_name = 'almacen/ingresos/lista_ingresos.html'
 
 
 
@@ -277,7 +281,7 @@ class Reporte(View):
 
     def get(self, request):
         productos = Producto.objects.all()
-        ingresos = Ingreso.objects.all()
+        ingresos = Ingreso.objects.filter(tipo=1)
         detalles = DetalleIngreso.objects.all()
         guia_remision = GuiaRemision.objects.all()
         return render(request, self.template_name, locals())
