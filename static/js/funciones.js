@@ -21,7 +21,7 @@ $(document).ready(function() {
     });
 
     $(".chosen-select").chosen({no_results_text: "No se encontró coincidencias con :"});
-
+ //
     $('#detalle').modal('show');
 
     $('#id_devolucion').change(function () {
