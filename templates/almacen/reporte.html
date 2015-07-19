@@ -1,8 +1,28 @@
 {% extends 'base.html' %}
 
+{%  block breadcrumb %}
+     <ol class="breadcrumb">
+        <li ><a href="{%  url 'almacen:index' %}">Inicio</a></li>
+        <li class="active"><a href="{%   url 'almacen:operaciones' %}">Reporte</a></li>
+        <li >Listar de Ingresos</li>
+    </ol>
+{% endblock %}
+
+
 {% block content %}
-    <div class="container">
-            <table class="table table-striped " id="reporte" cellspacing="0" width="100%">
+        <div class=" contenedor-lista">
+        <div class="panel  panel-primary">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-pencil"></span>
+                <span class="">LISTADO DE GUIAS DE REMISIÓN</span>
+                <input class ="pull-right btn btn-success" id="btnExport" type="button" value="Exportar a Excel">
+                <a class ="pull-right btn btn-danger  "
+                   href="{% url 'almacen:operaciones' %}">Volver
+                </a>
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                       <table class="table table-striped " id="reporte" cellspacing="0" width="100%">
             <thead align="center">
                     <th width="20%" align="center">Producto\Guia de Remisión </th>
                     {% for guia in guia_remision %}
@@ -35,5 +55,13 @@
                 {% endfor %}
             </tbody>
             </table>
+                </div>
+            </div>
+        </div>
+
+
+
+
     </div>
+
 {% endblock %}

@@ -196,54 +196,22 @@ $(document).ready(function() {
     };
 
     $('#datatable').DataTable(datatable);
-
+    $('#reporte').DataTable(datatable);
 
     var datatableresponsive = datatable;
+
     datatableresponsive.responsive = true;
 
     $('#datatable-responsive').DataTable(datatableresponsive);
 
-    $('#reporte').DataTable( {
-       "dom": 'T<"clear">lfrtip',
-        tableTools: {
-            "sSwfPath": "../swf/copy_csv_xls_pdf.swf"
-        },
-        "oTableTools": {
-            "aButtons": [
-                {
-                    "sExtends": "ajax",
-                    "bFooter": fal
-                }
-            ]
-        },
-       "oLanguage": {
-            "oAria": {
-                "sSortAscending": " - ordenar de forma ascendente",
-                "sSortDescending": " - ordenar de forma descendente",
-                "sInfoEmpty": "No hay información para mostrar",
-                "sLengthMenu": "Mostrar _MENU_ registros",
-                "sSearch": "Buscar :",
-                "sZeroRecords": "No hay ningún registro",
+    $("#btnExport").click(function () {
 
-            },
-            "oPaginate": {
-                "sFirst": "Primera página",
-                "sLast": "Última página",
-                "sNext": "Página siguiente",
-                "sPrevious": "Página anterior"
-            },
+        $("#tblExport").battatech_excelexport({
+                containerid: "reporte",
+                datatype: 'table'
+            });
+        });
 
-            "sEmptyTable": "Esta tabla no tiene datos",
-            "sInfo": "Mostrando  _START_ - _END_ de _TOTAL_ registros",
-            "sInfoEmpty": "Mostrando 0 entradas",
-            "sInfoFiltered": "(filtrados de _MAX_  registros en total)",
-            "sLengthMenu": "Motrar _MENU_ registros",
-            "sSearch": "Buscar :",
-            "sZeroRecords": "No se encontraron coincidencias"
-
-        }
-
-    } );
 
 
 });
