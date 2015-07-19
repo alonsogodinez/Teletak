@@ -68,13 +68,15 @@ class Configuracion(AdminPermissionRequiredMixin,TemplateView):
     template_name = 'configuracion/index.html'
 
 
-class RegistrarTrabajador(LoginRequiredMixin,AdminPermissionRequiredMixin,SuccessMessageMixin,CreateView):
+class RegistrarTrabajador(LoginRequiredMixin,SuccessMessageMixin,CreateView):
 
     model = User
     template_name = 'configuracion/nuevo_trabajador.html'
     form_class = RegistrarTrabajadorForm
     success_url = '/usuarios'
     success_message = 'El registro se realizó correctamente'
+
+
 
     def form_valid(self, form):
         hasher = PBKDF2PasswordHasher()
@@ -89,7 +91,7 @@ class ListarTrabajadores(LoginRequiredMixin,AdminPermissionRequiredMixin,ListVie
     template_name = 'configuracion/listar_trabajadores.html'
 
 
-class EditarTrabajador(SuccessMessageMixin,AdminPermissionRequiredMixin,UpdateView):
+class EditarTrabajador(SuccessMessageMixin,UpdateView):
 
     model = User
     form_class = EditarTrabajadorForm
@@ -98,7 +100,7 @@ class EditarTrabajador(SuccessMessageMixin,AdminPermissionRequiredMixin,UpdateVi
     success_message = 'Los datos se actualizaron correctamente'
 
 
-class EliminarTrabajador(SuccessMessageMixin,AdminPermissionRequiredMixin,DeleteView):
+class EliminarTrabajador(SuccessMessageMixin,DeleteView):
 
     model = User
     success_url = '/usuarios/lista'
