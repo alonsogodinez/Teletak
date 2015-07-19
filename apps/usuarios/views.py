@@ -68,7 +68,7 @@ class Configuracion(AdminPermissionRequiredMixin,TemplateView):
     template_name = 'configuracion/index.html'
 
 
-class RegistrarTrabajador(LoginRequiredMixin,SuccessMessageMixin,CreateView):
+class RegistrarTrabajador(LoginRequiredMixin,AdminPermissionRequiredMixin,SuccessMessageMixin,CreateView):
 
     model = User
     template_name = 'configuracion/nuevo_trabajador.html'
@@ -84,12 +84,12 @@ class RegistrarTrabajador(LoginRequiredMixin,SuccessMessageMixin,CreateView):
         return super(RegistrarTrabajador, self).form_valid(form)
 
 
-class ListarTrabajadores(LoginRequiredMixin,ListView):
+class ListarTrabajadores(LoginRequiredMixin,AdminPermissionRequiredMixin,ListView):
     queryset = User.objects.all()
     template_name = 'configuracion/listar_trabajadores.html'
 
 
-class EditarTrabajador(SuccessMessageMixin,UpdateView):
+class EditarTrabajador(SuccessMessageMixin,AdminPermissionRequiredMixin,UpdateView):
 
     model = User
     form_class = EditarTrabajadorForm
@@ -98,7 +98,7 @@ class EditarTrabajador(SuccessMessageMixin,UpdateView):
     success_message = 'Los datos se actualizaron correctamente'
 
 
-class EliminarTrabajador(SuccessMessageMixin,DeleteView):
+class EliminarTrabajador(SuccessMessageMixin,AdminPermissionRequiredMixin,DeleteView):
 
     model = User
     success_url = '/usuarios/lista'
