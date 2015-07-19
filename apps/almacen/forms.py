@@ -71,7 +71,7 @@ class GuiaRemisionForm(forms.ModelForm):
                                                                   'placeholder':'Punto de partida',
                                                                   'required':True}),
                                     label="Punto de partida")
-    nro_guia_remitente = forms.CharField(max_length=10,
+    nro_guia_remitente = forms.CharField(max_length=11,
                                          widget=forms.TextInput(attrs={'class':'form-control',
                                                                        'placeholder':'Nro guia remitente',
                                                                        'required':True}),
