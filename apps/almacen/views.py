@@ -100,12 +100,27 @@ class Reingresos(LoginRequiredMixin,View):
 
         return render(request,self.template_name,locals())
 
+class ListarReingresoView(LoginRequiredMixin,View):
+    def get(self,request):
+        object_list = Ingreso.objects.filter(tipo=2)
+        template_name = 'almacen/reingresos/lista_reingresos.html'
+        return render(request,template_name,locals())
+
 class DetalleReingresoView(LoginRequiredMixin,View):
     def get(self,request,id):
-        object_list = Ingreso.objects.all()
+        object_list = Ingreso.objects.filter(tipo=2)
         sal = Ingreso.objects.get(pk=id)
-        det = DetalleSalida.objects.filter(id_salida=id)
-        template_name = 'almacen/salidas/lista_salidas.html'
+        det = DetalleIngreso.objects.filter(id_ingreso=id)
+        template_name = 'almacen/reingresos/lista_reingresos.html'
+        status = True
+        return render(request,template_name,locals())
+
+class DetalleIngresoView(LoginRequiredMixin,View):
+    def get(self,request,id):
+        object_list = Ingreso.objects.filter(tipo=1)
+        sal = Ingreso.objects.get(pk=id)
+        det = DetalleIngreso.objects.filter(id_ingreso=id)
+        template_name = 'almacen/ingresos/lista_ingresos.html'
         status = True
         return render(request,template_name,locals())
 
@@ -171,14 +186,7 @@ class ListarIngresos(LoginRequiredMixin,ListView):
     model = Ingreso
     template_name = 'almacen/ingresos/lista_ingresos.html'
 
-class DetalleIngresoView(LoginRequiredMixin,View):
-    def get(self,request,id):
-        object_list = Ingreso.objects.all()
-        sal = Ingreso.objects.get(pk=id)
-        det = DetalleIngreso.objects.filter(id_ingreso=id)
-        template_name = 'almacen/ingresos/lista_ingresos.html'
-        status = True
-        return render(request,template_name,locals())
+
 
 
 

@@ -13,6 +13,12 @@
     <div class="container">
         <div class="row">
             <div class="panel form-panel panel-primary">
+                 <div class="panel-heading">
+                     <ul class="nav nav-tabs nav-justified">
+                         <li role="presentation" class="active"><a href="{% url 'almacen:reingresos' %}">Registro de Reingresos</a></li>
+                         <li role="presentation"><a href="{% url 'almacen:lista_reingreso' %}">Listado de Reingresos</a></li>
+                     </ul>
+                 </div>
                 <div class="panel-body">
                     <form method="post" enctype="multipart/form-data">
 

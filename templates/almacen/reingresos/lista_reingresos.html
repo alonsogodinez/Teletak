@@ -25,8 +25,8 @@
         <div class="panel  panel-primary">
             <div class="panel-heading">
                 <ul class="nav nav-tabs nav-justified">
-                     <li role="presentation" ><a href="{% url 'almacen:salidas' %}">Registro de Salidas</a></li>
-                     <li role="presentation" class="active"><a href="{% url 'almacen:lista_salidas' %}">Listado de Salidas</a></li>
+                     <li role="presentation" ><a href="{% url 'almacen:reingresos' %}">Registro de Reingresos</a></li>
+                     <li role="presentation" class="active"><a href="{% url 'almacen:lista_reingreso' %}">Listado de Reingresos</a></li>
                  </ul>
             </div>
             <div class="panel-body">
@@ -36,27 +36,19 @@
                         <thead>
                             <tr  align="center">
                                 <th width="10%">Fecha</th>
-                                <th width="20%">Trabajador</th>
-                                <!--<th width="20%">Almacen</th>-->
-                                <th width="20%">Nodo</th>
-                                <th width="10%">Devolucion</th>
+                                <th width="20%">Usuario</th>
+                                <th width="20%">Almacen</th>
                                 <th width="40%">Operaciones</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {% for salida in object_list %}
+                            {% for ingreso in object_list %}
                             <tr valign="middle" class="{{forloop.counter|divisibleby:2|yesno:'even,odd'}}">
-                                <td align="center">{{ salida.fecha }}</td>
-                                <td align="center">{{ salida.dni_usuario }}</td>
-                                <td align="center">{{ salida.nodo }}</td>
-                                <td align="center">{% if salida.devolucion%}
-                                        <span class="glyphicon glyphicon-ok-circle" ></span>
-                                    {% else %}
-                                        <span class="glyphicon glyphicon-remove-circle" ></span>
-                                    {% endif %}
-                                    </td>
+                                <td align="center">{{ ingreso.fecha }}</td>
+                                <td align="center">{{ ingreso.dni_usuario }}</td>
+                                <td align="center">{{ ingreso.almacen }}</td>
                                 <td align="center">
-                                    <a href="{% url 'almacen:detalle_salidas' salida.id %}"
+                                    <a href="{% url 'almacen:detalle_reingreso' ingreso.id %}"
                                        class="btn btn-info">
                                         Detalles
                                     </a>
@@ -85,6 +77,7 @@
             padding:9px 15px;
             border-bottom:1px solid #eee;
             background-color: #0480be;
+            color: white;
             -webkit-border-top-left-radius: 5px;
             -webkit-border-top-right-radius: 5px;
             -moz-border-radius-topleft: 5px;
@@ -99,7 +92,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title"><strong>Detalle de Salida Nro. {{ sal.id }}</strong></h4>
+                            <h4 class="modal-title"><strong>Detalle del Reingreso Nro. {{ sal.id }}</strong></h4>
                         </div>
                         <div class="modal-body">
                             <table width="100%">
@@ -112,26 +105,22 @@
                                     <td>{{ sal.fecha }}</td>
                                 </tr>
                                 <tr >
-                                    <td><STRONG>Motivo</STRONG></td>
-                                    <td>{% if sal.devolucion %}
-                                        Devolución de productos defectuosos al proveedor.
-                                    {% else %}
-                                        Productos empleados para el Nodo {{ sal.nodo }}.
-                                    {% endif %}</td>
+                                    <td><STRONG>Almacen</STRONG></td>
+                                    <td>{{ sal.almacen }}</td>
                                 </tr>
                             </table>
                             <br>
                             <table class="table table-bordered">
                                 <thead>
-                                    <th>Almacen</th>
                                     <th>Producto</th>
                                     <th>Cantidad</th>
+                                    <th>Estado</th>
                                 </thead>
                                 {% for d in det %}
                                 <tr>
-                                    <td>{{ d.id_almacen }}</td>
                                     <td>{{ d.codigo_producto }}</td>
                                     <td>{{ d.cantidad }}</td>
+                                    <td>{{ d.estado }}</td>
                                 </tr>
                                 {% endfor %}
                             </table>
