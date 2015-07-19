@@ -16,9 +16,9 @@ class UsuarioForm(forms.ModelForm):
 
 class IngresoForm(forms.ModelForm):
     almacen = forms.ModelChoiceField(queryset=Almacen.objects.all(),
-                                     widget=forms.Select(attrs={'class':'form-control chosen-select',
+                                     widget=forms.Select(attrs={'class':'form-control ',
                                                                 'placeholder':'almacen','required':True
-                                                                }),empty_label="Escoga la ubicacion del almacen",
+                                                                }),empty_label="Escoga el almacén",
                                      label= 'Almacen')
 
     class Meta:
@@ -33,7 +33,7 @@ class DetalleIngresoForm(forms.ModelForm):
                                                                   'required':True}),
                                   label="Cantidad")
     unidad_caja = forms.ModelChoiceField(queryset=UnidadMedicion.objects.all(),
-                                         widget=forms.Select(attrs={'class':'form-control chosen-select',
+                                         widget=forms.Select(attrs={'class':'form-control ',
                                                                     'required':True,
                                                                     'placeholder':'Unidad de medida'}),
                                          empty_label="Escoja la unidad de medida")
@@ -41,7 +41,7 @@ class DetalleIngresoForm(forms.ModelForm):
                                                            'placeholder':'Estado',
                                                            'required':True}),
                                                     label="Estado del producto")
-    codigo_producto = forms.ModelChoiceField(queryset=Producto.objects.all(),empty_label="Escoja el codigo de producto",
+    codigo_producto = forms.ModelChoiceField(queryset=Producto.objects.all(),empty_label="Escoja un producto",
                                             widget=forms.Select(attrs={'class':'form-control chosen-select',
                                                                      'placeholder':'Codigo',
                                                                      'required':True}))
