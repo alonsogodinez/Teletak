@@ -86,7 +86,7 @@ class RegistrarTrabajador(LoginRequiredMixin,SuccessMessageMixin,CreateView):
         return super(RegistrarTrabajador, self).form_valid(form)
 
 
-class ListarTrabajadores(LoginRequiredMixin,AdminPermissionRequiredMixin,ListView):
+class ListarTrabajadores(LoginRequiredMixin,ListView):
     queryset = User.objects.all()
     template_name = 'configuracion/listar_trabajadores.html'
 
